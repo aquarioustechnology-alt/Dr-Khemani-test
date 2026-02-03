@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Stethoscope, Baby, Heart, Scissors, Pill, Activity } from 'lucide-react';
+import { ArrowRight, Stethoscope, Baby, Heart, Scissors, Activity } from 'lucide-react';
 
 const treatmentCategories = [
     {

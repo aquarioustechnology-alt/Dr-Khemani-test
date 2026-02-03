@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, Phone, MessageCircle, X, ArrowRight, Calendar, Stethoscope } from 'lucide-react';
+import { Phone, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 
@@ -57,7 +57,7 @@ export function Navigation() {
     }
   }, [isOpen]);
 
-  const menuVariants = {
+  const menuVariants: Variants = {
     closed: {
       opacity: 0,
       x: '100%',
@@ -122,8 +122,8 @@ export function Navigation() {
                   key={link.name}
                   to={link.href}
                   className={`text-sm font-medium transition-colors duration-200 ${location.pathname === link.href
-                      ? 'text-[#E85A8E] font-semibold'
-                      : 'text-gray-700 hover:text-[#E85A8E]'
+                    ? 'text-[#E85A8E] font-semibold'
+                    : 'text-gray-700 hover:text-[#E85A8E]'
                     }`}
                 >
                   {link.name}
@@ -197,8 +197,8 @@ export function Navigation() {
                   <Link
                     to={link.href}
                     className={`block text-2xl font-heading font-semibold py-2 ${location.pathname === link.href
-                        ? 'text-[#E85A8E]'
-                        : 'text-gray-900'
+                      ? 'text-[#E85A8E]'
+                      : 'text-gray-900'
                       }`}
                   >
                     {link.name}
