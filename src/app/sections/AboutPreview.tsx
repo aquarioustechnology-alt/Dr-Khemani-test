@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Award, GraduationCap, Clock } from "lucide-react";
-import { Counter } from "@/components/Counter";
+import { ArrowRight, Award, Clock } from "lucide-react";
+
 
 export function AboutPreview() {
   return (

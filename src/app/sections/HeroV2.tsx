@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Star, Award, Users, Play, CheckCircle2, ArrowUpRight } from "lucide-react";
-import { Counter } from "@/components/Counter";
+import { Star, Award, Users, Play, ArrowUpRight } from "lucide-react";
+
 
 const heroImages = [
   "/images/WhatsApp Image 2025-12-22 at 12.26.51 PM.jpeg",

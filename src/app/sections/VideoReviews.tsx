@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { Play, Pause, ChevronLeft, ChevronRight, Quote, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Play, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const videos = [
     {
@@ -124,10 +125,11 @@ export function VideoReviews() {
                             >
                                 {/* Thumbnail */}
                                 <div className="absolute inset-0">
-                                    <img
+                                    <Image
                                         src={videos[activeIndex].thumbnail}
                                         alt={videos[activeIndex].title}
-                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                        fill
+                                        className="object-cover group-hover:scale-105 transition-transform duration-700"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                                 </div>
@@ -181,10 +183,11 @@ export function VideoReviews() {
                                 >
                                     <div className="flex gap-4">
                                         <div className="relative w-24 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-gray-200">
-                                            <img
+                                            <Image
                                                 src={video.thumbnail}
                                                 alt={video.title}
-                                                className="w-full h-full object-cover"
+                                                fill
+                                                className="object-cover"
                                             />
                                             <div className="absolute inset-0 flex items-center justify-center bg-black/20">
                                                 <Play className="w-4 h-4 text-white" />
@@ -202,13 +205,15 @@ export function VideoReviews() {
                         </div>
 
                         <div className="p-6 rounded-2xl bg-gradient-to-br from-[#C21975] to-[#8a2f5e] text-center shadow-xl shrink-0">
-                            <img
+                            <Image
+                                width={48}
+                                height={48}
                                 src="/images/logo-icon.png"
                                 alt="Healing Touch Clinic"
-                                className="w-12 h-12 mx-auto mb-4 object-contain brightness-0 invert opacity-80"
+                                className="mx-auto mb-4 object-contain brightness-0 invert opacity-80"
                             />
                             <p className="text-sm font-medium italic text-white/90 mb-4">
-                                "Dr. Vinita's expertise gave us the miracle we had been waiting for. Forever grateful."
+                                &quot;Dr. Vinita&apos;s expertise gave us the miracle we had been waiting for. Forever grateful.&quot;
                             </p>
                             <button
                                 onClick={scrollToTestimonials}

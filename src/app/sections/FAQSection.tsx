@@ -38,13 +38,13 @@ export function FAQSection() {
                     {/* Left: Sticky Header */}
                     <div className="lg:col-span-4 lg:sticky lg:top-32">
                         <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#a43971] bg-[#f5e6ef]/50">
-                            FAQ's
+                            FAQ&apos;s
                         </span>
                         <h2 className="font-display text-4xl lg:text-5xl font-bold animate-text-gradient leading-tight mb-6">
                             Common <br /><span className="text-[#a43971]">Questions</span>
                         </h2>
                         <p className="text-gray-600 text-lg mb-8">
-                            Find answers to the most frequently asked questions about our services and women's health.
+                            Find answers to the most frequently asked questions about our services and women&apos;s health.
                         </p>
                         <div className="hidden lg:block w-20 h-1 bg-[#a43971] rounded-full opacity-20" />
                     </div>

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { MapPin, Phone, Clock, ArrowRight, Loader2, Calendar } from "lucide-react";
+import { MapPin, Phone, Clock, ArrowRight } from "lucide-react";
 
 const clinics = [
   {

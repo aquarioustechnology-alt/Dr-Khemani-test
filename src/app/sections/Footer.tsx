@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, ArrowRight, UserPlus, Calendar } from "lucide-react";
 import { useState } from "react";
 
@@ -47,10 +48,11 @@ export function Footer() {
             <Link href="/" className="inline-block">
               <div className="flex items-center gap-3">
                 <div className="relative w-12 h-12 flex items-center justify-center">
-                  <img
+                  <Image
                     src="/images/logo-icon.png"
                     alt="Healing Touch Clinic Logo"
-                    className="w-full h-full object-contain brightness-0 invert"
+                    fill
+                    className="object-contain brightness-0 invert"
                   />
                 </div>
                 <div>
@@ -60,7 +62,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-pink-100/80 text-sm leading-relaxed max-w-xs">
-              Compassionate, world-class gynecological care led by Dr. Vinita Khemani. Dedicated to empowering women's health for over two decades.
+              Compassionate, world-class gynecological care led by Dr. Vinita Khemani. Dedicated to empowering women&apos;s health for over two decades.
             </p>
 
             <div className="flex items-center gap-4 py-4 border-y border-white/5">

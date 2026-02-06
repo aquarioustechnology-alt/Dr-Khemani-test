@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -49,7 +50,7 @@ const services = [
   },
 ];
 
-const Card = ({ service, index, range, targetScale, ctaText }: any) => {
+const Card = ({ service, index, range, targetScale, ctaText }: { service: any, index: any, range: any, targetScale: any, ctaText: any }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -106,7 +107,7 @@ const Card = ({ service, index, range, targetScale, ctaText }: any) => {
 
 export function ServicesParallax() {
   const container = useRef(null);
-  const { scrollYProgress } = useScroll({
+  useScroll({
     target: container,
     offset: ["start start", "end end"]
   });

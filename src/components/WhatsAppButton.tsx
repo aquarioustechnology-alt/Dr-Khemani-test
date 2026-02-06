@@ -1,6 +1,5 @@
 "use client";
 
-import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { getWhatsAppLink } from "@/lib/utils";
 

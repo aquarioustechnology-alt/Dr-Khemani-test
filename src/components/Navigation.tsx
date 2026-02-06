@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Menu, X, Calendar } from "lucide-react";
 
 const navLinks = [
@@ -33,10 +34,11 @@ export function Navigation() {
             <Link href="/" className="flex items-center gap-3 group">
               {/* Extracted Logo Icon */}
               <div className="relative w-12 h-12 flex items-center justify-center">
-                <img
+                <Image
                   src="/images/logo-icon.png"
                   alt="Dr. Vinita Khemani Logo"
-                  className="w-full h-full object-contain"
+                  fill
+                  className="object-contain"
                 />
               </div>
               <div className="hidden sm:block">

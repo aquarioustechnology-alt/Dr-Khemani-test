@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, MapPin, Clock, Calendar, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 
 export function ParallaxCTA() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -41,13 +41,13 @@ export function ParallaxCTA() {
               <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm" style={{ background: 'rgba(255,255,255,0.2)', color: 'white' }}>
                 Begin Your Journey Today
               </span>
-              
+
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Your Health Deserves the <span style={{ color: '#d4a5c4' }}>Best Care</span>
               </h2>
-              
+
               <p className="text-white/80 text-lg md:text-xl mb-8 leading-relaxed">
-                Take the first step towards better health. Book a consultation with 
+                Take the first step towards better health. Book a consultation with
                 Dr. Vinita Khemani and experience personalized, compassionate care.
               </p>
 
