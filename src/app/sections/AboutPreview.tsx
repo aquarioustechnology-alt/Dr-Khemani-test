@@ -52,9 +52,9 @@ export function AboutPreview() {
               <div className="flex items-center gap-4">
                 <div className="flex -space-x-3">
                   {[
-                    "https://randomuser.me/api/portraits/women/65.jpg",
-                    "https://randomuser.me/api/portraits/men/32.jpg",
-                    "https://randomuser.me/api/portraits/women/42.jpg"
+                    "/images/avatars/indian-woman-1.jpg",
+                    "/images/avatars/indian-man-1.jpg",
+                    "/images/avatars/indian-woman-2.jpg"
                   ].map((src, i) => (
                     <div key={i} className="w-10 h-10 rounded-full border-2 border-white relative overflow-hidden bg-gray-200">
                       <Image src={src} alt="Patient" fill className="object-cover" />

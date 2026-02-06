@@ -84,10 +84,10 @@ export function HeroV2() {
                 <div className="flex items-center gap-6 pt-8 border-t border-[#d4a5c4]/30">
                   <div className="flex -space-x-4">
                     {[
-                      "https://randomuser.me/api/portraits/women/44.jpg",
-                      "https://randomuser.me/api/portraits/men/32.jpg",
-                      "https://randomuser.me/api/portraits/women/68.jpg",
-                      "https://randomuser.me/api/portraits/men/22.jpg"
+                      "/images/avatars/indian-woman-1.jpg",
+                      "/images/avatars/indian-man-1.jpg",
+                      "/images/avatars/indian-woman-2.jpg",
+                      "/images/avatars/indian-man-2.jpg"
                     ].map((src, i) => (
                       <div key={i} className="w-12 h-12 rounded-full border-2 border-white bg-gray-200 overflow-hidden relative">
                         <Image src={src} alt="Patient" fill className="object-cover" />
