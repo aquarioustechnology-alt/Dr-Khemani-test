@@ -7,12 +7,12 @@ import { Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const features = [
-  "21+ Years of Clinical Excellence",
-  "Advanced Laparoscopic Surgery",
-  "High-Risk Pregnancy Expert",
-  "Personalized Treatment Plans",
-  "3 Convenient Locations in Kolkata",
-  "Emergency Consultations Available",
+  "Normal Delivery Priority",
+  "Painless Labor Options",
+  "Holistic Antenatal Care",
+  "Adolescent Health Guidance",
+  "Menopause Solutions",
+  "Post-Surgery Rehabilitation",
 ];
 
 export function WhyChoose() {

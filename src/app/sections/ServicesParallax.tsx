@@ -16,7 +16,8 @@ const services = [
     description: "Comprehensive prenatal care including regular checkups, ultrasound monitoring, nutrition counseling, and personalized birth planning for a healthy pregnancy journey.",
     features: ["Prenatal Checkups", "Nutrition Guidance", "Delivery Planning", "Postnatal Care"],
     image: "/images/WhatsApp Image 2025-12-22 at 12.22.01 PM.jpeg",
-    color: "#f5e6ef"
+    color: "#f5e6ef",
+    badgeText: "Motherhood Journey"
   },
   {
     id: 2,
@@ -26,7 +27,8 @@ const services = [
     description: "Specialized management of high-risk pregnancies including gestational diabetes, hypertension, multiple pregnancies, and cases with previous complications.",
     features: ["Risk Assessment", "Specialized Monitoring", "Emergency Protocols", "NICU Coordination"],
     image: "/images/WhatsApp Image 2026-01-14 at 12.55.29 PM.jpeg",
-    color: "#e8d5e0"
+    color: "#e8d5e0",
+    badgeText: "Priority Care"
   },
   {
     id: 3,
@@ -36,7 +38,8 @@ const services = [
     description: "Comprehensive fertility solutions including ovulation induction, IUI procedures, IVF coordination, and treatment for PCOS and endometriosis-related infertility.",
     features: ["Fertility Testing", "Ovulation Induction", "IUI & IVF Coordination", "Hormonal Therapy"],
     image: "/images/WhatsApp Image 2026-01-14 at 12.55.30 PM.jpeg",
-    color: "#d4a5c4"
+    color: "#d4a5c4",
+    badgeText: "Miracle Maker"
   },
   {
     id: 4,
@@ -46,7 +49,8 @@ const services = [
     description: "Advanced keyhole surgeries for fibroids, ovarian cysts, endometriosis, hysterectomy, and ectopic pregnancy with faster recovery and minimal scarring.",
     features: ["Keyhole Surgery", "Fibroid Removal", "Cyst Treatment", "Quick Recovery"],
     image: "/images/WhatsApp Image 2025-12-22 at 12.26.51 PM.jpeg",
-    color: "#c97ba3"
+    color: "#c97ba3",
+    badgeText: "Precision Care"
   },
 ];
 
@@ -74,7 +78,7 @@ const Card = ({ service, index, range, targetScale, ctaText }: { service: any, i
               <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: service.color }}>
                 <service.icon className="w-5 h-5 text-[#a43971]" />
               </div>
-              <span className="text-sm font-bold uppercase tracking-wider text-[#a43971]">Service 0{service.id}</span>
+              <span className="text-sm font-bold uppercase tracking-wider text-[#a43971]">{service.badgeText}</span>
             </div>
 
             <h3 className="text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-4">{service.title}</h3>
