@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Award, Clock, Activity } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Award, Clock } from "lucide-react";
 
 
 export function AboutPreview() {
