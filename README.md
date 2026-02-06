@@ -1,73 +1,107 @@
-# React + TypeScript + Vite
+# Dr. Vinita Khemani - Gynecologist Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, lead-generating website for Dr. Vinita Khemani, a renowned Gynecologist & Obstetrician in Kolkata with 21+ years of experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Design & UX
+- **Modern, Fluid Design**: Organic shapes, non-boxy layouts, premium aesthetics
+- **Smooth Animations**: Parallax effects, scroll-triggered reveals, micro-interactions
+- **Mobile-First**: Fully responsive with thumb-friendly CTAs
+- **Trust-Building**: Prominent credentials, testimonials, social proof
 
-## React Compiler
+### Lead Generation
+- Sticky CTAs (Call, WhatsApp, Book Appointment)
+- Multi-step booking form
+- WhatsApp integration
+- Click-to-call functionality
+- Instagram feed integration
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Sections
+1. Hero with animated stats
+2. Services showcase
+3. Doctor profile & credentials
+4. Why Choose Us
+5. Patient testimonials
+6. Instagram feed
+7. FAQ accordion
+8. Clinic locations
+9. Contact/Booking form
+10. Footer
 
-## Expanding the ESLint configuration
+### Technical Stack
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel-ready static export
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
+- Node.js 18+
+- npm or yarn
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clone or navigate to project
+cd dr-vinita-khemani
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The site is configured for static export. To deploy:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Build the project: `npm run build`
+2. The `dist` folder contains the static files
+3. Upload to Vercel, Netlify, or any static hosting
+
+## Customization
+
+### Colors
+Edit `tailwind.config.ts` to modify brand colors:
+- `medical` - Primary brand color (teal)
+- `warm` - Accent colors
+
+### Content
+All content is in `src/lib/data.ts`:
+- Doctor information
+- Services
+- Testimonials
+- Clinic locations
+- FAQs
+- Blog posts
+
+### Images
+Add images to `public/images/` directory:
+- `doctor-hero.jpg` - Hero section doctor photo
+- `service-*.jpg` - Service images
+- `instagram-*.jpg` - Instagram posts
+- `patient-*.jpg` - Patient photos
+
+## SEO
+
+The site includes:
+- Semantic HTML structure
+- Meta tags & Open Graph
+- Schema.org markup ready
+- Fast loading (optimized build)
+- Mobile-friendly
+
+## Contact
+
+For updates or support, contact the development team.
+
+---
+
+© 2026 Dr. Vinita Khemani. All rights reserved.

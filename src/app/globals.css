@@ -1,0 +1,294 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --font-inter: 'Plus Jakarta Sans', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+
+  /* Brand Colors - Based on #a43971 */
+  --color-primary: #C21975;
+  --color-primary-dark: #8a2f5e;
+  --color-primary-light: #d4a5c4;
+  --color-primary-soft: #f5e6ef;
+  --color-primary-matte: #b85a8a;
+  --color-primary-muted: #c97ba3;
+
+  /* Secondary - Complementary muted tones */
+  --color-sage: #9db5a0;
+  --color-slate: #7c8ba1;
+  --color-warm-gray: #9a8b8a;
+
+  /* Backgrounds */
+  --color-cream: #ffffff;
+  --color-warm: #f9f6f4;
+
+  --ease-expo-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: var(--color-cream);
+  color: #4a4a4a;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(164, 57, 113, 0.2);
+  color: var(--color-primary-dark);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--color-primary-light), var(--color-primary));
+  border-radius: 3px;
+}
+
+/* ==================== ORGANIC ANIMATION - Using #a43971 shades ==================== */
+@keyframes float-organic {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  25% {
+    transform: translate(10px, -15px) rotate(5deg) scale(1.05);
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  50% {
+    transform: translate(-5px, 10px) rotate(-3deg) scale(0.95);
+    border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+  }
+
+  75% {
+    transform: translate(15px, 5px) rotate(2deg) scale(1.02);
+    border-radius: 40% 60% 60% 40% / 40% 60% 40% 60%;
+  }
+}
+
+@keyframes pulse-soft {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+.organic-blob {
+  animation: float-organic 15s ease-in-out infinite;
+}
+
+.organic-blob-slow {
+  animation: float-organic 20s ease-in-out infinite reverse;
+}
+
+.pulse-soft {
+  animation: pulse-soft 8s ease-in-out infinite;
+}
+
+/* ==================== GLASS ==================== */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(74, 74, 74, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* ==================== TEXT ==================== */
+.text-gradient {
+  background: linear-gradient(135deg, #a43971 0%, #c97ba3 50%, #9db5a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-soft {
+  background: linear-gradient(135deg, #a43971 0%, #b85a8a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fluid-hero {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 1.05;
+}
+
+/* ==================== BUTTONS ==================== */
+.btn-primary {
+  background: linear-gradient(135deg, #a43971 0%, #8a2f5e 100%);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(164, 57, 113, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(164, 57, 113, 0.35);
+}
+
+.btn-secondary {
+  background: white;
+  color: #a43971;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 2px solid #d4a5c4;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background: #f5e6ef;
+  border-color: #a43971;
+  transform: translateY(-2px);
+}
+
+.btn-white {
+  background: white;
+  color: #a43971;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.btn-white:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ==================== COUNTER STYLES ==================== */
+.counter-box {
+  background: linear-gradient(135deg, #f5e6ef 0%, #ffffff 100%);
+  border: 1px solid #d4a5c4;
+  border-radius: 24px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 40px -10px rgba(164, 57, 113, 0.1);
+  transition: all 0.3s ease;
+}
+
+.counter-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px -10px rgba(164, 57, 113, 0.2);
+  border-color: #a43971;
+}
+
+.counter-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #a43971, #9db5a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ==================== TRUST CARDS - MATTE COLORS ==================== */
+.trust-card {
+  border-radius: 32px;
+  padding: 2rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.trust-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -20px rgba(164, 57, 113, 0.15);
+}
+
+/* ==================== CONTAINER ==================== */
+.container-fluid {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 3rem);
+}
+
+/* ==================== REVEAL ==================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s var(--ease-expo-out);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==================== ANIMATED TEXT GRADIENT ==================== */
+@keyframes text-gradient {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-text-gradient {
+  background: linear-gradient(to right, #730940, #C21975, #8a2f5e, #730940);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: text-gradient 6s linear infinite;
+}
