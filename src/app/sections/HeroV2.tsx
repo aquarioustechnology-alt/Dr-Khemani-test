@@ -57,7 +57,7 @@ export function HeroV2() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-lg leading-relaxed">
-                  Experience world-class gynecological care with a personal touch. Over 21 years of dedicated service to women&apos;s wellness.
+                  Experience world-class gynecological care with a personal touch. Over <span className="font-bold text-gray-900">21 years</span> of dedicated service to women&apos;s wellness.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-14">

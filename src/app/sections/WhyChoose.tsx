@@ -44,23 +44,53 @@ export function WhyChoose() {
             viewport={{ once: true }}
             className="relative h-full"
           >
-            <div className="relative h-full">
-              <div className="absolute inset-0 rounded-3xl rotate-3 scale-105 bg-[#f5e6ef]" />
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl h-full">
+            <motion.div
+              className="relative h-full w-full cursor-pointer group perspective-1000"
+              whileHover="hover"
+              initial="initial"
+              animate="animate"
+            >
+              {/* Animated Background Layer */}
+              <motion.div
+                className="absolute inset-0 rounded-[2.5rem] bg-[#f5e6ef] z-0"
+                variants={{
+                  initial: { rotate: 3, scale: 1.05 },
+                  hover: { rotate: -3, scale: 1.1, transition: { duration: 0.4, ease: "easeOut" } }
+                }}
+              />
+
+              {/* Main Image Container */}
+              <motion.div
+                className="relative h-full w-full rounded-[2.5rem] overflow-hidden shadow-2xl z-10"
+                variants={{
+                  initial: { scale: 1, rotate: 0 },
+                  hover: { scale: 1.02, rotate: 1, transition: { duration: 0.4, ease: "easeOut" } }
+                }}
+              >
                 <Image
                   src="/images/1663147659234.webp"
                   alt="Dr. Vinita conducting health seminar"
                   width={600}
                   height={500}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-              </div>
 
-              <div className="absolute -bottom-6 -right-6 p-6 rounded-3xl backdrop-blur-md bg-[#1a103c]/20 border border-white/20 shadow-xl z-20">
+                {/* Gradient Overlay on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </motion.div>
+
+              {/* Floating Badge */}
+              <motion.div
+                className="absolute -bottom-6 -right-6 p-6 rounded-3xl backdrop-blur-md bg-[#1a103c]/20 border border-white/20 shadow-xl z-20"
+                variants={{
+                  initial: { y: 0, scale: 1 },
+                  hover: { y: -5, scale: 1.05, rotate: -1, transition: { duration: 0.4, delay: 0.1 } }
+                }}
+              >
                 <p className="text-3xl font-bold text-white">3,500+</p>
                 <p className="text-sm text-white/90 font-medium">Safe Deliveries</p>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </motion.div>
 
           {/* Right - Content */}

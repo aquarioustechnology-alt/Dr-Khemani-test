@@ -217,7 +217,7 @@ export function ClinicTiming() {
 
                     {/* Quick Booking */}
                     <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                      <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Quick Booking</p>
+                      <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Immediate response</p>
                       <p className="text-2xl font-bold text-gray-900">+91 99035 88155</p>
                     </div>
                   </div>
