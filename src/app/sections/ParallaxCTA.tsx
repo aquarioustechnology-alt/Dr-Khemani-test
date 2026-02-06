@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, ArrowRight } from "lucide-react";
+import { Phone, ArrowUpRight } from "lucide-react";
 
 export function ParallaxCTA() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -53,12 +53,13 @@ export function ParallaxCTA() {
 
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/book-appointment"
-                  className="inline-flex items-center gap-2 bg-white px-8 py-4 rounded-full font-bold hover:shadow-2xl hover:scale-105 transition-all"
-                  style={{ color: '#a43971' }}
+                  href="#contact"
+                  className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#a43971] font-semibold text-lg transition-transform hover:scale-105 shadow-xl hover:shadow-2xl"
                 >
                   Book Appointment
-                  <ArrowRight className="w-5 h-5" />
+                  <span className="w-12 h-12 rounded-full bg-[#a43971] text-white flex items-center justify-center transition-transform group-hover:rotate-45">
+                    <ArrowUpRight className="w-6 h-6" />
+                  </span>
                 </Link>
                 <a
                   href="tel:+919903588155"

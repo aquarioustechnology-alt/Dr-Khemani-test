@@ -15,7 +15,7 @@ const services = [
     subtitle: "From conception to delivery",
     description: "Comprehensive prenatal care including regular checkups, ultrasound monitoring, nutrition counseling, and personalized birth planning for a healthy pregnancy journey.",
     features: ["Prenatal Checkups", "Nutrition Guidance", "Delivery Planning", "Postnatal Care"],
-    image: "/images/WhatsApp Image 2025-12-22 at 12.22.01 PM.jpeg",
+    image: "/images/Pregnancy Care.png",
     color: "#f5e6ef",
     badgeText: "Motherhood Journey"
   },
@@ -26,7 +26,7 @@ const services = [
     subtitle: "Expert care for complex cases",
     description: "Specialized management of high-risk pregnancies including gestational diabetes, hypertension, multiple pregnancies, and cases with previous complications.",
     features: ["Risk Assessment", "Specialized Monitoring", "Emergency Protocols", "NICU Coordination"],
-    image: "/images/WhatsApp Image 2026-01-14 at 12.55.29 PM.jpeg",
+    image: "/images/High-Risk Pregnancy.webp",
     color: "#e8d5e0",
     badgeText: "Priority Care"
   },
@@ -37,7 +37,7 @@ const services = [
     subtitle: "Making dreams come true",
     description: "Comprehensive fertility solutions including ovulation induction, IUI procedures, IVF coordination, and treatment for PCOS and endometriosis-related infertility.",
     features: ["Fertility Testing", "Ovulation Induction", "IUI & IVF Coordination", "Hormonal Therapy"],
-    image: "/images/WhatsApp Image 2026-01-14 at 12.55.30 PM.jpeg",
+    image: "/images/Fertility Treatment.webp",
     color: "#d4a5c4",
     badgeText: "Miracle Maker"
   },
@@ -48,7 +48,7 @@ const services = [
     subtitle: "Minimally invasive precision",
     description: "Advanced keyhole surgeries for fibroids, ovarian cysts, endometriosis, hysterectomy, and ectopic pregnancy with faster recovery and minimal scarring.",
     features: ["Keyhole Surgery", "Fibroid Removal", "Cyst Treatment", "Quick Recovery"],
-    image: "/images/WhatsApp Image 2025-12-22 at 12.26.51 PM.jpeg",
+    image: "/images/Laparoscopic Surgery.jpg",
     color: "#c97ba3",
     badgeText: "Precision Care"
   },
@@ -85,7 +85,7 @@ const Card = ({ service, index, range, targetScale, ctaText }: { service: any, i
             <p className="text-xl text-[#a43971] font-medium mb-6">{service.subtitle}</p>
             <p className="text-gray-600 leading-relaxed mb-8">{service.description}</p>
 
-            <Link href="/book-appointment" className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#a43971] text-white text-sm font-semibold hover:bg-[#8a2f5e] hover:gap-3 transition-all shadow-lg hover:shadow-xl mt-4 w-fit">
+            <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#a43971] text-white text-sm font-semibold hover:bg-[#8a2f5e] hover:gap-3 transition-all shadow-lg hover:shadow-xl mt-4 w-fit">
               {ctaText}
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -123,7 +123,7 @@ export function ServicesParallax() {
           Our Expertise
         </span>
         <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-          Comprehensive Care for Every <br /><span className="text-[#a43971]">Stage of Womanhood</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Comprehensive Care for Every</span> <br /><span className="text-[#a43971]">Stage of Womanhood</span>
         </h2>
       </div>
 

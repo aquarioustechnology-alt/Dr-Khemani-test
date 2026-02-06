@@ -8,8 +8,8 @@ import { Star, Award, Users, Play, ArrowUpRight } from "lucide-react";
 
 
 const heroImages = [
-  "/images/WhatsApp Image 2025-12-22 at 12.26.51 PM.jpeg",
-  "/images/WhatsApp Image 2026-01-14 at 12.55.29 PM.jpeg",
+  "/images/Laparoscopic Surgery.jpg",
+  "/images/High-Risk Pregnancy.webp",
   "/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg",
 ];
 
@@ -50,7 +50,7 @@ export function HeroV2() {
                 </div>
 
                 <h1 className="font-display text-5xl md:text-6xl lg:text-[68px] leading-[1.1] font-medium animate-text-gradient mb-8 tracking-tight">
-                  Your Health, <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Your Health,</span> <br />
                   <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">
                     Our Priority.
                   </span>
@@ -62,7 +62,7 @@ export function HeroV2() {
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-14">
                   <Link
-                    href="/book-appointment"
+                    href="#contact"
                     className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-transform hover:scale-105 shadow-xl hover:shadow-2xl"
                     style={{ background: 'linear-gradient(135deg, #C21975 0%, #8a2f5e 100%)' }}
                   >

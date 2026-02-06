@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Award, Clock } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Award, Clock, Activity } from "lucide-react";
 
 
 export function AboutPreview() {
@@ -18,7 +18,7 @@ export function AboutPreview() {
               About Dr. Vinita Khemani
             </span>
             <h2 className="font-display text-4xl lg:text-5xl font-bold animate-text-gradient leading-tight">
-              Compassionate Care, <br /> <span className="text-[#C21975] whitespace-nowrap">Expert Solutions.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Compassionate Care,</span> <br /> <span className="text-[#C21975] whitespace-nowrap">Expert Solutions.</span>
             </h2>
           </div>
           <div className="lg:col-span-8">
@@ -38,7 +38,7 @@ export function AboutPreview() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-[2.5rem] p-10 flex flex-col justify-between group hover:-translate-y-2 transition-transform duration-500 bg-[#730940]/5 border border-[#730940]/10"
+            className="rounded-[2.5rem] p-10 flex flex-col justify-between group hover:-translate-y-2 transition-transform duration-500 bg-[#fff5f5] border border-[#730940]/10"
           >
             <div>
               <div className="w-16 h-16 rounded-2xl bg-white/80 flex items-center justify-center mb-8 shadow-sm">
@@ -75,17 +75,27 @@ export function AboutPreview() {
             className="rounded-[2.5rem] overflow-hidden relative group"
           >
             <Image
-              src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg"
+              src="/images/unnamed (1).webp"
               alt="Dr Vinita Khemani"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
-            <div className="absolute bottom-0 left-0 p-8 w-full">
-              <div className="backdrop-blur-md bg-white/10 p-6 rounded-2xl border border-white/20 shadow-lg">
-                <p className="text-white/90 text-sm font-semibold tracking-wider uppercase mb-1">Senior Consultant</p>
-                <h3 className="text-white text-3xl font-bold">Dr. Vinita Khemani</h3>
+
+            {/* Overlay Block - Hero Style 'Advanced Care' */}
+            {/* Overlay Block - Hero Style 'Advanced Care' */}
+            <div className="absolute bottom-6 right-6 p-5 rounded-3xl backdrop-blur-md bg-gray-900/30 border border-white/20 shadow-xl max-w-[260px]">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-full border border-white/30 bg-white/10 flex items-center justify-center shrink-0 text-white">
+                  <Activity className="w-5 h-5" />
+                </div>
+                <h3 className="text-3xl font-bold text-white leading-none">
+                  500+
+                </h3>
               </div>
+              <p className="text-sm text-white/90 font-medium tracking-wide pl-1">
+                Surgeries Performed
+              </p>
             </div>
           </motion.div>
 
@@ -105,20 +115,24 @@ export function AboutPreview() {
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#C21975]" />
-                  <span className="text-lg text-gray-600">MBBS (Calcutta University)</span>
+                  <span className="text-lg text-gray-600">Gold Medalist in Obstetrics</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#C21975]" />
-                  <span className="text-lg text-gray-600">DGO - Obstetrics & Gynecology</span>
+                  <span className="text-lg text-gray-600">Best Gynecologist Award 2023</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#C21975]" />
-                  <span className="text-lg text-gray-600">Fellowship in Laparoscopy</span>
+                  <span className="text-lg text-gray-600">Published Author in Medical Journals</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#C21975]" />
+                  <span className="text-lg text-gray-600">Speaker at National OBGYN Conference</span>
                 </li>
               </ul>
             </div>
 
-            <div className="flex flex-wrap gap-4 mt-8">
+            <div className="flex items-center justify-between mt-8 gap-2">
               <Link
                 href="/about"
                 className="inline-flex items-center gap-2 text-[#C21975] font-semibold group-hover:gap-3 transition-all underline decoration-[#C21975]/30 underline-offset-4"
@@ -127,10 +141,13 @@ export function AboutPreview() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/book-appointment"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#C21975] text-white font-bold text-sm shadow-md hover:shadow-lg hover:-translate-y-1 transition-all"
+                href="#contact"
+                className="group inline-flex items-center justify-center gap-2 pr-1.5 pl-5 py-1 rounded-full bg-[#C21975] text-white font-semibold text-sm transition-transform hover:scale-105 shadow-md hover:shadow-lg"
               >
                 Schedule Visit
+                <span className="w-8 h-8 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                  <ArrowUpRight className="w-4 h-4" />
+                </span>
               </Link>
             </div>
           </motion.div>

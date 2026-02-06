@@ -5,10 +5,10 @@ import Image from "next/image";
 import { Instagram, ExternalLink } from "lucide-react";
 
 const instagramPosts = [
-  { id: 1, image: "/images/WhatsApp Image 2025-12-22 at 12.22.01 PM.jpeg", likes: 245 },
-  { id: 2, image: "/images/WhatsApp Image 2025-12-22 at 12.26.51 PM.jpeg", likes: 189 },
-  { id: 3, image: "/images/WhatsApp Image 2026-01-14 at 12.55.29 PM.jpeg", likes: 312 },
-  { id: 4, image: "/images/WhatsApp Image 2026-01-14 at 12.55.30 PM.jpeg", likes: 278 },
+  { id: 1, image: "/images/Pregnancy Care.png", likes: 245 },
+  { id: 2, image: "/images/Laparoscopic Surgery.jpg", likes: 189 },
+  { id: 3, image: "/images/High-Risk Pregnancy.webp", likes: 312 },
+  { id: 4, image: "/images/Fertility Treatment.webp", likes: 278 },
   { id: 5, image: "/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg", likes: 421 },
   { id: 6, image: "/images/WhatsApp Image 2025-12-22 at 12.26.52 PM.jpeg", likes: 156 },
 ];

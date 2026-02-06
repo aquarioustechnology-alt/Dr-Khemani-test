@@ -23,7 +23,7 @@ const testimonials = [
     text: "Had a great experience from Day 1. She took time to explain everything. Answered all queries over WhatsApp in emergencies. Never felt uncomfortable for a moment.",
     rating: 5,
     initial: "S",
-    image: "/images/WhatsApp Image 2026-01-14 at 12.55.30 PM.jpeg",
+    image: "/images/2023-02-08.webp",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const testimonials = [
     text: "She is not just a gynaecologist but a manifestation of the Almighty. She performed my hysterectomy and freed me from years of pain. Highly satisfied with treatment.",
     rating: 5,
     initial: "S",
-    image: "/images/WhatsApp Image 2025-12-22 at 12.22.01 PM.jpeg",
+    image: "/images/2023-04-06.webp",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const testimonials = [
     text: "Amazing doctor, very patient and friendly. Always available to clear doubts. Carries a very positive feeling. Every hospital visit post-delivery was reassuring.",
     rating: 5,
     initial: "K",
-    image: "/images/WhatsApp Image 2026-01-14 at 12.55.29 PM.jpeg",
+    image: "/images/2023-04-23.webp",
   },
   {
     id: 5,
@@ -117,13 +117,13 @@ export function Testimonials() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-5xl mx-auto mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style={{ background: '#f5e6ef', color: '#a43971' }}>
             Patient Stories
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold animate-text-gradient mb-4">
-            Words from Those Who <br /> <span className="text-gradient whitespace-nowrap">Trusted Us</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Words from Those Who </span> <span className="text-gradient whitespace-nowrap">Trusted Us</span>
           </h2>
           <p className="text-gray-600 text-lg">
             Real experiences from patients whose lives we&apos;ve touched with compassionate care.

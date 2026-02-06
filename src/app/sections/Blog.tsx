@@ -43,13 +43,13 @@ export function Blog() {
         <section className="py-24 bg-white relative overflow-hidden">
             <div className="container-fluid mx-auto max-w-[1400px] px-6">
                 <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
-                    <div className="max-w-2xl">
+                    <div className="max-w-3xl">
                         <span className="inline-block px-4 py-2 rounded-full border border-[#C21975]/30 bg-[#fff5f9] text-[#C21975] text-sm font-medium mb-6">
                             Health Insights
                         </span>
                         <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight animate-text-gradient">
-                            Latest from the <br />
-                            <span className="text-gray-900">Health Blog</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Latest from the </span>
+                            <span className="text-[#C21975]">Health Blog</span>
                         </h2>
                     </div>
 

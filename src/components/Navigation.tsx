@@ -15,18 +15,33 @@ const navLinks = [
 ];
 
 export function Navigation() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsVisible(false); // Hide on scroll down
+      } else {
+        setIsVisible(true); // Show on scroll up
+      }
+
+      setIsScrolled(currentScrollY > 50);
+      setLastScrollY(currentScrollY);
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
+        } ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
         }`}>
         <div className="container-fluid">
           <div className="flex items-center justify-between">
@@ -50,7 +65,7 @@ export function Navigation() {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
-                <Link key={link.href} href={link.href}
+                <Link key={link.href} href={link.label === "Contact" ? "#contact" : link.href}
                   className={`text-sm font-medium transition-colors relative group ${isScrolled ? "text-gray-700 hover:text-primary" : "text-gray-700 hover:text-primary"
                     }`}>
                   {link.label}
@@ -67,7 +82,7 @@ export function Navigation() {
                 <Phone className="w-4 h-4" />
                 +91 99035 88155
               </a>
-              <Link href="/book-appointment"
+              <Link href="#contact"
                 className="flex items-center gap-2 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:scale-105 transition-all"
                 style={{ background: 'linear-gradient(135deg, #C21975, #8a2f5e)' }}>
                 <Calendar className="w-4 h-4" />
@@ -90,7 +105,7 @@ export function Navigation() {
           <div className="absolute top-0 right-0 w-80 h-full bg-white shadow-xl p-6 pt-20">
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link key={link.href} href={link.href} onClick={() => setIsMobileMenuOpen(false)}
+                <Link key={link.href} href={link.label === "Contact" ? "#contact" : link.href} onClick={() => setIsMobileMenuOpen(false)}
                   className="text-lg font-medium text-gray-700 hover:text-primary transition-colors py-2 border-b border-gray-100">
                   {link.label}
                 </Link>
@@ -101,7 +116,7 @@ export function Navigation() {
                 <Phone className="w-5 h-5" />
                 +91 99035 88155
               </a>
-              <Link href="/book-appointment" onClick={() => setIsMobileMenuOpen(false)}
+              <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)}
                 className="flex items-center justify-center gap-2 text-white px-5 py-3 rounded-full font-medium"
                 style={{ background: 'linear-gradient(135deg, #C21975, #8a2f5e)' }}>
                 <Calendar className="w-5 h-5" />

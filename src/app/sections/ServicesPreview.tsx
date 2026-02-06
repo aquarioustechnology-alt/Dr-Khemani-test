@@ -10,7 +10,7 @@ const services = [
     icon: Baby,
     title: "Pregnancy Care",
     desc: "Complete prenatal to postnatal care for a healthy pregnancy journey. Regular checkups, nutrition guidance, and delivery planning.",
-    image: "/images/WhatsApp Image 2025-12-22 at 12.22.01 PM.jpeg",
+    image: "/images/Pregnancy Care.png",
     color: "from-rose-500 to-pink-600",
     features: ["Prenatal Checkups", "High-Risk Care", "Delivery Planning"],
   },
@@ -18,7 +18,7 @@ const services = [
     icon: HeartPulse,
     title: "High-Risk Pregnancy",
     desc: "Expert management of complex pregnancies including diabetes, hypertension, multiple pregnancies, and previous complications.",
-    image: "/images/WhatsApp Image 2026-01-14 at 12.55.29 PM.jpeg",
+    image: "/images/High-Risk Pregnancy.webp",
     color: "from-violet-500 to-purple-600",
     features: ["Risk Assessment", "Specialized Monitoring", "Emergency Care"],
   },
@@ -26,7 +26,7 @@ const services = [
     icon: Sparkles,
     title: "Fertility Treatment",
     desc: "Comprehensive fertility solutions including ovulation induction, IUI counseling, and IVF coordination to help you conceive.",
-    image: "/images/WhatsApp Image 2026-01-14 at 12.55.30 PM.jpeg",
+    image: "/images/Fertility Treatment.webp",
     color: "from-amber-500 to-orange-600",
     features: ["Fertility Tests", "Ovulation Tracking", "Treatment Plans"],
   },
@@ -34,7 +34,7 @@ const services = [
     icon: Scan,
     title: "Laparoscopic Surgery",
     desc: "Minimally invasive surgeries for fibroids, ovarian cysts, endometriosis, and hysterectomy with faster recovery.",
-    image: "/images/WhatsApp Image 2025-12-22 at 12.26.51 PM.jpeg",
+    image: "/images/Laparoscopic Surgery.jpg",
     color: "from-teal-500 to-cyan-600",
     features: ["Keyhole Surgery", "Quick Recovery", "Minimal Scarring"],
   },
@@ -93,7 +93,7 @@ export function ServicesPreview() {
                   {service.title}
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">{service.desc}</p>
-                
+
                 {/* Features */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {service.features.map((feature, i) => (

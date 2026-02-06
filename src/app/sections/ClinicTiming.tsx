@@ -13,9 +13,8 @@ const clinics = [
     phone: "+91 99035 88155",
     image: "/images/WhatsApp Image 2026-01-14 at 12.55.29 PM (1).jpeg",
     timings: [
-      { day: "Mon, Wed, Thu, Fri, Sat", time: "11:00 AM – 3:00 PM" },
-      { day: "Tuesday", time: "11:00 AM – 4:00 PM" },
-      { day: "Sunday", time: "Closed", isClosed: true },
+      { day: "Mon & Thu", time: "3:00 PM – 5:00 PM" },
+      { day: "Tue, Wed, Fri, Sat", time: "12:00 PM – 2:00 PM" },
     ]
   },
   {
@@ -23,9 +22,9 @@ const clinics = [
     name: "Bhagirathi Neotia",
     address: "Women & Child Care Centre, New Town Action Area 1D, Kolkata",
     phone: "033-332350000 / 6292149133",
-    image: "/images/WhatsApp Image 2026-01-14 at 12.55.29 PM.jpeg",
+    image: "/images/High-Risk Pregnancy.webp",
     timings: [
-      { day: "Wed & Fri", time: "4:00 PM – 5:00 PM" },
+      { day: "Wed & Fri", time: "4:00 PM" },
     ]
   },
   {
@@ -33,19 +32,19 @@ const clinics = [
     name: "Charnock",
     address: "VIP Road (Opp. Haldiram), Kolkata",
     phone: "033-40500500 / 9831639000",
-    image: "/images/WhatsApp Image 2025-12-22 at 12.26.51 PM.jpeg",
+    image: "/images/Laparoscopic Surgery.jpg",
     timings: [
-      { day: "Thursday", time: "11:00 AM – 12:00 PM" },
+      { day: "Thursday", time: "11:00 AM" },
     ]
   },
   {
     id: "apollo",
     name: "Apollo Clinic",
     address: "Signature Building Nawapara, Chinar Park, Kolkata",
-    phone: "+91 99035 88155",
+    phone: "033-66263456 / 033-66263402",
     image: "/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg",
     timings: [
-      { day: "Mon & Wed", time: "3:00 PM – 4:00 PM" },
+      { day: "Monday, Wed", time: "11:00 AM" },
     ]
   },
   {
@@ -53,9 +52,9 @@ const clinics = [
     name: "Spandan",
     address: "Teghoria, VIP Road (Near Disha Eye Hospital), Kolkata",
     phone: "033-40045511 / 8918314710",
-    image: "/images/WhatsApp Image 2025-12-22 at 12.22.01 PM.jpeg",
+    image: "/images/Pregnancy Care.png",
     timings: [
-      { day: "Wed & Sat", time: "5:00 PM – 6:00 PM" },
+      { day: "Wed & Sat", time: "5:00 PM" },
     ]
   },
   {
@@ -63,9 +62,9 @@ const clinics = [
     name: "ILS Dumdum",
     address: "1, Mall Road, near Nager Bazar Flyover, Kolkata",
     phone: "6292260651",
-    image: "/images/WhatsApp Image 2026-01-14 at 12.55.29 PM.jpeg",
+    image: "/images/High-Risk Pregnancy.webp",
     timings: [
-      { day: "Thursday", time: "4:00 PM – 5:00 PM" },
+      { day: "Thursday", time: "1:00 PM" },
     ]
   }
 ];
@@ -75,7 +74,7 @@ export function ClinicTiming() {
   const activeClinic = clinics.find(c => c.id === activeTab) || clinics[0];
 
   return (
-    <section className="py-24 bg-white" id="contact">
+    <section className="py-24 bg-white">
       <div className="container-fluid mx-auto max-w-[1400px] px-6">
 
         {/* Header */}
@@ -84,7 +83,7 @@ export function ClinicTiming() {
             Visit Us
           </span>
           <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight text-balance">
-            Our Clinic <span className="text-[#a43971] whitespace-nowrap">Locations</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Our Clinic</span> <span className="text-[#a43971] whitespace-nowrap">Locations</span>
           </h2>
         </div>
 
@@ -105,7 +104,7 @@ export function ClinicTiming() {
         </div>
 
         {/* Content Area */}
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+        <div id="contact" className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start scroll-mt-32">
 
           {/* Left: Enquiry Form (Sticky) */}
           <div className="lg:col-span-5 order-2 lg:order-1">
@@ -128,16 +127,9 @@ export function ClinicTiming() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-white">Email Address *</label>
-                      <input type="email" className="w-full px-5 py-3 rounded-xl bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-900 placeholder-gray-400" placeholder="your@email.com" required />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-white">City / Town *</label>
-                      <input type="text" className="w-full px-5 py-3 rounded-xl bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-900 placeholder-gray-400" placeholder="e.g. Kolkata" required />
-                    </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-white">Email Address *</label>
+                    <input type="email" className="w-full px-5 py-3 rounded-xl bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-900 placeholder-gray-400" placeholder="your@email.com" required />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -210,32 +202,40 @@ export function ClinicTiming() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   {/* Contact Info */}
-                  <div className="p-6 rounded-3xl bg-[#730940] border border-[#730940] shadow-lg hover:translate-y-[-2px] transition-transform">
+                  <div className="p-6 rounded-3xl bg-[#eaecf0] border border-gray-300 shadow-lg hover:translate-y-[-2px] transition-transform">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white border border-white/20">
+                      <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-900 border border-gray-200 shadow-sm">
                         <Phone className="w-5 h-5" />
                       </div>
-                      <span className="font-bold text-white text-lg">Contact</span>
+                      <span className="font-bold text-gray-900 text-lg">Contact</span>
                     </div>
-                    <p className="text-xl font-medium text-white mb-3">{activeClinic.phone}</p>
-                    <a href={`tel:${activeClinic.phone.split('/')[0].trim()}`} className="inline-flex items-center gap-2 text-pink-200 text-sm font-bold uppercase tracking-wide hover:text-white transition-colors">
+                    {/* Phone number removed from here */}
+
+                    <a href={`tel:${activeClinic.phone.split('/')[0].trim()}`} className="inline-flex items-center gap-2 text-gray-600 text-sm font-bold uppercase tracking-wide hover:text-gray-900 transition-colors mb-6">
                       Call Now <ArrowRight className="w-4 h-4" />
                     </a>
+
+                    {/* Quick Booking */}
+                    <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                      <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Quick Booking</p>
+                      <p className="text-2xl font-bold text-gray-900">+91 99035 88155</p>
+                    </div>
                   </div>
 
                   {/* Timings */}
-                  <div className="p-6 rounded-3xl bg-white border border-gray-100 shadow-sm">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-full bg-[#f5e6ef] flex items-center justify-center text-[#a43971]">
+                  <div className="p-6 rounded-3xl bg-[#fff5f5] border border-gray-100 shadow-sm">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-10 h-10 rounded-full bg-[#fde8ef] flex items-center justify-center text-[#a43971]">
                         <Clock className="w-5 h-5" />
                       </div>
                       <span className="font-bold text-gray-800">Timings</span>
                     </div>
-                    <ul className="space-y-3">
+
+                    <ul className="space-y-4">
                       {activeClinic.timings.map((time, i) => (
-                        <li key={i} className="flex justify-between items-start text-sm pb-2 border-b border-gray-50 last:border-0 last:pb-0">
-                          <span className="text-gray-500 font-medium w-24 flex-shrink-0">{time.day}</span>
-                          <span className={`font-bold text-right ${time.isClosed ? 'text-red-400' : 'text-gray-800'}`}>{time.time}</span>
+                        <li key={i} className="flex flex-col sm:flex-row sm:justify-between sm:items-center pb-3 border-b border-pink-100 last:border-0 last:pb-0 gap-2">
+                          <span className="text-gray-600 font-semibold">{time.day}</span>
+                          <span className="font-bold text-gray-900 text-lg bg-white px-3 py-1 rounded-md shadow-sm border border-gray-100">{time.time}</span>
                         </li>
                       ))}
                     </ul>

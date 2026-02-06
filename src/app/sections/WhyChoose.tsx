@@ -36,29 +36,29 @@ export function WhyChoose() {
       <motion.div className="absolute bottom-20 left-20 w-80 h-80 rounded-full blur-3xl" style={{ y: imageY, background: 'rgba(201,123,163,0.2)' }} />
 
       <div className="container-fluid relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16">
           {/* Left - Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative h-full"
           >
-            <div className="relative">
-              <div className="absolute inset-0 rounded-3xl rotate-3 scale-105 opacity-20 bg-white" />
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative h-full">
+              <div className="absolute inset-0 rounded-3xl rotate-3 scale-105 bg-[#f5e6ef]" />
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl h-full">
                 <Image
-                  src="/images/WhatsApp Image 2025-12-22 at 12.26.51 PM.jpeg"
+                  src="/images/1663147659234.webp"
                   alt="Dr. Vinita conducting health seminar"
                   width={600}
                   height={500}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
-              <div className="absolute -bottom-6 -right-6 glass px-6 py-4 rounded-2xl shadow-xl">
-                <p className="text-3xl font-bold" style={{ color: '#a43971' }}>500+</p>
-                <p className="text-sm text-gray-600">Surgeries Performed</p>
+              <div className="absolute -bottom-6 -right-6 p-6 rounded-3xl backdrop-blur-md bg-[#1a103c]/20 border border-white/20 shadow-xl z-20">
+                <p className="text-3xl font-bold text-white">3,500+</p>
+                <p className="text-sm text-white/90 font-medium">Safe Deliveries</p>
               </div>
             </div>
           </motion.div>
