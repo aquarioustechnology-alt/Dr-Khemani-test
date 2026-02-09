@@ -120,7 +120,7 @@ export function ServicesParallax() {
     <section ref={container} className="relative mt-[10vh]">
       <div className="container-fluid mx-auto px-6 mb-20 text-center max-w-3xl">
         <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#a43971] bg-[#f5e6ef]/50">
-          Our Expertise
+          Specialized Expertise
         </span>
         <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Comprehensive Care for Every</span> <br /><span className="text-[#a43971]">Stage of Womanhood</span>

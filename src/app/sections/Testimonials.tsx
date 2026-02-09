@@ -123,10 +123,10 @@ export function Testimonials() {
             Patient Stories
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold animate-text-gradient mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Words from Those Who </span> <span className="text-gradient whitespace-nowrap">Trusted Us</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Words from Those Who </span> <span className="text-gradient whitespace-nowrap">Trust Her</span>
           </h2>
           <p className="text-gray-600 text-lg">
-            Real experiences from patients whose lives we&apos;ve touched with compassionate care.
+            Real experiences from patients whose lives Dr. Vinita Khemani has touched with compassionate care.
           </p>
         </motion.div>
 

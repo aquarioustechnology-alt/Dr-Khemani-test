@@ -100,7 +100,7 @@ export function WhyChoose() {
             viewport={{ once: true }}
           >
             <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style={{ background: 'rgba(255,255,255,0.2)', color: 'white' }}>
-              Why Patients Trust Us
+              Why Patients Trust Her
             </span>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
@@ -132,7 +132,7 @@ export function WhyChoose() {
             </div>
 
             <Link href="/services" className="btn-white inline-flex items-center gap-2">
-              Explore Our Services
+              Explore Services
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>

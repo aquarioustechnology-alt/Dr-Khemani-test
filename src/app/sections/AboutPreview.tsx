@@ -23,9 +23,9 @@ export function AboutPreview() {
           </div>
           <div className="lg:col-span-8">
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">
-              With over two decades of experience in gynecology and obstetrics, I have dedicated
-              my career to providing compassionate, personalized care to women at every stage of life.
-              I believe every patient deserves individual attention and a treatment plan tailored to their unique needs.
+              With over two decades of experience in gynecology and obstetrics, Dr. Vinita Khemani has dedicated
+              her career to providing compassionate, personalized care to women at every stage of life.
+              She believes every patient deserves individual attention and a treatment plan tailored to their unique needs.
             </p>
           </div>
         </div>
@@ -136,7 +136,7 @@ export function AboutPreview() {
                 href="/about"
                 className="inline-flex items-center gap-2 text-[#C21975] font-semibold group-hover:gap-3 transition-all underline decoration-[#C21975]/30 underline-offset-4"
               >
-                More About Me
+                Learn More
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link

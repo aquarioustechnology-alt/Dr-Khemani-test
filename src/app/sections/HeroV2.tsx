@@ -46,7 +46,7 @@ export function HeroV2() {
                   style={{ background: 'rgba(255,255,255,0.6)' }}
                 >
                   <div className="w-2 h-2 rounded-full bg-[#C21975] animate-pulse" />
-                  <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">I am Dr. Vinita Khemani</span>
+                  <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Dr. Vinita Khemani</span>
                 </div>
 
                 <h1 className="font-display text-5xl md:text-6xl lg:text-[68px] leading-[1.1] font-medium animate-text-gradient mb-8 tracking-tight">

@@ -83,7 +83,7 @@ export function ClinicTiming() {
             Visit Us
           </span>
           <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight text-balance">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Our Clinic</span> <span className="text-[#a43971] whitespace-nowrap">Locations</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Clinic</span> <span className="text-[#a43971] whitespace-nowrap">Locations</span>
           </h2>
         </div>
 
