@@ -8,9 +8,9 @@ import { Star, Award, Users, Play, ArrowUpRight } from "lucide-react";
 
 
 const heroImages = [
-  "/images/Laparoscopic Surgery.jpg",
-  "/images/High-Risk Pregnancy.webp",
-  "/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg",
+  "/images/WhatsApp_Image_2025-12-22_at_12.22.00_PM.jpeg",
+  "/images/2023-02-08.jpg",
+  "/images/2023-04-06.webp",
 ];
 
 export function HeroV2() {
