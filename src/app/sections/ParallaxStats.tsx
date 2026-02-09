@@ -26,7 +26,7 @@ export function ParallaxStats() {
               </h2>
 
               <p className="text-lg text-gray-600 mb-10 leading-relaxed max-w-lg">
-                With a legacy of excellence in women's care, Dr. Vinita Khemani blends advanced medical expertise with a human touch. Her commitment goes beyond treatment—she builds lasting relationships with every family she serves.
+                With a legacy of excellence in women&apos;s care, Dr. Vinita Khemani blends advanced medical expertise with a human touch. Her commitment goes beyond treatment—she builds lasting relationships with every family she serves.
               </p>
 
               <Link
