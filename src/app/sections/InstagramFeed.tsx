@@ -29,10 +29,10 @@ export function InstagramFeed() {
             @drvinitakhemani
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Follow Her <span className="text-gradient">Journey</span>
+            Follow <span className="text-gradient">@drvinitakhemani</span>
           </h2>
           <p className="text-gray-600">
-            Health tips, patient stories, and behind-the-scenes from the clinic.
+            Women&apos;s health tips, pregnancy guidance, patient success stories, and clinic updates.
           </p>
         </motion.div>
 

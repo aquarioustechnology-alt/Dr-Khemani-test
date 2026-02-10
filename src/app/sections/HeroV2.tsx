@@ -50,14 +50,14 @@ export function HeroV2() {
                 </div>
 
                 <h1 className="font-display text-5xl md:text-6xl lg:text-[68px] leading-[1.1] font-medium animate-text-gradient mb-8 tracking-tight">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Your Health,</span> <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Best Gynecologist</span> <br />
                   <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">
-                    Our Priority.
+                    in Kolkata.
                   </span>
                 </h1>
 
                 <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-lg leading-relaxed">
-                  Experience world-class gynecological care with a personal touch. Over <span className="font-bold text-gray-900">21 years</span> of dedicated service to women&apos;s wellness.
+                  Dr. Vinita Khemani is a senior Obstetrician-Gynecologist in Kolkata with <span className="font-bold text-gray-900">21+ years</span> of experience in high-risk pregnancy, laparoscopic surgery, and fertility treatment. Trusted by 10,000+ patients.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-14">
@@ -125,7 +125,7 @@ export function HeroV2() {
                     >
                       <Image
                         src={heroImages[currentImageIndex]}
-                        alt="Hero Image"
+                        alt="Dr. Vinita Khemani consulting patients at Healing Touch Clinic Kolkata"
                         fill
                         className="object-cover"
                         priority
@@ -160,11 +160,11 @@ export function HeroV2() {
                         <Users className="w-5 h-5 text-white" />
                       </div>
                       <h3 className="text-lg font-display font-medium text-white leading-tight">
-                        Patient Focused
+                        10,000+ Patients
                       </h3>
                     </div>
                     <p className="text-xs text-white/80 leading-relaxed font-light pl-1">
-                      Compassionate care tailored to your unique health journey.
+                      Personalized gynecological care with 4.9★ patient satisfaction rating.
                     </p>
                   </div>
                 </motion.div>
@@ -181,11 +181,11 @@ export function HeroV2() {
                       <Award className="w-5 h-5" />
                     </div>
                     <h3 className="text-lg font-display font-medium text-white leading-tight drop-shadow-md">
-                      Advanced Care
+                      583+ Surgeries
                     </h3>
                   </div>
                   <p className="text-xs text-white/90 leading-relaxed font-light drop-shadow-md pl-1">
-                    State-of-the-art technology for precise diagnosis & treatment.
+                    Advanced laparoscopic & minimally invasive procedures.
                   </p>
                 </motion.div>
               </div>

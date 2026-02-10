@@ -83,7 +83,7 @@ export function ClinicTiming() {
             Visit Us
           </span>
           <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight text-balance">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Clinic</span> <span className="text-[#a43971] whitespace-nowrap">Locations</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">6 Clinic Locations</span> <span className="text-[#a43971]">in Kolkata</span>
           </h2>
         </div>
 
@@ -112,8 +112,8 @@ export function ClinicTiming() {
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#C21975] rounded-full mix-blend-overlay filter blur-[60px] opacity-20 pointer-events-none" />
 
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-2 text-white">Book an Appointment</h3>
-                <p className="text-pink-100 mb-8">Fill in your details and we will callback.</p>
+                <h3 className="text-2xl font-bold mb-2 text-white">Book an Appointment with Dr. Khemani</h3>
+                <p className="text-pink-100 mb-8">Fill in your details and our team will call you within 30 minutes.</p>
                 <form className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">

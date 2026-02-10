@@ -89,8 +89,8 @@ export function VideoReviews() {
                             Patient Stories
                         </span>
                         <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight animate-text-gradient">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Real Stories of </span>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">Hope & Healing</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Patient Video </span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">Testimonials</span>
                         </h2>
                     </div>
 
@@ -213,7 +213,7 @@ export function VideoReviews() {
                                 className="mx-auto mb-4 object-contain brightness-0 invert opacity-80"
                             />
                             <p className="text-sm font-medium italic text-white/90 mb-4">
-                                &quot;Dr. Vinita&apos;s expertise gave us the miracle we had been waiting for. Forever grateful.&quot;
+                                &quot;After consulting 3 other doctors, Dr. Vinita correctly diagnosed my condition and I delivered a healthy baby. Forever grateful.&quot;
                             </p>
                             <button
                                 onClick={scrollToTestimonials}

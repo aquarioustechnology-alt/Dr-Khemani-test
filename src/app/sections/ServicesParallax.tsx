@@ -12,19 +12,19 @@ const services = [
     id: 1,
     icon: Baby,
     title: "Pregnancy Care",
-    subtitle: "From conception to delivery",
-    description: "Comprehensive prenatal care including regular checkups, ultrasound monitoring, nutrition counseling, and personalized birth planning for a healthy pregnancy journey.",
+    subtitle: "Complete prenatal to postnatal care",
+    description: "Comprehensive prenatal care including regular checkups, ultrasound monitoring, nutrition counseling, and personalized birth planning. Dr. Khemani prioritizes normal delivery with over 2,348 successful deliveries.",
     features: ["Prenatal Checkups", "Nutrition Guidance", "Delivery Planning", "Postnatal Care"],
     image: "/images/Pregnancy Care.png",
     color: "#f5e6ef",
-    badgeText: "Motherhood Journey"
+    badgeText: "Maternity Care"
   },
   {
     id: 2,
     icon: HeartPulse,
     title: "High-Risk Pregnancy",
-    subtitle: "Expert care for complex cases",
-    description: "Specialized management of high-risk pregnancies including gestational diabetes, hypertension, multiple pregnancies, and cases with previous complications.",
+    subtitle: "Specialized management for complex cases",
+    description: "Expert management of high-risk pregnancies including gestational diabetes, preeclampsia, placenta previa, multiple pregnancies, and recurrent miscarriage with 24/7 monitoring protocols.",
     features: ["Risk Assessment", "Specialized Monitoring", "Emergency Protocols", "NICU Coordination"],
     image: "/images/High-Risk Pregnancy.webp",
     color: "#e8d5e0",
@@ -34,23 +34,23 @@ const services = [
     id: 3,
     icon: Sparkles,
     title: "Fertility Treatment",
-    subtitle: "Making dreams come true",
-    description: "Comprehensive fertility solutions including ovulation induction, IUI procedures, IVF coordination, and treatment for PCOS and endometriosis-related infertility.",
+    subtitle: "Evidence-based fertility solutions",
+    description: "Comprehensive fertility evaluation and treatment including ovulation induction, IUI procedures, IVF coordination, and management of PCOS, endometriosis, and tubal factor infertility.",
     features: ["Fertility Testing", "Ovulation Induction", "IUI & IVF Coordination", "Hormonal Therapy"],
     image: "/images/Fertility Treatment.webp",
     color: "#d4a5c4",
-    badgeText: "Miracle Maker"
+    badgeText: "Fertility Specialist"
   },
   {
     id: 4,
     icon: Scan,
     title: "Laparoscopic Surgery",
-    subtitle: "Minimally invasive precision",
-    description: "Advanced keyhole surgeries for fibroids, ovarian cysts, endometriosis, hysterectomy, and ectopic pregnancy with faster recovery and minimal scarring.",
+    subtitle: "Keyhole surgery with faster recovery",
+    description: "583+ advanced laparoscopic surgeries performed for fibroids, ovarian cysts, endometriosis, hysterectomy, and ectopic pregnancy – with same-day discharge and minimal scarring.",
     features: ["Keyhole Surgery", "Fibroid Removal", "Cyst Treatment", "Quick Recovery"],
     image: "/images/Laparoscopic Surgery.jpg",
     color: "#c97ba3",
-    badgeText: "Precision Care"
+    badgeText: "Minimally Invasive"
   },
 ];
 
@@ -117,27 +117,36 @@ export function ServicesParallax() {
   });
 
   return (
-    <section ref={container} className="relative mt-[10vh]">
-      <div className="container-fluid mx-auto px-6 mb-20 text-center max-w-3xl">
-        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#a43971] bg-[#f5e6ef]/50">
-          Specialized Expertise
-        </span>
-        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Comprehensive Care for Every</span> <br /><span className="text-[#a43971]">Stage of Womanhood</span>
-        </h2>
+    <>
+      <section ref={container} className="relative mt-[10vh]">
+        <div className="container-fluid mx-auto px-6 mb-20 text-center max-w-3xl">
+          <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#a43971] bg-[#f5e6ef]/50">
+            Specialized Expertise
+          </span>
+          <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Gynecology & Obstetric</span> <br /><span className="text-[#a43971]">Services in Kolkata</span>
+          </h2>
+        </div>
+
+        {services.map((service, index) => {
+          const targetScale = 1 - ((services.length - index) * 0.05);
+
+          let ctaText = "Book Appointment";
+          if (service.id === 1) ctaText = "Plan Pregnancy";
+          if (service.id === 2) ctaText = "Consult Now";
+          if (service.id === 3) ctaText = "Infertility Check";
+          if (service.id === 4) ctaText = "Surgical Opinion";
+
+          return <Card key={service.id} service={service} index={index} range={[index * 0.25, 1]} targetScale={targetScale} ctaText={ctaText} />;
+        })}
+      </section>
+
+      <div className="flex items-center justify-center relative z-10 py-8 bg-[#fffefe] -mt-32">
+        <Link href="#contact" className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-gray-900 border border-gray-200 text-lg font-semibold hover:bg-[#C21975] hover:text-white hover:border-[#C21975] transition-all shadow-lg hover:shadow-2xl hover:-translate-y-1">
+          Explore All Treatments
+          <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+        </Link>
       </div>
-
-      {services.map((service, index) => {
-        const targetScale = 1 - ((services.length - index) * 0.05);
-
-        let ctaText = "Book Appointment";
-        if (service.id === 1) ctaText = "Plan Pregnancy";
-        if (service.id === 2) ctaText = "Consult Now";
-        if (service.id === 3) ctaText = "Infertility Check";
-        if (service.id === 4) ctaText = "Surgical Opinion";
-
-        return <Card key={service.id} service={service} index={index} range={[index * 0.25, 1]} targetScale={targetScale} ctaText={ctaText} />;
-      })}
-    </section>
+    </>
   );
 }

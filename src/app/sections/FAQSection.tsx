@@ -7,23 +7,23 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
     {
         question: "How often should I visit a gynecologist?",
-        answer: "It is recommended to visit a gynecologist annually for a routine check-up. However, if you experience any unusual symptoms or have specific concerns, you should schedule an appointment immediately."
+        answer: "Visit a gynecologist once a year for a routine check-up. Schedule an immediate appointment if you experience irregular periods, pelvic pain, unusual discharge, or any sudden symptoms. Women above 40 should also include annual breast and cervical screening."
     },
     {
-        question: "What should I expect during my first Prenatal visit?",
-        answer: "Your first prenatal visit will involve a review of your medical history, a physical exam, and lab tests. We will also discuss your due date, nutrition, and any questions you may have about your pregnancy journey."
+        question: "What happens during the first prenatal visit?",
+        answer: "The first prenatal visit includes a complete medical history review, blood tests (CBC, blood group, thyroid, sugar), urine analysis, blood pressure check, and an ultrasound to confirm the pregnancy and estimated due date. Dr. Khemani also provides a personalized nutrition and supplement plan."
     },
     {
-        question: "Do you offer minimally invasive surgery options?",
-        answer: "Yes, Dr. Vinita Khemani specializes in advanced laparoscopic surgeries which are minimally invasive, resulting in smaller incisions, less pain, and faster recovery times."
+        question: "Does Dr. Vinita Khemani perform laparoscopic surgery?",
+        answer: "Yes. Dr. Khemani has performed 583+ laparoscopic (keyhole) surgeries for fibroids, ovarian cysts, endometriosis, ectopic pregnancy, and hysterectomy. Benefits include smaller incisions (5–10 mm), less post-operative pain, and discharge typically within 24–48 hours."
     },
     {
-        question: "How can I manage high-risk pregnancy?",
-        answer: "Managing a high-risk pregnancy involves frequent monitoring, specialized care plans, and close coordination with our medical team. We provide comprehensive support to ensure the safety of both mother and baby."
+        question: "What is a high-risk pregnancy and how is it managed?",
+        answer: "A high-risk pregnancy involves conditions like gestational diabetes, preeclampsia, placenta previa, or a history of preterm birth. Dr. Khemani manages these with frequent ultrasound monitoring, specialized medication, coordinated NICU backup, and a customized delivery plan."
     },
     {
-        question: "What fertility treatments are available?",
-        answer: "We offer a range of fertility treatments including ovulation induction, IUI (Intrauterine Insemination), and coordination for IVF procedures, tailored to your specific needs."
+        question: "What fertility treatments does Dr. Khemani offer?",
+        answer: "Treatments include ovulation induction, IUI (Intrauterine Insemination), IVF coordination, hormonal therapy for PCOS, hysteroscopy for uterine abnormalities, and laparoscopic treatment for endometriosis and tubal blockage. Each plan is tailored after a complete fertility evaluation."
     }
 ];
 

@@ -62,7 +62,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-pink-100/80 text-sm leading-relaxed max-w-xs">
-              Compassionate, world-class gynecological care led by Dr. Vinita Khemani. Dedicated to empowering women&apos;s health for over two decades.
+              Dr. Vinita Khemani is a senior Gynecologist & Obstetrician in Kolkata with 21+ years of experience. Specializing in pregnancy care, laparoscopic surgery, and fertility treatment across 6 hospital locations.
             </p>
 
             <div className="flex items-center gap-4 py-4 border-y border-white/5">

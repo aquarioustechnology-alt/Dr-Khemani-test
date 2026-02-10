@@ -9,7 +9,7 @@ const blogPosts = [
     {
         id: 1,
         title: "Understanding High-Risk Pregnancy: Causes & Care",
-        excerpt: "Pregnancy is a beautiful journey, but for some, it comes with added complexities. Learn about risk factors and specialized care.",
+        excerpt: "Learn what makes a pregnancy high-risk – covering gestational diabetes, preeclampsia, placenta previa, and how specialist monitoring reduces complications. Based on Dr. Khemani’s clinical experience.",
         image: "/images/1656409765121.webp",
         date: "Feb 12, 2024",
         author: "Dr. Vinita Khemani",
@@ -19,7 +19,7 @@ const blogPosts = [
     {
         id: 2,
         title: "PCOS Management: Lifestyle Changes That Help",
-        excerpt: "Polycystic Ovary Syndrome affects many women. Discover actionable lifestyle shifts and dietary habits to manage symptoms effectively.",
+        excerpt: "PCOS affects 1 in 5 Indian women. Learn evidence-based dietary changes, exercise routines, and medical treatments including metformin and hormonal therapy for managing PCOS symptoms.",
         image: "/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg",
         date: "Feb 08, 2024",
         author: "Dr. Vinita Khemani",
@@ -29,7 +29,7 @@ const blogPosts = [
     {
         id: 3,
         title: "Minimally Invasive Surgery: Benefits of Laparoscopy",
-        excerpt: "Why choose laparoscopic surgery? Explore the benefits including faster recovery, less pain, and minimal scarring.",
+        excerpt: "Laparoscopic (keyhole) surgery uses 5–10 mm incisions instead of traditional open surgery. Benefits include 48-hour discharge, 80% less post-operative pain, and minimal scarring. Learn who qualifies.",
         image: "/images/WhatsApp Image 2025-12-22 at 12.26.52 PM.jpeg",
         date: "Jan 28, 2024",
         author: "Dr. Vinita Khemani",
@@ -48,8 +48,8 @@ export function Blog() {
                             Health Insights
                         </span>
                         <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight animate-text-gradient">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Latest from the </span>
-                            <span className="text-[#C21975]">Health Blog</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Women&apos;s Health </span>
+                            <span className="text-[#C21975]">Articles & Guides</span>
                         </h2>
                     </div>
 

@@ -18,14 +18,14 @@ export function AboutPreview() {
               About Dr. Vinita Khemani
             </span>
             <h2 className="font-display text-4xl lg:text-5xl font-bold animate-text-gradient leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Compassionate Care,</span> <br /> <span className="text-[#C21975] whitespace-nowrap">Expert Solutions.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">21+ Years of</span> <br /> <span className="text-[#C21975]">Clinical Excellence.</span>
             </h2>
           </div>
           <div className="lg:col-span-8">
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">
-              With over two decades of experience in gynecology and obstetrics, Dr. Vinita Khemani has dedicated
-              her career to providing compassionate, personalized care to women at every stage of life.
-              She believes every patient deserves individual attention and a treatment plan tailored to their unique needs.
+              Dr. Vinita Khemani is one of the most experienced Obstetrician-Gynecologists in Kolkata, having successfully treated
+              over 10,000 patients. She specializes in painless delivery, high-risk pregnancy management, PCOS/PCOD treatment,
+              and advanced laparoscopic surgery with a focus on evidence-based, personalized care.
             </p>
           </div>
         </div>
@@ -45,7 +45,7 @@ export function AboutPreview() {
                 <Clock className="w-8 h-8 text-[#C21975]" />
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-4">21+ Years</h3>
-              <p className="text-gray-700 text-lg font-medium">Of Clinical Excellence & Patient Care</p>
+              <p className="text-gray-700 text-lg font-medium">In Obstetrics & Gynecology Practice</p>
             </div>
 
             <div className="mt-8 pt-8 border-t border-[#d4a5c4]/30">
@@ -113,20 +113,20 @@ export function AboutPreview() {
               <h3 className="text-2xl font-bold mb-6 text-gray-900">Key Achievements</h3>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#C21975]" />
-                  <span className="text-lg text-gray-600">Gold Medalist in Obstetrics</span>
+                  <div className="w-2 h-2 shrink-0 rounded-full bg-[#C21975]" />
+                  <span className="text-lg text-gray-800 font-medium">Life Member of FOGSI (India)</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#C21975]" />
-                  <span className="text-lg text-gray-600">Best Gynecologist Award 2023</span>
+                  <div className="w-2 h-2 shrink-0 rounded-full bg-[#C21975]" />
+                  <span className="text-lg text-gray-800 font-medium">Life Member of BOGS (Bengal)</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#C21975]" />
-                  <span className="text-lg text-gray-600">Published Author in Medical Journals</span>
+                  <div className="w-2 h-2 shrink-0 rounded-full bg-[#C21975]" />
+                  <span className="text-lg text-gray-800 font-medium">Member of ISAR (Reproduction)</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#C21975]" />
-                  <span className="text-lg text-gray-600">Speaker at National OBGYN Conference</span>
+                  <div className="w-2 h-2 shrink-0 rounded-full bg-[#C21975]" />
+                  <span className="text-lg text-gray-800 font-medium">Gold Medalist – MS Obs & Gynae</span>
                 </li>
               </ul>
             </div>

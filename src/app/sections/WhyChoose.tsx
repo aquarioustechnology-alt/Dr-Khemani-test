@@ -8,11 +8,11 @@ import Link from "next/link";
 
 const features = [
   "Normal Delivery Priority",
-  "Painless Labor Options",
-  "Holistic Antenatal Care",
-  "Adolescent Health Guidance",
-  "Menopause Solutions",
-  "Post-Surgery Rehabilitation",
+  "Painless Labor & Epidural Options",
+  "Trimester-Wise Pregnancy Monitoring",
+  "PCOS & Menstrual Disorder Treatment",
+  "Menopause & HRT Management",
+  "Post-Operative Recovery Support",
 ];
 
 export function WhyChoose() {
@@ -87,8 +87,8 @@ export function WhyChoose() {
                   hover: { y: -5, scale: 1.05, rotate: -1, transition: { duration: 0.4, delay: 0.1 } }
                 }}
               >
-                <p className="text-3xl font-bold text-white">3,500+</p>
-                <p className="text-sm text-white/90 font-medium">Safe Deliveries</p>
+                <p className="text-3xl font-bold text-white">2,348+</p>
+                <p className="text-sm text-white/90 font-medium">Successful Deliveries</p>
               </motion.div>
             </motion.div>
           </motion.div>
@@ -104,13 +104,12 @@ export function WhyChoose() {
             </span>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
-              Delivering Excellence in
-              <span className="block" style={{ color: '#d4a5c4' }}>Women&apos;s Healthcare</span>
+              Why 10,000+ Patients Choose
+              <span className="block" style={{ color: '#d4a5c4' }}>Dr. Vinita Khemani</span>
             </h2>
 
             <p className="text-white/80 text-lg mb-8 leading-relaxed">
-              With over two decades of dedicated service, Dr. Vinita Khemani has earned the trust
-              of thousands of patients through compassionate care and clinical excellence.
+              A Gold Medalist in Obstetrics & Gynaecology, Dr. Khemani practices at 6 leading hospitals across Kolkata. She is known for her normal-delivery-first approach, with a 4.9★ patient satisfaction score.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-10">

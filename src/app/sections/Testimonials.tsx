@@ -123,10 +123,10 @@ export function Testimonials() {
             Patient Stories
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold animate-text-gradient mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Words from Those Who </span> <span className="text-gradient whitespace-nowrap">Trust Her</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Verified Patient </span> <span className="text-gradient">Reviews</span>
           </h2>
           <p className="text-gray-600 text-lg">
-            Real experiences from patients whose lives Dr. Vinita Khemani has touched with compassionate care.
+            Read first-hand accounts from patients treated by Dr. Vinita Khemani – rated 4.5★ on Google with 413+ verified reviews.
           </p>
         </motion.div>
 
@@ -207,7 +207,7 @@ export function Testimonials() {
                               </div>
                             ))}
                           </div>
-                          <p className="text-xs font-semibold text-gray-700">+2k Happy Patients</p>
+                          <p className="text-xs font-semibold text-gray-700">413+ Google Reviews</p>
                         </div>
                         <div className="w-8 h-8 rounded-full bg-[#C21975] flex items-center justify-center text-white">
                           <Quote className="w-4 h-4 fill-white" />
