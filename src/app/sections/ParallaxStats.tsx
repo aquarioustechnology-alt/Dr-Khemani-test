@@ -5,7 +5,6 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 import { Counter } from "@/components/Counter";
-import Image from "next/image";
 
 export function ParallaxStats() {
   return (
