@@ -110,7 +110,7 @@ export function AboutPreview() {
               <div className="w-16 h-16 rounded-2xl bg-[#f5e6ef] flex items-center justify-center mb-8">
                 <Award className="w-8 h-8 text-[#C21975]" />
               </div>
-              <h3 className="text-2xl font-bold mb-6 text-gray-900">Key Achievements</h3>
+              <h3 className="text-2xl font-bold mb-6 text-gray-900">Associated With</h3>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 shrink-0 rounded-full bg-[#C21975]" />
