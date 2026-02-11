@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Calendar, ChevronDown, Baby, HeartPulse, Sparkles, Scan, Stethoscope, Heart } from "lucide-react";
+import { Phone, Calendar, ChevronDown, Baby, HeartPulse, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [

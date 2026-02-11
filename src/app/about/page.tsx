@@ -14,13 +14,7 @@ import {
     ChevronDown, Calendar
 } from "lucide-react";
 
-const affiliations = [
-    { name: "Healing Touch Clinic", location: "Bangur Avenue, Kolkata", role: "Primary Clinic" },
-    { name: "Bhagirathi Neotia Hospital", location: "New Town, Kolkata", role: "Consultant" },
-    { name: "Charnock Hospital", location: "VIP Road, Kolkata", role: "Consultant" },
-    { name: "Apollo Clinic", location: "Chinar Park, Kolkata", role: "Consultant" },
-    { name: "Spandan Hospital", location: "Teghoria, Kolkata", role: "Consultant" },
-];
+
 
 const aboutFaqs = [
     {

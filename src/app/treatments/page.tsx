@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
     ArrowUpRight, ArrowRight, Calendar, CheckCircle,
-    Baby, HeartPulse, Sparkles, Scan, Stethoscope, Heart,
+    Baby, HeartPulse, Heart,
     Shield, Microscope, UserCheck, ChevronDown
 } from "lucide-react";
 import { useState } from "react";

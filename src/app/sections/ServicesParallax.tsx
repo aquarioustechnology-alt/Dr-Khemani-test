@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Baby, HeartPulse, Sparkles, Scan } from "lucide-react";
+import { ArrowRight, Baby, HeartPulse } from "lucide-react";
 
 const FertilityIcon = ({ className }: { className?: string }) => (
   <div className={`relative ${className || "w-5 h-5"}`}>
