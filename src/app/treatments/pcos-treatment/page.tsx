@@ -1,0 +1,217 @@
+"use client";
+
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/app/sections/Footer";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import {
+    HeartPulse, CheckCircle, Calendar, ArrowUpRight, ChevronDown,
+    Activity, Scale, Pill, Apple, Moon
+} from "lucide-react";
+
+const symptoms = [
+    "Irregular or absent periods",
+    "Heavy or prolonged menstrual bleeding",
+    "Excessive facial/body hair (hirsutism)",
+    "Acne that doesn't respond to treatment",
+    "Unexplained weight gain (especially around the waist)",
+    "Thinning hair or hair loss on the scalp",
+    "Dark patches on skin (acanthosis nigricans)",
+    "Difficulty getting pregnant",
+    "Mood swings and anxiety",
+    "Fatigue and low energy",
+];
+
+const treatmentPillars = [
+    {
+        icon: Apple,
+        title: "Lifestyle Modification",
+        desc: "Personalized diet plans, exercise routines, and stress management techniques forming the foundation of PCOS management.",
+        color: "#22C55E",
+    },
+    {
+        icon: Pill,
+        title: "Medical Management",
+        desc: "Hormonal regulation, insulin sensitizers (Metformin), anti-androgen therapy, and cycle regulation medication.",
+        color: "#C21975",
+    },
+    {
+        icon: Scale,
+        title: "Weight Management",
+        desc: "Just 5-10% weight loss can restore ovulation. Dr. Khemani provides structured programs with nutritionist coordination.",
+        color: "#F59E0B",
+    },
+    {
+        icon: HeartPulse,
+        title: "Fertility Support",
+        desc: "Ovulation induction, follicular monitoring, and IUI for PCOS patients trying to conceive, with high success rates.",
+        color: "#8B5CF6",
+    },
+    {
+        icon: Activity,
+        title: "Metabolic Health",
+        desc: "Insulin resistance management, lipid profiling, diabetes screening, and cardiovascular risk reduction strategies.",
+        color: "#06B6D4",
+    },
+    {
+        icon: Moon,
+        title: "Mental Wellness",
+        desc: "Addressing anxiety, mood swings, and body image concerns commonly associated with PCOS through supportive care.",
+        color: "#EC4899",
+    },
+];
+
+const faqs = [
+    { q: "Can PCOS be cured permanently?", a: "PCOS is a manageable condition, not a curable one. However, with proper lifestyle changes, medication, and regular monitoring, symptoms can be controlled effectively. Many women with PCOS lead completely normal lives with appropriate management." },
+    { q: "Will PCOS affect my ability to get pregnant?", a: "PCOS is one of the most treatable causes of infertility. With ovulation induction and monitoring, the majority of women with PCOS can conceive. Dr. Khemani has helped many PCOS patients achieve successful pregnancies." },
+    { q: "What diet is best for PCOS?", a: "A low-glycemic, anti-inflammatory diet rich in whole grains, lean proteins, fruits, and vegetables is recommended. Dr. Khemani provides personalized nutrition plans along with treatment." },
+    { q: "How is PCOS diagnosed?", a: "PCOS is diagnosed using the Rotterdam criteria: presence of 2 out of 3 features — irregular periods, clinical/biochemical hyperandrogenism, and polycystic ovaries on ultrasound. Blood tests for hormones (LH, FSH, testosterone, insulin) are also done." },
+    { q: "Does PCOS cause weight gain?", a: "PCOS is associated with insulin resistance which can make weight gain easier and weight loss harder. However, with proper medical management and lifestyle changes, weight can be effectively managed." },
+];
+
+export default function PCOSTreatmentPage() {
+    const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+    return (
+        <main className="relative">
+            <Navigation />
+
+            {/* Hero */}
+            <section className="bg-white px-2 pt-24 pb-8 md:pt-28 md:px-4 lg:pt-32 lg:px-6">
+                <div className="mx-auto w-[95%] px-4 md:px-0">
+                    <div className="relative rounded-[3rem] overflow-hidden min-h-[70vh] flex items-center" style={{ background: 'linear-gradient(135deg, #fadce9 0%, #fff 100%)' }}>
+                        <div className="relative z-10 w-full px-6 py-12 md:px-12 lg:px-16">
+                            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                                <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
+                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border border-[#d4a5c4]" style={{ background: 'rgba(255,255,255,0.6)' }}>
+                                        <div className="w-2 h-2 rounded-full bg-[#C21975] animate-pulse" />
+                                        <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">PCOS / PCOD</span>
+                                    </div>
+                                    <h1 className="font-display text-4xl md:text-5xl lg:text-[56px] leading-[1.1] font-bold tracking-tight mb-6">
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Expert PCOS</span> <br />
+                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">Management & Care.</span>
+                                    </h1>
+                                    <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
+                                        Dr. Vinita Khemani offers comprehensive PCOS/PCOD management combining medical treatment, lifestyle coaching, and fertility support — helping women take control of their health.
+                                    </p>
+                                    <Link href="#contact" className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-transform hover:scale-105 shadow-xl" style={{ background: 'linear-gradient(135deg, #C21975 0%, #8a2f5e 100%)' }}>
+                                        Book Consultation
+                                        <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45"><ArrowUpRight className="w-6 h-6" /></span>
+                                    </Link>
+                                </motion.div>
+                                <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[400px] md:h-[500px] order-first lg:order-none">
+                                    <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl">
+                                        <Image src="/images/2023-02-08.webp" alt="PCOS Treatment - Dr. Vinita Khemani" fill className="object-cover" priority />
+                                    </div>
+                                </motion.div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Symptoms */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Know the Signs</span>
+                            <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-8">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Common PCOS</span>{" "}
+                                <span className="text-[#C21975]">Symptoms</span>
+                            </h2>
+                            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                                PCOS affects 1 in 5 Indian women. Recognizing these symptoms early leads to better management and outcomes.
+                            </p>
+                            <div className="grid sm:grid-cols-2 gap-3">
+                                {symptoms.map((s, i) => (
+                                    <motion.div key={i} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
+                                        className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-[#C21975] shrink-0 mt-0.5" /><span className="text-sm text-gray-700">{s}</span></motion.div>
+                                ))}
+                            </div>
+                        </div>
+                        <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
+                            className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                            <Image src="/images/2023-04-06.webp" alt="PCOS symptoms awareness" fill className="object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#730940]/50 via-transparent to-transparent" />
+                            <div className="absolute bottom-8 left-8 right-8 text-white">
+                                <p className="text-3xl font-bold">1 in 5</p>
+                                <p className="text-pink-100">Indian women are affected by PCOS</p>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Treatment Pillars */}
+            <section className="py-24 bg-[#F5F5F5]">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="text-center max-w-2xl mx-auto mb-16">
+                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Treatment Approach</span>
+                        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">6-Pillar PCOS</span>{" "}
+                            <span className="text-[#C21975]">Management</span>
+                        </h2>
+                    </div>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {treatmentPillars.map((pillar, i) => (
+                            <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                                className="p-8 rounded-[2rem] bg-white border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-transform duration-500 group">
+                                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style={{ backgroundColor: `${pillar.color}15` }}>
+                                    <pillar.icon className="w-7 h-7" style={{ color: pillar.color }} />
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-3">{pillar.title}</h3>
+                                <p className="text-gray-600 leading-relaxed">{pillar.desc}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="max-w-3xl mx-auto">
+                        <div className="text-center mb-16">
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">FAQ</span>
+                            <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">PCOS</span>{" "}
+                                <span className="text-[#C21975]">Questions</span>
+                            </h2>
+                        </div>
+                        <div className="space-y-4">
+                            {faqs.map((faq, i) => (
+                                <div key={i} className="rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.08)] overflow-hidden bg-white">
+                                    <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between p-6 text-left">
+                                        <span className="text-lg font-semibold text-gray-900 pr-4">{faq.q}</span>
+                                        <ChevronDown className={`w-5 h-5 text-[#C21975] shrink-0 transition-transform ${openFaq === i ? "rotate-180" : ""}`} />
+                                    </button>
+                                    {openFaq === i && <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} className="px-6 pb-6"><p className="text-gray-600 leading-relaxed">{faq.a}</p></motion.div>}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="py-20 bg-[#F5F5F5]">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="rounded-[3rem] p-12 md:p-16 text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #730940 0%, #C21975 100%)' }}>
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
+                        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Take Control of Your PCOS</h2>
+                        <p className="text-pink-100 text-lg mb-10 max-w-2xl mx-auto">Get a comprehensive evaluation and personalized treatment plan from Dr. Vinita Khemani.</p>
+                        <Link href="#contact" className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg hover:scale-105 transition-transform shadow-xl">
+                            Book Consultation <span className="w-12 h-12 rounded-full bg-[#C21975] text-white flex items-center justify-center group-hover:rotate-45 transition-transform"><Calendar className="w-6 h-6" /></span>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
+            <Footer />
+        </main>
+    );
+}

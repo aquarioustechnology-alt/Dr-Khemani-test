@@ -57,7 +57,7 @@ export const services = [
     title: "Gynecology Consultation",
     shortTitle: "Gynecology",
     description: "Comprehensive care for all women's health concerns including routine check-ups, menstrual problems, and preventive care.",
-    icon: "Stethoscope",
+    icon: "PcosIcon",
     features: [
       "Routine gynecological check-ups",
       "Menstrual disorder management",
@@ -102,7 +102,7 @@ export const services = [
     title: "Fertility Treatment",
     shortTitle: "Fertility",
     description: "Advanced fertility solutions helping couples achieve their dream of parenthood with personalized treatment plans.",
-    icon: "Sparkles",
+    icon: "FertilityIcon",
     features: [
       "Infertility evaluation",
       "Ovulation induction",
@@ -117,7 +117,7 @@ export const services = [
     title: "Laparoscopic Surgery",
     shortTitle: "Laparoscopy",
     description: "Minimally invasive surgical procedures for faster recovery and better outcomes.",
-    icon: "Scan",
+    icon: "LaparoscopyIcon",
     features: [
       "Diagnostic laparoscopy",
       "Ovarian cyst removal",

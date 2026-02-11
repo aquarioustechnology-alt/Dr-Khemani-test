@@ -109,7 +109,7 @@ export function WhyChoose() {
             </h2>
 
             <p className="text-white/80 text-lg mb-8 leading-relaxed">
-              A Gold Medalist in Obstetrics & Gynaecology, Dr. Khemani practices at 6 leading hospitals across Kolkata. She is known for her normal-delivery-first approach, with a 4.9★ patient satisfaction score.
+              A highly experienced Obstetrician & Gynaecology Specialist, Dr. Khemani practices at 6 leading hospitals across Kolkata. She is known for her normal-delivery-first approach, with a 4.9★ patient satisfaction score.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-10">

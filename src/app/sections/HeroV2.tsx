@@ -111,9 +111,9 @@ export function HeroV2() {
               </motion.div>
 
               {/* Right Content - Slider */}
-              <div className="relative h-[600px] hidden lg:block">
+              <div className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full mb-8 lg:mb-0 order-first lg:order-none">
                 {/* Slider Container */}
-                <div className="absolute top-0 right-0 w-full h-full rounded-[2.5rem] overflow-hidden shadow-2xl">
+                <div className="absolute top-0 right-0 w-full h-full rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden shadow-2xl">
                   <AnimatePresence mode="popLayout">
                     <motion.div
                       key={currentImageIndex}
@@ -134,12 +134,12 @@ export function HeroV2() {
                   </AnimatePresence>
 
                   {/* Slider Controls */}
-                  <div className="absolute bottom-6 left-6 flex gap-2 z-20">
+                  <div className="absolute bottom-4 left-4 lg:bottom-6 lg:left-6 flex gap-2 z-20">
                     {heroImages.map((_, i) => (
                       <button
                         key={i}
                         onClick={() => setCurrentImageIndex(i)}
-                        className={`w-2.5 h-2.5 rounded-full transition-all ${currentImageIndex === i ? 'bg-[#C21975] scale-125' : 'bg-white/60'}`}
+                        className={`w-2 h-2 lg:w-2.5 lg:h-2.5 rounded-full transition-all ${currentImageIndex === i ? 'bg-[#C21975] scale-125' : 'bg-white/60'}`}
                       />
                     ))}
                   </div>
@@ -150,20 +150,20 @@ export function HeroV2() {
                   initial={{ opacity: 0, scale: 0.8, x: -20 }}
                   animate={{ opacity: 1, scale: 1, x: 0 }}
                   transition={{ delay: 0.6, type: "spring" }}
-                  className="absolute top-8 -left-12 p-5 rounded-3xl bg-[#730940] shadow-[0_15px_40px_rgba(115,9,64,0.4)] max-w-[260px] z-30 relative overflow-hidden group"
+                  className="absolute top-4 left-4 lg:top-8 lg:-left-12 p-4 lg:p-5 rounded-2xl lg:rounded-3xl bg-[#730940] shadow-[0_15px_40px_rgba(115,9,64,0.4)] max-w-[200px] lg:max-w-[260px] z-30 relative overflow-hidden group hidden md:block"
                 >
                   <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-white/10 to-transparent opacity-50 rounded-bl-[3rem]" />
 
                   <div className="relative z-10">
                     <div className="flex items-center gap-3 mb-2">
-                      <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
-                        <Users className="w-5 h-5 text-white" />
+                      <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
+                        <Users className="w-4 h-4 lg:w-5 lg:h-5 text-white" />
                       </div>
-                      <h3 className="text-lg font-display font-medium text-white leading-tight">
+                      <h3 className="text-sm lg:text-lg font-medium text-white leading-tight">
                         10,000+ Patients
                       </h3>
                     </div>
-                    <p className="text-xs text-white/80 leading-relaxed font-light pl-1">
+                    <p className="text-[10px] lg:text-xs text-white/80 leading-relaxed font-light pl-1">
                       Personalized gynecological care with 4.9★ patient satisfaction rating.
                     </p>
                   </div>
@@ -174,17 +174,17 @@ export function HeroV2() {
                   initial={{ opacity: 0, scale: 0.8, x: 20 }}
                   animate={{ opacity: 1, scale: 1, x: 0 }}
                   transition={{ delay: 0.8, type: "spring" }}
-                  className="absolute bottom-8 -right-12 p-5 rounded-3xl backdrop-blur-md bg-[#1a103c]/20 border border-white/20 shadow-xl max-w-[260px] z-30 hidden xl:block"
+                  className="absolute bottom-4 right-4 lg:bottom-8 lg:-right-12 p-4 lg:p-5 rounded-2xl lg:rounded-3xl backdrop-blur-md bg-[#1a103c]/20 border border-white/20 shadow-xl max-w-[200px] lg:max-w-[260px] z-30 hidden md:block"
                 >
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 rounded-full border border-white/30 bg-white/10 flex items-center justify-center shrink-0 text-white">
-                      <Award className="w-5 h-5" />
+                    <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border border-white/30 bg-white/10 flex items-center justify-center shrink-0 text-white">
+                      <Award className="w-4 h-4 lg:w-5 lg:h-5" />
                     </div>
-                    <h3 className="text-lg font-display font-medium text-white leading-tight drop-shadow-md">
+                    <h3 className="text-sm lg:text-lg font-medium text-white leading-tight drop-shadow-md">
                       583+ Surgeries
                     </h3>
                   </div>
-                  <p className="text-xs text-white/90 leading-relaxed font-light drop-shadow-md pl-1">
+                  <p className="text-[10px] lg:text-xs text-white/90 leading-relaxed font-light drop-shadow-md pl-1">
                     Advanced laparoscopic & minimally invasive procedures.
                   </p>
                 </motion.div>

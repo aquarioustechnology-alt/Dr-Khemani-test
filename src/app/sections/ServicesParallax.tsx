@@ -7,6 +7,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Baby, HeartPulse, Sparkles, Scan } from "lucide-react";
 
+const FertilityIcon = ({ className }: { className?: string }) => (
+  <div className={`relative ${className || "w-5 h-5"}`}>
+    <Image
+      src="/images/fertility-treatment-ico.svg"
+      alt="Fertility Treatment"
+      fill
+      className="object-contain"
+    />
+  </div>
+);
+
+const LaparoscopyIcon = ({ className }: { className?: string }) => (
+  <div className={`relative ${className || "w-5 h-5"}`}>
+    <Image
+      src="/images/laparoscopy-surgery-ico.svg"
+      alt="Laparoscopic Surgery"
+      fill
+      className="object-contain"
+    />
+  </div>
+);
+
 const services = [
   {
     id: 1,
@@ -15,6 +37,7 @@ const services = [
     subtitle: "Complete prenatal to postnatal care",
     description: "Comprehensive prenatal care including regular checkups, ultrasound monitoring, nutrition counseling, and personalized birth planning. Dr. Khemani prioritizes normal delivery with over 2,348 successful deliveries.",
     features: ["Prenatal Checkups", "Nutrition Guidance", "Delivery Planning", "Postnatal Care"],
+    href: "/treatments/pregnancy-care",
     image: "/images/Pregnancy Care.png",
     color: "#f5e6ef",
     badgeText: "Maternity Care"
@@ -26,30 +49,33 @@ const services = [
     subtitle: "Specialized management for complex cases",
     description: "Expert management of high-risk pregnancies including gestational diabetes, preeclampsia, placenta previa, multiple pregnancies, and recurrent miscarriage with 24/7 monitoring protocols.",
     features: ["Risk Assessment", "Specialized Monitoring", "Emergency Protocols", "NICU Coordination"],
+    href: "/treatments/high-risk-pregnancy",
     image: "/images/High-Risk Pregnancy.webp",
-    color: "#e8d5e0",
+    color: "#f5e6ef",
     badgeText: "Priority Care"
   },
   {
     id: 3,
-    icon: Sparkles,
+    icon: FertilityIcon,
     title: "Fertility Treatment",
     subtitle: "Evidence-based fertility solutions",
     description: "Comprehensive fertility evaluation and treatment including ovulation induction, IUI procedures, IVF coordination, and management of PCOS, endometriosis, and tubal factor infertility.",
     features: ["Fertility Testing", "Ovulation Induction", "IUI & IVF Coordination", "Hormonal Therapy"],
+    href: "/treatments/fertility",
     image: "/images/Fertility Treatment.webp",
-    color: "#d4a5c4",
+    color: "#f5e6ef",
     badgeText: "Fertility Specialist"
   },
   {
     id: 4,
-    icon: Scan,
+    icon: LaparoscopyIcon,
     title: "Laparoscopic Surgery",
     subtitle: "Keyhole surgery with faster recovery",
     description: "583+ advanced laparoscopic surgeries performed for fibroids, ovarian cysts, endometriosis, hysterectomy, and ectopic pregnancy – with same-day discharge and minimal scarring.",
     features: ["Keyhole Surgery", "Fibroid Removal", "Cyst Treatment", "Quick Recovery"],
+    href: "/treatments/laparoscopic-surgery",
     image: "/images/Laparoscopic Surgery.jpg",
-    color: "#c97ba3",
+    color: "#f5e6ef",
     badgeText: "Minimally Invasive"
   },
 ];
@@ -85,7 +111,7 @@ const Card = ({ service, index, range, targetScale, ctaText }: { service: any, i
             <p className="text-xl text-[#a43971] font-medium mb-6">{service.subtitle}</p>
             <p className="text-gray-600 leading-relaxed mb-8">{service.description}</p>
 
-            <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#a43971] text-white text-sm font-semibold hover:bg-[#8a2f5e] hover:gap-3 transition-all shadow-lg hover:shadow-xl mt-4 w-fit">
+            <Link href={service.href || "#contact"} className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#a43971] text-white text-sm font-semibold hover:bg-[#8a2f5e] hover:gap-3 transition-all shadow-lg hover:shadow-xl mt-4 w-fit">
               {ctaText}
               <ArrowRight className="w-4 h-4" />
             </Link>

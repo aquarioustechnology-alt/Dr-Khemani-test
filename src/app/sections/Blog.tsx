@@ -5,36 +5,40 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Calendar, User, Clock } from "lucide-react";
 
+// Latest 3 blog posts from the verified list
 const blogPosts = [
     {
-        id: 1,
-        title: "Understanding High-Risk Pregnancy: Causes & Care",
-        excerpt: "Learn what makes a pregnancy high-risk – covering gestational diabetes, preeclampsia, placenta previa, and how specialist monitoring reduces complications. Based on Dr. Khemani’s clinical experience.",
-        image: "/images/1656409765121.webp",
-        date: "Feb 12, 2024",
-        author: "Dr. Vinita Khemani",
+        id: "1",
+        slug: "a-quick-guide-on-pcos-and-how-to-beat-it-without-fear",
+        title: "A Quick Guide on PCOS and How to Beat It without Fear",
+        excerpt: "The impact of PCOS extends to various symptoms that can significantly affect a woman's quality of life. In this blog post, we will provide a comprehensive overview of PCOS.",
+        category: "PCOS",
         readTime: "5 min read",
-        category: "Pregnancy"
+        date: "Apr 13, 2023",
+        image: "/images/blog/pcos-treatment.jpg",
+        author: "Dr. Vinita Khemani"
     },
     {
-        id: 2,
-        title: "PCOS Management: Lifestyle Changes That Help",
-        excerpt: "PCOS affects 1 in 5 Indian women. Learn evidence-based dietary changes, exercise routines, and medical treatments including metformin and hormonal therapy for managing PCOS symptoms.",
-        image: "/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg",
-        date: "Feb 08, 2024",
-        author: "Dr. Vinita Khemani",
+        id: "2",
+        slug: "the-importance-of-family-planning-understanding-contraception",
+        title: "The Importance of Family Planning: Understanding Contraception",
+        excerpt: "Navigating married life can be challenging, and making decisions about family planning is no exception. Choosing the right contraceptive method is essential.",
+        category: "Family Planning",
         readTime: "4 min read",
-        category: "Women's Health"
+        date: "Apr 5, 2023",
+        image: "/images/blog/family-planning.jpg",
+        author: "Dr. Vinita Khemani"
     },
     {
-        id: 3,
-        title: "Minimally Invasive Surgery: Benefits of Laparoscopy",
-        excerpt: "Laparoscopic (keyhole) surgery uses 5–10 mm incisions instead of traditional open surgery. Benefits include 48-hour discharge, 80% less post-operative pain, and minimal scarring. Learn who qualifies.",
-        image: "/images/WhatsApp Image 2025-12-22 at 12.26.52 PM.jpeg",
-        date: "Jan 28, 2024",
-        author: "Dr. Vinita Khemani",
+        id: "3",
+        slug: "holistic-approaches-to-fertility-management",
+        title: "Holistic Approaches to Fertility Management",
+        excerpt: "Lack of Fertility can be a worrying and challenging experience. However, adopting a holistic approach to fertility management can provide hope and empower individuals.",
+        category: "Fertility",
         readTime: "6 min read",
-        category: "Surgery"
+        date: "Mar 29, 2023",
+        image: "/images/blog/infertility-management.jpg",
+        author: "Dr. Vinita Khemani"
     }
 ];
 
@@ -70,7 +74,7 @@ export function Blog() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="group flex flex-col bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-xl hover:border-[#C21975]/20 transition-all duration-300"
+                            className="group flex flex-col bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-xl hover:border-[#C21975]/20 transition-all duration-300 h-full"
                         >
                             {/* Image Container */}
                             <div className="relative h-60 overflow-hidden">
@@ -102,7 +106,7 @@ export function Blog() {
                                 </div>
 
                                 <h3 className="text-xl font-bold font-display text-gray-900 mb-3 group-hover:text-[#C21975] transition-colors line-clamp-2">
-                                    <Link href={`/blog/${post.id}`}>
+                                    <Link href={`/blog/${post.slug}`}>
                                         {post.title}
                                     </Link>
                                 </h3>
@@ -119,7 +123,7 @@ export function Blog() {
                                         <span className="text-xs font-semibold text-gray-900">{post.author}</span>
                                     </div>
                                     <Link
-                                        href={`/blog/${post.id}`}
+                                        href={`/blog/${post.slug}`}
                                         className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:bg-[#C21975] group-hover:border-[#C21975] group-hover:text-white transition-all"
                                     >
                                         <ArrowRight className="w-4 h-4" />

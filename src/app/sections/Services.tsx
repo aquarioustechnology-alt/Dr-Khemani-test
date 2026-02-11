@@ -1,20 +1,54 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  Stethoscope, Baby, HeartPulse, Sparkles, Scan, Flower2,
-  ArrowRight 
+import Image from "next/image";
+import {
+  Baby, HeartPulse, Flower2,
+  ArrowRight, Stethoscope
 } from "lucide-react";
 import { FadeInWhenVisible } from "@/components/FadeInWhenVisible";
 import { services } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
+const FertilityIcon = ({ className }: { className?: string }) => (
+  <div className={`relative ${className || "w-8 h-8"}`}>
+    <Image
+      src="/images/fertility-treatment-ico.svg"
+      alt="Fertility Treatment"
+      fill
+      className="object-contain"
+    />
+  </div>
+);
+
+const LaparoscopyIcon = ({ className }: { className?: string }) => (
+  <div className={`relative ${className || "w-8 h-8"}`}>
+    <Image
+      src="/images/laparoscopy-surgery-ico.svg"
+      alt="Laparoscopic Surgery"
+      fill
+      className="object-contain"
+    />
+  </div>
+);
+
+const PcosIcon = ({ className }: { className?: string }) => (
+  <div className={`relative ${className || "w-8 h-8"}`}>
+    <Image
+      src="/images/pcos-treatment-ico.svg"
+      alt="PCOS Treatment"
+      fill
+      className="object-contain"
+    />
+  </div>
+);
+
 const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
-  Stethoscope,
+  PcosIcon,
   Baby,
   HeartPulse,
-  Sparkles,
-  Scan,
+  FertilityIcon,
+  LaparoscopyIcon,
   Flower2,
 };
 
@@ -23,7 +57,7 @@ export function Services() {
     <section id="services" className="py-24 bg-white relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-medical-50/50 to-transparent" />
-      
+
       <div className="container-fluid relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -32,13 +66,13 @@ export function Services() {
               Our Services
             </span>
           </FadeInWhenVisible>
-          
+
           <FadeInWhenVisible delay={0.1}>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Comprehensive Women&apos;s Healthcare
             </h2>
           </FadeInWhenVisible>
-          
+
           <FadeInWhenVisible delay={0.2}>
             <p className="text-lg text-gray-600">
               Specialized treatments designed to support every stage of a woman&apos;s health journey
@@ -51,7 +85,7 @@ export function Services() {
           {services.map((service, index) => {
             const IconComponent = iconMap[service.icon];
             const isLarge = index === 0 || index === 3;
-            
+
             return (
               <FadeInWhenVisible key={service.id} delay={index * 0.1}>
                 <motion.div

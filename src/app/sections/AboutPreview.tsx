@@ -89,11 +89,11 @@ export function AboutPreview() {
                   <Award className="w-5 h-5" />
                 </div>
                 <h3 className="text-3xl font-bold text-white leading-none">
-                  15+
+                  6+
                 </h3>
               </div>
               <p className="text-sm text-white/90 font-medium tracking-wide pl-1">
-                Excellence Awards
+                Clinic Locations
               </p>
             </div>
           </motion.div>
@@ -126,7 +126,7 @@ export function AboutPreview() {
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 shrink-0 rounded-full bg-[#C21975]" />
-                  <span className="text-lg text-gray-800 font-medium">Gold Medalist – MS Obs & Gynae</span>
+                  <span className="text-lg text-gray-800 font-medium">Honors in MBBS (2 Subjects)</span>
                 </li>
               </ul>
             </div>

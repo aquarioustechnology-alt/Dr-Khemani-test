@@ -1,0 +1,159 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import { GraduationCap, Award, BookOpen } from "lucide-react";
+
+const historyData = [
+    {
+        year: "1998",
+        title: "MBBS Graduation",
+        subtitle: "B.S. Medical College, Bankura",
+        desc: "Graduated with Honors in 2 subjects, laying a strong foundation in medical sciences and women's health.",
+        image: "/images/2023-04-06.webp",
+        icon: GraduationCap
+    },
+    {
+        year: "2003",
+        title: "DGO Specialization",
+        subtitle: "NRS Medical College, Kolkata",
+        desc: "Completed Post-Graduate Diploma in Obstetrics & Gynaecology, specializing in high-risk pregnancies and maternal care.",
+        image: "/images/2023-02-08.jpg",
+        icon: BookOpen
+    },
+    {
+        year: "2005",
+        title: "Infertility Training",
+        subtitle: "FOGSI Certified",
+        desc: "Advanced certification in infertility management, empowering couples to achieve their dreams of parenthood.",
+        image: "/images/Fertility Treatment.webp",
+        icon: BabyIcon
+    },
+    {
+        year: "2006",
+        title: "Advanced Laparoscopy",
+        subtitle: "Minimally Invasive Surgery",
+        desc: "Mastered advanced laparoscopic techniques for fibroids, cysts, and hysterectomies with minimal recovery time.",
+        image: "/images/Laparoscopic Surgery.jpg",
+        icon: ScanIcon
+    },
+    {
+        year: "Present",
+        title: "Leading Consultant",
+        subtitle: "6+ Hospitals in Kolkata",
+        desc: "Senior Consultant at top hospitals including Bhagirathi Neotia, Charnock, and Apollo, while running Healing Touch Clinic.",
+        image: "/images/doctor_clinic_portrait_1770790565861.png",
+        icon: Award
+    }
+];
+
+// Icons helper
+function BabyIcon(props: React.ComponentProps<"svg">) { return <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12h.01" /><path d="M15 12h.01" /><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" /><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.7 9 9 0 0 1-1.8 3.9 2 2 0 0 1-3.7 1.8 9 9 0 0 1-3.9 0 2 2 0 0 1-3.7-1.8 9 9 0 0 1-1.8-3.9 2 2 0 0 1 0-3.7 9 9 0 0 1 1.8-3.9 2 2 0 0 1 3.7-1.8 9 9 0 0 1 3.9 0 2 2 0 0 1 3.7 1.8z" /></svg> }
+function ScanIcon(props: React.ComponentProps<"svg">) { return <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2" /><path d="M17 3h2a2 2 0 0 1 2 2v2" /><path d="M21 17v2a2 2 0 0 1-2 2h-2" /><path d="M7 21H5a2 2 0 0 1-2-2v-2" /></svg> }
+
+export function AcademicJourney() {
+    const [activeYear, setActiveYear] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+    useEffect(() => {
+        if (!isPaused) {
+            intervalRef.current = setInterval(() => {
+                setActiveYear((prev) => (prev + 1) % historyData.length);
+            }, 3000); // Change slide every 3 seconds
+        }
+
+        return () => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+        };
+    }, [isPaused]);
+
+    return (
+        <section
+            className="py-24 bg-white"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+        >
+            <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                <div className="text-center mb-16">
+                    <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">
+                        Milestones
+                    </span>
+                    <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900">
+                        Academic & Clinical Journey
+                    </h2>
+                </div>
+
+                <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+
+                    {/* Left Column: Timeline Navigation */}
+                    <div className="lg:col-span-4 relative">
+                        {/* Vertical Line */}
+                        <div className="absolute left-[27px] top-6 bottom-6 w-[2px] bg-gray-100" />
+
+                        <div className="flex flex-col gap-8 relative z-10">
+                            {historyData.map((item, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setActiveYear(i)}
+                                    className={`group flex items-center gap-6 text-left transition-all duration-300 w-full p-2 rounded-xl hover:bg-gray-50 ${activeYear === i ? "opacity-100 scale-105 ml-2" : "opacity-60 hover:opacity-100"}`}
+                                >
+                                    <div className={`w-14 h-14 rounded-full border-4 shrink-0 flex items-center justify-center transition-all duration-300 ${activeYear === i ? "border-[#C21975] bg-[#C21975] text-white shadow-lg" : "border-gray-200 bg-white text-gray-400 group-hover:border-[#C21975]"}`}>
+                                        <span className="text-sm font-bold">{item.year}</span>
+                                    </div>
+                                    <div>
+                                        <span className={`block text-lg font-bold transition-colors ${activeYear === i ? "text-gray-900" : "text-gray-500"}`}>
+                                            {item.title}
+                                        </span>
+                                    </div>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Right Column: Dynamic Content */}
+                    <div className="lg:col-span-8">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={activeYear}
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -20 }}
+                                transition={{ duration: 0.4 }}
+                                className="grid md:grid-cols-2 gap-8 items-center bg-[#fff5f9] p-8 md:p-12 rounded-[3rem]"
+                            >
+                                <div className="space-y-6 order-2 md:order-1">
+                                    <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-sm text-[#C21975]">
+                                        {(() => {
+                                            const Icon = historyData[activeYear].icon;
+                                            return <Icon className="w-8 h-8" />;
+                                        })()}
+                                    </div>
+                                    <div>
+                                        <h3 className="text-3xl font-display font-bold text-gray-900 mb-2">{historyData[activeYear].title}</h3>
+                                        <p className="text-lg text-[#C21975] font-medium mb-4">{historyData[activeYear].subtitle}</p>
+                                        <p className="text-gray-600 leading-relaxed text-lg">
+                                            {historyData[activeYear].desc}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="relative h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-xl order-1 md:order-2">
+                                    <Image
+                                        src={historyData[activeYear].image}
+                                        alt={historyData[activeYear].title}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-[#C21975]/10 mix-blend-multiply" />
+                                </div>
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    );
+}

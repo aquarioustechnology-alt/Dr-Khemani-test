@@ -10,18 +10,17 @@ const quickLinks = [
   { label: "Patient Success Stories", href: "/stories" },
   { label: "Women's Health Blog", href: "/blog" },
   { label: "Contact Clinic", href: "/contact" },
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Service", href: "/terms" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
 ];
 
 const medicalServices = [
-  { title: "Pregnancy Care", href: "/services/pregnancy-care" },
-  { title: "Normal Delivery", href: "/services/normal-delivery" },
-  { title: "High-Risk Pregnancy", href: "/services/high-risk-pregnancy" },
-  { title: "Infertility Treatment", href: "/services/infertility-treatment" },
-  { title: "Laparoscopic Surgery", href: "/services/laparoscopic-surgery" },
-  { title: "PCOD/PCOS Management", href: "/services/pcod-management" },
-  { title: "Hysterectomy", href: "/services/hysterectomy" },
+  { title: "Pregnancy Care", href: "/treatments/pregnancy-care" },
+  { title: "High-Risk Pregnancy", href: "/treatments/high-risk-pregnancy" },
+  { title: "Fertility Treatment", href: "/treatments/fertility" },
+  { title: "Laparoscopic Surgery", href: "/treatments/laparoscopic-surgery" },
+  { title: "PCOS / PCOD Management", href: "/treatments/pcos-treatment" },
+  { title: "Menopause Care", href: "/treatments/menopause" },
 ];
 
 export function Footer() {
@@ -195,10 +194,6 @@ export function Footer() {
             © {new Date().getFullYear()} Healing Touch Clinic. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/doctors-login" className="text-xs text-pink-200/60 hover:text-[#C21975] transition-colors flex items-center gap-1">
-              Doctor Login
-            </Link>
-            <span className="w-1 h-1 rounded-full bg-pink-200/40" />
             <p className="text-xs text-pink-200/60">
               Designed by <a href="#" className="hover:text-white transition-colors">Aquarious Technology</a>
             </p>
