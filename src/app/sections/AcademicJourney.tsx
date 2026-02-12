@@ -43,7 +43,7 @@ const historyData = [
         title: "Leading Consultant",
         subtitle: "6+ Hospitals in Kolkata",
         desc: "Senior Consultant at top hospitals including Bhagirathi Neotia, Charnock, and Apollo, while running Healing Touch Clinic.",
-        image: "/images/doctor_clinic_portrait_1770790565861.png",
+        image: "/images/dr-vinita-about-hero.webp",
         icon: Award
     }
 ];
@@ -54,27 +54,20 @@ function ScanIcon(props: React.ComponentProps<"svg">) { return <svg {...props} x
 
 export function AcademicJourney() {
     const [activeYear, setActiveYear] = useState(0);
-    const [isPaused, setIsPaused] = useState(false);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
-        if (!isPaused) {
-            intervalRef.current = setInterval(() => {
-                setActiveYear((prev) => (prev + 1) % historyData.length);
-            }, 3000); // Change slide every 3 seconds
-        }
+        intervalRef.current = setInterval(() => {
+            setActiveYear((prev) => (prev + 1) % historyData.length);
+        }, 3000); // Change slide every 3 seconds
 
         return () => {
             if (intervalRef.current) clearInterval(intervalRef.current);
         };
-    }, [isPaused]);
+    }, []);
 
     return (
-        <section
-            className="py-24 bg-white"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-        >
+        <section className="py-24 bg-white">
             <div className="container-fluid mx-auto max-w-[1400px] px-6">
                 <div className="text-center mb-16">
                     <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">
@@ -90,20 +83,20 @@ export function AcademicJourney() {
                     {/* Left Column: Timeline Navigation */}
                     <div className="lg:col-span-4 relative">
                         {/* Vertical Line */}
-                        <div className="absolute left-[27px] top-6 bottom-6 w-[2px] bg-gray-100" />
+                        <div className="absolute left-[40px] top-6 bottom-6 w-[2px] bg-gray-100" />
 
                         <div className="flex flex-col gap-8 relative z-10">
                             {historyData.map((item, i) => (
                                 <button
                                     key={i}
                                     onClick={() => setActiveYear(i)}
-                                    className={`group flex items-center gap-6 text-left transition-all duration-300 w-full p-2 rounded-xl hover:bg-gray-50 ${activeYear === i ? "opacity-100 scale-105 ml-2" : "opacity-60 hover:opacity-100"}`}
+                                    className={`group flex items-center gap-6 text-left transition-all duration-300 w-full p-2 rounded-xl hover:bg-gray-50 ${activeYear === i ? "bg-gray-50 scale-105 ml-2" : "hover:translate-x-1"}`}
                                 >
-                                    <div className={`w-14 h-14 rounded-full border-4 shrink-0 flex items-center justify-center transition-all duration-300 ${activeYear === i ? "border-[#C21975] bg-[#C21975] text-white shadow-lg" : "border-gray-200 bg-white text-gray-400 group-hover:border-[#C21975]"}`}>
+                                    <div className={`w-20 py-2 rounded-full border-2 shrink-0 flex items-center justify-center transition-all duration-300 ${activeYear === i ? "border-[#C21975] bg-[#C21975] text-white shadow-lg shadow-pink-500/20" : "border-gray-200 bg-white text-gray-500 group-hover:border-[#C21975] group-hover:text-[#C21975]"}`}>
                                         <span className="text-sm font-bold">{item.year}</span>
                                     </div>
                                     <div>
-                                        <span className={`block text-lg font-bold transition-colors ${activeYear === i ? "text-gray-900" : "text-gray-500"}`}>
+                                        <span className={`block text-lg font-bold transition-colors ${activeYear === i ? "text-gray-900" : "text-gray-600 group-hover:text-gray-900"}`}>
                                             {item.title}
                                         </span>
                                     </div>

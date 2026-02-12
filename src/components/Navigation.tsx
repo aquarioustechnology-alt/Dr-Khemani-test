@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Calendar, ChevronDown, Baby, HeartPulse, Heart } from "lucide-react";
+import { Phone, Calendar, ChevronDown, Baby, Users, Activity, Stethoscope, Scissors, Microscope, CircleDot, Shield, Flower2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -49,12 +49,18 @@ const PcosIcon = ({ className }: { className?: string }) => (
 );
 
 const treatments = [
-  { href: "/treatments/pregnancy-care", label: "Pregnancy Care", icon: Baby, desc: "Complete prenatal to postnatal care" },
-  { href: "/treatments/high-risk-pregnancy", label: "High-Risk Pregnancy", icon: HeartPulse, desc: "Specialized care for complex pregnancies" },
-  { href: "/treatments/fertility", label: "Fertility Treatment", icon: FertilityIcon, desc: "Evidence-based fertility solutions" },
-  { href: "/treatments/laparoscopic-surgery", label: "Laparoscopic Surgery", icon: LaparoscopyIcon, desc: "Minimally invasive surgical care" },
-  { href: "/treatments/pcos-treatment", label: "PCOS Treatment", icon: PcosIcon, desc: "Hormonal balance and wellness" },
-  { href: "/treatments/menopause", label: "Menopause Care", icon: Heart, desc: "Comprehensive menopause management" },
+  { href: "/treatments/pcos-treatment", label: "PCOS Treatment", icon: PcosIcon, desc: "Hormonal balance & management" },
+  { href: "/treatments/endometriosis", label: "Endometriosis", icon: Stethoscope, desc: "Specialized pain management" },
+  { href: "/treatments/advanced-laparoscopic-procedures", label: "Adv. Laparoscopic Procedures", icon: LaparoscopyIcon, desc: "Complex minimally invasive surgeries" },
+  { href: "/treatments/pregnancy-care", label: "Pregnancy Management", icon: Baby, desc: "Complete prenatal to postnatal care" },
+  { href: "/treatments/fertility", label: "Fertility Management", icon: FertilityIcon, desc: "Evidence-based fertility solutions" },
+  { href: "/treatments/family-planning", label: "Family Planning", icon: Users, desc: "Contraceptive & reproductive advice" },
+  { href: "/treatments/emergency-caesarean", label: "Emergency C-Section", icon: Activity, desc: "Urgent surgical delivery care" },
+  { href: "/treatments/hysterectomy", label: "Hysterectomy", icon: Scissors, desc: "Surgical removal of the uterus" },
+  { href: "/treatments/hysteroscopy", label: "Hysteroscopy", icon: Microscope, desc: "Uterine inspection & treatment" },
+  { href: "/treatments/ovarian-cystectomy", label: "Ovarian Cystectomy", icon: CircleDot, desc: "Cyst removal via laparoscopy" },
+  { href: "/treatments/high-risk-pregnancy", label: "High-Risk Pregnancy", icon: Shield, desc: "Care for complex pregnancies" },
+  { href: "/treatments/menopause", label: "Menopause Care", icon: Flower2, desc: "Menopause symptom management" },
 ];
 
 export function Navigation() {
@@ -141,10 +147,10 @@ export function Navigation() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 15 }}
                             transition={{ duration: 0.2 }}
-                            className="absolute top-full left-1/2 -translate-x-1/2 w-[600px] pt-4"
+                            className="absolute top-full left-1/2 -translate-x-[70%] w-[900px] pt-4"
                           >
                             <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-2">
-                              <div className="grid grid-cols-2 gap-2">
+                              <div className="grid grid-cols-3 gap-2">
                                 {treatments.map((treatment) => (
                                   <Link
                                     key={treatment.href}

@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 import { Counter } from "@/components/Counter";
+import { calculateSurgeries, calculateDeliveries } from "@/lib/utils";
 
 export function ParallaxStats() {
   return (
@@ -26,7 +27,7 @@ export function ParallaxStats() {
               </h2>
 
               <p className="text-lg text-gray-600 mb-10 leading-relaxed max-w-lg">
-                Dr. Vinita Khemani has performed 2,348+ successful deliveries and 583+ laparoscopic surgeries across 6 hospitals in Kolkata. With a 4.5★ Google rating from 413+ verified reviews, her results-driven approach has earned the trust of families across West Bengal.
+                Dr. Vinita Khemani has performed {calculateDeliveries().toLocaleString()}+ successful deliveries and {calculateSurgeries().toLocaleString()}+ laparoscopic surgeries across 6 hospitals in Kolkata. With a 4.5★ Google rating from 413+ verified reviews, her results-driven approach has earned the trust of families across West Bengal.
               </p>
 
               <Link
@@ -143,7 +144,7 @@ export function ParallaxStats() {
                 className="p-8 rounded-[2rem] bg-[#fdf2f8]"
               >
                 <h3 className="text-5xl font-bold text-gray-900 mb-2">
-                  <Counter end={2348} suffix="+" />
+                  <Counter end={calculateDeliveries()} suffix="+" />
                 </h3>
                 <p className="text-[#702459] font-medium">Successful Deliveries</p>
               </motion.div>
@@ -156,7 +157,7 @@ export function ParallaxStats() {
                 className="p-8 rounded-[2rem] bg-[#fff5f5]"
               >
                 <h3 className="text-5xl font-bold text-gray-900 mb-2">
-                  <Counter end={583} suffix="+" />
+                  <Counter end={calculateSurgeries()} suffix="+" />
                 </h3>
                 <p className="text-[#7f1d1d] font-medium">Surgeries Performed</p>
               </motion.div>

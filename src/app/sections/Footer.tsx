@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, ArrowRight, UserPlus, Calendar } from "lucide-react";
 import { useState } from "react";
+import { calculateExperience } from "@/lib/utils";
 
 const quickLinks = [
   { label: "About Dr. Vinita", href: "/about" },
@@ -61,12 +62,12 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-pink-100/80 text-sm leading-relaxed max-w-xs">
-              Dr. Vinita Khemani is a senior Gynecologist & Obstetrician in Kolkata with 21+ years of experience. Specializing in pregnancy care, laparoscopic surgery, and fertility treatment across 6 hospital locations.
+              Dr. Vinita Khemani is a senior Gynecologist & Obstetrician in Kolkata with {calculateExperience()}+ years of experience. Specializing in pregnancy care, laparoscopic surgery, and fertility treatment across 6 hospital locations.
             </p>
 
             <div className="flex items-center gap-4 py-4 border-y border-white/5">
               <div>
-                <p className="text-2xl font-bold text-white">21+</p>
+                <p className="text-2xl font-bold text-white">{calculateExperience()}+</p>
                 <p className="text-xs text-pink-200/70 uppercase tracking-wider">Years Exp.</p>
               </div>
               <div className="h-8 w-px bg-white/10" />

@@ -7,10 +7,12 @@ import Image from "next/image";
 import Link from "next/link";
 import {
     ArrowUpRight, ArrowRight, Calendar, CheckCircle,
-    Baby, HeartPulse, Heart,
-    Shield, Microscope, UserCheck, ChevronDown
+    Baby, Heart,
+    Shield, Microscope, UserCheck, ChevronDown,
+    Stethoscope, Scissors, CircleDot, Users, Activity, Flower2
 } from "lucide-react";
 import { useState } from "react";
+import { calculateExperience, calculateSurgeries } from "@/lib/utils";
 
 const FertilityIcon = ({ className }: { className?: string }) => (
     <div className={`relative ${className || "w-6 h-6"}`}>
@@ -47,77 +49,143 @@ const PcosIcon = ({ className }: { className?: string }) => (
 
 const serviceCategories = [
     {
-        id: "pregnancy",
-        icon: Baby,
-        title: "Pregnancy Care",
-        subtitle: "Complete Prenatal to Postnatal Care",
-        description: "Comprehensive pregnancy monitoring from conception to postnatal recovery. Dr. Vinita Khemani prioritizes normal delivery, with 2,348+ successful deliveries in Kolkata.",
-        services: ["Normal Delivery", "Painless Labor (Epidural)", "Prenatal Checkups", "Nutrition Counseling", "Delivery Planning", "Postnatal Recovery"],
-        image: "/images/Pregnancy Care.png",
-        href: "/treatments/pregnancy-care",
-        color: "#f5e6ef",
-    },
-    {
-        id: "high-risk",
-        icon: HeartPulse,
-        title: "High-Risk Pregnancy",
-        subtitle: "Specialized Complex Pregnancy Management",
-        description: "Expert care for pregnancies complicated by gestational diabetes, preeclampsia, placenta previa, multiple pregnancies, and recurrent miscarriage with round-the-clock monitoring.",
-        services: ["Gestational Diabetes", "Preeclampsia Care", "Multiple Pregnancy", "Placenta Previa", "Recurrent Miscarriage", "NICU Coordination"],
-        image: "/images/High-Risk Pregnancy.webp",
-        href: "/treatments/high-risk-pregnancy",
-        color: "#e8d5e0",
-    },
-    {
-        id: "fertility",
-        icon: FertilityIcon,
-        title: "Fertility Treatment",
-        subtitle: "Evidence-Based Fertility Solutions",
-        description: "Comprehensive fertility evaluation and personalized treatment plans. From ovulation induction to IUI and IVF coordination, Dr. Khemani has helped thousands of couples realize their dream of parenthood.",
-        services: ["Fertility Evaluation", "Ovulation Induction", "IUI Procedures", "IVF Coordination", "PCOS Fertility Support", "Male Factor Management"],
-        image: "/images/Fertility Treatment.webp",
-        href: "/treatments/fertility",
-        color: "#d4a5c4",
-    },
-    {
-        id: "laparoscopy",
-        icon: LaparoscopyIcon,
-        title: "Laparoscopic Surgery",
-        subtitle: "Minimally Invasive Surgical Care",
-        description: "583+ advanced laparoscopic surgeries for fibroids, ovarian cysts, endometriosis, hysterectomy, and ectopic pregnancy with minimal scarring and faster recovery.",
-        services: ["Diagnostic Laparoscopy", "Fibroid Removal", "Ovarian Cystectomy", "Laparoscopic Hysterectomy", "Ectopic Pregnancy", "Endometriosis Surgery"],
-        image: "/images/Laparoscopic Surgery.jpg",
-        href: "/treatments/laparoscopic-surgery",
-        color: "#c97ba3",
-    },
-    {
-        id: "pcos",
+        id: "pcos-treatment",
         icon: PcosIcon,
-        title: "PCOS / PCOD Treatment",
-        subtitle: "Expert Hormonal Balance Care",
-        description: "Comprehensive PCOS/PCOD management through lifestyle modification, medication, and fertility support. Dr. Khemani treats the root cause, not just the symptoms.",
-        services: ["Hormonal Assessment", "Lifestyle Modification", "Medication Management", "Weight Management", "Fertility Support", "Long-term Monitoring"],
+        title: "PCOS Treatment & Management",
+        subtitle: "Hormonal Balance & Wellness",
+        description: "Comprehensive management of Polycystic Ovary Syndrome (PCOS) addressing irregular periods, acne, weight gain, and infertility. Dr. Khemani focuses on lifestyle changes and targeted medical therapies.",
+        services: ["Hormonal Evaluation", "Diet & Lifestyle Plan", "Menstrual Regulation", "Acne & Hirsutism Treatment", "Metabolic Health", "Fertility Support"],
         image: "/images/2023-04-06.webp",
         href: "/treatments/pcos-treatment",
         color: "#f5e6ef",
     },
     {
-        id: "menopause",
-        icon: Heart,
-        title: "Menopause & HRT",
-        subtitle: "Comprehensive Menopause Management",
-        description: "Symptom management including hot flashes, mood changes, and bone health. Hormone Replacement Therapy options, alternative therapies, and long-term wellness programs.",
-        services: ["HRT Management", "Bone Health Screening", "Cardiovascular Risk Assessment", "Mood & Sleep Support", "Alternative Therapies", "Long-term Wellness"],
+        id: "endometriosis",
+        icon: Stethoscope,
+        title: "Endometriosis Management",
+        subtitle: "Specialized Chronic Pain Relief",
+        description: "Expert diagnosis and treatment for endometriosis, reducing pelvic pain and preserving fertility. We offer both medical management and advanced conservative surgery.",
+        services: ["Pelvic Pain Assessment", "Diagnostic Laparoscopy", "Cyst Removal", "Adhesiolysis", "Fertility Preservation", "Long-term Management"],
+        image: "/images/Laparoscopic Surgery.jpg",
+        href: "/treatments/endometriosis",
+        color: "#e8d5e0",
+    },
+    {
+        id: "advanced-laparoscopy",
+        icon: LaparoscopyIcon,
+        title: "Advanced Laparoscopic Procedures",
+        subtitle: "Complex Minimally Invasive Surgery",
+        description: `State-of-the-art keyhole surgeries for complex gynecological conditions. Dr. Khemani has performed ${calculateSurgeries()}+ procedures ensuring faster recovery, minimal pain, and tiny scars.`,
+        services: ["Total Laparoscopic Hysterectomy", "Myomectomy (Fibroids)", "Complex Cystectomy", "Ectopic Pregnancy", "Tubal Recanalization", "Fertility Enhancing Surgery"],
+        image: "/images/Laparoscopic Surgery.jpg",
+        href: "/treatments/advanced-laparoscopic-procedures",
+        color: "#d4a5c4",
+    },
+    {
+        id: "pregnancy-care",
+        icon: Baby,
+        title: "Pregnancy Management",
+        subtitle: "Complete Prenatal to Postnatal Care",
+        description: "Holistic pregnancy care tailored to your journey. From the first heartbeat to delivery and beyond, we prioritize the health and safety of both mother and baby.",
+        services: ["Prenatal Checkups", "Ultrasound Monitoring", "Nutrition Counseling", "Normal Delivery Focus", "Labor Pain Management", "Postnatal Care"],
+        image: "/images/Pregnancy Care.png",
+        href: "/treatments/pregnancy-care",
+        color: "#f5e6ef",
+    },
+    {
+        id: "high-risk-pregnancy",
+        icon: Shield,
+        title: "High-Risk Pregnancy",
+        subtitle: "Specialized Care for Complex Cases",
+        description: "Dedicated management for pregnancies complicated by diabetes, hypertension, multiple gestations, or age-related factors. We ensure close monitoring for the best outcomes.",
+        services: ["Gestational Diabetes", "Preeclampsia Management", "Twin/Triplet Care", "Preterm Labor Prevention", "Recurrent Miscarriage", "Fetal Monitoring"],
+        image: "/images/High-Risk Pregnancy.webp",
+        href: "/treatments/high-risk-pregnancy",
+        color: "#e8d5e0",
+    },
+    {
+        id: "fertility-management",
+        icon: FertilityIcon,
+        title: "Fertility Management",
+        subtitle: "Pathways to Parenthood",
+        description: "Compassionate evaluation and evidence-based treatments for couples facing conception challenges. We offer a range of assisted reproductive technologies.",
+        services: ["Fertility Profiling", "Ovulation Induction", "IUI (Intrauterine Insemination)", "IVF Coordination", "Male Infertility Support", "Counseling"],
+        image: "/images/Fertility Treatment.webp",
+        href: "/treatments/fertility",
+        color: "#d4a5c4",
+    },
+    {
+        id: "family-planning",
+        icon: Users,
+        title: "Family Planning",
+        subtitle: "Empowering Reproductive Choices",
+        description: "Confidential guidance on contraception and reproductive health. We help you choose the best method for your lifestyle and future family goals.",
+        services: ["Contraceptive Counseling", "IUD Insertion/Removal", "Oral Contraceptives", "Permanent Sterilization", "Pre-conception Counseling", "Sexual Health"],
+        image: "/images/2023-02-08.webp",
+        href: "/treatments/family-planning",
+        color: "#f5e6ef",
+    },
+    {
+        id: "emergency-c-section",
+        icon: Activity,
+        title: "Emergency Caesarean Section",
+        subtitle: "Critical Care When Seconds Count",
+        description: "Rapid response capability for emergency deliveries. Advanced surgical skill ensures the safety of mother and baby during unforeseen complications.",
+        services: ["Fetal Distress Management", "Obstructed Labor", "Emergency Delivery", "NICU Backup", "Maternal Safety", "Post-Op Care"],
+        image: "/images/High-Risk Pregnancy.webp",
+        href: "/treatments/emergency-caesarean",
+        color: "#e8d5e0",
+    },
+    {
+        id: "hysterectomy",
+        icon: Scissors,
+        title: "Hysterectomy",
+        subtitle: "Surgical Solution for Uterine Conditions",
+        description: "Removal of the uterus when medically necessary for fibroids, cancer prevention, or severe bleeding. offering Laparoscopic, Abdominal, and Vaginal approaches.",
+        services: ["Laparoscopic Hysterectomy", "Total/Subtotal Removal", "Ovary Preservation", "Fibroid Treatment", "Recovery Planning", "Hormonal Support"],
+        image: "/images/Laparoscopic Surgery.jpg",
+        href: "/treatments/hysterectomy",
+        color: "#d4a5c4",
+    },
+    {
+        id: "hysteroscopy",
+        icon: Microscope,
+        title: "Hysteroscopy",
+        subtitle: "Direct Visual Diagnosis & Treatment",
+        description: "Minimally invasive procedure to inspect the inside of the uterus. Used for diagnosing bleeding causes and treating polyps or septum without external cuts.",
+        services: ["Diagnostic Hysteroscopy", "Polypectomy", "Septum Resection", "Adhesiolysis", "Biopsy", "Fibroid Resection"],
+        image: "/images/Laparoscopic Surgery.jpg",
+        href: "/treatments/hysteroscopy",
+        color: "#f5e6ef",
+    },
+    {
+        id: "ovarian-cystectomy",
+        icon: CircleDot,
+        title: "Ovarian Cystectomy",
+        subtitle: "Preserving Ovarian Health",
+        description: "Surgical removal of ovarian cysts while preserving the ovary and fertility. Specialized in treating dermoid, endometriotic, and simple cysts.",
+        services: ["Laparoscopic Removal", "Fertility Preservation", "Pathology Review", "Pain Relief", "Cyst Surveillance", "Emergency Torsion Care"],
+        image: "/images/Laparoscopic Surgery.jpg",
+        href: "/treatments/ovarian-cystectomy",
+        color: "#e8d5e0",
+    },
+    {
+        id: "menopause-care",
+        icon: Flower2,
+        title: "Menopause Care",
+        subtitle: "Graceful Transition Support",
+        description: "Holistic support for women navigating menopause. addressing hot flashes, bone health, and emotional well-being to ensure quality of life.",
+        services: ["Symptom Management", "Hormone Replacement Therapy (HRT)", "Bone Density Check", "Heart Health", "Lifestyle Guidance", "Wellness Checks"],
         image: "/images/2023-02-08.webp",
         href: "/treatments/menopause",
-        color: "#e8d5e0",
+        color: "#d4a5c4",
     },
 ];
 
 const whyChoose = [
     { icon: UserCheck, title: "Personalized Care", desc: "Every patient receives individualized attention and customized treatment plans." },
     { icon: Microscope, title: "Advanced Technology", desc: "Modern diagnostic equipment and minimally invasive surgical techniques." },
-    { icon: Shield, title: "21+ Years Experience", desc: "Two decades of clinical excellence with thousands of successful outcomes." },
+    { icon: Shield, title: `${calculateExperience()}+ Years Experience`, desc: `${calculateExperience()} years of clinical excellence with thousands of successful outcomes.` },
     { icon: Heart, title: "Compassionate Approach", desc: "Warm, supportive environment where patients feel heard and cared for." },
 ];
 
@@ -132,7 +200,7 @@ const serviceFaqs = [
     },
     {
         q: "What is laparoscopic surgery and is it safe?",
-        a: "Laparoscopic surgery is a minimally invasive surgical technique using small incisions and a camera. It offers 80% less pain, faster recovery (48 hours vs. weeks), and minimal scarring. Dr. Khemani has performed 583+ successful laparoscopic surgeries."
+        a: `Laparoscopic surgery is a minimally invasive surgical technique using small incisions and a camera. It offers 80% less pain, faster recovery (48 hours vs. weeks), and minimal scarring. Dr. Khemani has performed ${calculateSurgeries()}+ successful laparoscopic surgeries.`
     },
     {
         q: "Does Dr. Vinita Khemani perform painless delivery?",
@@ -178,7 +246,7 @@ export default function TreatmentsPage() {
 
                                     <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
                                         From pregnancy care to advanced laparoscopic surgery, Dr. Vinita Khemani provides
-                                        expert gynecological treatments backed by 21+ years of clinical experience in Kolkata.
+                                        expert gynecological treatments backed by {calculateExperience()} years of clinical experience in Kolkata.
                                     </p>
 
                                     <Link
@@ -199,7 +267,7 @@ export default function TreatmentsPage() {
             </section>
 
             {/* Treatments Grid */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-gradient-to-b from-white to-[#fffafc]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="space-y-20">
                         {serviceCategories.map((service, i) => (
@@ -248,13 +316,22 @@ export default function TreatmentsPage() {
                                         ))}
                                     </div>
 
-                                    <Link
-                                        href="#contact"
-                                        className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#C21975] text-white text-sm font-semibold hover:bg-[#8a2f5e] hover:gap-3 transition-all shadow-lg hover:shadow-xl w-fit"
-                                    >
-                                        Book Consultation
-                                        <ArrowRight className="w-4 h-4" />
-                                    </Link>
+                                    <div className="flex flex-wrap gap-4">
+                                        <Link
+                                            href="#contact"
+                                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C21975] text-white text-sm font-semibold hover:bg-[#8a2f5e] transition-all shadow-lg hover:shadow-xl w-fit"
+                                        >
+                                            Book Consultation
+                                            <Calendar className="w-4 h-4" />
+                                        </Link>
+                                        <Link
+                                            href={service.href}
+                                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[#C21975] text-[#C21975] text-sm font-semibold hover:bg-[#C21975] hover:text-white transition-all w-fit group/btn"
+                                        >
+                                            Learn More
+                                            <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                                        </Link>
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}
@@ -263,7 +340,7 @@ export default function TreatmentsPage() {
             </section>
 
             {/* Why Choose Section */}
-            <section className="py-24 bg-[#F5F5F5]">
+            <section className="py-24 bg-gradient-to-b from-[#fffafc] to-[#fff0f5]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="text-center max-w-2xl mx-auto mb-16">
                         <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">
@@ -297,38 +374,69 @@ export default function TreatmentsPage() {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-gradient-to-b from-white to-[#fff0f5]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="max-w-3xl mx-auto">
-                        <div className="text-center mb-16">
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">
-                                Common Questions
-                            </span>
-                            <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Treatments</span>{" "}
-                                <span className="text-[#C21975]">FAQ</span>
-                            </h2>
+                    <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+                        {/* Left: Sticky Header */}
+                        <div className="lg:col-span-4">
+                            <div className="lg:sticky lg:top-32 text-left">
+                                <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">
+                                    Common Questions
+                                </span>
+                                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.2] mb-6 pb-1">
+                                    Frequently <br />
+                                    <span className="text-[#C21975]">Asked</span> Questions
+                                </h2>
+                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                    Find answers to the most common questions about our services, treatments, and clinic policies.
+                                </p>
+                                <Link
+                                    href="#contact"
+                                    className="inline-flex items-center text-[#C21975] font-semibold hover:text-[#a01560] transition-colors group"
+                                >
+                                    Still have questions? Contact us
+                                    <ChevronDown className="w-5 h-5 ml-2 -rotate-90 group-hover:translate-x-1 transition-transform" />
+                                </Link>
+                            </div>
                         </div>
 
-                        <div className="space-y-4">
+                        {/* Right: Accordion */}
+                        <div className="lg:col-span-8 space-y-4">
                             {serviceFaqs.map((faq, i) => (
-                                <div key={i} className="rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.08)] overflow-hidden bg-white">
+                                <div
+                                    key={i}
+                                    className={`group rounded-2xl border transition-all duration-300 ${openFaq === i
+                                        ? "bg-white border-[#C21975]/30 shadow-lg shadow-pink-500/5 ring-1 ring-[#C21975]/20"
+                                        : "bg-white/80 border-white/50 shadow-sm hover:border-pink-100 hover:bg-white"
+                                        }`}
+                                >
                                     <button
                                         onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                                        className="w-full flex items-center justify-between p-6 text-left"
+                                        className="w-full flex items-center justify-between p-6 md:p-8 text-left"
                                     >
-                                        <span className="text-lg font-semibold text-gray-900 pr-4">{faq.q}</span>
-                                        <ChevronDown className={`w-5 h-5 text-[#C21975] shrink-0 transition-transform ${openFaq === i ? "rotate-180" : ""}`} />
+                                        <span className={`text-lg md:text-xl font-semibold transition-colors ${openFaq === i ? "text-[#C21975]" : "text-gray-900"}`}>
+                                            {faq.q}
+                                        </span>
+                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-300 shrink-0 ml-4 ${openFaq === i
+                                            ? "bg-[#C21975] border-[#C21975] text-white rotate-180"
+                                            : "bg-transparent border-gray-200 text-gray-400 group-hover:border-[#C21975] group-hover:text-[#C21975]"
+                                            }`}>
+                                            <ChevronDown className="w-5 h-5" />
+                                        </div>
                                     </button>
-                                    {openFaq === i && (
-                                        <motion.div
-                                            initial={{ opacity: 0, height: 0 }}
-                                            animate={{ opacity: 1, height: "auto" }}
-                                            className="px-6 pb-6"
-                                        >
-                                            <p className="text-gray-600 leading-relaxed">{faq.a}</p>
-                                        </motion.div>
-                                    )}
+                                    <motion.div
+                                        initial={false}
+                                        animate={{ height: openFaq === i ? "auto" : 0, opacity: openFaq === i ? 1 : 0 }}
+                                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                                        className="overflow-hidden"
+                                    >
+                                        <div className="px-6 md:px-8 pb-8 pt-0">
+                                            <div className="w-full h-px bg-gray-100 mb-6" />
+                                            <p className="text-gray-600 leading-relaxed text-lg">
+                                                {faq.a}
+                                            </p>
+                                        </div>
+                                    </motion.div>
                                 </div>
                             ))}
                         </div>
@@ -337,7 +445,7 @@ export default function TreatmentsPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 bg-[#F5F5F5]">
+            <section className="py-20 bg-[#fffbfd]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="rounded-[3rem] p-12 md:p-16 text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #730940 0%, #C21975 100%)' }}>
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />

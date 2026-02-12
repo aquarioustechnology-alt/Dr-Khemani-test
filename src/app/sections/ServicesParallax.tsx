@@ -6,6 +6,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Baby, HeartPulse } from "lucide-react";
+import { calculateSurgeries, calculateDeliveries } from "@/lib/utils";
 
 const FertilityIcon = ({ className }: { className?: string }) => (
   <div className={`relative ${className || "w-5 h-5"}`}>
@@ -35,7 +36,7 @@ const services = [
     icon: Baby,
     title: "Pregnancy Care",
     subtitle: "Complete prenatal to postnatal care",
-    description: "Comprehensive prenatal care including regular checkups, ultrasound monitoring, nutrition counseling, and personalized birth planning. Dr. Khemani prioritizes normal delivery with over 2,348 successful deliveries.",
+    description: `Comprehensive prenatal care including regular checkups, ultrasound monitoring, nutrition counseling, and personalized birth planning. Dr. Khemani prioritizes normal delivery with over ${calculateDeliveries().toLocaleString()} successful deliveries.`,
     features: ["Prenatal Checkups", "Nutrition Guidance", "Delivery Planning", "Postnatal Care"],
     href: "/treatments/pregnancy-care",
     image: "/images/Pregnancy Care.png",
@@ -71,7 +72,7 @@ const services = [
     icon: LaparoscopyIcon,
     title: "Laparoscopic Surgery",
     subtitle: "Keyhole surgery with faster recovery",
-    description: "583+ advanced laparoscopic surgeries performed for fibroids, ovarian cysts, endometriosis, hysterectomy, and ectopic pregnancy – with same-day discharge and minimal scarring.",
+    description: `${calculateSurgeries().toLocaleString()}+ advanced laparoscopic surgeries performed for fibroids, ovarian cysts, endometriosis, hysterectomy, and ectopic pregnancy – with same-day discharge and minimal scarring.`,
     features: ["Keyhole Surgery", "Fibroid Removal", "Cyst Treatment", "Quick Recovery"],
     href: "/treatments/laparoscopic-surgery",
     image: "/images/Laparoscopic Surgery.jpg",

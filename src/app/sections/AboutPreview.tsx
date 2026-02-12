@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Award, TrendingUp } from "lucide-react";
+import { calculateExperience } from "@/lib/utils";
 
 
 export function AboutPreview() {
@@ -18,7 +19,7 @@ export function AboutPreview() {
               About Dr. Vinita Khemani
             </span>
             <h2 className="font-display text-4xl lg:text-5xl font-bold animate-text-gradient leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">21+ Years of</span> <br /> <span className="text-[#C21975]">Clinical Excellence.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">{calculateExperience()}+ Years of</span> <br /> <span className="text-[#C21975]">Clinical Excellence.</span>
             </h2>
           </div>
           <div className="lg:col-span-8">

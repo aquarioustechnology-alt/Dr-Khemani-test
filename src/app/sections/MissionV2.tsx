@@ -6,7 +6,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export function MissionV2() {
     return (
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-gradient-to-b from-[#fff5f5] to-white">
             <div className="container-fluid mx-auto max-w-[1400px] px-6">
 
                 {/* Centered Heading */}
@@ -14,9 +14,9 @@ export function MissionV2() {
                     <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">
                         Our Mission
                     </span>
-                    <h2 className="font-display text-4xl md:text-5xl lg:text-[56px] font-bold text-gray-900 leading-tight">
+                    <h2 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-bold text-gray-900 leading-[1.2] pb-2">
                         Empowering women through <br />
-                        <span className="text-[#C21975] italic">compassionate healthcare.</span>
+                        <span className="text-[#C21975] italic pr-1">compassionate healthcare.</span>
                     </h2>
                     <p className="text-xl text-gray-600 mt-6 leading-relaxed">
                         We strive to create a safe, supportive environment where every woman feels heard, understood, and cared for at every stage of her life.

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export function WhyChooseUs() {
     return (
-        <section className="py-24 bg-[#fdfbfa]">
+        <section className="py-24 bg-gradient-to-b from-[#fdfbfd] to-[#fff0f5]">
             <div className="w-[95%] mx-auto bg-white rounded-[3rem] p-8 md:p-16 shadow-sm overflow-hidden">
                 <div className="container-fluid mx-auto">
 
@@ -15,7 +15,7 @@ export function WhyChooseUs() {
                             <span className="inline-block px-4 py-2 rounded-full bg-[#f5e6ef]/50 text-[#C21975] text-sm font-semibold mb-6 border border-[#d4a5c4]">
                                 Why Choose Us
                             </span>
-                            <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.2] pb-1">
                                 Your trusted partner in <br />
                                 <span className="text-[#C21975]">compassionate care</span>
                             </h2>
@@ -35,7 +35,7 @@ export function WhyChooseUs() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="bg-[#F8F5F7] rounded-[2rem] p-10 flex flex-col justify-between h-full min-h-[450px]"
+                            className="bg-[#fff5f5] rounded-[2rem] p-10 flex flex-col justify-between h-full min-h-[450px]"
                         >
                             <h3 className="text-2xl lg:text-3xl font-display font-medium text-gray-900 leading-tight mb-8">
                                 Personalized care plans tailored to meet the unique preferences and needs of every patient

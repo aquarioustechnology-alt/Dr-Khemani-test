@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Star, Award, Users, Play, ArrowUpRight } from "lucide-react";
+import { calculateExperience, calculateSurgeries } from "@/lib/utils";
 
 
 const heroImages = [
@@ -57,7 +58,7 @@ export function HeroV2() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-lg leading-relaxed">
-                  Dr. Vinita Khemani is a senior Obstetrician-Gynecologist in Kolkata with <span className="font-bold text-gray-900">21+ years</span> of experience in high-risk pregnancy, laparoscopic surgery, and fertility treatment. Trusted by 10,000+ patients.
+                  Dr. Vinita Khemani is a senior Obstetrician-Gynecologist in Kolkata with <span className="font-bold text-gray-900">{calculateExperience()}+ years</span> of experience in high-risk pregnancy, laparoscopic surgery, and fertility treatment. Trusted by 10,000+ patients.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-14">
@@ -181,7 +182,7 @@ export function HeroV2() {
                       <Award className="w-4 h-4 lg:w-5 lg:h-5" />
                     </div>
                     <h3 className="text-sm lg:text-lg font-medium text-white leading-tight drop-shadow-md">
-                      583+ Surgeries
+                      {calculateSurgeries()}+ Surgeries
                     </h3>
                   </div>
                   <p className="text-[10px] lg:text-xs text-white/90 leading-relaxed font-light drop-shadow-md pl-1">

@@ -3,12 +3,13 @@
 import { motion } from "framer-motion";
 import { Shield, Clock, Stethoscope, HeartPulse, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { calculateExperience } from "@/lib/utils";
 
 const trustItems = [
   {
     icon: Shield,
     title: "Trusted Expertise",
-    desc: "21+ years of specialized experience in women's healthcare",
+    desc: `${calculateExperience()}+ years of specialized experience in women's healthcare`,
     bgColor: "#f5e6ef",
     iconBg: "#a43971",
     borderColor: "#d4a5c4",
@@ -75,12 +76,12 @@ export function TrustBadges() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className="trust-card group cursor-pointer"
-              style={{ 
+              style={{
                 backgroundColor: item.bgColor,
                 border: `1px solid ${item.borderColor}`,
               }}
             >
-              <div 
+              <div
                 className="trust-icon-wrapper text-white shadow-lg mb-4"
                 style={{ backgroundColor: item.iconBg }}
               >

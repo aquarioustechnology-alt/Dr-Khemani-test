@@ -3,10 +3,11 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Users, Baby, Star, Scissors } from "lucide-react";
+import { calculateExperience, calculateSurgeries } from "@/lib/utils";
 
 export function AboutHeroV2() {
     return (
-        <section className="bg-white px-4 pt-32 pb-8 lg:pt-40 lg:pb-0">
+        <section className="bg-gradient-to-b from-[#fffafc] to-white px-4 pt-32 pb-8 lg:pt-40 lg:pb-0">
             <div className="mx-auto max-w-[1400px]">
 
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16 lg:mb-24">
@@ -24,15 +25,15 @@ export function AboutHeroV2() {
                                 </span>
                             </div>
 
-                            <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] leading-[1.1] font-bold text-gray-900 mb-8 tracking-tight">
+                            <h1 className="font-display text-4xl md:text-6xl lg:text-[64px] xl:text-[72px] leading-[1.2] font-bold text-gray-900 mb-8 tracking-tight pb-2">
                                 compassionate care <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#8a2f5e] italic">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#8a2f5e] italic pr-2">
                                     for every woman.
                                 </span>
                             </h1>
 
                             <p className="text-xl text-gray-600 leading-relaxed max-w-lg mb-8">
-                                With over 21 years of experience, Dr. Vinita Khemani combines medical excellence with a heart-centered approach to transform women&apos;s healthcare in Kolkata.
+                                With over {calculateExperience()} years of experience, Dr. Vinita Khemani combines medical excellence with a heart-centered approach to transform women&apos;s healthcare in Kolkata.
                             </p>
                         </motion.div>
                     </div>
@@ -46,7 +47,7 @@ export function AboutHeroV2() {
                             className="relative w-full h-[450px] md:h-[550px] rounded-[3rem] overflow-hidden shadow-2xl"
                         >
                             <Image
-                                src="/images/doctor_clinic_portrait_1770790565861.png"
+                                src="/images/dr-vinita-about-hero.webp"
                                 alt="Dr. Vinita Khemani - Best Gynecologist in Kolkata"
                                 fill
                                 className="object-cover object-top"
@@ -64,10 +65,10 @@ export function AboutHeroV2() {
                         >
                             <div className="grid grid-cols-2 gap-x-8 gap-y-6">
                                 {[
-                                    { value: "21+", label: "Years Exp.", icon: Star },
+                                    { value: `${calculateExperience()}+`, label: "Years Exp.", icon: Star },
                                     { value: "10k+", label: "Patients", icon: Users },
                                     { value: "2k+", label: "Deliveries", icon: Baby },
-                                    { value: "583+", label: "Surgeries", icon: Scissors },
+                                    { value: `${calculateSurgeries()}+`, label: "Surgeries", icon: Scissors },
                                 ].map((stat, i) => (
                                     <div key={i} className="flex items-center gap-3">
                                         <div className="w-10 h-10 rounded-full bg-[#fff5f9] flex items-center justify-center text-[#C21975] shrink-0">

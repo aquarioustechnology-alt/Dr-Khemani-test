@@ -1,16 +1,18 @@
+import { calculateExperience } from "./utils"; // Import utils
+
 // Dr. Vinita Khemani Website Data
 
 export const doctorInfo = {
   name: "Dr. Vinita Khemani",
   title: "Consultant Gynecologist & Obstetrician",
   qualifications: ["MBBS", "DGO", "DNB (OBGYN)"],
-  experience: 21,
+  experience: calculateExperience(),
   patientsTreated: "10,000+",
   phone: "+91-9903588155",
   email: "drvinitakhemani@gmail.com",
-  description: "One of Kolkata's most trusted obstetricians and gynecologists with over 21 years of extensive clinical experience in helping thousands of patients achieve optimal women's health.",
+  description: `One of Kolkata's most trusted obstetricians and gynecologists with over ${calculateExperience()} years of extensive clinical experience in helping thousands of patients achieve optimal women's health.`,
   philosophy: "Every woman deserves personalized, compassionate care. My approach combines medical expertise with genuine empathy to support you through every stage of life.",
-  image: "/images/doctor-hero.jpg",
+  image: "/images/dr-vinita-about-hero.webp",
 };
 
 export const clinics = [
@@ -321,7 +323,7 @@ export const instagramPosts = [
 ];
 
 export const stats = [
-  { label: "Years Experience", value: 21, suffix: "+" },
+  { label: "Years Experience", value: calculateExperience(), suffix: "+" },
   { label: "Patients Treated", value: 10000, suffix: "+" },
   { label: "Clinic Locations", value: 3, suffix: "" },
   { label: "Success Rate", value: 99, suffix: "%" },
@@ -354,8 +356,8 @@ export const whyChoosePoints = [
     icon: "Wallet",
   },
   {
-    title: "21+ Years Experience",
-    description: "Two decades of clinical excellence with thousands of successful patient outcomes.",
+    title: `${calculateExperience()}+ Years Experience`,
+    description: `${calculateExperience()} years of clinical excellence with thousands of successful patient outcomes.`,
     icon: "Award",
   },
 ];
