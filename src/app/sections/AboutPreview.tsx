@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Award, Clock } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Award, TrendingUp } from "lucide-react";
 
 
 export function AboutPreview() {
@@ -42,10 +42,10 @@ export function AboutPreview() {
           >
             <div>
               <div className="w-16 h-16 rounded-2xl bg-white/80 flex items-center justify-center mb-8 shadow-sm">
-                <Clock className="w-8 h-8 text-[#C21975]" />
+                <TrendingUp className="w-8 h-8 text-[#C21975]" />
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">21+ Years</h3>
-              <p className="text-gray-700 text-lg font-medium">In Obstetrics & Gynecology Practice</p>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">High Success Rate</h3>
+              <p className="text-gray-700 text-lg font-medium">In Fertility, PCOS & High-Risk Pregnancy</p>
             </div>
 
             <div className="mt-8 pt-8 border-t border-[#d4a5c4]/30">

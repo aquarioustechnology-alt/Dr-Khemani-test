@@ -13,6 +13,7 @@ import { ClinicTiming } from "./sections/ClinicTiming";
 
 import { InstagramFeed } from "./sections/InstagramFeed";
 import { VideoReviews } from "./sections/VideoReviews";
+import { FocusSection } from "./sections/FocusSection";
 
 import { Footer } from "./sections/Footer";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <Navigation />
       <HeroV2 />
       <AboutPreview />
+      <FocusSection />
       <ServicesParallax />
       <ParallaxStats />
       <WhyChoose />
