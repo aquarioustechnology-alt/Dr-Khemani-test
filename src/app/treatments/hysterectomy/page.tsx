@@ -108,6 +108,81 @@ export default function HysterectomyPage() {
                 </div>
             </section>
 
+            {/* Recovery Roadmap Section */}
+            <section className="py-24 bg-[#F5F5F5] relative overflow-hidden">
+                <div className="container-fluid mx-auto max-w-[1200px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Post-Op Care</span>
+                            <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                                Path to <span className="text-[#C21975]">Fast Recovery</span>
+                            </h2>
+                            <div className="relative border-l-2 border-[#C21975]/20 pl-8 ml-4 space-y-12">
+                                <div className="relative">
+                                    <span className="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-[#C21975] border-4 border-[#F5F5F5]" />
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Day 1-2: Hospital Stay</h3>
+                                    <p className="text-gray-600">Most laparoscopic patients are walking within hours and discharged in 24-48 hours. Pain is managed effectively.</p>
+                                </div>
+                                <div className="relative">
+                                    <span className="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-[#C21975] border-4 border-[#F5F5F5]" />
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Week 1: Rest & Light Activity</h3>
+                                    <p className="text-gray-600">Rest at home, but short walks are encouraged to aid healing. No heavy lifting.</p>
+                                </div>
+                                <div className="relative">
+                                    <span className="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-[#C21975] border-4 border-[#F5F5F5]" />
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Week 2-3: Returning to Routine</h3>
+                                    <p className="text-gray-600">Many return to desk jobs. Energy levels improve significantly.</p>
+                                </div>
+                                <div className="relative">
+                                    <span className="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-[#C21975] border-4 border-[#F5F5F5]" />
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Week 4-6: Full Recovery</h3>
+                                    <p className="text-gray-600">Clearance for exercise and normal activities. Feel the freedom from pain and bleeding!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
+                            <Image src="/images/2023-04-23.webp" alt="Patient recovering happily" fill className="object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-pink-900/60 to-transparent" />
+                            <div className="absolute bottom-8 left-8 right-8 text-white">
+                                <p className="text-lg font-medium leading-relaxed">&quot;The fear of surgery vanished when I realized how quickly I could get back to my life—pain-free.&quot;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Life After Hysterectomy */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1200px] px-6 text-center">
+                    <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-12">
+                        Life <span className="text-[#C21975]">After Surgery</span>
+                    </h2>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <div className="p-8 rounded-[2rem] bg-pink-50 border border-pink-100">
+                            <div className="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-[#C21975] shadow-sm mb-6">
+                                <UserCheck className="w-8 h-8" />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">No More Bleeding</h3>
+                            <p className="text-gray-600">Say goodbye to heavy periods, anemia, and fatigue. Regain your vitality.</p>
+                        </div>
+                        <div className="p-8 rounded-[2rem] bg-pink-50 border border-pink-100">
+                            <div className="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-[#C21975] shadow-sm mb-6">
+                                <Shield className="w-8 h-8" />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Cancer Prevention</h3>
+                            <p className="text-gray-600">Eliminates the risk of uterine, cervical, and (if removed) ovarian cancers.</p>
+                        </div>
+                        <div className="p-8 rounded-[2rem] bg-pink-50 border border-pink-100">
+                            <div className="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-[#C21975] shadow-sm mb-6">
+                                <Scissors className="w-8 h-8" />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Pain Relief</h3>
+                            <p className="text-gray-600">Permanent relief from fibroids, endometriosis pain, and pelvic pressure.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* FAQ Section with Updated Style */}
             <section className="py-24 bg-gradient-to-b from-white to-[#fff0f5]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">

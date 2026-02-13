@@ -211,39 +211,56 @@ export default function PregnancyCarePage() {
                 </div>
             </section>
 
-            {/* Trimester Timeline */}
+            {/* Trimester Timeline - Refactored */}
             <section className="py-24 bg-[#fafafa]">
-                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                <div className="container-fluid mx-auto max-w-[1200px] px-6">
                     <div className="text-center mb-16">
                         <span className="text-[#C21975] font-semibold tracking-wider uppercase text-sm">Your Roadmap</span>
                         <h2 className="font-display text-4xl font-bold text-gray-900 mt-2">Trimester by Trimester Care</h2>
+                        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">We follow international protocols ensuring no detail is missed at any stage.</p>
                     </div>
 
-                    <div className="grid lg:grid-cols-3 gap-8">
-                        {trimesterCare.map((tri, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.2 }}
-                                className={`rounded-[2rem] p-8 border hover:shadow-lg transition-shadow bg-white ${tri.color.replace('bg-', 'border-').replace('text-', 'details-')}`}
-                            >
-                                <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 ${tri.color}`}>{tri.weeks}</div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-1">{tri.title}</h3>
-                                <p className="text-sm font-medium text-gray-500 mb-4">{tri.subtitle}</p>
-                                <p className="text-gray-600 mb-8 leading-relaxed">{tri.desc}</p>
+                    <div className="relative">
+                        {/* Timeline Line */}
+                        <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#C21975] via-pink-200 to-transparent md:-translate-x-1/2" />
 
-                                <ul className="space-y-4">
-                                    {tri.points.map((pt, j) => (
-                                        <li key={j} className="flex items-start gap-3 text-sm text-gray-700">
-                                            <CheckCircle className="w-5 h-5 text-gray-400 shrink-0 mt-0.5" />
-                                            {pt}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </motion.div>
-                        ))}
+                        <div className="space-y-16">
+                            {trimesterCare.map((tri, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.1 }}
+                                    className={`relative flex flex-col md:flex-row gap-8 md:gap-16 ${i % 2 === 0 ? "md:text-right" : "md:flex-row-reverse md:text-left"}`}
+                                >
+                                    {/* Content Side */}
+                                    <div className="flex-1 pl-20 md:pl-0 md:pt-4">
+                                        <div className={`inline-flex items-center gap-2 mb-2 ${i % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
+                                            <span className="text-[#C21975] font-bold text-xl">{tri.weeks}</span>
+                                            <div className="h-px w-10 bg-[#C21975]/30"></div>
+                                        </div>
+                                        <h3 className="text-3xl font-bold text-gray-900 mb-2">{tri.title}</h3>
+                                        <h4 className="text-lg text-gray-500 font-medium italic mb-4">{tri.subtitle}</h4>
+                                        <p className="text-gray-600 mb-6 leading-relaxed bg-white p-6 rounded-2xl shadow-sm border border-gray-100">{tri.desc}</p>
+                                        <ul className={`space-y-2 inline-flex flex-col ${i % 2 === 0 ? 'md:items-end' : 'md:items-start'}`}>
+                                            {tri.points.map((pt, j) => (
+                                                <li key={j} className={`flex items-center gap-3 text-gray-700 text-sm ${i % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+                                                    <CheckCircle className="w-4 h-4 text-[#C21975] shrink-0" />
+                                                    <span>{pt}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    {/* Center Point */}
+                                    <div className="absolute left-8 md:left-1/2 top-0 md:top-6 w-4 h-4 bg-white border-4 border-[#C21975] rounded-full -translate-x-1/2 z-10 shadow-[0_0_0_8px_rgba(194,25,117,0.1)]" />
+
+                                    {/* Empty Side for layout balance */}
+                                    <div className="flex-1 hidden md:block" />
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

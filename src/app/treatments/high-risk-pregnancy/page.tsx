@@ -102,28 +102,44 @@ export default function HighRiskPregnancyPage() {
                 </div>
             </section>
 
-            {/* Monitoring Timeline */}
-            <section className="py-24 bg-[#F5F5F5]">
+            {/* Monitoring Timeline - Refactored */}
+            <section className="py-24 bg-[#F5F5F5] relative overflow-hidden">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="text-center max-w-2xl mx-auto mb-16">
+                    <div className="text-center max-w-2xl mx-auto mb-20">
                         <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Monitoring Protocol</span>
                         <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Enhanced</span>{" "}
                             <span className="text-[#C21975]">Monitoring</span>
                         </h2>
                     </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {monitoringProtocol.map((phase, i) => (
-                            <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                                className="p-6 rounded-[2rem] bg-white border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
-                                <div className="w-full py-3 rounded-xl bg-[#C21975] text-white text-center font-bold mb-6">{phase.week}</div>
-                                <ul className="space-y-3">
-                                    {phase.items.map((item, j) => (
-                                        <li key={j} className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-[#22C55E] shrink-0 mt-0.5" /><span className="text-sm text-gray-700">{item}</span></li>
-                                    ))}
-                                </ul>
-                            </motion.div>
-                        ))}
+
+                    <div className="relative">
+                        {/* Connecting Line (Desktop) */}
+                        <div className="absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#C21975]/30 to-transparent hidden lg:block" />
+
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {monitoringProtocol.map((phase, i) => (
+                                <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                                    className="relative z-10">
+                                    <div className="flex flex-col items-center text-center">
+                                        <div className="w-16 h-16 rounded-full bg-[#C21975] text-white flex items-center justify-center font-bold text-xl shadow-lg ring-4 ring-white mb-6">
+                                            {i + 1}
+                                        </div>
+                                        <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 w-full hover:shadow-md transition-shadow">
+                                            <h3 className="text-lg font-bold text-[#C21975] mb-4">{phase.week}</h3>
+                                            <ul className="space-y-3 text-left">
+                                                {phase.items.map((item, j) => (
+                                                    <li key={j} className="flex items-start gap-2">
+                                                        <CheckCircle className="w-4 h-4 text-[#22C55E] shrink-0 mt-0.5" />
+                                                        <span className="text-sm text-gray-700">{item}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

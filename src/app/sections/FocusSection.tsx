@@ -113,7 +113,7 @@ export function FocusSection() {
                         {/* Right Image Side */}
                         <div className="relative min-h-[400px] lg:min-h-full">
                             <Image
-                                src="/images/PCOS-bg.png"
+                                src="/images/doctor_clinic_portrait_1770790565861.png"
                                 alt="Dr. Vinita Khemani - Fertility & PCOS Specialist"
                                 fill
                                 className="object-cover object-center"

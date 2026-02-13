@@ -36,34 +36,36 @@ export default function HysteroscopyPage() {
             {/* Hero */}
             <section className="bg-white px-2 pt-24 pb-8 md:pt-28 md:px-4 lg:pt-32 lg:px-6">
                 <div className="mx-auto w-[95%] px-4 md:px-0">
-                    <div className="relative rounded-[3rem] overflow-hidden min-h-[70vh] flex items-center bg-[#f0f9ff]">
-                        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-3xl opacity-60 pointer-events-none" />
+                    <div className="relative rounded-[3rem] overflow-hidden min-h-[85vh] flex items-center bg-[#fdf2f7]">
+                        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-pink-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-100/50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
                         <div className="relative z-10 w-full px-6 py-12 md:px-12 lg:px-16">
                             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                                 <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border border-blue-200 bg-white/60 backdrop-blur-sm">
-                                        <Microscope className="w-4 h-4 text-blue-600" />
-                                        <span className="text-sm font-semibold tracking-wide text-blue-600 uppercase">Diagnostic & Operative</span>
+                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border border-[#d4a5c4] bg-white/60 backdrop-blur-sm">
+                                        <Microscope className="w-4 h-4 text-[#C21975]" />
+                                        <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">No-Cut Surgery</span>
                                     </div>
-                                    <h1 className="font-display text-4xl md:text-5xl lg:text-[60px] leading-[1.1] font-bold tracking-tight mb-6">
+                                    <h1 className="font-display text-4xl md:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight mb-6">
                                         <span className="text-gray-900">Advanced </span> <br />
-                                        <span className="italic text-blue-600">Hysteroscopy.</span>
+                                        <span className="italic text-[#C21975]">Hysteroscopy.</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        A thin telescope allows Dr. Khemani to see inside the womb without any cuts. It is the gold standard for diagnosing and treating uterine problems like polyps, septum, or adhesions.
+                                        A revolutionary diagnostic and treatment method that allows Dr. Khemani to see and treat inside the womb without a single incision. Gold standard care for abnormal bleeding and infertility.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
-                                        className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-blue-600 to-blue-800"
+                                        className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                     >
-                                        Book Hysteroscopy
+                                        Book Evaluation
                                         <ArrowUpRight className="w-5 h-5 transition-transform group-hover:rotate-45" />
                                     </button>
                                 </motion.div>
-                                <motion.div className="relative h-[400px] md:h-[500px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
-                                    <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                                <motion.div className="relative h-[500px] lg:h-[600px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
+                                    <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white">
                                         <Image src="/images/2023-04-23 (1).webp" alt="Hysteroscopy Procedure" fill className="object-cover" />
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-pink-900/30 to-transparent"></div>
                                     </div>
                                 </motion.div>
                             </div>
@@ -72,12 +74,43 @@ export default function HysteroscopyPage() {
                 </div>
             </section>
 
-            {/* Uses Section */}
+            {/* How It Works Section */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1200px] px-6">
                     <div className="text-center mb-16">
-                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-blue-200 text-blue-600 bg-blue-50">Applications</span>
-                        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Why is it <span className="text-blue-600">Done?</span></h2>
+                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">The Process</span>
+                        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-6">See Without <span className="text-[#C21975]">Scars</span></h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">Hysteroscopy uses a thin telescope inserted through the natural passage, meaning no external cuts or stitches.</p>
+                    </div>
+                    <div className="grid lg:grid-cols-3 gap-8">
+                        <div className="bg-[#fff0f5] p-8 rounded-[2.5rem] relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+                            <div className="absolute top-0 right-0 w-24 h-24 bg-[#C21975]/10 rounded-bl-full" />
+                            <span className="text-6xl font-display font-bold text-[#C21975]/20 absolute top-4 right-6">01</span>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4 relative z-10">Preparation</h3>
+                            <p className="text-gray-600 leading-relaxed relative z-10">Done typically after your period (Day 6-10). No prolonged fasting is usually required for diagnostic procedures.</p>
+                        </div>
+                        <div className="bg-[#fff0f5] p-8 rounded-[2.5rem] relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+                            <div className="absolute top-0 right-0 w-24 h-24 bg-[#C21975]/10 rounded-bl-full" />
+                            <span className="text-6xl font-display font-bold text-[#C21975]/20 absolute top-4 right-6">02</span>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4 relative z-10">Insertion</h3>
+                            <p className="text-gray-600 leading-relaxed relative z-10">A thin hysteroscope (telescope) is gently passed through the cervix. Saline water expands the uterus for a clear view.</p>
+                        </div>
+                        <div className="bg-[#fff0f5] p-8 rounded-[2.5rem] relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+                            <div className="absolute top-0 right-0 w-24 h-24 bg-[#C21975]/10 rounded-bl-full" />
+                            <span className="text-6xl font-display font-bold text-[#C21975]/20 absolute top-4 right-6">03</span>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4 relative z-10">Treatment</h3>
+                            <p className="text-gray-600 leading-relaxed relative z-10">Using tiny instruments through the scope, we can remove polyps, fibroids, or correct septums instantly.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Uses Section */}
+            <section className="py-24 bg-[#F9F9F9]">
+                <div className="container-fluid mx-auto max-w-[1200px] px-6">
+                    <div className="text-center mb-16">
+                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Applications</span>
+                        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Why is it <span className="text-[#C21975]">Done?</span></h2>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {uses.map((item, i) => (
@@ -87,10 +120,10 @@ export default function HysteroscopyPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="flex flex-col gap-4 p-8 rounded-[2rem] border border-blue-100 bg-blue-50/50 hover:bg-white hover:shadow-lg transition-all group"
+                                className="flex flex-col gap-4 p-8 rounded-[2rem] border border-gray-100 bg-white hover:shadow-xl transition-all group hover:-translate-y-2"
                             >
-                                <div className="w-12 h-12 rounded-xl bg-white text-blue-600 flex items-center justify-center shadow-sm shrink-0 group-hover:scale-110 transition-transform">
-                                    <item.icon className="w-6 h-6" />
+                                <div className="w-14 h-14 rounded-2xl bg-pink-50 text-[#C21975] flex items-center justify-center shadow-sm shrink-0 group-hover:scale-110 transition-transform cursor-default">
+                                    <item.icon className="w-7 h-7" />
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-gray-900 mb-2 text-lg">{item.title}</h4>
@@ -103,25 +136,25 @@ export default function HysteroscopyPage() {
             </section>
 
             {/* FAQ Section with Updated Style */}
-            <section className="py-24 bg-gradient-to-b from-white to-[#f0f9ff]">
+            <section className="py-24 bg-gradient-to-b from-white to-[#fff0f5]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
                         {/* Left: Sticky Header */}
                         <div className="lg:col-span-4">
                             <div className="lg:sticky lg:top-32 text-left">
-                                <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-blue-200 text-blue-600 bg-blue-50">
+                                <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">
                                     FAQ
                                 </span>
                                 <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.2] mb-6 pb-1">
                                     Common <br />
-                                    <span className="text-blue-600">Questions</span>
+                                    <span className="text-[#C21975]">Questions</span>
                                 </h2>
                                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                                     Everything you need to know about Hysteroscopy.
                                 </p>
                                 <button
                                     onClick={() => setIsEnquiryModalOpen(true)}
-                                    className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors group"
+                                    className="inline-flex items-center text-[#C21975] font-semibold hover:text-[#a01560] transition-colors group"
                                 >
                                     Ask a Question
                                     <ChevronDown className="w-5 h-5 ml-2 -rotate-90 group-hover:translate-x-1 transition-transform" />
@@ -135,20 +168,20 @@ export default function HysteroscopyPage() {
                                 <div
                                     key={i}
                                     className={`group rounded-2xl border transition-all duration-300 ${openFaq === i
-                                        ? "bg-white border-blue-200 shadow-lg shadow-blue-100 ring-1 ring-blue-100"
-                                        : "bg-white/80 border-white/50 shadow-sm hover:border-blue-200 hover:bg-white"
+                                        ? "bg-white border-[#C21975]/30 shadow-lg shadow-pink-500/5 ring-1 ring-[#C21975]/20"
+                                        : "bg-white/80 border-white/50 shadow-sm hover:border-pink-100 hover:bg-white"
                                         }`}
                                 >
                                     <button
                                         onClick={() => setOpenFaq(openFaq === i ? null : i)}
                                         className="w-full flex items-center justify-between p-6 md:p-8 text-left"
                                     >
-                                        <span className={`text-lg md:text-xl font-semibold transition-colors ${openFaq === i ? "text-blue-700" : "text-gray-900"}`}>
+                                        <span className={`text-lg md:text-xl font-semibold transition-colors ${openFaq === i ? "text-[#C21975]" : "text-gray-900"}`}>
                                             {faq.q}
                                         </span>
                                         <div className={`w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-300 shrink-0 ml-4 ${openFaq === i
-                                            ? "bg-blue-600 border-blue-600 text-white rotate-180"
-                                            : "bg-transparent border-gray-200 text-gray-400 group-hover:border-blue-600 group-hover:text-blue-600"
+                                            ? "bg-[#C21975] border-[#C21975] text-white rotate-180"
+                                            : "bg-transparent border-gray-200 text-gray-400 group-hover:border-[#C21975] group-hover:text-[#C21975]"
                                             }`}>
                                             <ChevronDown className="w-5 h-5" />
                                         </div>

@@ -2,29 +2,89 @@
 
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/app/sections/Footer";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
     Sun, ArrowUpRight, ChevronDown,
-    Heart, ShieldCheck, Bone, Brain, Thermometer
+    Heart, ShieldCheck, Bone, Brain, Thermometer, CheckCircle2
 } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
 
 const stages = [
-    { stage: "Perimenopause", age: "Age 40-50", desc: "Transitional phase with irregular periods, hot flashes, and hormonal fluctuations. Early management significantly improves quality of life." },
-    { stage: "Menopause", age: "Average age 51", desc: "12 consecutive months without menstruation marks menopause. Hormonal therapy and lifestyle adjustments become critical for comfort and health." },
-    { stage: "Post-menopause", age: "Beyond menopause", desc: "Long-term health monitoring for bone density, cardiovascular health, and cognitive wellness. Regular screenings ensure healthy aging." },
+    { stage: "Perimenopause", age: "Age 40-50", desc: "The transitional phase leading up to menopause. You may start experiencing irregular periods, hot flashes, and mood swings as hormone levels fluctuate. Early management during this phase can significantly improve your quality of life and ease the transition." },
+    { stage: "Menopause", age: "Average age 51", desc: "Defined as 12 consecutive months without a menstrual period. This marks the end of your reproductive years. Hormonal therapy and lifestyle adjustments become critical for managing symptoms like vaginal dryness, sleep disturbances, and hot flashes." },
+    { stage: "Post-menopause", age: "Beyond menopause", desc: "The phase following menopause, lasting for the rest of your life. The focus shifts to long-term health monitoring, particularly for bone density (osteoporosis risk) and cardiovascular health, as the protective effect of estrogen is lost." },
 ];
 
 const services = [
-    { icon: Thermometer, title: "Hot Flash Management", desc: "Effective relief from hot flashes, night sweats, and vasomotor symptoms through HRT and non-hormonal alternatives." },
-    { icon: Bone, title: "Bone Health & Osteoporosis", desc: "DEXA scanning, calcium/vitamin D supplementation, and osteoporosis prevention strategies to maintain bone density." },
-    { icon: Heart, title: "Cardiovascular Screening", desc: "Heart disease risk assessment and prevention. Cholesterol management, blood pressure monitoring, and lifestyle counseling." },
-    { icon: Brain, title: "Mood & Cognitive Support", desc: "Management of mood swings, anxiety, sleep disturbances, and brain fog through integrated medical and lifestyle approaches." },
-    { icon: ShieldCheck, title: "HRT (Hormone Therapy)", desc: "Bioidentical hormone replacement therapy (estrogen, progesterone) customized to individual symptoms, risk profile, and preferences." },
-    { icon: Sun, title: "Wellness Programs", desc: "Holistic menopause wellness including nutrition counseling, exercise planning, stress management, and preventive health screenings." },
+    {
+        id: 1,
+        icon: Thermometer,
+        title: "Hot Flash Management",
+        subtitle: "Cooling the fire within",
+        description: "Hot flashes and night sweats are among the most common and bothersome symptoms of menopause. We offer a comprehensive approach to manage these vasomotor symptoms. From non-hormonal medications and lifestyle modifications to advanced hormonal therapies, we tailor the treatment to your specific severity and medical history, helping you regain comfort and sleep quality.",
+        features: ["Lifestyle Triggers Analysis", "Non-Hormonal Medications", "Low-Dose HRT Options", "Cooling Techniques"],
+        image: "/images/hot-flash-abstract.svg",
+        color: "#fff0f5",
+        badgeText: "Symptom Relief"
+    },
+    {
+        id: 2,
+        icon: Bone,
+        title: "Bone Health & Osteoporosis",
+        subtitle: "Strengthening your foundation",
+        description: "Estrogen plays a crucial role in maintaining bone density. After menopause, bone loss accelerates, increasing the risk of osteoporosis and fractures. We provide comprehensive bone health assessments, including DEXA scans, and create personalized plans involving calcium/vitamin D supplementation, weight-bearing exercise protocols, and medical therapy when necessary to keep your bones strong.",
+        features: ["DEXA Screening", "Nutritional Counseling", "Strength Training Guide", "Fracture Prevention"],
+        image: "/images/bone-health-abstract.svg",
+        color: "#f5e6ef",
+        badgeText: "Preventive Care"
+    },
+    {
+        id: 3,
+        icon: Heart,
+        title: "Cardiovascular Screening",
+        subtitle: "Protecting your heart",
+        description: "Heart disease risk increases significantly for women after menopause. We go beyond basic checkups to offer in-depth cardiovascular risk assessments. Our program includes monitoring cholesterol levels, blood pressure, and blood sugar, along with lifestyle coaching to manage weight and stress, ensuring your heart remains healthy for the years to come.",
+        features: ["Lipid Profile Analysis", "Blood Pressure Monitoring", "Metabolic Syndrome Check", "Heart-Healthy Diet Plans"],
+        image: "/images/cardio-abstract.svg",
+        color: "#fff0f5",
+        badgeText: "Heart Health"
+    },
+    {
+        id: 4,
+        icon: Brain,
+        title: "Mood & Cognitive Support",
+        subtitle: "Mental clarity and emotional balance",
+        description: "Hormonal fluctuations can lead to mood swings, anxiety, depression, and 'brain fog'. We understand these are real physiological changes, not just 'in your head'. Our holistic approach integrates medical management, counseling support, and cognitive strategies to help you navigate these emotional tides and maintain mental sharpness.",
+        features: ["Mood Assessment", "Cognitive Exercises", "Sleep Hygiene Protocols", "Supportive Counseling"],
+        image: "/images/mood-abstract.svg",
+        color: "#f5e6ef",
+        badgeText: "Mental Wellness"
+    },
+    {
+        id: 5,
+        icon: ShieldCheck,
+        title: "HRT (Hormone Therapy)",
+        subtitle: "Restoring balance safely",
+        description: "Hormone Replacement Therapy (HRT) is the most effective treatment for many menopausal symptoms. We specialize in Bioidentical Hormone Replacement Therapy (BHRT), customizing the dosage and delivery method (patch, gel, pill) to your unique needs. We carefully evaluate your personal and family history to ensure the safest and most effective approach.",
+        features: ["Bioidentical Hormones", "Customized Dosing", "Regular Safety Monitoring", "Risk-Benefit Analysis"],
+        image: "/images/hrt-abstract.svg",
+        color: "#fff0f5",
+        badgeText: "Advanced Therapy"
+    },
+    {
+        id: 6,
+        icon: Sun,
+        title: "Wellness Programs",
+        subtitle: "Thriving in your second spring",
+        description: "Menopause is a time for renewal. Our holistic wellness programs focus on nutrition, physical activity, and stress management. We help you embrace this life stage with vitality, offering guidance on weight management, sexual health, and overall well-being to ensure you feel your best every day.",
+        features: ["Nutritional Planning", "Sexual Health Support", "Yoga & Meditation", "Weight Management"],
+        image: "/images/wellness-abstract.svg",
+        color: "#f5e6ef",
+        badgeText: "Holistic Living"
+    },
 ];
 
 const faqs = [
@@ -34,9 +94,76 @@ const faqs = [
     { q: "How do I know if I'm in menopause?", a: "Classic signs include irregular periods (eventually stopping), hot flashes, night sweats, vaginal dryness, mood changes, and sleep problems. Blood tests for FSH and estradiol can confirm menopause." },
 ];
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const ServiceCard = ({ service, index, range, targetScale }: { service: any, index: number, range: any, targetScale: any }) => {
+    const container = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: container,
+        offset: ["start end", "start start"]
+    });
+
+    const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+    const scale = useTransform(scrollYProgress, range, [1, targetScale]);
+
+    return (
+        <div ref={container} className="h-screen flex items-center justify-center sticky top-0">
+            <motion.div
+                style={{ scale, top: `calc(-5vh + ${index * 25}px)` }}
+                className="flex flex-col relative -top-[25vh] h-[550px] w-full max-w-[1200px] rounded-[3rem] p-8 md:p-12 origin-top border border-gray-200 shadow-2xl overflow-hidden bg-white"
+            >
+                <div className="grid lg:grid-cols-2 gap-12 h-full items-center">
+                    {/* Content */}
+                    <div className="flex flex-col justify-center h-full order-2 lg:order-1">
+                        <div className="inline-flex items-center gap-2 mb-6">
+                            <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: service.color }}>
+                                <service.icon className="w-5 h-5 text-[#C21975]" />
+                            </div>
+                            <span className="text-sm font-bold uppercase tracking-wider text-[#C21975]">{service.badgeText}</span>
+                        </div>
+
+                        <h3 className="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-3">{service.title}</h3>
+                        <p className="text-lg text-[#C21975] font-medium mb-4 italic">{service.subtitle}</p>
+                        <p className="text-gray-600 leading-relaxed mb-6 text-sm md:text-base line-clamp-4 hover:line-clamp-none transition-all duration-300">
+                            {service.description}
+                        </p>
+
+                        <div className="grid grid-cols-2 gap-3 mt-auto">
+                            {service.features.map((feature: string, i: number) => (
+                                <div key={i} className="flex items-center gap-2 text-sm text-gray-700 font-medium">
+                                    <CheckCircle2 className="w-4 h-4 text-[#C21975] shrink-0" />
+                                    {feature}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Image */}
+                    <div className="relative h-full w-full rounded-[2rem] overflow-hidden order-1 lg:order-2">
+                        <motion.div style={{ scale: imageScale }} className="w-full h-full relative">
+                            <Image
+                                fill
+                                src={service.image}
+                                alt={service.title}
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-tr from-pink-900/10 to-transparent mix-blend-multiply" />
+                        </motion.div>
+                    </div>
+                </div>
+            </motion.div>
+        </div>
+    )
+}
+
 export default function MenopausePage() {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
     const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
+    const container = useRef(null);
+
+    useScroll({
+        target: container,
+        offset: ["start start", "end end"]
+    });
 
     return (
         <main className="relative">
@@ -102,28 +229,22 @@ export default function MenopausePage() {
                 </div>
             </section>
 
-            {/* Services */}
-            <section className="py-24 bg-[#F5F5F5]">
-                <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="text-center max-w-2xl mx-auto mb-16">
-                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Our Services</span>
-                        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Menopause</span>{" "}
-                            <span className="text-[#C21975]">Services</span>
-                        </h2>
-                    </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {services.map((svc, i) => (
-                            <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                                className="p-8 rounded-[2rem] bg-white border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-transform duration-500 group">
-                                <div className="w-14 h-14 rounded-2xl bg-[#f5e6ef] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <svc.icon className="w-7 h-7 text-[#C21975]" />
-                                </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-3">{svc.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">{svc.desc}</p>
-                            </motion.div>
-                        ))}
-                    </div>
+            {/* Services Parallax Section */}
+            <section ref={container} className="relative py-24 bg-[#F9F9F9]">
+                <div className="container-fluid mx-auto px-6 mb-20 text-center max-w-3xl">
+                    <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Our Services</span>
+                    <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Menopause</span>{" "}
+                        <span className="text-[#C21975]">Services</span>
+                    </h2>
+                    <p className="text-lg text-gray-600 mt-6">Comprehensive care designed to support you through every aspect of the menopausal transition.</p>
+                </div>
+
+                <div className="container-fluid mx-auto px-4 md:px-6">
+                    {services.map((service, index) => {
+                        const targetScale = 1 - ((services.length - index) * 0.05);
+                        return <ServiceCard key={service.id} service={service} index={index} range={[index * 0.25, 1]} targetScale={targetScale} />;
+                    })}
                 </div>
             </section>
 

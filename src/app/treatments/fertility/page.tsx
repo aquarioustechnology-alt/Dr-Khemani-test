@@ -104,7 +104,7 @@ export default function FertilityPage() {
                 </div>
             </section>
 
-            {/* Treatment Options Grid */}
+            {/* Treatment Options Grid - Refactored */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="text-center max-w-2xl mx-auto mb-16">
@@ -114,44 +114,60 @@ export default function FertilityPage() {
                             <span className="text-[#C21975]">Fertility Care</span>
                         </h2>
                     </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
                         {treatmentOptions.map((opt, i) => (
-                            <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                                className="p-8 rounded-[2rem] bg-white border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-transform duration-500 group">
-                                <div className="w-14 h-14 rounded-2xl bg-[#f5e6ef] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <opt.icon className="w-7 h-7 text-[#C21975]" />
+                            <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                                className="group">
+                                <div className="flex items-start gap-6">
+                                    <div className="w-14 h-14 rounded-full bg-[#f5e6ef] flex items-center justify-center shrink-0 group-hover:bg-[#C21975] transition-colors duration-300">
+                                        <opt.icon className="w-6 h-6 text-[#C21975] group-hover:text-white transition-colors" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-bold text-gray-900 mb-3">{opt.title}</h3>
+                                        <p className="text-gray-600 leading-relaxed text-sm">{opt.desc}</p>
+                                    </div>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-3">{opt.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">{opt.desc}</p>
                             </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Journey Steps */}
-            <section className="py-24 bg-[#F5F5F5]">
+            {/* Journey Steps - Refactored */}
+            <section className="py-24 bg-[#F9F9F9] relative overflow-hidden">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="text-center max-w-2xl mx-auto mb-16">
-                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Your Journey</span>
-                        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Treatment</span>{" "}
-                            <span className="text-[#C21975]">Pathway</span>
-                        </h2>
-                    </div>
-                    <div className="max-w-4xl mx-auto space-y-6">
-                        {journeySteps.map((step, i) => (
-                            <motion.div key={i} initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                                className="flex items-start gap-6 p-6 rounded-[2rem] bg-white border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
-                                <div className="w-16 h-16 rounded-2xl bg-[#C21975] flex items-center justify-center shrink-0">
-                                    <span className="text-2xl font-bold text-white">{step.step}</span>
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
-                                    <p className="text-gray-600 leading-relaxed">{step.desc}</p>
-                                </div>
-                            </motion.div>
-                        ))}
+                    <div className="grid lg:grid-cols-2 gap-20 items-center">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Your Approach</span>
+                            <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-8">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Treatment</span>{" "}
+                                <span className="text-[#C21975]">Pathway</span>
+                            </h2>
+                            <p className="text-gray-600 text-lg mb-8">
+                                We believe in a step-by-step, scientific approach. No unnecessary tests, no rushed procedures.
+                            </p>
+                            <div className="relative h-[500px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
+                                <Image src="/images/2023-04-23.webp" alt="Fertility Journey" fill className="object-cover" />
+                            </div>
+                        </div>
+
+                        <div className="space-y-0 relative">
+                            {/* Connector Line */}
+                            <div className="absolute left-[27px] top-6 bottom-6 w-0.5 bg-gray-200" />
+
+                            {journeySteps.map((step, i) => (
+                                <motion.div key={i} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                                    className="relative flex items-start gap-8 pb-12 last:pb-0">
+                                    <div className="w-14 h-14 rounded-full bg-white border-4 border-[#f5e6ef] flex items-center justify-center shrink-0 z-10 shadow-sm text-[#C21975] font-bold text-lg">
+                                        {step.step}
+                                    </div>
+                                    <div className="pt-2">
+                                        <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
+                                        <p className="text-gray-600 leading-relaxed text-sm">{step.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

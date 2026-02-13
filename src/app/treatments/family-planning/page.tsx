@@ -34,23 +34,23 @@ export default function FamilyPlanningPage() {
             {/* Hero */}
             <section className="bg-white px-2 pt-24 pb-8 md:pt-28 md:px-4 lg:pt-32 lg:px-6">
                 <div className="mx-auto w-[95%] px-4 md:px-0">
-                    <div className="relative rounded-[3rem] overflow-hidden min-h-[70vh] flex items-center bg-[#f3f4f6]">
+                    <div className="relative rounded-[3rem] overflow-hidden min-h-[70vh] flex items-center bg-[#fff0f5]">
                         <div className="relative z-10 w-full px-6 py-12 md:px-12 lg:px-16">
                             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                                 <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border border-gray-300 bg-white/60 backdrop-blur-sm">
-                                        <Users className="w-4 h-4 text-gray-700" />
-                                        <span className="text-sm font-semibold tracking-wide text-gray-700 uppercase">Contraception & Counseling</span>
+                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border border-[#d4a5c4] bg-white/60 backdrop-blur-sm">
+                                        <Users className="w-4 h-4 text-[#C21975]" />
+                                        <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Contraception & Counseling</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[60px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-gray-900">Smart Family <br /> Planning.</span>
+                                        <span className="text-gray-900">Smart Family <br /> <span className="text-[#C21975]">Planning.</span></span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
                                         Empowering you to make informed decisions about your reproductive health. Dr. Vinita Khemani provides private, non-judgmental counseling on the full range of contraceptive options.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
-                                        className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-gray-700 to-gray-900"
+                                        className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                     >
                                         Private Consultation
                                         <ArrowUpRight className="w-5 h-5 transition-transform group-hover:rotate-45" />
@@ -59,6 +59,7 @@ export default function FamilyPlanningPage() {
                                 <motion.div className="relative h-[400px] md:h-[500px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
                                         <Image src="/images/2023-04-23.webp" alt="Family Planning Advice" fill className="object-cover" />
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-pink-900/10 to-transparent"></div>
                                     </div>
                                 </motion.div>
                             </div>
@@ -71,8 +72,8 @@ export default function FamilyPlanningPage() {
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1200px] px-6">
                     <div className="text-center mb-16">
-                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-gray-300 text-gray-600 bg-gray-100">Choices</span>
-                        <h2 className="font-display text-4xl font-bold text-gray-900 mb-6">Your <span className="text-gray-600">Options</span></h2>
+                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Choices</span>
+                        <h2 className="font-display text-4xl font-bold text-gray-900 mb-6">Your <span className="text-[#C21975]">Options</span></h2>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {methods.map((item, i) => (
@@ -82,9 +83,9 @@ export default function FamilyPlanningPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="flex flex-col gap-4 p-8 rounded-[2rem] border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-xl transition-all text-center group hover:-translate-y-2"
+                                className="flex flex-col gap-4 p-8 rounded-[2rem] border border-gray-100 bg-[#fffbfc] hover:bg-white hover:shadow-xl transition-all text-center group hover:-translate-y-2"
                             >
-                                <div className="mx-auto w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-sm text-gray-800 group-hover:bg-gray-800 group-hover:text-white transition-colors">
+                                <div className="mx-auto w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-sm text-[#C21975] group-hover:bg-[#C21975] group-hover:text-white transition-colors">
                                     <item.icon className="w-7 h-7" />
                                 </div>
                                 <div>
@@ -98,25 +99,25 @@ export default function FamilyPlanningPage() {
             </section>
 
             {/* FAQ Section with Updated Style */}
-            <section className="py-24 bg-gradient-to-b from-white to-[#f3f4f6]">
+            <section className="py-24 bg-gradient-to-b from-white to-[#fff0f5]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
                         {/* Left: Sticky Header */}
                         <div className="lg:col-span-4">
                             <div className="lg:sticky lg:top-32 text-left">
-                                <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-gray-300 text-gray-600 bg-gray-100">
+                                <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">
                                     FAQ
                                 </span>
                                 <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.2] mb-6 pb-1">
                                     Common <br />
-                                    <span className="text-gray-600">Questions</span>
+                                    <span className="text-[#C21975]">Questions</span>
                                 </h2>
                                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                                     Clarify your doubts in confidence.
                                 </p>
                                 <button
                                     onClick={() => setIsEnquiryModalOpen(true)}
-                                    className="inline-flex items-center text-gray-800 font-semibold hover:text-black transition-colors group"
+                                    className="inline-flex items-center text-[#C21975] font-semibold hover:text-[#a01560] transition-colors group"
                                 >
                                     Book an Appointment
                                     <ChevronDown className="w-5 h-5 ml-2 -rotate-90 group-hover:translate-x-1 transition-transform" />
@@ -130,20 +131,20 @@ export default function FamilyPlanningPage() {
                                 <div
                                     key={i}
                                     className={`group rounded-2xl border transition-all duration-300 ${openFaq === i
-                                        ? "bg-white border-gray-400 shadow-lg shadow-gray-200 ring-1 ring-gray-200"
-                                        : "bg-white/80 border-white/50 shadow-sm hover:border-gray-300 hover:bg-white"
+                                        ? "bg-white border-[#C21975]/30 shadow-lg shadow-pink-500/5 ring-1 ring-[#C21975]/20"
+                                        : "bg-white/80 border-white/50 shadow-sm hover:border-pink-100 hover:bg-white"
                                         }`}
                                 >
                                     <button
                                         onClick={() => setOpenFaq(openFaq === i ? null : i)}
                                         className="w-full flex items-center justify-between p-6 md:p-8 text-left"
                                     >
-                                        <span className={`text-lg md:text-xl font-semibold transition-colors ${openFaq === i ? "text-gray-900" : "text-gray-900"}`}>
+                                        <span className={`text-lg md:text-xl font-semibold transition-colors ${openFaq === i ? "text-[#C21975]" : "text-gray-900"}`}>
                                             {faq.q}
                                         </span>
                                         <div className={`w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-300 shrink-0 ml-4 ${openFaq === i
-                                            ? "bg-gray-800 border-gray-800 text-white rotate-180"
-                                            : "bg-transparent border-gray-200 text-gray-400 group-hover:border-gray-800 group-hover:text-gray-800"
+                                            ? "bg-[#C21975] border-[#C21975] text-white rotate-180"
+                                            : "bg-transparent border-gray-200 text-gray-400 group-hover:border-[#C21975] group-hover:text-[#C21975]"
                                             }`}>
                                             <ChevronDown className="w-5 h-5" />
                                         </div>
@@ -167,6 +168,7 @@ export default function FamilyPlanningPage() {
                     </div>
                 </div>
             </section>
+
 
             <SharedCTA title="Plan Your Future" subtitle="Discuss suitable contraception methods in confidence." />
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />

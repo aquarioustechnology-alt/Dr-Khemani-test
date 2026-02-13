@@ -1,0 +1,6 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#f5e6ef"/>
+  <circle cx="400" cy="600" r="200" fill="#ffd166" opacity="0.2"/>
+  <path d="M400 300 L420 350 L400 400 L380 350 Z" fill="#C21975" opacity="0.4"/>
+  <path d="M400 300 L440 330 L400 360 L360 330 Z" fill="#C21975" opacity="0.2" transform="rotate(45 400 350)"/>
+</svg>

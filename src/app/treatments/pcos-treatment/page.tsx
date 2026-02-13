@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useState } from "react";
 import {
     HeartPulse, CheckCircle, ArrowUpRight, ChevronDown,
-    Activity, Scale, Pill, Apple, AlertOctagon, Brain, Baby,
+    Activity, Scale, Pill, AlertOctagon, Brain, Baby,
     ClipboardCheck, Utensils, X, Check
 } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
@@ -143,32 +143,37 @@ export default function PCOSTreatmentPage() {
                 </div>
             </section>
 
-            {/* Understanding Causes Section */}
+            {/* Understanding Causes Section - Refactored */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-purple-200 text-purple-700 bg-purple-50">Root Causes</span>
-                        <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Understanding <span className="text-[#C21975]">Why It Happens</span></h2>
-                        <p className="text-gray-600 text-lg">PCOS is complex and presents differently in every woman. It often stems from a combination of genetic and environmental factors.</p>
-                    </div>
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                        <div className="max-w-xl">
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Root Causes</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Understanding <span className="text-[#C21975]">Why It Happens</span></h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                PCOS is complex and presents differently in every woman. It often stems from a combination of genetic and environmental factors that disrupt hormonal harmony.
+                            </p>
+                            <div className="relative h-[400px] rounded-[2rem] overflow-hidden shadow-2xl">
+                                <Image src="/images/2023-04-23 (1).webp" alt="Doctor explaining causes" fill className="object-cover" />
+                            </div>
+                        </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {causes.map((cause, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="p-8 rounded-[2rem] bg-[#fafafa] hover:bg-white border border-gray-100 hover:border-pink-200 hover:shadow-xl transition-all duration-300 group"
-                            >
-                                <div className="w-14 h-14 rounded-2xl bg-white border border-gray-100 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                                    <cause.icon className="w-7 h-7 text-[#C21975]" />
-                                </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-3">{cause.title}</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">{cause.desc}</p>
-                            </motion.div>
-                        ))}
+                        <div className="grid sm:grid-cols-2 gap-x-8 gap-y-12">
+                            {causes.map((cause, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.1 }}
+                                    className="relative pl-6 border-l-2 border-[#C21975]/20 hover:border-[#C21975] transition-colors"
+                                >
+                                    <cause.icon className="w-8 h-8 text-[#C21975] mb-4" />
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3">{cause.title}</h3>
+                                    <p className="text-gray-600 text-sm leading-relaxed">{cause.desc}</p>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -314,27 +319,28 @@ export default function PCOSTreatmentPage() {
                 </div>
             </section>
 
-            {/* Indian Diet Plan Section */}
-            <section className="py-24 bg-[#0a2e26] text-white">
-                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+            {/* Indian Diet Plan Section - Rebranded */}
+            <section className="py-24 bg-[#2D0C1E] text-white overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#C21975]/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+                <div className="container-fluid mx-auto max-w-[1400px] px-6 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-xs font-semibold mb-6 border border-emerald-400 text-emerald-300 bg-emerald-900/50">Indian Diet Context</span>
-                            <h2 className="font-display text-4xl lg:text-5xl font-bold mb-6">Eat Right for <br /><span className="text-emerald-400">PCOS Reversal</span></h2>
-                            <p className="text-emerald-100/80 text-lg mb-10 leading-relaxed">
+                            <span className="inline-block px-4 py-2 rounded-full text-xs font-semibold mb-6 border border-pink-400/30 text-pink-300 bg-pink-900/20">Indian Diet Context</span>
+                            <h2 className="font-display text-4xl lg:text-5xl font-bold mb-6">Eat Right for <br /><span className="text-[#C21975]">PCOS Reversal</span></h2>
+                            <p className="text-pink-100/80 text-lg mb-10 leading-relaxed">
                                 Most Indian diets are carb-heavy (Rice, Roti), which spikes insulin levels. Dr. Khemani recommends a modified Indian diet focusing on portion control and macro-balance.
                             </p>
                             <div className="flex gap-4">
                                 <div className="flex flex-col gap-2">
-                                    <div className="w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center text-white mb-2"><Utensils className="w-6 h-6" /></div>
+                                    <div className="w-12 h-12 rounded-full bg-[#C21975] flex items-center justify-center text-white mb-2"><Utensils className="w-6 h-6" /></div>
                                     <p className="font-bold">Home-Cooked</p>
-                                    <p className="text-xs text-emerald-200">Focus on &apos;Ghar ka khana&apos; with less oil.</p>
+                                    <p className="text-xs text-pink-200">Focus on &apos;Ghar ka khana&apos; with less oil.</p>
                                 </div>
                                 <div className="h-full w-px bg-white/10 mx-2"></div>
                                 <div className="flex flex-col gap-2">
-                                    <div className="w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center text-white mb-2"><Scale className="w-6 h-6" /></div>
+                                    <div className="w-12 h-12 rounded-full bg-[#C21975] flex items-center justify-center text-white mb-2"><Scale className="w-6 h-6" /></div>
                                     <p className="font-bold">Portion Control</p>
-                                    <p className="text-xs text-emerald-200">1/2 Plate Veggies, 1/4 Protein, 1/4 Carbs.</p>
+                                    <p className="text-xs text-pink-200">1/2 Plate Veggies, 1/4 Protein, 1/4 Carbs.</p>
                                 </div>
                             </div>
                         </div>
@@ -342,13 +348,13 @@ export default function PCOSTreatmentPage() {
                             <div className="space-y-8">
                                 {diets.map((d, i) => (
                                     <div key={i}>
-                                        <h4 className={`text-xl font-bold mb-4 flex items-center gap-3 ${d.type === 'good' ? 'text-emerald-400' : 'text-red-400'}`}>
+                                        <h4 className={`text-xl font-bold mb-4 flex items-center gap-3 ${d.type === 'good' ? 'text-pink-400' : 'text-red-400'}`}>
                                             {d.type === 'good' ? <CheckCircle className="w-5 h-5" /> : <AlertOctagon className="w-5 h-5" />}
                                             {d.title}
                                         </h4>
                                         <div className="flex flex-wrap gap-2">
                                             {d.list.map((item, j) => (
-                                                <span key={j} className={`px-3 py-1.5 rounded-full text-xs font-medium ${d.type === 'good' ? 'bg-emerald-900/50 text-emerald-200 border border-emerald-800' : 'bg-red-900/30 text-red-200 border border-red-900/50'}`}>
+                                                <span key={j} className={`px-3 py-1.5 rounded-full text-xs font-medium ${d.type === 'good' ? 'bg-[#C21975]/20 text-pink-200 border border-[#C21975]/30' : 'bg-red-900/30 text-red-200 border border-red-900/50'}`}>
                                                     {item}
                                                 </span>
                                             ))}
@@ -357,48 +363,69 @@ export default function PCOSTreatmentPage() {
                                 ))}
                             </div>
                             <div className="mt-8 pt-8 border-t border-white/10 text-center">
-                                <p className="text-sm font-medium text-emerald-100">&quot;Food is the first medicine for PCOS.&quot;</p>
+                                <p className="text-sm font-medium text-pink-200">&quot;Food is the first medicine for PCOS.&quot;</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Treatment Pillars */}
-            <section className="py-24 bg-[#F5F5F5]">
+            {/* Treatment Pillars - Refactored */}
+            <section className="py-24 bg-[#F9F9F9]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="text-center max-w-2xl mx-auto mb-16">
-                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Clinical Approach</span>
-                        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                            Personalized <br />
-                            <span className="text-[#C21975]">Treatment Plan</span>
-                        </h2>
-                    </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow">
-                            <div className="w-12 h-12 bg-pink-50 rounded-xl flex items-center justify-center text-[#C21975] mb-4"><Pill className="w-6 h-6" /></div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Hormonal Regulation</h3>
-                            <p className="text-gray-600 text-sm">Use of Oral Contraceptive Pills (OCPs) or cyclic progesterone to regularize periods and protect the uterus.</p>
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="relative h-[600px] rounded-[3rem] overflow-hidden hidden lg:block shadow-2xl">
+                            <Image src="/images/2023-04-06.webp" alt="PCOS Treatment" fill className="object-cover" />
+                            <div className="absolute inset-0 bg-black/20" />
+                            <div className="absolute bottom-10 left-10 right-10 text-white">
+                                <h3 className="text-3xl font-bold mb-2">Holistic Care</h3>
+                                <p className="opacity-90">We treat the root cause, not just the symptoms.</p>
+                            </div>
                         </div>
-                        <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow">
-                            <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-4"><Baby className="w-6 h-6" /></div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Fertility Focus</h3>
-                            <p className="text-gray-600 text-sm">Ovulation induction agents (Letrozole/Clomiphene) and follicular monitoring for those planning pregnancy.</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow">
-                            <div className="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 mb-4"><Activity className="w-6 h-6" /></div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Insulin Sensitizers</h3>
-                            <p className="text-gray-600 text-sm">Metformin is prescribed where insulin resistance is a key factor, aiding weight loss and ovulation.</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow">
-                            <div className="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center text-yellow-600 mb-4"><Utensils className="w-6 h-6" /></div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Anti-Androgens</h3>
-                            <p className="text-gray-600 text-sm">Medications to block male hormones, effectively reducing hirsutism (excess hair) and acne over 6-9 months.</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow">
-                            <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-green-600 mb-4"><Apple className="w-6 h-6" /></div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Lifestyle Coaching</h3>
-                            <p className="text-gray-600 text-sm">Sleep hygiene, stress management (Cortisol control), and consistent exercise routines.</p>
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Clinical Approach</span>
+                            <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-12">
+                                Personalized <br />
+                                <span className="text-[#C21975]">Treatment Plan</span>
+                            </h2>
+                            <div className="space-y-8">
+                                <div className="flex gap-6 group">
+                                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-[#C21975] shadow-sm border border-gray-100 shrink-0 group-hover:scale-110 group-hover:bg-[#C21975] group-hover:text-white transition-all duration-300">
+                                        <Pill className="w-8 h-8" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-bold text-gray-900 mb-2">Hormonal Regulation</h3>
+                                        <p className="text-gray-600 leading-relaxed">Use of Oral Contraceptive Pills (OCPs) or cyclic progesterone to regularize periods and protect the uterus.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-6 group">
+                                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-[#C21975] shadow-sm border border-gray-100 shrink-0 group-hover:scale-110 group-hover:bg-[#C21975] group-hover:text-white transition-all duration-300">
+                                        <Baby className="w-8 h-8" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-bold text-gray-900 mb-2">Fertility Focus</h3>
+                                        <p className="text-gray-600 leading-relaxed">Ovulation induction agents (Letrozole/Clomiphene) and follicular monitoring for those planning pregnancy.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-6 group">
+                                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-[#C21975] shadow-sm border border-gray-100 shrink-0 group-hover:scale-110 group-hover:bg-[#C21975] group-hover:text-white transition-all duration-300">
+                                        <Activity className="w-8 h-8" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-bold text-gray-900 mb-2">Insulin Sensitizers</h3>
+                                        <p className="text-gray-600 leading-relaxed">Metformin is prescribed where insulin resistance is a key factor, aiding weight loss and ovulation.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-6 group">
+                                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-[#C21975] shadow-sm border border-gray-100 shrink-0 group-hover:scale-110 group-hover:bg-[#C21975] group-hover:text-white transition-all duration-300">
+                                        <Utensils className="w-8 h-8" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-bold text-gray-900 mb-2">Anti-Androgens & Lifestyle</h3>
+                                        <p className="text-gray-600 leading-relaxed">Medications to block male hormones combined with sleep hygiene and stress management.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

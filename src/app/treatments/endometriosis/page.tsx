@@ -81,7 +81,7 @@ export default function EndometriosisPage() {
             {/* Understanding Section */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1200px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">The Condition</span>
                             <h2 className="font-display text-4xl font-bold text-gray-900 mb-6">What is <span className="text-[#C21975]">Endometriosis?</span></h2>
@@ -98,32 +98,75 @@ export default function EndometriosisPage() {
                                 ))}
                             </div>
                         </div>
-
-                        <div className="bg-[#fdf2f7] p-10 rounded-[2.5rem] relative overflow-hidden">
-                            <h3 className="text-2xl font-bold text-gray-900 mb-8">Our Treatment Approach</h3>
-                            <div className="space-y-8 relative z-10">
-                                <div className="flex gap-5">
-                                    <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#C21975] shadow-sm font-bold shrink-0">1</div>
-                                    <div>
-                                        <h4 className="font-bold text-lg text-gray-900 mb-2">Medical Management</h4>
-                                        <p className="text-gray-600 border-l-2 border-[#C21975]/30 pl-4 py-1">Hormonal therapies (Progestins, OCPs) to suppress tissue growth and manage pain for mild cases.</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-5">
-                                    <div className="w-14 h-14 rounded-2xl bg-[#C21975] flex items-center justify-center text-white shadow-lg font-bold shrink-0">2</div>
-                                    <div>
-                                        <h4 className="font-bold text-lg text-gray-900 mb-2">Laparoscopic Excision</h4>
-                                        <p className="text-gray-600 border-l-2 border-[#C21975]/30 pl-4 py-1">The Gold Standard. Minimally invasive surgery to thoroughly remove endometrial lesions while preserving fertility.</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-5">
-                                    <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#C21975] shadow-sm font-bold shrink-0">3</div>
-                                    <div>
-                                        <h4 className="font-bold text-lg text-gray-900 mb-2">Fertility Preservation</h4>
-                                        <p className="text-gray-600 border-l-2 border-[#C21975]/30 pl-4 py-1">Specialized IVF protocols for women with low ovarian reserve due to endometriomas (chocolate cysts).</p>
-                                    </div>
+                        <div className="relative">
+                            <div className="aspect-square rounded-[2.5rem] bg-[#fff0f5] relative overflow-hidden flex items-center justify-center p-8">
+                                <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-30" />
+                                <div className="text-center relative z-10">
+                                    <p className="text-[#C21975] font-display text-8xl font-bold mb-2">10%</p>
+                                    <p className="text-gray-600 text-xl font-medium">of women worldwide <br />suffer from Endometriosis.</p>
+                                    <div className="mt-8 inline-block px-6 py-3 bg-white rounded-full shadow-md text-[#C21975] font-bold">Don&apos;t suffer in silence.</div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Stages Section (New) */}
+            <section className="py-20 bg-[#F9F9F9]">
+                <div className="container-fluid mx-auto max-w-[1200px] px-6">
+                    <div className="text-center mb-12">
+                        <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">Stages of <span className="text-[#C21975]">Severity</span></h2>
+                        <p className="text-gray-600">Endometriosis is classified into four stages based on location and depth.</p>
+                    </div>
+                    <div className="grid md:grid-cols-4 gap-6">
+                        {[
+                            { s: "Stage 1", t: "Minimal", d: "Small isolated implants, no significant scarring." },
+                            { s: "Stage 2", t: "Mild", d: "More implants deeper in tissue, some scar tissue." },
+                            { s: "Stage 3", t: "Moderate", d: "Deep cysts (Chocolate Cysts) may form on ovaries." },
+                            { s: "Stage 4", t: "Severe", d: "Deep implants, large cysts, and extensive adhesions." }
+                        ].map((stage, i) => (
+                            <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100/50 hover:border-[#C21975]/30 transition-colors">
+                                <span className="text-5xl font-display font-bold text-gray-100 mb-4 block">{stage.s}</span>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">{stage.t}</h4>
+                                <p className="text-sm text-gray-600">{stage.d}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Treatment Approach */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1200px] px-6">
+                    <div className="text-center mb-16">
+                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Management</span>
+                        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Our Treatment <span className="text-[#C21975]">Protocol</span></h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">We tailor the approach based on your pain levels, stage of disease, and fertility goals.</p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <div className="p-8 rounded-[2.5rem] bg-[#fff0f5] hover:bg-pink-50 transition-colors group">
+                            <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-[#C21975] shadow-sm mb-6 font-bold text-2xl group-hover:scale-110 transition-transform">1</div>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Medical Management</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                For mild cases, we use hormonal therapies (Progestins, OCPs) to suppress tissue growth and manage pain effectively without surgery.
+                            </p>
+                        </div>
+                        <div className="p-8 rounded-[2.5rem] bg-[#fff0f5] hover:bg-pink-50 transition-colors group relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-24 h-24 bg-[#C21975]/10 rounded-bl-full" />
+                            <div className="w-16 h-16 rounded-2xl bg-[#C21975] flex items-center justify-center text-white shadow-lg mb-6 font-bold text-2xl group-hover:scale-110 transition-transform">2</div>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Laparoscopic Excision</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                The Gold Standard. We perform minimally invasive surgery to thoroughly excise (cut out) endometrial lesions and adhesions while preserving healthy tissue.
+                            </p>
+                        </div>
+                        <div className="p-8 rounded-[2.5rem] bg-[#fff0f5] hover:bg-pink-50 transition-colors group">
+                            <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-[#C21975] shadow-sm mb-6 font-bold text-2xl group-hover:scale-110 transition-transform">3</div>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Fertility Preservation</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                For women planning pregnancy, we prioritize ovary-sparing techniques and offer specialized protocols to protect egg reserve during treatment.
+                            </p>
                         </div>
                     </div>
                 </div>
