@@ -3,7 +3,29 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { GraduationCap, Award, BookOpen } from "lucide-react";
+import { GraduationCap, Award, Stethoscope } from "lucide-react";
+
+const FertilityIcon = ({ className }: { className?: string }) => (
+    <div className={`relative ${className || "w-8 h-8"}`}>
+        <Image
+            src="/images/fertility-treatment-ico.svg"
+            alt="Infertility Training"
+            fill
+            className="object-contain"
+        />
+    </div>
+);
+
+const LaparoscopyIcon = ({ className }: { className?: string }) => (
+    <div className={`relative ${className || "w-8 h-8"}`}>
+        <Image
+            src="/images/laparoscopy-surgery-ico.svg"
+            alt="Advanced Laparoscopy"
+            fill
+            className="object-contain"
+        />
+    </div>
+);
 
 const historyData = [
     {
@@ -20,7 +42,7 @@ const historyData = [
         subtitle: "NRS Medical College, Kolkata",
         desc: "Completed Post-Graduate Diploma in Obstetrics & Gynaecology, specializing in high-risk pregnancies and maternal care.",
         image: "/images/2023-02-08.jpg",
-        icon: BookOpen
+        icon: Stethoscope
     },
     {
         year: "2005",
@@ -28,7 +50,7 @@ const historyData = [
         subtitle: "FOGSI Certified",
         desc: "Advanced certification in infertility management, empowering couples to achieve their dreams of parenthood.",
         image: "/images/Fertility Treatment.webp",
-        icon: BabyIcon
+        icon: FertilityIcon
     },
     {
         year: "2006",
@@ -36,7 +58,7 @@ const historyData = [
         subtitle: "Minimally Invasive Surgery",
         desc: "Mastered advanced laparoscopic techniques for fibroids, cysts, and hysterectomies with minimal recovery time.",
         image: "/images/Laparoscopic Surgery.jpg",
-        icon: ScanIcon
+        icon: LaparoscopyIcon
     },
     {
         year: "Present",
@@ -47,10 +69,6 @@ const historyData = [
         icon: Award
     }
 ];
-
-// Icons helper
-function BabyIcon(props: React.ComponentProps<"svg">) { return <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12h.01" /><path d="M15 12h.01" /><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" /><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.7 9 9 0 0 1-1.8 3.9 2 2 0 0 1-3.7 1.8 9 9 0 0 1-3.9 0 2 2 0 0 1-3.7-1.8 9 9 0 0 1-1.8-3.9 2 2 0 0 1 0-3.7 9 9 0 0 1 1.8-3.9 2 2 0 0 1 3.7-1.8 9 9 0 0 1 3.9 0 2 2 0 0 1 3.7 1.8z" /></svg> }
-function ScanIcon(props: React.ComponentProps<"svg">) { return <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2" /><path d="M17 3h2a2 2 0 0 1 2 2v2" /><path d="M21 17v2a2 2 0 0 1-2 2h-2" /><path d="M7 21H5a2 2 0 0 1-2-2v-2" /></svg> }
 
 export function AcademicJourney() {
     const [activeYear, setActiveYear] = useState(0);

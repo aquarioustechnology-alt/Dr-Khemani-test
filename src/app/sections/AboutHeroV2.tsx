@@ -47,7 +47,7 @@ export function AboutHeroV2() {
                             className="relative w-full h-[450px] md:h-[550px] rounded-[3rem] overflow-hidden shadow-2xl"
                         >
                             <Image
-                                src="/images/dr-vinita-about-hero.webp"
+                                src="/images/Gynaecologist-Dr.-Vinita-Khemani.jpg"
                                 alt="Dr. Vinita Khemani - Best Gynecologist in Kolkata"
                                 fill
                                 className="object-cover object-top"

@@ -26,7 +26,7 @@ export function FocusSection() {
                     </div>
                     <div>
                         <p className="text-xl text-gray-600 leading-relaxed">
-                            Every journey to motherhood is unique. We provide comprehensive, compassionate care tailored to manage PCOS and help you achieve your dream of starting a family.
+                            Specializing in PCOS management and Infertility solutions, Dr. Vinita Khemani adopts a systematic, root-cause approach. We provide expert medical care to restore hormonal balance and help you achieve your dream of starting a family.
                         </p>
                     </div>
                 </div>

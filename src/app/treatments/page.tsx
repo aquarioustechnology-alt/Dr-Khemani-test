@@ -448,7 +448,7 @@ export default function TreatmentsPage() {
             </section>
 
             {/* Shared CTA Section */}
-            <SharedCTA showForm={true} title="Find Your Treatment" subtitle="Not sure which treatment is right for you? Consult with Dr. Vinita Khemani for a personalized recommendation." />
+            <SharedCTA title="Find Your Treatment" subtitle="Not sure which treatment is right for you? Consult with Dr. Vinita Khemani for a personalized recommendation." />
 
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 

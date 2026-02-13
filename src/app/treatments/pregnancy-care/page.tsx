@@ -7,98 +7,85 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import {
-    Baby, Heart, Shield, CheckCircle, Calendar,
-    ArrowUpRight, ChevronDown, Clock, Users
+    Baby, Heart, Shield, CheckCircle,
+    ArrowUpRight, ChevronDown, Clock, Users,
+    Stethoscope, Activity, Sparkles, Utensils
 } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
 
 const trimesterCare = [
     {
-        trimester: "First Trimester",
+        title: "First Trimester",
         weeks: "Weeks 1–12",
-        icon: "🌱",
-        color: "#f5e6ef",
-        items: [
-            "Pregnancy confirmation & dating ultrasound",
-            "Blood group, Rh factor & complete blood panel",
-            "Thyroid function tests (TSH, T3, T4)",
-            "First trimester screening (NT scan + dual marker)",
-            "Folic acid & prenatal vitamin prescription",
-            "Diet & lifestyle counseling",
+        subtitle: "The Foundation Phase",
+        desc: "The most critical period for fetal development. We focus on confirming viability, dating the pregnancy, and starting essential supplementation.",
+        points: [
+            "Viability Scan & Dating Ultrasound (6-8 weeks)",
+            "NT Scan & Double Marker Test (11-13 weeks)",
+            "Thyroid, Sugar, and Thalassemia Screening",
+            "Morning Sickness & Diet Management",
+            "Folic Acid Supplementation Start"
         ],
+        color: "bg-pink-50 border-pink-100 text-[#C21975]"
     },
     {
-        trimester: "Second Trimester",
+        title: "Second Trimester",
         weeks: "Weeks 13–27",
-        icon: "🌿",
-        color: "#e8d5e0",
-        items: [
-            "Anomaly scan (Level II ultrasound at 18-20 weeks)",
-            "Gestational diabetes screening (GTT)",
-            "Iron & calcium supplementation review",
-            "Fetal growth monitoring",
-            "Birth preparation classes enrollment",
-            "Cervical length assessment if needed",
+        subtitle: "The Honeymoon Phase",
+        desc: "As morning sickness fades, we focus on detailed anomaly checks and monitoring fetal growth.",
+        points: [
+            "Anomaly Scan (Level II Ultrasound) at 18-20 weeks",
+            "Tetanus & Flu Vaccinations",
+            "Gestational Diabetes Screening (GTT)",
+            "Iron & Calcium Supplementation",
+            "Fetal Movement Monitoring (Quickening)"
         ],
+        color: "bg-purple-50 border-purple-100 text-purple-700"
     },
     {
-        trimester: "Third Trimester",
+        title: "Third Trimester",
         weeks: "Weeks 28–40",
-        icon: "🌸",
-        color: "#d4a5c4",
-        items: [
-            "Bi-weekly to weekly monitoring",
-            "Growth scan & amniotic fluid assessment",
-            "Non-stress test (NST) for fetal wellbeing",
-            "Delivery planning & birth preference discussion",
-            "Group B Streptococcus screening",
-            "Hospital bag preparation guidance",
+        subtitle: "The Home Stretch",
+        desc: "Preparing for delivery. Visits become more frequent to monitor position, fluid levels, and mother's BP.",
+        points: [
+            "Growth Scans & Doppler Studies",
+            "Non-Stress Test (NST) for Fetal Heart Rate",
+            "BP Monitoring for Preeclampsia",
+            "Birth Plan & Delivery Mode Discussion",
+            "Pelvic Assessment for Normal Delivery"
         ],
-    },
+        color: "bg-orange-50 border-orange-100 text-orange-700"
+    }
 ];
 
-const deliveryOptions = [
-    {
-        title: "Normal Delivery",
-        desc: "Dr. Khemani advocates a 'normal delivery first' approach. With 2,348+ successful deliveries, she ensures every mother gets the best chance at natural childbirth with full medical backup.",
-        icon: Baby,
-        highlight: true,
-    },
-    {
-        title: "Painless Labor (Epidural)",
-        desc: "Epidural analgesia for a comfortable birthing experience. Dr. Khemani coordinates with expert anesthesiologists to ensure safe and effective pain management during labor.",
-        icon: Heart,
-        highlight: false,
-    },
-    {
-        title: "Cesarean Section (When Needed)",
-        desc: "When medically necessary, Dr. Khemani performs cesarean deliveries with precision. She discusses all options transparently, ensuring informed decision-making by the family.",
-        icon: Shield,
-        highlight: false,
-    },
+const dietaryTips = [
+    { title: "Iron-Rich Foods", desc: "Spinach, Dates, Jaggery, Lentils – Prevention of Anemia is priority #1.", icon: Utensils },
+    { title: "Protein Power", desc: "Paneer, Eggs, Soya, Chicken – Essential for baby's tissue growth.", icon: Activity },
+    { title: "Hydration", desc: "3-4 Liters of water daily to maintain amniotic fluid levels.", icon: Sparkles },
+    { title: "Avoid", desc: "Raw papaya, pineapple, excess caffeine, and unpasteurized dairy.", icon: Shield },
 ];
 
 const faqs = [
     {
-        q: "When should I visit a gynecologist after finding out I'm pregnant?",
-        a: "You should schedule your first prenatal visit within 6-8 weeks of your last menstrual period. Dr. Vinita Khemani recommends early booking to establish baseline health parameters and begin appropriate prenatal care."
+        q: "When should I book my first appointment?",
+        a: "Ideally, as soon as you miss your period or get a positive home pregnancy test. An early scan at 6-7 weeks is crucial to confirm the pregnancy location and heartbeat."
     },
     {
-        q: "What is the cost of normal delivery in Kolkata?",
-        a: "Normal delivery costs in Kolkata vary depending on the hospital and room type. At Dr. Khemani's affiliated hospitals, costs are transparent and discussed during prenatal consultations. Insurance is accepted at most locations."
+        q: "What are the chances of a normal delivery?",
+        a: "Dr. Vinita Khemani is a strong proponent of vaginal delivery. Unless there is a specific medical indication for a C-section (like placenta previa or fetal distress), we always trial for a normal delivery. Our normal delivery rates are significantly higher than the city average."
     },
     {
-        q: "Does Dr. Vinita Khemani offer painless delivery?",
-        a: "Yes. Dr. Khemani offers painless labor through epidural analgesia at her affiliated hospitals. The procedure is safe, well-managed by experienced anesthesiologists, and discussed thoroughly during the delivery planning consultation."
+        q: "Is it safe to exercise during pregnancy?",
+        a: "Yes! Unless you have a high-risk condition (like low-lying placenta), antenatal yoga and walking are highly recommended. They help position the baby correctly and build stamina for labor."
     },
     {
-        q: "How many scans are needed during pregnancy?",
-        a: "Typically 3-4 scans: a dating scan (6-8 weeks), NT scan (11-13 weeks), anomaly scan (18-20 weeks), and growth scan (32-34 weeks). Additional scans may be needed for high-risk pregnancies."
+        q: "Do you handle high-risk pregnancies?",
+        a: "Yes, Dr. Khemani specializes in high-risk cases including pregnancy with diabetes, hypertension, thyroid issues, and previous recurrent miscarriages. We have advanced monitoring protocols for such cases."
     },
     {
-        q: "What should I eat during pregnancy?",
-        a: "A balanced diet with adequate protein, iron, calcium, folic acid, and DHA is essential. Dr. Khemani provides personalized nutrition plans during consultations, considering individual health conditions and dietary preferences."
+        q: "What hospitals are you affiliated with?",
+        a: "Dr. Khemani delivers at top maternity hospitals in Kolkata including AMRI, Bhagirathi Neotia, and others, ensuring you have access to the best NICU and emergency facilities."
     },
 ];
 
@@ -113,77 +100,83 @@ export default function PregnancyCarePage() {
             {/* Hero Section */}
             <section className="bg-white px-2 pt-24 pb-8 md:pt-28 md:px-4 lg:pt-32 lg:px-6">
                 <div className="mx-auto w-[95%] px-4 md:px-0">
-                    <div
-                        className="relative rounded-[3rem] overflow-hidden min-h-[70vh] flex items-center"
-                        style={{ background: 'linear-gradient(135deg, #fadce9 0%, #fff 100%)' }}
-                    >
+                    <div className="relative rounded-[3rem] overflow-hidden min-h-[80vh] flex items-center bg-[#fff5f9]">
+                        {/* Abstract Shapes */}
+                        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-pink-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-100/50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+
                         <div className="relative z-10 w-full px-6 py-12 md:px-12 lg:px-16">
                             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                                <motion.div
-                                    initial={{ opacity: 0, x: -50 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.8 }}
-                                >
-                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border border-[#d4a5c4]" style={{ background: 'rgba(255,255,255,0.6)' }}>
-                                        <div className="w-2 h-2 rounded-full bg-[#C21975] animate-pulse" />
-                                        <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Pregnancy Care</span>
+                                <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
+                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border border-[#d4a5c4] bg-white/60 backdrop-blur-sm">
+                                        <Baby className="w-4 h-4 text-[#C21975]" />
+                                        <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Obstetrics & Maternity Care</span>
                                     </div>
-
-                                    <h1 className="font-display text-4xl md:text-5xl lg:text-[56px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Complete Pregnancy</span> <br />
-                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">
-                                            Care & Delivery.
+                                    <h1 className="font-display text-4xl md:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight mb-6">
+                                        <span className="text-gray-900">Journey to</span> <br />
+                                        <span className="italic text-[#C21975]">
+                                            Motherhood.
                                         </span>
                                     </h1>
-
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        From conception to postnatal recovery, Dr. Vinita Khemani provides comprehensive, personalized pregnancy
-                                        care with 2,348+ successful deliveries and a &ldquo;normal delivery first&rdquo; philosophy.
+                                        Safe, supported, and joyful pregnancy care. From the first heartbeat to the first cry, Dr. Vinita Khemani walks with you every step of the way.
                                     </p>
 
-                                    {/* Quick Stats */}
-                                    <div className="flex flex-wrap gap-6 mb-8">
-                                        <div className="flex items-center gap-2">
-                                            <Baby className="w-5 h-5 text-[#C21975]" />
-                                            <span className="text-sm font-bold text-gray-800">2,348+ Deliveries</span>
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <Users className="w-5 h-5 text-[#C21975]" />
-                                            <span className="text-sm font-bold text-gray-800">10,000+ Patients</span>
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <Clock className="w-5 h-5 text-[#C21975]" />
-                                            <span className="text-sm font-bold text-gray-800">21+ Years</span>
+                                    <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                                        <button
+                                            onClick={() => setIsEnquiryModalOpen(true)}
+                                            className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl hover:shadow-pink-500/20 bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                                        >
+                                            Book Prenatal Visit
+                                            <ArrowUpRight className="w-5 h-5 transition-transform group-hover:rotate-45" />
+                                        </button>
+                                        <div className="flex items-center gap-4 px-6 py-4 rounded-full bg-white border border-pink-100 shadow-sm">
+                                            <div className="flex -space-x-3">
+                                                {[1, 2, 3].map(i => (
+                                                    <div key={i} className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white" />
+                                                ))}
+                                            </div>
+                                            <div className="text-sm">
+                                                <p className="font-bold text-gray-900">2,300+</p>
+                                                <p className="text-gray-500 text-xs">Deliveries</p>
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <button
-                                        onClick={() => setIsEnquiryModalOpen(true)}
-                                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-transform hover:scale-105 shadow-xl hover:shadow-2xl"
-                                        style={{ background: 'linear-gradient(135deg, #C21975 0%, #8a2f5e 100%)' }}
-                                    >
-                                        Book Consultation
-                                        <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
-                                            <ArrowUpRight className="w-6 h-6" />
-                                        </span>
-                                    </button>
                                 </motion.div>
 
                                 <motion.div
-                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.8, delay: 0.2 }}
-                                    className="relative h-[400px] md:h-[500px] order-first lg:order-none"
+                                    className="relative h-[500px] lg:h-[600px] w-full"
                                 >
-                                    <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl">
-                                        <Image
-                                            src="/images/mother_newborn_1770790584420.png"
-                                            alt="Pregnancy Care in Kolkata - Dr. Vinita Khemani"
-                                            fill
-                                            className="object-cover"
-                                            priority
-                                        />
-                                    </div>
+                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle,rgba(255,255,255,0.8)_0%,transparent_70%)] z-10" />
+                                    <Image
+                                        src="/images/mother_newborn_1770790584420.png"
+                                        alt="Mother holding newborn baby"
+                                        fill
+                                        className="object-contain relative z-20 drop-shadow-2xl"
+                                        priority
+                                    />
+
+                                    {/* Floating Stats */}
+                                    <motion.div
+                                        animate={{ y: [0, -10, 0] }}
+                                        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                                        className="absolute top-20 right-0 bg-white p-4 rounded-2xl shadow-xl z-30 border border-gray-50"
+                                    >
+                                        <Heart className="w-8 h-8 text-red-500 mb-2 fill-current" />
+                                        <p className="font-bold text-gray-900 leading-tight">Normal Delivery<br />Focus</p>
+                                    </motion.div>
+
+                                    <motion.div
+                                        animate={{ y: [0, 10, 0] }}
+                                        transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
+                                        className="absolute bottom-20 left-0 bg-white p-4 rounded-2xl shadow-xl z-30 border border-gray-50"
+                                    >
+                                        <Shield className="w-8 h-8 text-blue-500 mb-2" />
+                                        <p className="font-bold text-gray-900 leading-tight">High-Risk<br />Expertise</p>
+                                    </motion.div>
                                 </motion.div>
                             </div>
                         </div>
@@ -191,41 +184,61 @@ export default function PregnancyCarePage() {
                 </div>
             </section>
 
-            {/* Trimester Care Timeline */}
+            {/* Introduction */}
             <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1200px] px-6 text-center">
+                    <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-8">
+                        More Than Just <span className="text-[#C21975]">Checkups</span>
+                    </h2>
+                    <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-12">
+                        Pregnancy is a transformation. We don&apos;t just monitor the baby; we care for the mother. From nutritional planning to labor preparation classes, our goal is a healthy mother and a healthy baby. Dr. Khemani is renowned for her patience, accessibility, and calm demeanor during delivery.
+                    </p>
+                    <div className="grid md:grid-cols-4 gap-8">
+                        {[
+                            { icon: Clock, label: "24/7 Emergency Support" },
+                            { icon: Stethoscope, label: "Advanced Fetal Monitoring" },
+                            { icon: Users, label: "Partner Involvement" },
+                            { icon: Activity, label: "Postnatal Recovery Plan" }
+                        ].map((item, i) => (
+                            <div key={i} className="flex flex-col items-center gap-3">
+                                <div className="w-16 h-16 rounded-full bg-pink-50 flex items-center justify-center text-[#C21975]">
+                                    <item.icon className="w-7 h-7" />
+                                </div>
+                                <span className="font-semibold text-gray-800">{item.label}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Trimester Timeline */}
+            <section className="py-24 bg-[#fafafa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="text-center max-w-2xl mx-auto mb-16">
-                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">
-                            Trimester-wise Care
-                        </span>
-                        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Your Pregnancy</span>{" "}
-                            <span className="text-[#C21975]">Roadmap</span>
-                        </h2>
+                    <div className="text-center mb-16">
+                        <span className="text-[#C21975] font-semibold tracking-wider uppercase text-sm">Your Roadmap</span>
+                        <h2 className="font-display text-4xl font-bold text-gray-900 mt-2">Trimester by Trimester Care</h2>
                     </div>
 
                     <div className="grid lg:grid-cols-3 gap-8">
                         {trimesterCare.map((tri, i) => (
                             <motion.div
                                 key={i}
-                                initial={{ opacity: 0, y: 40 }}
+                                initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: i * 0.15 }}
-                                className="p-8 rounded-[2rem] bg-white border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-transform duration-500"
+                                transition={{ delay: i * 0.2 }}
+                                className={`rounded-[2rem] p-8 border hover:shadow-lg transition-shadow bg-white ${tri.color.replace('bg-', 'border-').replace('text-', 'details-')}`}
                             >
-                                <div className="flex items-center gap-4 mb-6">
-                                    <span className="text-4xl">{tri.icon}</span>
-                                    <div>
-                                        <h3 className="text-xl font-bold text-gray-900">{tri.trimester}</h3>
-                                        <p className="text-sm font-medium text-[#C21975]">{tri.weeks}</p>
-                                    </div>
-                                </div>
-                                <ul className="space-y-3">
-                                    {tri.items.map((item, j) => (
-                                        <li key={j} className="flex items-start gap-3">
-                                            <CheckCircle className="w-4 h-4 text-[#22C55E] shrink-0 mt-0.5" />
-                                            <span className="text-sm text-gray-700 leading-relaxed">{item}</span>
+                                <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 ${tri.color}`}>{tri.weeks}</div>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-1">{tri.title}</h3>
+                                <p className="text-sm font-medium text-gray-500 mb-4">{tri.subtitle}</p>
+                                <p className="text-gray-600 mb-8 leading-relaxed">{tri.desc}</p>
+
+                                <ul className="space-y-4">
+                                    {tri.points.map((pt, j) => (
+                                        <li key={j} className="flex items-start gap-3 text-sm text-gray-700">
+                                            <CheckCircle className="w-5 h-5 text-gray-400 shrink-0 mt-0.5" />
+                                            {pt}
                                         </li>
                                     ))}
                                 </ul>
@@ -235,36 +248,29 @@ export default function PregnancyCarePage() {
                 </div>
             </section>
 
-            {/* Delivery Options */}
-            <section className="py-24 bg-[#F5F5F5]">
-                <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="text-center max-w-2xl mx-auto mb-16">
-                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">
-                            Delivery Options
-                        </span>
-                        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Safe &</span>{" "}
-                            <span className="text-[#C21975]">Comfortable Delivery</span>
-                        </h2>
-                    </div>
-
-                    <div className="grid lg:grid-cols-3 gap-8">
-                        {deliveryOptions.map((option, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className={`p-8 rounded-[2rem] border shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-transform duration-500 ${option.highlight ? 'bg-[#730940] border-[#730940] text-white' : 'bg-white border-gray-100'}`}
-                            >
-                                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${option.highlight ? 'bg-white/10' : 'bg-[#f5e6ef]'}`}>
-                                    <option.icon className={`w-7 h-7 ${option.highlight ? 'text-white' : 'text-[#C21975]'}`} />
+            {/* Diet Section */}
+            <section className="py-24 bg-[#730940] text-white relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-10" />
+                <div className="container-fluid mx-auto max-w-[1400px] px-6 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <h2 className="font-display text-4xl lg:text-5xl font-bold mb-6">Nourishing <br />Two Lives</h2>
+                            <p className="text-pink-100 text-lg mb-8 leading-relaxed">
+                                In India, pregnancy diet is often surrounded by myths. Dr. Khemani provides scientific, culturally appropriate diet charts that ensure you gain weight healthily without compromising on nutrition.
+                            </p>
+                            <Link href="/contact" className="inline-flex items-center gap-2 text-white font-semibold hover:gap-4 transition-all">
+                                Get a Diet Chart <ArrowUpRight className="w-5 h-5" />
+                            </Link>
+                        </div>
+                        <div className="grid sm:grid-cols-2 gap-4">
+                            {dietaryTips.map((tip, i) => (
+                                <div key={i} className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-white/20 transition-colors">
+                                    <tip.icon className="w-8 h-8 text-pink-300 mb-4" />
+                                    <h4 className="font-bold text-lg mb-2">{tip.title}</h4>
+                                    <p className="text-sm text-pink-100">{tip.desc}</p>
                                 </div>
-                                <h3 className={`text-xl font-bold mb-3 ${option.highlight ? 'text-white' : 'text-gray-900'}`}>{option.title}</h3>
-                                <p className={`leading-relaxed ${option.highlight ? 'text-pink-100' : 'text-gray-600'}`}>{option.desc}</p>
-                            </motion.div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -274,18 +280,17 @@ export default function PregnancyCarePage() {
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <motion.div
-                            initial={{ opacity: 0, x: -40 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl"
+                            className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl"
                         >
                             <Image
                                 src="/images/2023-04-23 (1).webp"
-                                alt="Postnatal care and newborn checkup with Dr. Vinita Khemani"
+                                alt="Postnatal consultation"
                                 fill
                                 className="object-cover"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                         </motion.div>
 
                         <motion.div
@@ -294,21 +299,27 @@ export default function PregnancyCarePage() {
                             viewport={{ once: true }}
                         >
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">
-                                After Delivery
+                                The Fourth Trimester
                             </span>
                             <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-8">
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Postnatal</span>{" "}
-                                <span className="text-[#C21975]">Recovery</span>
+                                Postnatal Support
                             </h2>
 
                             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                                Dr. Khemani provides comprehensive postnatal care including breastfeeding guidance, recovery monitoring, postpartum mental health support, and newborn care advice. She ensures a smooth transition into motherhood.
+                                The journey doesn&apos;t end at delivery. The first 40 days (postpartum period) are crucial for recovery. We support you with:
                             </p>
 
-                            <div className="space-y-4">
-                                {["Breastfeeding guidance & lactation support", "Postpartum follow-up visits at 2, 6 weeks", "Mental health screening & support", "Contraception counseling", "Newborn care & vaccination schedule"].map((item, i) => (
+                            <div className="grid sm:grid-cols-2 gap-y-4 gap-x-8">
+                                {[
+                                    "Lactation Counseling",
+                                    "Stitch Care & Healing",
+                                    "Postpartum Depression Screening",
+                                    "Contraception Advice",
+                                    "Newborn Vaccination Schedule",
+                                    "Pelvic Floor Rehab"
+                                ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-3">
-                                        <CheckCircle className="w-5 h-5 text-[#22C55E] shrink-0" />
+                                        <div className="w-2 h-2 rounded-full bg-[#C21975] shrink-0" />
                                         <span className="text-gray-700 font-medium">{item}</span>
                                     </div>
                                 ))}
@@ -318,7 +329,7 @@ export default function PregnancyCarePage() {
                 </div>
             </section>
 
-            {/* FAQ Section */}
+            {/* FAQ Section with Updated Style */}
             <section className="py-24 bg-gradient-to-b from-white to-[#fff0f5]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
@@ -326,14 +337,14 @@ export default function PregnancyCarePage() {
                         <div className="lg:col-span-4">
                             <div className="lg:sticky lg:top-32 text-left">
                                 <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">
-                                    Common Questions
+                                    FAQ
                                 </span>
                                 <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.2] mb-6 pb-1">
-                                    Pregnancy <br />
-                                    <span className="text-[#C21975]">FAQ</span>
+                                    Common <br />
+                                    <span className="text-[#C21975]">Questions</span>
                                 </h2>
                                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                                    Find answers to the most common questions about prenatal care, delivery options, and postnatal recovery.
+                                    Expert answers to help you feel prepared and confident.
                                 </p>
                                 <button
                                     onClick={() => setIsEnquiryModalOpen(true)}
@@ -390,24 +401,11 @@ export default function PregnancyCarePage() {
             </section>
 
             {/* Shared CTA Section */}
-            <SharedCTA showForm={true} title="Planning Your Pregnancy?" subtitle="Book a prenatal consultation with Dr. Vinita Khemani and begin your pregnancy journey with expert care." />
+            <SharedCTA title="Start Your Journey" subtitle="Book your first prenatal consultation with Dr. Vinita Khemani today." />
 
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 
-            {/* Schema */}
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "MedicalWebPage",
-                    "name": "Pregnancy Care & Normal Delivery in Kolkata",
-                    "description": "Expert pregnancy care by Dr. Vinita Khemani with 2,348+ successful deliveries",
-                    "mainEntity": {
-                        "@type": "FAQPage",
-                        "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
-                    }
-                })
-            }} />
-
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />
         </main>
     );

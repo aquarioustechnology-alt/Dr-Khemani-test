@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Award, ShieldCheck } from "lucide-react";
+import { ShieldCheck, Users, MapPin, Baby, Stethoscope } from "lucide-react";
 
 const memberships = [
-    { title: "Life Member – FOGSI", subtitle: "Federation of Obstetric & Gynaecological Societies of India" },
-    { title: "Life Member – BOGS", subtitle: "Bengal Obstetric & Gynaecological Society" },
-    { title: "Member – ISAR", subtitle: "Indian Society for Assisted Reproduction" },
-    { title: "MBBS Gold Medalist", subtitle: "Honors in 2 Major Subjects" },
+    { title: "Life Member – FOGSI", subtitle: "Federation of Obstetric & Gynaecological Societies of India", icon: Users },
+    { title: "Life Member – BOGS", subtitle: "Bengal Obstetric & Gynaecological Society", icon: MapPin },
+    { title: "Member – ISAR", subtitle: "Indian Society for Assisted Reproduction", icon: Baby },
+    { title: "Senior Consultant", subtitle: "Obstetrician & Gynecologist", icon: Stethoscope },
 ];
 
 export function Credentials() {
@@ -39,7 +39,7 @@ export function Credentials() {
                                     className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
                                 >
                                     <div className="w-10 h-10 rounded-full bg-[#fdebf4] flex items-center justify-center text-[#C21975] mb-4">
-                                        <Award className="w-5 h-5" />
+                                        <item.icon className="w-5 h-5" />
                                     </div>
                                     <h3 className="font-bold text-gray-900 mb-1 leading-snug">{item.title}</h3>
                                     <p className="text-sm text-gray-500 leading-relaxed">{item.subtitle}</p>

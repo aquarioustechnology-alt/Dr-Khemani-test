@@ -10,9 +10,8 @@ import { Footer } from "@/app/sections/Footer";
 import { Navigation } from "@/components/Navigation";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Link from "next/link";
 import {
-    ChevronDown, Calendar
+    ChevronDown
 } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
@@ -140,7 +139,7 @@ export default function AboutPage() {
             </section>
 
             {/* Shared CTA Section */}
-            <SharedCTA bgVariant="pink" showForm={true} />
+            <SharedCTA title="Find Your Treatment" subtitle="Not sure which treatment is right for you? Consult with Dr. Vinita Khemani for a personalized recommendation." />
 
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 

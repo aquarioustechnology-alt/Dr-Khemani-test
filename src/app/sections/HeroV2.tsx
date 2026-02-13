@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { Star, Award, Users, Play, ArrowUpRight } from "lucide-react";
 import { calculateExperience, calculateSurgeries } from "@/lib/utils";
 import { EnquiryModal } from "@/components/EnquiryModal";

@@ -4,10 +4,9 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/app/sections/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import {
-    Scan, Calendar, ArrowUpRight, ChevronDown,
+    Scan, ArrowUpRight, ChevronDown,
     Clock, Shield, Zap, TrendingUp
 } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
@@ -156,25 +155,70 @@ export default function LaparoscopicSurgeryPage() {
                 </div>
             </section>
 
-            {/* FAQ */}
-            <section className="py-24 bg-[#F5F5F5]">
+            {/* FAQ Section with Updated Style */}
+            <section className="py-24 bg-gradient-to-b from-white to-[#fff0f5]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="max-w-3xl mx-auto">
-                        <div className="text-center mb-16">
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">FAQ</span>
-                            <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Surgery</span>{" "}
-                                <span className="text-[#C21975]">Questions</span>
-                            </h2>
+                    <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+                        {/* Left: Sticky Header */}
+                        <div className="lg:col-span-4">
+                            <div className="lg:sticky lg:top-32 text-left">
+                                <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">
+                                    FAQ
+                                </span>
+                                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.2] mb-6 pb-1">
+                                    Common <br />
+                                    <span className="text-[#C21975]">Questions</span>
+                                </h2>
+                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                    Expert answers to help you feel prepared.
+                                </p>
+                                <button
+                                    onClick={() => setIsEnquiryModalOpen(true)}
+                                    className="inline-flex items-center text-[#C21975] font-semibold hover:text-[#a01560] transition-colors group"
+                                >
+                                    Still have questions? Contact us
+                                    <ChevronDown className="w-5 h-5 ml-2 -rotate-90 group-hover:translate-x-1 transition-transform" />
+                                </button>
+                            </div>
                         </div>
-                        <div className="space-y-4">
+
+                        {/* Right: Accordion */}
+                        <div className="lg:col-span-8 space-y-4">
                             {faqs.map((faq, i) => (
-                                <div key={i} className="rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.08)] overflow-hidden bg-white">
-                                    <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between p-6 text-left">
-                                        <span className="text-lg font-semibold text-gray-900 pr-4">{faq.q}</span>
-                                        <ChevronDown className={`w-5 h-5 text-[#C21975] shrink-0 transition-transform ${openFaq === i ? "rotate-180" : ""}`} />
+                                <div
+                                    key={i}
+                                    className={`group rounded-2xl border transition-all duration-300 ${openFaq === i
+                                        ? "bg-white border-[#C21975]/30 shadow-lg shadow-pink-500/5 ring-1 ring-[#C21975]/20"
+                                        : "bg-white/80 border-white/50 shadow-sm hover:border-pink-100 hover:bg-white"
+                                        }`}
+                                >
+                                    <button
+                                        onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                                        className="w-full flex items-center justify-between p-6 md:p-8 text-left"
+                                    >
+                                        <span className={`text-lg md:text-xl font-semibold transition-colors ${openFaq === i ? "text-[#C21975]" : "text-gray-900"}`}>
+                                            {faq.q}
+                                        </span>
+                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-300 shrink-0 ml-4 ${openFaq === i
+                                            ? "bg-[#C21975] border-[#C21975] text-white rotate-180"
+                                            : "bg-transparent border-gray-200 text-gray-400 group-hover:border-[#C21975] group-hover:text-[#C21975]"
+                                            }`}>
+                                            <ChevronDown className="w-5 h-5" />
+                                        </div>
                                     </button>
-                                    {openFaq === i && <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} className="px-6 pb-6"><p className="text-gray-600 leading-relaxed">{faq.a}</p></motion.div>}
+                                    <motion.div
+                                        initial={false}
+                                        animate={{ height: openFaq === i ? "auto" : 0, opacity: openFaq === i ? 1 : 0 }}
+                                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                                        className="overflow-hidden"
+                                    >
+                                        <div className="px-6 md:px-8 pb-8 pt-0">
+                                            <div className="w-full h-px bg-gray-100 mb-6" />
+                                            <p className="text-gray-600 leading-relaxed text-lg">
+                                                {faq.a}
+                                            </p>
+                                        </div>
+                                    </motion.div>
                                 </div>
                             ))}
                         </div>
@@ -183,7 +227,7 @@ export default function LaparoscopicSurgeryPage() {
             </section>
 
             {/* Shared CTA Section */}
-            <SharedCTA showForm={true} title="Need Surgery Consultation?" subtitle="Discuss your condition with Dr. Vinita Khemani and explore minimally invasive options." />
+            <SharedCTA title="Need Surgery Consultation?" subtitle="Discuss your condition with Dr. Vinita Khemani and explore minimally invasive options." />
 
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 

@@ -4,10 +4,10 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/app/sections/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+
 import { useState } from "react";
 import {
-    MapPin, Phone, Clock, Calendar, ArrowUpRight, Navigation2
+    MapPin, Phone, Clock, ArrowUpRight, Navigation2
 } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
