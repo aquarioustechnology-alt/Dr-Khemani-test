@@ -10,6 +10,8 @@ import {
     ShieldAlert, CheckCircle, Calendar, ArrowUpRight, ChevronDown,
     AlertTriangle, HeartPulse, Stethoscope, Baby, Activity, Eye
 } from "lucide-react";
+import { SharedCTA } from "@/components/SharedCTA";
+import { EnquiryModal } from "@/components/EnquiryModal";
 
 const riskConditions = [
     { icon: HeartPulse, title: "Gestational Diabetes", desc: "Comprehensive glucose monitoring, insulin management, and dietary guidance for gestational diabetes to protect both mother and baby." },
@@ -36,6 +38,7 @@ const faqs = [
 
 export default function HighRiskPregnancyPage() {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
+    const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
 
     return (
         <main className="relative">
@@ -59,10 +62,12 @@ export default function HighRiskPregnancyPage() {
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
                                         Dr. Vinita Khemani specializes in managing high-risk pregnancies with advanced monitoring, timely intervention, and hospital-grade safety — giving every mother the best chance for a healthy delivery.
                                     </p>
-                                    <Link href="#contact" className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-transform hover:scale-105 shadow-xl" style={{ background: 'linear-gradient(135deg, #C21975 0%, #8a2f5e 100%)' }}>
+                                    <button
+                                        onClick={() => setIsEnquiryModalOpen(true)}
+                                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-transform hover:scale-105 shadow-xl" style={{ background: 'linear-gradient(135deg, #C21975 0%, #8a2f5e 100%)' }}>
                                         Book Consultation
                                         <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45"><ArrowUpRight className="w-6 h-6" /></span>
-                                    </Link>
+                                    </button>
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[400px] md:h-[500px] order-first lg:order-none">
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl">
@@ -178,19 +183,10 @@ export default function HighRiskPregnancyPage() {
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="py-20 bg-white">
-                <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="rounded-[3rem] p-12 md:p-16 text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #730940 0%, #C21975 100%)' }}>
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
-                        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Need Expert High-Risk Care?</h2>
-                        <p className="text-pink-100 text-lg mb-10 max-w-2xl mx-auto">Consult Dr. Vinita Khemani for specialized high-risk pregnancy management.</p>
-                        <Link href="#contact" className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg hover:scale-105 transition-transform shadow-xl">
-                            Book Consultation <span className="w-12 h-12 rounded-full bg-[#C21975] text-white flex items-center justify-center group-hover:rotate-45 transition-transform"><Calendar className="w-6 h-6" /></span>
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            {/* Shared CTA Section */}
+            <SharedCTA showForm={true} title="Need Expert High-Risk Care?" subtitle="Consult Dr. Vinita Khemani for specialized high-risk pregnancy management." />
+
+            <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />

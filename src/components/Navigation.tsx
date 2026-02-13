@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, Calendar, ChevronDown, Baby, Users, Activity, Stethoscope, Scissors, Microscope, CircleDot, Shield, Flower2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { EnquiryModal } from "./EnquiryModal";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -70,6 +71,7 @@ export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isTreatmentsHovered, setIsTreatmentsHovered] = useState(false);
   const [isMobileTreatmentsOpen, setIsMobileTreatmentsOpen] = useState(false);
+  const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -103,7 +105,7 @@ export function Navigation() {
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
         } ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm py-3" : "bg-white/90 backdrop-blur-sm shadow-sm py-4 lg:bg-transparent lg:shadow-none lg:py-5"
         }`}>
-        <div className="container-fluid px-4 md:px-8">
+        <div className="container-fluid px-4 lg:px-6 xl:px-12 relative">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group z-50 relative">
@@ -115,25 +117,25 @@ export function Navigation() {
                   className="object-contain"
                 />
               </div>
-              <div className="hidden sm:block">
-                <p className="font-display font-bold text-lg leading-tight text-gray-800">Healing Touch Clinic</p>
-                <p className="text-xs font-medium" style={{ color: '#a43971' }}>Dr. Vinita Khemani</p>
+              <div className="hidden sm:block whitespace-nowrap">
+                <p className="font-display font-bold text-base lg:text-lg leading-tight text-gray-800">Healing Touch Clinic</p>
+                <p className="text-[10px] lg:text-xs font-medium" style={{ color: '#a43971' }}>Dr. Vinita Khemani</p>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center lg:gap-4 xl:gap-8">
               {navLinks.map((link) => (
-                <div key={link.href} className="relative">
+                <div key={link.href}>
                   {link.isDropdown ? (
                     <div
                       onMouseEnter={() => setIsTreatmentsHovered(true)}
                       onMouseLeave={() => setIsTreatmentsHovered(false)}
-                      className="relative py-4"
+                      className="py-4"
                     >
                       <Link
                         href={link.href}
-                        className="flex items-center gap-1 text-sm font-medium transition-colors relative group text-gray-700 hover:text-[#C21975]"
+                        className="flex items-center gap-1 text-sm font-medium transition-colors relative group text-gray-700 hover:text-[#C21975] whitespace-nowrap"
                       >
                         {link.label}
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isTreatmentsHovered ? "rotate-180" : ""}`} />
@@ -143,11 +145,11 @@ export function Navigation() {
                       <AnimatePresence>
                         {isTreatmentsHovered && (
                           <motion.div
-                            initial={{ opacity: 0, y: 15 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 15 }}
+                            initial={{ opacity: 0, y: 15, x: "-50%" }}
+                            animate={{ opacity: 1, y: 0, x: "-50%" }}
+                            exit={{ opacity: 0, y: 15, x: "-50%" }}
                             transition={{ duration: 0.2 }}
-                            className="absolute top-full left-1/2 -translate-x-[70%] w-[900px] pt-4"
+                            className="absolute top-full left-1/2 w-[900px] pt-4"
                           >
                             <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-2">
                               <div className="grid grid-cols-3 gap-2">
@@ -179,7 +181,7 @@ export function Navigation() {
                     </div>
                   ) : (
                     <Link href={link.label === "Contact" ? "#contact" : link.href}
-                      className="text-sm font-medium transition-colors relative group text-gray-700 hover:text-primary py-4 block">
+                      className="text-sm font-medium transition-colors relative group text-gray-700 hover:text-primary py-4 block whitespace-nowrap">
                       {link.label}
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all group-hover:w-full bg-[#C21975]" />
                     </Link>
@@ -191,18 +193,19 @@ export function Navigation() {
             {/* Actions & Mobile Menu Toggle */}
             <div className="flex items-center gap-4">
               {/* Desktop CTA */}
-              <div className="hidden lg:flex items-center gap-4">
+              <div className="hidden lg:flex items-center lg:gap-4 xl:gap-8">
                 <a href="tel:+919903588155"
-                  className="flex items-center gap-2 text-sm font-medium transition-colors text-gray-700 hover:text-primary">
+                  className="flex items-center gap-2 text-sm font-medium transition-colors text-gray-700 hover:text-primary whitespace-nowrap shrink-0">
                   <Phone className="w-4 h-4" />
                   +91 99035 88155
                 </a>
-                <Link href="#contact"
-                  className="flex items-center gap-2 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:scale-105 transition-all"
+                <button
+                  onClick={() => setIsEnquiryModalOpen(true)}
+                  className="flex items-center gap-2 text-white px-5 xl:px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:scale-105 transition-all whitespace-nowrap"
                   style={{ background: 'linear-gradient(135deg, #C21975, #8a2f5e)' }}>
                   <Calendar className="w-4 h-4" />
                   Book Appointment
-                </Link>
+                </button>
               </div>
 
               {/* Mobile Hamburger Button */}
@@ -306,19 +309,22 @@ export function Navigation() {
                 +91 99035 88155
               </a>
 
-              <Link
-                href="#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setIsEnquiryModalOpen(true);
+                }}
                 className="flex items-center justify-center gap-2 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl"
                 style={{ background: 'linear-gradient(135deg, #C21975, #8a2f5e)' }}
               >
-                <Calendar className="w-6 h-6" />
+                <Calendar className="w-4 h-4" />
                 Book Your Visit
-              </Link>
+              </button>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
+      <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
     </>
   );
 }

@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Star, Award, Users, Play, ArrowUpRight } from "lucide-react";
 import { calculateExperience, calculateSurgeries } from "@/lib/utils";
+import { EnquiryModal } from "@/components/EnquiryModal";
+import { VideoModal } from "@/components/VideoModal";
 
 
 const heroImages = [
@@ -16,6 +18,8 @@ const heroImages = [
 
 export function HeroV2() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -62,8 +66,8 @@ export function HeroV2() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-14">
-                  <Link
-                    href="#contact"
+                  <button
+                    onClick={() => setIsEnquiryModalOpen(true)}
                     className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-transform hover:scale-105 shadow-xl hover:shadow-2xl"
                     style={{ background: 'linear-gradient(135deg, #C21975 0%, #8a2f5e 100%)' }}
                   >
@@ -71,11 +75,13 @@ export function HeroV2() {
                     <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                       <ArrowUpRight className="w-6 h-6" />
                     </span>
-                  </Link>
+                  </button>
 
-                  <button className="inline-flex items-center gap-3 pl-2 pr-8 py-1 rounded-full bg-white text-gray-700 font-semibold text-lg border border-gray-200 hover:border-[#C21975] hover:text-[#C21975] transition-all group">
+                  <button
+                    onClick={() => setIsVideoModalOpen(true)}
+                    className="inline-flex items-center gap-3 pl-2 pr-8 py-1 rounded-full bg-white text-gray-700 font-semibold text-lg border border-gray-200 hover:border-[#C21975] hover:text-[#C21975] transition-all group">
                     <span className="w-12 h-12 rounded-full border border-current flex items-center justify-center group-hover:bg-[#C21975] group-hover:border-[#C21975] group-hover:text-white transition-colors">
-                      <Play className="w-5 h-5 ml-0.5 fill-current" />
+                      <Play className="w-5 h-5 -ml-1 fill-current" />
                     </span>
                     Watch Video
                   </button>
@@ -194,6 +200,8 @@ export function HeroV2() {
           </div>
         </div>
       </div>
+      <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
+      <VideoModal isOpen={isVideoModalOpen} onClose={() => setIsVideoModalOpen(false)} />
     </section>
   );
 }

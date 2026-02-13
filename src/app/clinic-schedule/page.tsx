@@ -9,6 +9,8 @@ import { useState } from "react";
 import {
     MapPin, Phone, Clock, Calendar, ArrowUpRight, Navigation2
 } from "lucide-react";
+import { SharedCTA } from "@/components/SharedCTA";
+import { EnquiryModal } from "@/components/EnquiryModal";
 
 const clinics = [
     {
@@ -101,6 +103,7 @@ const clinics = [
 
 export default function ClinicSchedulePage() {
     const [activeTab, setActiveTab] = useState(clinics[0].id);
+    const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
     const activeClinic = clinics.find(c => c.id === activeTab) || clinics[0];
 
     return (
@@ -305,29 +308,10 @@ export default function ClinicSchedulePage() {
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="py-20 bg-white">
-                <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="rounded-[3rem] p-12 md:p-16 text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #730940 0%, #C21975 100%)' }}>
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
-                        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                            Visit Us Today
-                        </h2>
-                        <p className="text-pink-100 text-lg mb-10 max-w-2xl mx-auto">
-                            Choose the nearest clinic and book your appointment with Dr. Vinita Khemani.
-                        </p>
-                        <Link
-                            href="/contact"
-                            className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg transition-transform hover:scale-105 shadow-xl hover:shadow-2xl"
-                        >
-                            Book Appointment
-                            <span className="w-12 h-12 rounded-full bg-[#C21975] text-white flex items-center justify-center transition-transform group-hover:rotate-45">
-                                <Calendar className="w-6 h-6" />
-                            </span>
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            {/* Shared CTA Section */}
+            <SharedCTA title="Visit Us Today" subtitle="Choose the nearest clinic and book your appointment with Dr. Vinita Khemani." />
+
+            <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 
             <Footer />
         </main>

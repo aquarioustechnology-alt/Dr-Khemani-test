@@ -10,6 +10,8 @@ import {
     Baby, Heart, Shield, CheckCircle, Calendar,
     ArrowUpRight, ChevronDown, Clock, Users
 } from "lucide-react";
+import { SharedCTA } from "@/components/SharedCTA";
+import { EnquiryModal } from "@/components/EnquiryModal";
 
 const trimesterCare = [
     {
@@ -102,6 +104,7 @@ const faqs = [
 
 export default function PregnancyCarePage() {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
+    const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
 
     return (
         <main className="relative">
@@ -154,8 +157,8 @@ export default function PregnancyCarePage() {
                                         </div>
                                     </div>
 
-                                    <Link
-                                        href="#contact"
+                                    <button
+                                        onClick={() => setIsEnquiryModalOpen(true)}
                                         className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-transform hover:scale-105 shadow-xl hover:shadow-2xl"
                                         style={{ background: 'linear-gradient(135deg, #C21975 0%, #8a2f5e 100%)' }}
                                     >
@@ -163,7 +166,7 @@ export default function PregnancyCarePage() {
                                         <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                             <ArrowUpRight className="w-6 h-6" />
                                         </span>
-                                    </Link>
+                                    </button>
                                 </motion.div>
 
                                 <motion.div
@@ -332,13 +335,13 @@ export default function PregnancyCarePage() {
                                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                                     Find answers to the most common questions about prenatal care, delivery options, and postnatal recovery.
                                 </p>
-                                <Link
-                                    href="#contact"
+                                <button
+                                    onClick={() => setIsEnquiryModalOpen(true)}
                                     className="inline-flex items-center text-[#C21975] font-semibold hover:text-[#a01560] transition-colors group"
                                 >
                                     Still have questions? Contact us
                                     <ChevronDown className="w-5 h-5 ml-2 -rotate-90 group-hover:translate-x-1 transition-transform" />
-                                </Link>
+                                </button>
                             </div>
                         </div>
 
@@ -386,31 +389,10 @@ export default function PregnancyCarePage() {
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="py-20 bg-white">
-                <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="rounded-[3rem] p-12 md:p-16 text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #730940 0%, #C21975 100%)' }}>
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
-                        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                            Planning Your Pregnancy?
-                        </h2>
-                        <p className="text-pink-100 text-lg mb-10 max-w-2xl mx-auto">
-                            Book a prenatal consultation with Dr. Vinita Khemani and begin your pregnancy journey with expert care.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link href="#contact" className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg transition-transform hover:scale-105 shadow-xl">
-                                Book Now
-                                <span className="w-12 h-12 rounded-full bg-[#C21975] text-white flex items-center justify-center transition-transform group-hover:rotate-45">
-                                    <Calendar className="w-6 h-6" />
-                                </span>
-                            </Link>
-                            <a href="tel:+919903588155" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border-2 border-white/30 text-white font-semibold text-lg hover:bg-white/10 transition-all">
-                                Call: +91 99035 88155
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Shared CTA Section */}
+            <SharedCTA showForm={true} title="Planning Your Pregnancy?" subtitle="Book a prenatal consultation with Dr. Vinita Khemani and begin your pregnancy journey with expert care." />
+
+            <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 
             {/* Schema */}
             <script type="application/ld+json" dangerouslySetInnerHTML={{
