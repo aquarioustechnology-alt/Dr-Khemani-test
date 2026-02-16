@@ -5,17 +5,17 @@ import { Footer } from "@/app/sections/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { AlertTriangle, ArrowUpRight, Activity, Shield, ChevronDown } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, Activity, Shield, ChevronDown, HeartPulse, AlertOctagon, Droplets, Ban, Zap, Gauge, Clock, Baby, Siren, Stethoscope, Heart, Users, BedDouble, Milk } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
 
 const reasons = [
-    { title: "Fetal Distress", desc: "Sudden drop in baby's heart rate indicating lack of oxygen.", icon: Activity },
-    { title: "Prolapsed Cord", desc: "Umbilical cord slips out before the baby, cutting off blood supply.", icon: AlertTriangle },
-    { title: "Placental Abruption", desc: "Placenta separates from the uterus wall prematurely, causing severe bleeding.", icon: Shield },
-    { title: "Obstructed Labor", desc: "Baby is too large or in a difficult position (like transverse lie) to pass through safely.", icon: AlertTriangle },
-    { title: "Uterine Rupture", desc: "A tear in the uterus, a rare but life-threatening emergency.", icon: AlertTriangle },
-    { title: "Severe Preeclampsia", desc: "Dangerously high BP threatening seizures (Eclampsia).", icon: Activity }
+    { title: "Fetal Distress", desc: "A critical condition where the baby's heart rate drops significantly or becomes irregular, indicating oxygen deprivation. Immediate delivery is vital to prevent long-term neurological damage.", icon: HeartPulse },
+    { title: "Prolapsed Cord", desc: "Occurs when the umbilical cord descends into the birth canal ahead of the baby, getting compressed. This medical emergency cuts off the baby's oxygen supply instantly.", icon: AlertOctagon },
+    { title: "Placental Abruption", desc: "The placenta detaches from the uterine wall before delivery, causing heavy internal bleeding and depriving the baby of oxygen. Requires immediate surgery.", icon: Droplets },
+    { title: "Obstructed Labor", desc: "When the baby cannot exit the pelvis due to size (macrosomia) or abnormal position (transverse/breech), forcing a surgical birth to prevent uterine injury.", icon: Ban },
+    { title: "Uterine Rupture", desc: "A catastrophic breach of the uterine wall, often along a previous C-section scar. This rare event causes severe bleeding and requires instant life-saving surgery.", icon: Zap },
+    { title: "Severe Preeclampsia", desc: "Dangerously high blood pressure with organ damage. If it escalates to Eclampsia (seizures), immediate delivery is necessary to protect the mother's life.", icon: Gauge }
 ];
 
 const faqs = [
@@ -117,7 +117,7 @@ export default function EmergencyCSectionPage() {
             <section className="py-24 bg-[#F9F9F9] overflow-hidden">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
-                        <div className="order-2 lg:order-1">
+                        <div className="order-2 lg:order-2">
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">The Procedure</span>
                             <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight">
                                 Precision meets <span className="text-[#C21975]">Compassion</span>
@@ -146,8 +146,8 @@ export default function EmergencyCSectionPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="order-1 lg:order-2 relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
-                            <Image src="/images/mother_newborn_1770790584420.png" alt="Mother and newborn post-delivery" fill className="object-cover" />
+                        <div className="order-1 lg:order-1 relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
+                            <Image src="/images/Pregnancy Care.png" alt="Mother and newborn post-delivery care" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#2D0C1E]/60 to-transparent" />
                             <div className="absolute bottom-10 left-10 right-10 text-white">
                                 <blockquote className="text-xl italic font-medium mb-4">&quot;Even in an emergency, the moment you hold your baby should be magical. We make sure safety never overshadows that joy.&quot;</blockquote>
@@ -161,7 +161,7 @@ export default function EmergencyCSectionPage() {
             {/* C-Sections in India - Long-form Content */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Understanding C-Sections</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Emergency C-Section: <br /><span className="text-[#C21975]">When Every Minute Counts</span></h2>
@@ -184,9 +184,11 @@ export default function EmergencyCSectionPage() {
                                 </span>
                             </button>
                         </div>
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <Image src="/images/emergency-csection.jpg" alt="Emergency caesarean readiness" fill className="object-cover" />
-                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
+                        <div className="relative sticky top-32">
+                            <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                                <Image src="/images/emergency-csection.jpg" alt="Emergency caesarean readiness" fill className="object-cover" />
+                            </div>
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-20">
                                 <p className="text-sm font-bold text-gray-900 mb-1">24/7 Ready</p>
                                 <p className="text-xs text-gray-600">Decision-to-delivery in under 30 minutes at equipped hospital facilities.</p>
                             </div>
@@ -213,42 +215,133 @@ export default function EmergencyCSectionPage() {
                 </div>
             </section>
 
-            {/* Dr. Khemani&apos;s Expertise */}
+            {/* Why Choose Us — Bento Grid */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
-                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Emergency C-Section Expert" fill className="object-cover" />
-                        </div>
+                    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Expert Obstetrics</span>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Trust Dr. Khemani for Emergency Delivery?</h3>
-                            <p className="text-gray-600 leading-relaxed mb-4">
-                                With 23+ years of obstetric experience, Dr. Khemani has managed thousands of deliveries including complex emergency scenarios. Her calm, decisive approach during emergencies ensures optimal outcomes for both mother and baby.
-                            </p>
-                            <div className="space-y-3 mb-6">
-                                {[
-                                    "Rapid decision-making in labor emergencies",
-                                    "Hospital affiliations with 24/7 OT and blood bank",
-                                    "NICU access for premature or distressed newborns",
-                                    "Honest assessment — C-section only when truly needed",
-                                    "Comprehensive post-operative care and recovery support"
-                                ].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-3">
-                                        <Shield className="w-4 h-4 text-[#C21975] shrink-0" />
-                                        <span className="text-gray-700 text-sm font-medium">{item}</span>
-                                    </div>
-                                ))}
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Emergency Protocol</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                                Prepared for every{" "}<br />
+                                <span className="italic text-[#C21975]">critical moment</span>
+                            </h2>
+                        </div>
+                        <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">
+                            When an emergency arises, it&apos;s not just skill that saves lives — it&apos;s preparation, systems, and a team that moves as one.
+                        </p>
+                    </div>
+                    {/* Row 1: 3 columns */}
+                    <div className="grid lg:grid-cols-3 gap-6 mb-6">
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#C21975] shadow-sm mb-6"><Siren className="w-7 h-7" /></div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-4">Code Blue: Under 30 Minutes</h3>
                             </div>
-                            <button
-                                onClick={() => setIsEnquiryModalOpen(true)}
-                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
-                            >
-                                Consult Dr. Khemani
-                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
-                                    <ArrowUpRight className="w-6 h-6" />
-                                </span>
-                            </button>
+                            <p className="text-gray-600 text-base leading-relaxed">Our Code Blue protocol ensures decision-to-delivery in under 30 minutes. The OT is pre-sterilized, the anesthesia team is on standby, and blood products are cross-matched — before the emergency even occurs.</p>
+                        </div>
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#C21975] shadow-sm mb-6"><Users className="w-7 h-7" /></div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-4">Coordinated Team Response</h3>
+                            </div>
+                            <p className="text-gray-600 text-base leading-relaxed">An emergency C-section involves the obstetrician, anesthesiologist, neonatologist, nurses, and blood bank — all pre-briefed and ready. Dr. Khemani leads this coordinated effort with calm precision.</p>
+                        </div>
+                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
+                            <Image src="/images/emergency_ot_ready_1771254301635.png" alt="Emergency caesarean section operating theatre readiness" fill className="object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                            <div className="absolute bottom-6 left-6 right-6 text-white">
+                                <p className="font-bold text-lg mb-1">24/7 OT Readiness</p>
+                                <p className="text-sm opacity-90">Fully equipped operation theatre with continuous fetal monitoring and instant surgical access.</p>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Row 2: 3 columns */}
+                    <div className="grid lg:grid-cols-3 gap-6">
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#C21975] shadow-sm mb-6"><Baby className="w-7 h-7" /></div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-4">Gentle C-Section Technique</h3>
+                            </div>
+                            <p className="text-gray-600 text-base leading-relaxed">Even in emergencies, we practice the &quot;Gentle Caesarean&quot; approach — delayed cord clamping when safe, immediate skin-to-skin contact, and allowing the mother to see and hear her baby&apos;s first cry.</p>
+                        </div>
+                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
+                            <Image src="/images/best-lady-gynecologist-kolkata.webp" alt="NICU team ready for newborn care after emergency delivery" fill className="object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                            <div className="absolute bottom-6 left-6 right-6 text-white">
+                                <p className="font-bold text-lg mb-1">NICU On Standby</p>
+                                <p className="text-sm opacity-90">Neonatology team and incubator ready within seconds for premature or distressed newborns.</p>
+                            </div>
+                        </div>
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#C21975] shadow-sm mb-6"><Heart className="w-7 h-7" /></div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-4">Aesthetic Closure &amp; Minimal Scarring</h3>
+                            </div>
+                            <p className="text-gray-600 text-base leading-relaxed">Despite the urgency, Dr. Khemani uses layered subcuticular closure with absorbable sutures — the same cosmetic technique used in elective surgeries — ensuring minimal visible scarring and faster wound healing.</p>
+                        </div>
+                    </div>
+                    <div className="mt-10 text-center">
+                        <button onClick={() => setIsEnquiryModalOpen(true)} className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]">
+                            Consult Dr. Khemani
+                            <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45"><ArrowUpRight className="w-6 h-6" /></span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* Recovery & Aftercare */}
+            <section className="py-24 bg-[#F9F9F9]">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="text-center mb-16">
+                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Post-Delivery Care</span>
+                        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            Recovery After an <span className="text-[#C21975]">Emergency C-Section</span>
+                        </h2>
+                        <p className="text-gray-600 max-w-3xl mx-auto text-lg">An emergency delivery can feel overwhelming. Our comprehensive post-operative care ensures you heal physically and emotionally.</p>
+                    </div>
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                        <div className="relative sticky top-32">
+                            <div className="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                                <Image src="/images/pregnancy_ultrasound_1771254283977.png" alt="Post-operative monitoring and recovery after emergency C-section" fill className="object-cover" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                            </div>
+                        </div>
+                        <div className="space-y-8">
+                            <div className="flex gap-5 items-start p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                                <div className="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center text-[#C21975] shrink-0"><Stethoscope className="w-6 h-6" /></div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-gray-900 mb-1">Pain Management</h4>
+                                    <p className="text-gray-600 leading-relaxed">A structured pain relief plan using a combination of oral analgesics and regional anesthesia techniques. Most patients report manageable discomfort by Day 2 and significantly reduced pain by Day 5.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-5 items-start p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                                <div className="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center text-[#C21975] shrink-0"><Activity className="w-6 h-6" /></div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-gray-900 mb-1">Early Mobilization</h4>
+                                    <p className="text-gray-600 leading-relaxed">Gentle walking is encouraged within 12-24 hours after surgery. This reduces the risk of blood clots, improves circulation, and speeds up bowel recovery — getting you back on your feet safely.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-5 items-start p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                                <div className="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center text-[#C21975] shrink-0"><Milk className="w-6 h-6" /></div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-gray-900 mb-1">Breastfeeding Support</h4>
+                                    <p className="text-gray-600 leading-relaxed">Our lactation consultants assist with positioning and latching techniques that are comfortable after abdominal surgery. Breastfeeding is initiated within the first hour when the baby is stable.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-5 items-start p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                                <div className="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center text-[#C21975] shrink-0"><HeartPulse className="w-6 h-6" /></div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-gray-900 mb-1">Emotional Debriefing</h4>
+                                    <p className="text-gray-600 leading-relaxed">An unplanned C-section can feel like a loss of control. We provide post-delivery counseling sessions to help you process the experience, address any feelings of guilt or anxiety, and bond with your baby.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-5 items-start p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                                <div className="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center text-[#C21975] shrink-0"><Shield className="w-6 h-6" /></div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-gray-900 mb-1">Wound Care &amp; Follow-Up</h4>
+                                    <p className="text-gray-600 leading-relaxed">Detailed wound care instructions are provided at discharge. A follow-up visit at 1 week (for wound check) and 6 weeks (for full recovery assessment) ensures complete healing and uterine recovery.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

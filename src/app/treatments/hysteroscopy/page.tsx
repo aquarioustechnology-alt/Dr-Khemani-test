@@ -140,7 +140,7 @@ export default function HysteroscopyPage() {
             {/* Understanding Hysteroscopy - Long-form Content */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">In-Depth Guide</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Diagnostic vs. Operative <br /><span className="text-[#C21975]">Hysteroscopy: What to Expect</span></h2>
@@ -166,9 +166,11 @@ export default function HysteroscopyPage() {
                                 </span>
                             </button>
                         </div>
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <Image src="/images/hysteroscopy-procedure.jpg" alt="Hysteroscopy procedure in Kolkata" fill className="object-cover" />
-                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
+                        <div className="relative sticky top-32">
+                            <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                                <Image src="/images/hysteroscopy-procedure.jpg" alt="Hysteroscopy procedure in Kolkata" fill className="object-cover" />
+                            </div>
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-20">
                                 <p className="text-sm font-bold text-gray-900 mb-1">See &amp; Treat</p>
                                 <p className="text-xs text-gray-600">Diagnose and treat uterine conditions in a single sitting — no incisions needed.</p>
                             </div>
@@ -198,11 +200,11 @@ export default function HysteroscopyPage() {
             {/* Dr. Khemani&apos;s Expertise */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
-                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                    <div className="grid lg:grid-cols-2 gap-12 items-stretch bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
+                        <div className="relative min-h-[500px] h-full rounded-[2rem] overflow-hidden shadow-xl">
                             <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Hysteroscopy Expert" fill className="object-cover" />
                         </div>
-                        <div>
+                        <div className="flex flex-col justify-center items-start">
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Expert Care</span>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Dr. Khemani for Hysteroscopy?</h3>
                             <p className="text-gray-600 leading-relaxed mb-4">

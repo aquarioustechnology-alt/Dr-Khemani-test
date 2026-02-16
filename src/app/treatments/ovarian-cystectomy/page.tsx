@@ -5,15 +5,15 @@ import { Footer } from "@/app/sections/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { CircleDot, ArrowUpRight, ChevronDown, Activity, AlertTriangle, ShieldCheck, Heart, Stethoscope, FlaskConical } from "lucide-react";
+import { CircleDot, ArrowUpRight, ChevronDown, Egg, Flame, Droplets, Layers, Heart, Stethoscope, FlaskConical, Microscope, Timer, ShieldCheck, Scissors, Sparkles, ClipboardCheck } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
 
 const types = [
-    { title: "Functional Cysts", desc: "Common, benign fluid-filled sacs that form during the menstrual cycle and often disappear on their own.", icon: CircleDot },
-    { title: "Dermoid Cysts", desc: "Cysts containing tissues like hair or skin. They rarely resolve on their own and may need removal.", icon: ShieldCheck },
-    { title: "Endometriomas", desc: "Chocolate cysts caused by endometriosis. They are painful and can affect fertility.", icon: AlertTriangle },
-    { title: "Cystadenomas", desc: "Cysts developing from ovarian surface cells, filled with watery or mucous material. Can grow large.", icon: Activity }
+    { title: "Functional Cysts", desc: "The most common type — fluid-filled sacs that form during ovulation. Typically harmless and resolve within 2-3 menstrual cycles without treatment. Monitoring via ultrasound is usually sufficient.", icon: CircleDot },
+    { title: "Dermoid Cysts", desc: "Also called mature teratomas, these contain tissues like hair, fat, or teeth. They grow slowly but won't resolve on their own and may twist the ovary (torsion), requiring surgical removal.", icon: Layers },
+    { title: "Endometriomas", desc: "Known as 'chocolate cysts' due to their dark blood content, these are caused by endometriosis. They can cause severe pain, damage ovarian tissue, and significantly impact fertility if left untreated.", icon: Flame },
+    { title: "Cystadenomas", desc: "Develop from the outer surface of the ovary, filled with watery or mucous fluid. Can grow very large (10-30cm) and cause abdominal distension, requiring careful laparoscopic excision.", icon: Droplets }
 ];
 
 const faqs = [
@@ -98,36 +98,54 @@ export default function OvarianCystectomyPage() {
             {/* Symptoms Section */}
             <section className="py-24 bg-[#F5F5F5]">
                 <div className="container-fluid mx-auto max-w-[1200px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl">
-                            <Image src="/images/pcos-bg.png" alt="Symptoms of Ovarian Cysts" fill className="object-cover" />
-                            <div className="absolute inset-0 bg-black/20" />
+                    <div className="text-center mb-16">
+                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Warning Signs</span>
+                        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            Signs You <span className="text-[#C21975]">Shouldn&apos;t Ignore</span>
+                        </h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto text-lg">Most cysts are silent. But when symptoms appear, they demand attention.</p>
+                    </div>
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                        <div className="relative sticky top-32">
+                            <div className="relative h-[550px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                                <Image src="/images/ovarian-cyst-care.jpg" alt="Ovarian cyst diagnosis and symptoms" fill className="object-cover" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                            </div>
                         </div>
-                        <div>
-                            <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-                                Signs You <span className="text-[#C21975]">Shouldn&apos;t Ignore</span>
-                            </h2>
-                            <div className="space-y-6">
-                                <div className="flex gap-4 items-start">
-                                    <div className="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center text-[#C21975] shrink-0 mt-1"><Activity className="w-5 h-5" /></div>
-                                    <div>
-                                        <h4 className="text-xl font-bold text-gray-900">Pelvic Pain</h4>
-                                        <p className="text-gray-600">Dull ache or sharp pain in the lower abdomen, often on the side of the cyst.</p>
-                                    </div>
+                        <div className="space-y-8">
+                            <div className="flex gap-5 items-start p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                                <div className="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center text-[#C21975] shrink-0"><Flame className="w-6 h-6" /></div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-gray-900 mb-1">Pelvic Pain &amp; Cramping</h4>
+                                    <p className="text-gray-600 leading-relaxed">A persistent dull ache or sudden sharp pain in the lower abdomen, typically on the side of the cyst. Pain may worsen during intercourse, exercise, or bowel movements.</p>
                                 </div>
-                                <div className="flex gap-4 items-start">
-                                    <div className="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center text-[#C21975] shrink-0 mt-1"><AlertTriangle className="w-5 h-5" /></div>
-                                    <div>
-                                        <h4 className="text-xl font-bold text-gray-900">Bloating & Heaviness</h4>
-                                        <p className="text-gray-600">Feeling of fullness or pressure in the abdomen, similar to indigestion.</p>
-                                    </div>
+                            </div>
+                            <div className="flex gap-5 items-start p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                                <div className="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center text-[#C21975] shrink-0"><Droplets className="w-6 h-6" /></div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-gray-900 mb-1">Bloating &amp; Abdominal Pressure</h4>
+                                    <p className="text-gray-600 leading-relaxed">Persistent feeling of fullness, heaviness, or swelling in the lower belly. Large cysts can press on the bladder causing frequent urination, or on the bowel causing constipation.</p>
                                 </div>
-                                <div className="flex gap-4 items-start">
-                                    <div className="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center text-[#C21975] shrink-0 mt-1"><ShieldCheck className="w-5 h-5" /></div>
-                                    <div>
-                                        <h4 className="text-xl font-bold text-gray-900">Irregular Cycles</h4>
-                                        <p className="text-gray-600">Changes in menstrual flow, spotting, or painful periods.</p>
-                                    </div>
+                            </div>
+                            <div className="flex gap-5 items-start p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                                <div className="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center text-[#C21975] shrink-0"><CircleDot className="w-6 h-6" /></div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-gray-900 mb-1">Irregular or Heavy Periods</h4>
+                                    <p className="text-gray-600 leading-relaxed">Changes in menstrual flow — heavier bleeding, spotting between periods, or missed cycles. Endometriomas are notorious for causing painful, irregular menstruation.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-5 items-start p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                                <div className="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center text-[#C21975] shrink-0"><Egg className="w-6 h-6" /></div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-gray-900 mb-1">Difficulty Conceiving</h4>
+                                    <p className="text-gray-600 leading-relaxed">Endometriomas and large cysts can disrupt ovulation and damage healthy ovarian tissue, making it harder to get pregnant. Early evaluation protects your fertility window.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-5 items-start p-6 rounded-2xl bg-red-50 border border-red-200 shadow-sm">
+                                <div className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center text-red-600 shrink-0"><ShieldCheck className="w-6 h-6" /></div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-red-800 mb-1">Emergency: Sudden Severe Pain</h4>
+                                    <p className="text-red-700/80 leading-relaxed">Sudden, intense pelvic pain with nausea and vomiting may indicate cyst rupture or ovarian torsion (twisting). This is a surgical emergency — seek immediate care.</p>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +172,7 @@ export default function OvarianCystectomyPage() {
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-3">Fertility Preservation</h3>
                             <p className="text-gray-600 leading-relaxed">
-                                Our primary goal is to remove the cyst while meticulously preserving healthy ovarian tissue, safeguarding your future fertility.
+                                Our primary goal is to remove the cyst while meticulously preserving maximal healthy ovarian tissue. Dr. Khemani uses careful dissection techniques to protect the ovarian blood supply and egg reserve (AMH), safeguarding your future ability to conceive naturally or via IVF.
                             </p>
                         </div>
                         <div className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 group">
@@ -163,7 +181,7 @@ export default function OvarianCystectomyPage() {
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-3">Minimally Invasive</h3>
                             <p className="text-gray-600 leading-relaxed">
-                                Utilizing advanced 3D laparoscopic techniques for smaller incisions, less pain, faster recovery, and minimal scarring.
+                                Utilizing advanced 3D HD laparoscopic technology, we operate through tiny 5mm incisions. This keyhole approach ensures minimal blood loss, significantly reduced post-operative pain, and almost invisible scarring, allowing you to walk the same day and return to work within a week.
                             </p>
                         </div>
                         <div className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 group">
@@ -172,7 +190,7 @@ export default function OvarianCystectomyPage() {
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-3">Long-Term Wellness</h3>
                             <p className="text-gray-600 leading-relaxed">
-                                Beyond surgery, we provide comprehensive post-operative care and guidance to minimize recurrence and promote overall well-being.
+                                Surgery is just one step. To prevent cyst recurrence—especially with endometriosis—we provide a holistic long-term plan involving hormonal management, dietary modifications, and lifestyle counseling. We treat the root cause, not just the symptom, promoting complete hormonal balance.
                             </p>
                         </div>
                     </div>
@@ -182,9 +200,9 @@ export default function OvarianCystectomyPage() {
             {/* Ovarian Cysts in India - Long-form Content */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Understanding Cysts</span>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">When to Act</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Ovarian Cysts: <br /><span className="text-[#C21975]">When to Worry, When to Wait</span></h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
                                 Ovarian cysts are extremely common — studies show that nearly every woman of reproductive age develops at least one ovarian cyst during her lifetime. The vast majority of these are functional cysts that resolve on their own within 2-3 menstrual cycles without any treatment.
@@ -205,11 +223,13 @@ export default function OvarianCystectomyPage() {
                                 </span>
                             </button>
                         </div>
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <Image src="/images/ovarian-cyst-care.jpg" alt="Ovarian cyst evaluation and care" fill className="object-cover" />
-                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
-                                <p className="text-sm font-bold text-gray-900 mb-1">Fertility First</p>
-                                <p className="text-xs text-gray-600">Laparoscopic cystectomy preserves ovarian tissue and protects future fertility.</p>
+                        <div className="relative sticky top-32">
+                            <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                                <Image src="/images/laparoscopy-explanation.jpg" alt="Laparoscopic ovarian cystectomy consultation and evaluation" fill className="object-cover" />
+                            </div>
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-20">
+                                <p className="text-sm font-bold text-gray-900 mb-1">Ovary Preserved</p>
+                                <p className="text-xs text-gray-600">Cyst removed, healthy tissue saved — protecting your fertility and hormonal balance.</p>
                             </div>
                         </div>
                     </div>
@@ -234,43 +254,76 @@ export default function OvarianCystectomyPage() {
                 </div>
             </section>
 
-            {/* Dr. Khemani&apos;s Expertise */}
+            {/* Why Choose Us — Bento Grid */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
-                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Ovarian Cyst Specialist" fill className="object-cover" />
-                        </div>
+                    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Expert Care</span>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Dr. Khemani for Cyst Surgery?</h3>
-                            <p className="text-gray-600 leading-relaxed mb-4">
-                                Dr. Khemani specializes in laparoscopic ovarian cystectomy with a strong focus on fertility preservation. Her surgical expertise ensures the cyst is completely removed while maximizing the preservation of healthy ovarian tissue.
-                            </p>
-                            <div className="space-y-3 mb-6">
-                                {[
-                                    "Fertility-preserving laparoscopic cystectomy",
-                                    "Expert management of complex and large cysts",
-                                    "Same-day discharge for most laparoscopic cases",
-                                    "Thorough pre-operative evaluation with tumor markers",
-                                    "23+ years of gynecological surgical experience"
-                                ].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-3">
-                                        <ShieldCheck className="w-4 h-4 text-[#C21975] shrink-0" />
-                                        <span className="text-gray-700 text-sm font-medium">{item}</span>
-                                    </div>
-                                ))}
-                            </div>
-                            <button
-                                onClick={() => setIsEnquiryModalOpen(true)}
-                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
-                            >
-                                Consult Dr. Khemani
-                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
-                                    <ArrowUpRight className="w-6 h-6" />
-                                </span>
-                            </button>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Surgical Excellence</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                                Precision surgery that{" "}<br />
+                                <span className="italic text-[#C21975]">protects your fertility</span>
+                            </h2>
                         </div>
+                        <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">
+                            Every cystectomy is planned with one goal: remove the disease, preserve the ovary, and protect your reproductive future.
+                        </p>
+                    </div>
+                    {/* Row 1: 3 columns */}
+                    <div className="grid lg:grid-cols-3 gap-6 mb-6">
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#C21975] shadow-sm mb-6"><Microscope className="w-7 h-7" /></div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-4">Pre-Surgical Tumor Marker Evaluation</h3>
+                            </div>
+                            <p className="text-gray-600 text-base leading-relaxed">Every cyst undergoes CA-125, HE4, and ultrasound morphology assessment before surgery. This triple-check protocol ensures we identify any suspicious features and plan the safest surgical approach.</p>
+                        </div>
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#C21975] shadow-sm mb-6"><Egg className="w-7 h-7" /></div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-4">Ovarian Reserve Protection</h3>
+                            </div>
+                            <p className="text-gray-600 text-base leading-relaxed">Using precise stripping technique instead of cautery-heavy methods, Dr. Khemani minimizes thermal damage to surrounding follicles — preserving your AMH levels and egg reserve for future pregnancies.</p>
+                        </div>
+                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
+                            <Image src="/images/laparoscopy-technology.jpg" alt="3D Laparoscopic cystectomy technology used for precise ovarian surgery" fill className="object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                            <div className="absolute bottom-6 left-6 right-6 text-white">
+                                <p className="font-bold text-lg mb-1">3D HD Laparoscopy</p>
+                                <p className="text-sm opacity-90">Depth perception that enables millimeter-precise cyst wall separation from healthy ovarian tissue.</p>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Row 2: 3 columns */}
+                    <div className="grid lg:grid-cols-3 gap-6">
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#C21975] shadow-sm mb-6"><Timer className="w-7 h-7" /></div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-4">Same-Day Discharge in Most Cases</h3>
+                            </div>
+                            <p className="text-gray-600 text-base leading-relaxed">Laparoscopic cystectomy typically takes 45-90 minutes. With just 3 tiny incisions (5mm each), most patients go home the same day and return to normal activities within 5-7 days.</p>
+                        </div>
+                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
+                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani performing laparoscopic cystectomy consultation" fill className="object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                            <div className="absolute bottom-6 left-6 right-6 text-white">
+                                <p className="font-bold text-lg mb-1">Dr. Vinita Khemani</p>
+                                <p className="text-sm opacity-90">23+ years specializing in fertility-preserving laparoscopic gynecological surgery.</p>
+                            </div>
+                        </div>
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#C21975] shadow-sm mb-6"><ClipboardCheck className="w-7 h-7" /></div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-4">Comprehensive Post-Op &amp; Recurrence Prevention</h3>
+                            </div>
+                            <p className="text-gray-600 text-base leading-relaxed">Surgery is just the beginning. Every patient receives a personalized follow-up plan including hormonal management, dietary guidance, and scheduled ultrasound monitoring to minimize cyst recurrence.</p>
+                        </div>
+                    </div>
+                    <div className="mt-10 text-center">
+                        <button onClick={() => setIsEnquiryModalOpen(true)} className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]">
+                            Consult Dr. Khemani
+                            <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45"><ArrowUpRight className="w-6 h-6" /></span>
+                        </button>
                     </div>
                 </div>
             </section>

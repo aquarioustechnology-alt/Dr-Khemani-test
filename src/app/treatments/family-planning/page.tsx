@@ -103,9 +103,9 @@ export default function FamilyPlanningPage() {
             {/* Family Planning in India - Long-form Content */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Indian Context</span>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Empowering Choices</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Family Planning in India: <br /><span className="text-[#C21975]">Empowering Informed Choices</span></h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
                                 Despite being home to one of the world&apos;s largest family planning programs, India still faces significant gaps in contraceptive awareness and access. According to NFHS-5 data, the unmet need for family planning in India remains around 9.4%, meaning millions of women who want to delay or prevent pregnancy lack access to effective contraception.
@@ -126,9 +126,11 @@ export default function FamilyPlanningPage() {
                                 </span>
                             </button>
                         </div>
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <Image src="/images/family-planning-counseling.jpg" alt="Family planning consultation" fill className="object-cover" />
-                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
+                        <div className="relative sticky top-32">
+                            <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                                <Image src="/images/family-planning-counseling.jpg" alt="Family planning consultation" fill className="object-cover object-top" />
+                            </div>
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-20">
                                 <p className="text-sm font-bold text-gray-900 mb-1">Your Choice</p>
                                 <p className="text-xs text-gray-600">Personalized contraceptive counseling tailored to your health, lifestyle, and family goals.</p>
                             </div>
@@ -158,11 +160,11 @@ export default function FamilyPlanningPage() {
             {/* Dr. Khemani&apos;s Approach */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
-                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                    <div className="grid lg:grid-cols-2 gap-12 items-stretch bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
+                        <div className="relative min-h-[500px] h-full rounded-[2rem] overflow-hidden shadow-xl">
                             <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Family Planning Expert" fill className="object-cover" />
                         </div>
-                        <div>
+                        <div className="flex flex-col justify-center items-start">
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Trusted Guidance</span>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Consult Dr. Khemani?</h3>
                             <p className="text-gray-600 leading-relaxed mb-4">

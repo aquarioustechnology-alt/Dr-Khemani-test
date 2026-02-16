@@ -251,9 +251,9 @@ export default function MenopausePage() {
             {/* Menopause in India - Long-form Content */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Indian Context</span>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Changing Narratives</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Menopause in India: <br /><span className="text-[#C21975]">Breaking the Silence</span></h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
                                 Over 130 million Indian women are currently in the menopausal or postmenopausal phase, yet menopause remains one of the least discussed health topics in the country. Cultural taboos, lack of awareness, and the misconception that menopause symptoms must simply be endured lead millions of women to suffer in silence.
@@ -274,9 +274,11 @@ export default function MenopausePage() {
                                 </span>
                             </button>
                         </div>
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <Image src="/images/menopause-wellness.jpg" alt="Menopause health awareness in India" fill className="object-cover" />
-                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
+                        <div className="relative sticky top-32">
+                            <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                                <Image src="/images/menopause-wellness.jpg" alt="Menopause health awareness in India" fill className="object-cover" />
+                            </div>
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-20">
                                 <p className="text-sm font-bold text-gray-900 mb-1">Holistic Approach</p>
                                 <p className="text-xs text-gray-600">Personalized treatment plans addressing symptoms, bone health, and heart health.</p>
                             </div>
@@ -303,43 +305,67 @@ export default function MenopausePage() {
                 </div>
             </section>
 
-            {/* Dr. Khemani&apos;s Expertise */}
+            {/* Why Choose Us — Bento Grid */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
-                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                    {/* Header Row */}
+                    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Us</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                                Your trusted partner in{" "}
+                                <br />
+                                <span className="italic text-[#C21975]">compassionate care</span>
+                            </h2>
+                        </div>
+                        <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">
+                            Dr. Khemani prioritizes dignity, comfort, and personalized attention, ensuring every woman feels valued and supported through her menopausal transition.
+                        </p>
+                    </div>
+
+                    {/* Bento Grid: 3 columns */}
+                    <div className="grid lg:grid-cols-3 gap-6">
+                        {/* Left Card */}
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
+                                    Personalized care plans tailored to meet the unique preferences and needs of every patient
+                                </h3>
+                            </div>
+                            <p className="text-[#C21975] text-base leading-relaxed">
+                                Dr. Khemani provides evidence-based hormone replacement therapy (HRT), bone density screening, and cardiovascular risk assessment — addressing not just symptoms, but long-term wellness.
+                            </p>
+                        </div>
+
+                        {/* Center Image */}
+                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
                             <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Menopause Specialist Kolkata" fill className="object-cover" />
                         </div>
-                        <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Compassionate Care</span>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Dr. Khemani for Menopause?</h3>
-                            <p className="text-gray-600 leading-relaxed mb-4">
-                                Dr. Khemani understands that menopause is not a disease — it is a natural transition that deserves expert guidance. Her comprehensive approach addresses not just symptoms, but long-term health risks including osteoporosis and cardiovascular disease.
-                            </p>
-                            <div className="space-y-3 mb-6">
-                                {[
-                                    "Evidence-based hormone replacement therapy (HRT)",
-                                    "Bone density screening and osteoporosis prevention",
-                                    "Cardiovascular risk assessment during transition",
-                                    "Non-hormonal alternatives when HRT is contraindicated",
-                                    "Nutritional and lifestyle modification guidance"
-                                ].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-3">
-                                        <CheckCircle2 className="w-4 h-4 text-[#C21975] shrink-0" />
-                                        <span className="text-gray-700 text-sm font-medium">{item}</span>
-                                    </div>
-                                ))}
+
+                        {/* Right Card */}
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
+                                    A vibrant and supportive approach offering modern therapies and enriching wellness programs
+                                </h3>
                             </div>
-                            <button
-                                onClick={() => setIsEnquiryModalOpen(true)}
-                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
-                            >
-                                Consult Dr. Khemani
-                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
-                                    <ArrowUpRight className="w-6 h-6" />
-                                </span>
-                            </button>
+                            <p className="text-gray-600 text-base leading-relaxed">
+                                From non-hormonal alternatives to nutritional counseling and lifestyle modification, our holistic approach ensures patients feel empowered, informed, and comfortable at every stage.
+                            </p>
                         </div>
+                    </div>
+
+                    {/* CTA Button */}
+                    <div className="mt-10 text-center">
+                        <button
+                            onClick={() => setIsEnquiryModalOpen(true)}
+                            className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                        >
+                            Consult Dr. Khemani
+                            <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                <ArrowUpRight className="w-6 h-6" />
+                            </span>
+                        </button>
                     </div>
                 </div>
             </section>

@@ -188,9 +188,9 @@ export default function HysterectomyPage() {
             {/* Hysterectomy in India - Long-form Content */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Indian Context</span>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Facts vs Myths</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Hysterectomy in India: <br /><span className="text-[#C21975]">Separating Facts from Fear</span></h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
                                 Hysterectomy remains one of the most commonly performed gynecological surgeries in India, yet it is surrounded by fear and misinformation. Many women delay necessary surgery due to myths about losing femininity, premature aging, or drastic lifestyle changes — none of which are true when the surgery is performed by experienced hands with proper ovarian preservation.
@@ -211,9 +211,11 @@ export default function HysterectomyPage() {
                                 </span>
                             </button>
                         </div>
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <Image src="/images/hysterectomy-awareness.jpg" alt="Hysterectomy awareness and patient education" fill className="object-cover" />
-                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
+                        <div className="relative sticky top-32">
+                            <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                                <Image src="/images/hysterectomy-awareness.jpg" alt="Hysterectomy awareness and patient education" fill className="object-cover" />
+                            </div>
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-20">
                                 <p className="text-sm font-bold text-gray-900 mb-1">Key Fact</p>
                                 <p className="text-xs text-gray-600">Over 90% of hysterectomies can now be performed laparoscopically with discharge in 24-48 hours.</p>
                             </div>
@@ -240,43 +242,67 @@ export default function HysterectomyPage() {
                 </div>
             </section>
 
-            {/* Dr. Khemani's Approach */}
+            {/* Why Choose Us — Bento Grid */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
-                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                    {/* Header Row */}
+                    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Us</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                                Your trusted partner in{" "}
+                                <br />
+                                <span className="italic text-[#C21975]">surgical excellence</span>
+                            </h2>
+                        </div>
+                        <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">
+                            Surgery should be the last resort, not the first suggestion. When it is needed, Dr. Khemani ensures minimally invasive techniques for the best outcomes.
+                        </p>
+                    </div>
+
+                    {/* Bento Grid: 3 columns */}
+                    <div className="grid lg:grid-cols-3 gap-6">
+                        {/* Left Card */}
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
+                                    23+ years of surgical expertise with advanced laparoscopic hysterectomy (TLH)
+                                </h3>
+                            </div>
+                            <p className="text-[#C21975] text-base leading-relaxed">
+                                Ovarian preservation whenever safely possible, comprehensive pre-operative counseling, and meticulous post-operative care for optimal recovery.
+                            </p>
+                        </div>
+
+                        {/* Center Image */}
+                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
                             <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Hysterectomy Specialist Kolkata" fill className="object-cover" />
                         </div>
-                        <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Trusted Expertise</span>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Dr. Khemani for Hysterectomy?</h3>
-                            <p className="text-gray-600 leading-relaxed mb-4">
-                                Dr. Vinita Khemani has performed hundreds of successful hysterectomies using advanced laparoscopic techniques. Her philosophy is simple: surgery should be the last resort, not the first suggestion. When surgery is needed, her patients benefit from:
-                            </p>
-                            <div className="space-y-3 mb-6">
-                                {[
-                                    "23+ years of surgical experience",
-                                    "Expertise in Total Laparoscopic Hysterectomy (TLH)",
-                                    "Ovarian preservation whenever safely possible",
-                                    "Hospital affiliations with NICU and ICU backup",
-                                    "Comprehensive pre-operative counseling and post-operative care"
-                                ].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-[#C21975] shrink-0" />
-                                        <span className="text-gray-700 text-sm font-medium">{item}</span>
-                                    </div>
-                                ))}
+
+                        {/* Right Card */}
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
+                                    Hospital affiliations with NICU and ICU backup for complete safety
+                                </h3>
                             </div>
-                            <button
-                                onClick={() => setIsEnquiryModalOpen(true)}
-                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
-                            >
-                                Consult Dr. Khemani
-                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
-                                    <ArrowUpRight className="w-6 h-6" />
-                                </span>
-                            </button>
+                            <p className="text-gray-600 text-base leading-relaxed">
+                                Smaller incisions, less pain, faster recovery — most patients go home within 24-48 hours. Every surgery backed by comprehensive pre and post-operative protocols.
+                            </p>
                         </div>
+                    </div>
+
+                    {/* CTA Button */}
+                    <div className="mt-10 text-center">
+                        <button
+                            onClick={() => setIsEnquiryModalOpen(true)}
+                            className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                        >
+                            Consult Dr. Khemani
+                            <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                <ArrowUpRight className="w-6 h-6" />
+                            </span>
+                        </button>
                     </div>
                 </div>
             </section>

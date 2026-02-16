@@ -325,48 +325,67 @@ export default function EndometriosisPage() {
                 </div>
             </section>
 
-            {/* Why Choose Dr. Khemani */}
+            {/* Why Choose Us — Bento Grid */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="text-center mb-16">
-                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Expert Endometriosis Care</span>
-                        <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-4">Why Dr. Khemani for <span className="text-[#C21975]">Endometriosis?</span></h2>
-                        <p className="text-gray-600 text-lg max-w-3xl mx-auto">Specialized expertise in advanced laparoscopic excision surgery combined with a compassionate, patient-first approach.</p>
+                    {/* Header Row */}
+                    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Us</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                                Your trusted partner in{" "}
+                                <br />
+                                <span className="italic text-[#C21975]">endometriosis care</span>
+                            </h2>
+                        </div>
+                        <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">
+                            Specialized expertise in advanced laparoscopic excision surgery combined with a compassionate, patient-first approach. 23+ years, 608+ successful surgeries.
+                        </p>
                     </div>
-                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-pink-50">
-                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+
+                    {/* Bento Grid: 3 columns */}
+                    <div className="grid lg:grid-cols-3 gap-6">
+                        {/* Left Card */}
+                        <div className="bg-white rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px] border border-pink-50 shadow-sm">
+                            <div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
+                                    Gold-standard excision surgery that removes disease from the root
+                                </h3>
+                            </div>
+                            <p className="text-[#C21975] text-base leading-relaxed">
+                                Unlike many practitioners who rely on ablation (burning) techniques, Dr. Khemani performs thorough excision surgery — significantly reducing recurrence rates and preserving fertility.
+                            </p>
+                        </div>
+
+                        {/* Center Image */}
+                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
                             <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Endometriosis Specialist Kolkata" fill className="object-cover" />
                         </div>
-                        <div>
-                            <div className="grid grid-cols-2 gap-4 mb-8">
-                                {[
-                                    { num: "23+", label: "Years of Experience" },
-                                    { num: "608+", label: "Successful Surgeries" },
-                                    { num: "500+", label: "Endo Cases Managed" },
-                                    { num: "6", label: "Hospital Affiliations" }
-                                ].map((stat, i) => (
-                                    <div key={i} className="text-center p-4 bg-[#fff9fc] rounded-2xl border border-pink-100">
-                                        <p className="text-2xl font-bold text-[#C21975]">{stat.num}</p>
-                                        <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
-                                    </div>
-                                ))}
+
+                        {/* Right Card */}
+                        <div className="bg-white rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px] border border-pink-50 shadow-sm">
+                            <div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
+                                    Access to state-of-the-art facilities at Kolkata&apos;s leading hospitals
+                                </h3>
                             </div>
-                            <p className="text-gray-600 leading-relaxed mb-4">
-                                Dr. Vinita Khemani brings over two decades of surgical expertise to endometriosis care. Unlike many practitioners who still rely on ablation (burning) techniques, Dr. Khemani performs thorough excision surgery — the gold standard — which removes disease from the root and significantly reduces recurrence rates.
+                            <p className="text-gray-600 text-base leading-relaxed">
+                                Affiliated with Bhagirathi Neotia, Charnock Hospital, Apollo Clinic, and ILS Hospital — ensuring optimal laparoscopic equipment and operating facilities for the best outcomes.
                             </p>
-                            <p className="text-gray-600 leading-relaxed mb-6">
-                                Affiliated with Bhagirathi Neotia, Charnock Hospital, Apollo Clinic, and ILS Hospital in Kolkata, she ensures access to state-of-the-art laparoscopic equipment and operating facilities for optimal surgical outcomes.
-                            </p>
-                            <button
-                                onClick={() => setIsEnquiryModalOpen(true)}
-                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
-                            >
-                                Book Your Consultation
-                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
-                                    <ArrowUpRight className="w-6 h-6" />
-                                </span>
-                            </button>
                         </div>
+                    </div>
+
+                    {/* CTA Button */}
+                    <div className="mt-10 text-center">
+                        <button
+                            onClick={() => setIsEnquiryModalOpen(true)}
+                            className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                        >
+                            Book Your Consultation
+                            <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                <ArrowUpRight className="w-6 h-6" />
+                            </span>
+                        </button>
                     </div>
                 </div>
             </section>

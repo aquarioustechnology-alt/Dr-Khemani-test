@@ -30,22 +30,22 @@ const symptoms = [
 const causes = [
     {
         title: "Insulin Resistance",
-        desc: "Up to 70% of women with PCOS have insulin resistance, meaning their body's cells don't respond properly to insulin. This triggers the pancreas to make more insulin, which in turn causes ovaries to produce more male hormones (androgens).",
+        desc: "Up to 70% of women with PCOS exhibit insulin resistance, where cells don't respond effectively to insulin. The body compensates by producing excess insulin, which directly stimulates the ovaries to release too many male hormones. This hormonal surge disrupts ovulation and causes common symptoms like resistant weight gain and dark patches on the skin.",
         icon: Activity
     },
     {
         title: "Hormonal Imbalance",
-        desc: "Raised levels of Luteinizing Hormone (LH) and Androgens interfere with normal ovulation. This prevents the release of eggs, leading to irregular cycles and the formation of tiny fluid-filled sacs (cysts) in the ovaries.",
+        desc: "PCOS creates a disconnect in brain-ovary signaling. Elevated levels of Luteinizing Hormone (LH) prevent eggs from fully maturing and releasing. Instead of ovulating, the follicles remain as small fluid-filled sacs or 'cysts'. Simultaneously, high androgen levels trigger physical symptoms like acne, unwanted facial hair growth, and scalp thinning.",
         icon: Scale
     },
     {
         title: "Low-Grade Inflammation",
-        desc: "Women with PCOS often have low-grade chronic inflammation. This stimulates polycystic ovaries to produce androgens, which can lead to heart and blood vessel problems.",
+        desc: "Chronic, low-grade inflammation is a hidden driver of PCOS in many women. This immune system overactivity stimulates polycystic ovaries to produce androgens, independent of body weight. Over time, this inflammatory state worsens hormonal imbalances and significantly increases the risk of developing heart disease and type 2 diabetes later in life.",
         icon: HeartPulse
     },
     {
-        title: "Genetics",
-        desc: "PCOS runs in families. If your mother or sister has PCOS, you have a higher chance of developing it, suggesting a strong genetic link.",
+        title: "Genetic Factors",
+        desc: "While the exact cause is unknown, genetics play a major role. If your mother or sister has PCOS, your likelihood of developing it is much higher. However, genes are not destiny—environmental triggers like stress, diet, and poor lifestyle choices can 'activate' these genetic predispositions, leading to the onset of symptoms.",
         icon: Brain
     }
 ];
@@ -124,7 +124,7 @@ export default function PCOSTreatmentPage() {
                                         </Link>
                                     </div>
                                 </motion.div>
-                                <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[450px] md:h-[550px] order-first lg:order-none">
+                                <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[450px] md:h-[550px] order-first">
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
                                         <Image src="/images/PCOS-bg.png" alt="PCOS Awareness and Treatment" fill className="object-cover" priority />
                                     </div>
@@ -294,7 +294,7 @@ export default function PCOSTreatmentPage() {
                                 ))}
                             </div>
                         </div>
-                        <div className="relative">
+                        <div className="relative lg:order-first">
                             <div className="relative h-[600px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white">
                                 <Image src="/images/2023-04-06.webp" alt="PCOS Awareness" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#540d2d]/80 via-transparent to-transparent" />
@@ -316,70 +316,97 @@ export default function PCOSTreatmentPage() {
                 </div>
             </section>
 
-            {/* Diagnosis & Long Term Risks */}
-            <section className="py-24 bg-[#f8f9fa]">
+            {/* Diagnosis Section - Structured like Reference */}
+            <section className="py-24 bg-[#fff0f5]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-12">
-                        {/* Diagnosis */}
-                        <div className="p-10 rounded-[2.5rem] bg-white border border-gray-100 relative overflow-hidden group shadow-sm hover:shadow-lg transition-shadow">
-                            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                                <ClipboardCheck className="w-32 h-32" />
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Content */}
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Clinical Evaluation</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Accurate <span className="text-[#C21975]">PCOS Diagnosis</span></h2>
+                            <p className="text-gray-600 text-lg mb-8">
+                                Diagnosis is confirmed if you meet <strong>2 out of 3</strong> Rotterdam Criteria. We ensure a thorough check to rule out other hormonal issues.
+                            </p>
+
+                            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                                <div className="bg-white p-5 rounded-2xl shadow-sm border border-pink-100">
+                                    <div className="w-10 h-10 rounded-full bg-[#fdeef6] text-[#C21975] flex items-center justify-center font-bold mb-3">A</div>
+                                    <h4 className="font-bold text-gray-900 mb-1">Irregular Periods</h4>
+                                    <p className="text-xs text-gray-500">Ovulatory dysfunction leading to missed or heavy cycles.</p>
+                                </div>
+                                <div className="bg-white p-5 rounded-2xl shadow-sm border border-pink-100">
+                                    <div className="w-10 h-10 rounded-full bg-[#fdeef6] text-[#C21975] flex items-center justify-center font-bold mb-3">B</div>
+                                    <h4 className="font-bold text-gray-900 mb-1">High Androgens</h4>
+                                    <p className="text-xs text-gray-500">Physical signs (acne, hair growth) or elevated blood levels.</p>
+                                </div>
+                                <div className="bg-white p-5 rounded-2xl shadow-sm border border-pink-100 sm:col-span-2">
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-10 h-10 rounded-full bg-[#fdeef6] text-[#C21975] flex items-center justify-center font-bold shrink-0">C</div>
+                                        <div>
+                                            <h4 className="font-bold text-gray-900 mb-1">Polycystic Ovaries</h4>
+                                            <p className="text-xs text-gray-500">Multiple immature follicles visible on ultrasonography.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="relative z-10">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                    <span className="w-10 h-10 rounded-full bg-[#C21975] text-white flex items-center justify-center text-sm">1</span>
-                                    Diagnosis
-                                </h3>
-                                <p className="text-gray-600 mb-6">Diagnosis is confirmed if you meet <strong>2 out of 3</strong> Rotterdam Criteria:</p>
-                                <ul className="space-y-4 mb-8">
-                                    <li className="flex gap-3 text-gray-700 text-sm">
-                                        <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold shrink-0">A</div>
-                                        Irregular or absent periods (Ovulatory Dysfunction)
-                                    </li>
-                                    <li className="flex gap-3 text-gray-700 text-sm">
-                                        <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold shrink-0">B</div>
-                                        High Androgen levels (Clinical signs or Blood tests)
-                                    </li>
-                                    <li className="flex gap-3 text-gray-700 text-sm">
-                                        <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold shrink-0">C</div>
-                                        Polycystic Ovaries visualized on Ultrasonography (USG)
-                                    </li>
-                                </ul>
-                                <div className="p-4 bg-gray-50 rounded-xl border border-gray-200 text-sm italic text-gray-500">
-                                    * We also screen for Thyroid, Prolactin, and Sugar levels to rule out other causes.
+
+                            <div className="flex flex-wrap gap-4">
+                                <button onClick={() => setIsEnquiryModalOpen(true)} className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-3 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]">
+                                    Book Consultation
+                                    <span className="w-8 h-8 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45"><ArrowUpRight className="w-4 h-4" /></span>
+                                </button>
+                                <div className="px-6 py-3 rounded-full border border-pink-200 bg-white/50 text-sm text-gray-600 flex items-center gap-2">
+                                    <Activity className="w-4 h-4 text-[#C21975]" />
+                                    Includes Thyroid & Prolactin screening
                                 </div>
                             </div>
                         </div>
 
-                        {/* Long Term Risks */}
-                        <div className="p-10 rounded-[2.5rem] bg-[#fff5f5] border border-red-100 relative overflow-hidden group shadow-sm hover:shadow-lg transition-shadow">
-                            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                                <AlertOctagon className="w-32 h-32 text-red-500" />
+                        {/* Right Image */}
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                            <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.29 PM.jpeg" alt="PCOS Diagnosis Consultation Dr. Khemani" fill className="object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Long Term Risks Section */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        {/* Left Image */}
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                            <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg" alt="Consultation regarding long-term risks" fill className="object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                            <div className="absolute bottom-8 left-8 right-8 text-white">
+                                <p className="text-lg font-bold">Holistic Health</p>
+                                <p className="text-sm opacity-90">Preventing long-term risks through specialized care.</p>
                             </div>
-                            <div className="relative z-10">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                    <span className="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center text-sm">2</span>
-                                    Long-Term Risks
-                                </h3>
-                                <p className="text-gray-600 mb-6">Untreated PCOS is more than a reproductive issue. It affects lifelong metabolic health.</p>
-                                <div className="grid sm:grid-cols-2 gap-4">
-                                    <div className="bg-white p-4 rounded-xl shadow-sm">
-                                        <p className="font-bold text-gray-900 text-sm mb-1">Type 2 Diabetes</p>
-                                        <p className="text-xs text-gray-500">Insulin resistance significantly increases risk by age 40.</p>
+                        </div>
+
+                        {/* Right Content */}
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-red-200 text-red-600 bg-red-50">Health Alert</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Long-Term <span className="text-red-500">Risks</span></h2>
+                            <p className="text-gray-600 text-lg mb-10 leading-relaxed">
+                                Untreated PCOS is more than just irregular periods. The chronic hormonal imbalance and inflammation can lead to serious lifelong health complications if not managed early.
+                            </p>
+
+                            <div className="grid sm:grid-cols-2 gap-6">
+                                {[
+                                    { title: "Type 2 Diabetes", desc: "50% risk by age 40 due to insulin resistance.", icon: Activity },
+                                    { title: "Heart Disease", desc: "Elevated BP and cholesterol increase cardiovascular risk.", icon: HeartPulse },
+                                    { title: "Endometrial Cancer", desc: "Irregular shedding of lining increases cancer risk.", icon: AlertOctagon },
+                                    { title: "Depression & Anxiety", desc: "Hormonal fluctuations often trigger mood disorders.", icon: Brain },
+                                ].map((risk, i) => (
+                                    <div key={i} className="bg-[#fff9f9] p-6 rounded-2xl border border-red-100 hover:border-red-200 transition-colors">
+                                        <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-red-500 mb-4">
+                                            <risk.icon className="w-5 h-5" />
+                                        </div>
+                                        <h4 className="font-bold text-gray-900 mb-2">{risk.title}</h4>
+                                        <p className="text-xs text-gray-600 leading-relaxed">{risk.desc}</p>
                                     </div>
-                                    <div className="bg-white p-4 rounded-xl shadow-sm">
-                                        <p className="font-bold text-gray-900 text-sm mb-1">Heart Disease</p>
-                                        <p className="text-xs text-gray-500">High BP and cholesterol are common comorbidities.</p>
-                                    </div>
-                                    <div className="bg-white p-4 rounded-xl shadow-sm">
-                                        <p className="font-bold text-gray-900 text-sm mb-1">Endometrial Cancer</p>
-                                        <p className="text-xs text-gray-500">Irregular shedding of the uterine lining increases risk.</p>
-                                    </div>
-                                    <div className="bg-white p-4 rounded-xl shadow-sm">
-                                        <p className="font-bold text-gray-900 text-sm mb-1">Depression</p>
-                                        <p className="text-xs text-gray-500">Hormonal imbalances often trigger mood disorders.</p>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -442,7 +469,7 @@ export default function PCOSTreatmentPage() {
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="relative h-[600px] rounded-[3rem] overflow-hidden hidden lg:block shadow-2xl">
-                            <Image src="/images/2023-04-06.webp" alt="PCOS Treatment" fill className="object-cover" />
+                            <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM.jpeg" alt="PCOS Treatment Personalized Plan" fill className="object-cover" />
                             <div className="absolute inset-0 bg-black/20" />
                             <div className="absolute bottom-10 left-10 right-10 text-white">
                                 <h3 className="text-3xl font-bold mb-2">Holistic Care</h3>
@@ -501,8 +528,8 @@ export default function PCOSTreatmentPage() {
             {/* Exercise & Lifestyle for PCOS */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last lg:order-first">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last lg:order-first sticky top-32">
                             <Image src="/images/pcos-exercise-yoga.jpg" alt="Indian woman doing yoga exercise for PCOS management" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#540d2d]/60 via-transparent to-transparent" />
                             <div className="absolute bottom-8 left-8 right-8 text-white">
@@ -552,7 +579,7 @@ export default function PCOSTreatmentPage() {
             {/* PCOS and Mental Health */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Beyond Physical Symptoms</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">PCOS &amp; Your <br /><span className="text-[#C21975]">Mental Wellbeing</span></h2>
@@ -574,8 +601,8 @@ export default function PCOSTreatmentPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <Image src="/images/pcos-mental-health.jpg" alt="Mental health support for PCOS patients in Kolkata" fill className="object-cover" />
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white sticky top-32">
+                            <Image src="/images/family-planning-counseling.jpg" alt="Mental health counseling and support for PCOS" fill className="object-cover object-top" />
                         </div>
                     </div>
                 </div>
@@ -603,11 +630,11 @@ export default function PCOSTreatmentPage() {
                             </motion.div>
                         ))}
                     </div>
-                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
-                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Best Gynecologist for PCOS in Kolkata" fill className="object-cover" />
+                    <div className="grid lg:grid-cols-2 gap-12 items-stretch bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
+                        <div className="relative min-h-[500px] h-full rounded-[2rem] overflow-hidden shadow-xl">
+                            <Image src="/images/pcos_doctor_consult_1771254617510.png" alt="Dr. Vinita Khemani consulting patient about PCOS treatment in Kolkata" fill className="object-cover" />
                         </div>
-                        <div>
+                        <div className="flex flex-col justify-center items-start">
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Dr. Vinita Khemani&apos;s PCOS Philosophy</h3>
                             <p className="text-gray-600 leading-relaxed mb-4">
                                 &quot;PCOS is not a disease to be feared — it is a condition to be understood and managed. Every woman&apos;s body tells a different story, and real healing begins when we listen to that story. At our clinic, we don&apos;t just prescribe medication; we build a comprehensive wellness plan that addresses diet, exercise, emotional health, and hormonal balance together.&quot;
@@ -615,9 +642,25 @@ export default function PCOSTreatmentPage() {
                             <p className="text-gray-600 leading-relaxed mb-6">
                                 Dr. Khemani is affiliated with leading hospitals in Kolkata including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital, ensuring that patients have access to the latest diagnostic tools and treatment modalities.
                             </p>
+
+                            <div className="space-y-3 mb-8">
+                                <div className="flex items-center gap-3">
+                                    <CheckCircle className="w-5 h-5 text-[#C21975] shrink-0" />
+                                    <span className="text-gray-700 font-medium">Evidence-Based Treatment Protocols</span>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <CheckCircle className="w-5 h-5 text-[#C21975] shrink-0" />
+                                    <span className="text-gray-700 font-medium">Holistic Lifestyle Integration</span>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <CheckCircle className="w-5 h-5 text-[#C21975] shrink-0" />
+                                    <span className="text-gray-700 font-medium">Compassionate & Confidential Care</span>
+                                </div>
+                            </div>
+
                             <button
                                 onClick={() => setIsEnquiryModalOpen(true)}
-                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e] w-fit"
                             >
                                 Consult Dr. Khemani Today
                                 <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">

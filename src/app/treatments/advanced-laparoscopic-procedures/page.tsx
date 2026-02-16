@@ -185,7 +185,7 @@ export default function AdvancedLaparoscopyPage() {
             {/* Understanding Laparoscopy - Deep Dive */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Understanding the Procedure</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">What is <br /><span className="text-[#C21975]">Laparoscopic Surgery?</span></h2>
@@ -208,9 +208,11 @@ export default function AdvancedLaparoscopyPage() {
                                 </span>
                             </button>
                         </div>
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <Image src="/images/laparoscopy-explanation.jpg" alt="Understanding laparoscopic keyhole surgery procedure" fill className="object-cover" />
-                            <div className="absolute -bottom-4 -right-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[260px] hidden md:block">
+                        <div className="relative sticky top-32">
+                            <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                                <Image src="/images/laparoscopy-explanation.jpg" alt="Understanding laparoscopic keyhole surgery procedure" fill className="object-cover" />
+                            </div>
+                            <div className="absolute -bottom-4 -right-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[260px] hidden md:block z-20">
                                 <p className="text-sm font-bold text-gray-900 mb-1">Open vs Laparoscopic</p>
                                 <p className="text-xs text-gray-600">Laparoscopy uses 5mm incisions vs 15-20cm cuts in open surgery — 80% faster recovery</p>
                             </div>
@@ -237,48 +239,39 @@ export default function AdvancedLaparoscopyPage() {
                 </div>
             </section>
 
-            {/* Dr. Khemani's Surgical Excellence */}
+            {/* Why Choose Us — Bento Grid */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="text-center mb-16">
-                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Surgical Expertise</span>
-                        <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-4">Dr. Khemani&apos;s <span className="text-[#C21975]">Surgical Mastery</span></h2>
-                        <p className="text-gray-600 text-lg max-w-3xl mx-auto">A surgeon&apos;s skill directly determines outcomes in laparoscopic surgery. Experience matters — and Dr. Khemani brings decades of it.</p>
+                    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Us</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                                Your trusted partner in{" "}<br />
+                                <span className="italic text-[#C21975]">advanced laparoscopy</span>
+                            </h2>
+                        </div>
+                        <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">
+                            608+ successful laparoscopic surgeries, 23+ years of experience, and affiliations with 6 premier hospitals across Kolkata. A surgeon&apos;s skill directly determines outcomes.
+                        </p>
                     </div>
-                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
-                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                    <div className="grid lg:grid-cols-3 gap-6">
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">Complex surgical portfolio including TLH for large uteri up to 20-week size</h3>
+                            <p className="text-[#C21975] text-base leading-relaxed">Myomectomies for multiple fibroids, extensive endometriosis excision, and difficult ovarian cystectomies — all performed laparoscopically.</p>
+                        </div>
+                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
                             <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Expert Laparoscopic Surgeon Kolkata" fill className="object-cover" />
                         </div>
-                        <div>
-                            <div className="grid grid-cols-2 gap-4 mb-8">
-                                {[
-                                    { num: "608+", label: "Laparoscopic Surgeries" },
-                                    { num: "23+", label: "Years Experience" },
-                                    { num: "6", label: "Hospital Affiliations" },
-                                    { num: "99%", label: "Patient Satisfaction" }
-                                ].map((stat, i) => (
-                                    <div key={i} className="text-center p-4 bg-white rounded-2xl border border-pink-100 shadow-sm">
-                                        <p className="text-2xl font-bold text-[#C21975]">{stat.num}</p>
-                                        <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
-                                    </div>
-                                ))}
-                            </div>
-                            <p className="text-gray-600 leading-relaxed mb-4">
-                                Dr. Vinita Khemani is one of the most experienced laparoscopic gynecological surgeons in Kolkata. Her surgical portfolio includes complex Total Laparoscopic Hysterectomies for large uteri (up to 20-week size), myomectomies for multiple fibroids, extensive endometriosis excision, and difficult ovarian cystectomies.
-                            </p>
-                            <p className="text-gray-600 leading-relaxed mb-6">
-                                She operates across premier hospitals including Bhagirathi Neotia (New Town), Charnock Hospital (VIP Road), Apollo Clinic (Chinar Park), Spandan Hospital, and ILS Hospital (Dumdum), ensuring patients can access advanced laparoscopic care at a location convenient to them.
-                            </p>
-                            <button
-                                onClick={() => setIsEnquiryModalOpen(true)}
-                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
-                            >
-                                Consult Dr. Khemani
-                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
-                                    <ArrowUpRight className="w-6 h-6" />
-                                </span>
-                            </button>
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">Operating across 6 premier hospitals for convenient access</h3>
+                            <p className="text-gray-600 text-base leading-relaxed">Bhagirathi Neotia (New Town), Charnock Hospital (VIP Road), Apollo Clinic (Chinar Park), Spandan Hospital, and ILS Hospital (Dumdum).</p>
                         </div>
+                    </div>
+                    <div className="mt-10 text-center">
+                        <button onClick={() => setIsEnquiryModalOpen(true)} className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]">
+                            Consult Dr. Khemani
+                            <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45"><ArrowUpRight className="w-6 h-6" /></span>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -287,7 +280,7 @@ export default function AdvancedLaparoscopyPage() {
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last lg:order-first">
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last">
                             <Image src="/images/laparoscopy-recovery.jpg" alt="Recovery after laparoscopic surgery at home" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#540d2d]/50 via-transparent to-transparent" />
                             <div className="absolute bottom-8 left-8 right-8 text-white">

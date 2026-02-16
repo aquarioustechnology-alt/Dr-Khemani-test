@@ -274,32 +274,67 @@ export default function FertilityPage() {
                 </div>
             </section>
 
-            {/* Dr. Khemani's Fertility Approach */}
+            {/* Why Choose Us — Bento Grid */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
-                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                    {/* Header Row */}
+                    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Us</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                                Your trusted partner in{" "}
+                                <br />
+                                <span className="italic text-[#C21975]">fertility care</span>
+                            </h2>
+                        </div>
+                        <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">
+                            With 23+ years of experience and affiliations with leading hospitals in Kolkata, Dr. Khemani offers the full spectrum of fertility care — from evaluation to IVF coordination.
+                        </p>
+                    </div>
+
+                    {/* Bento Grid: 3 columns */}
+                    <div className="grid lg:grid-cols-3 gap-6">
+                        {/* Left Card */}
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
+                                    Every couple&apos;s fertility journey is unique, deserving a thoughtful, personalized approach
+                                </h3>
+                            </div>
+                            <p className="text-[#C21975] text-base leading-relaxed">
+                                We don&apos;t rush into expensive treatments. Instead, we start with comprehensive evaluation, address treatable causes first, and escalate only when necessary — keeping couples informed at every step.
+                            </p>
+                        </div>
+
+                        {/* Center Image */}
+                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
                             <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Fertility Specialist Kolkata" fill className="object-cover" />
                         </div>
-                        <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Trusted Expertise</span>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Dr. Khemani&apos;s Fertility Philosophy</h3>
-                            <p className="text-gray-600 leading-relaxed mb-4">
-                                &quot;Every couple&apos;s fertility journey is unique, and it deserves a thoughtful, personalized approach. We don&apos;t rush into expensive treatments. Instead, we start with a comprehensive evaluation, address treatable causes first, and escalate only when necessary — always keeping the couple informed and involved in every decision.&quot;
+
+                        {/* Right Card */}
+                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
+                            <div>
+                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
+                                    Coordinated care with leading IVF centers for seamless advanced treatment
+                                </h3>
+                            </div>
+                            <p className="text-gray-600 text-base leading-relaxed">
+                                From basic hormonal evaluation and ovulation induction to IUI and IVF coordination with Bhagirathi Neotia and Charnock Hospital, our approach ensures no gap in your fertility journey.
                             </p>
-                            <p className="text-gray-600 leading-relaxed mb-6">
-                                With 23+ years of experience and affiliations with Bhagirathi Neotia, Charnock Hospital, and Apollo Clinic, Dr. Khemani offers the full spectrum of fertility care from basic evaluation to IVF coordination with leading reproductive medicine centers in Kolkata.
-                            </p>
-                            <button
-                                onClick={() => setIsEnquiryModalOpen(true)}
-                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
-                            >
-                                Consult Dr. Khemani
-                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
-                                    <ArrowUpRight className="w-6 h-6" />
-                                </span>
-                            </button>
                         </div>
+                    </div>
+
+                    {/* CTA Button */}
+                    <div className="mt-10 text-center">
+                        <button
+                            onClick={() => setIsEnquiryModalOpen(true)}
+                            className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                        >
+                            Consult Dr. Khemani
+                            <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                <ArrowUpRight className="w-6 h-6" />
+                            </span>
+                        </button>
                     </div>
                 </div>
             </section>

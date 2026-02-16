@@ -134,8 +134,14 @@ export default function PregnancyCarePage() {
                                         </button>
                                         <div className="flex items-center gap-4 px-6 py-4 rounded-full bg-white border border-pink-100 shadow-sm">
                                             <div className="flex -space-x-3">
-                                                {[1, 2, 3].map(i => (
-                                                    <div key={i} className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white" />
+                                                {[
+                                                    "/images/WhatsApp Image 2026-01-14 at 12.55.29 PM (1).jpeg",
+                                                    "/images/doctor_clinic_portrait_1770790565861.png",
+                                                    "/images/pcos_doctor_consult_1771254346129.png"
+                                                ].map((src, i) => (
+                                                    <div key={i} className="w-8 h-8 rounded-full border-2 border-white relative overflow-hidden">
+                                                        <Image src={src} alt="Happy Patient" fill className="object-cover" />
+                                                    </div>
                                                 ))}
                                             </div>
                                             <div className="text-sm">
@@ -150,7 +156,7 @@ export default function PregnancyCarePage() {
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.8, delay: 0.2 }}
-                                    className="relative h-[500px] lg:h-[600px] w-full"
+                                    className="relative h-[500px] lg:h-[600px] w-full rounded-[3rem] overflow-hidden shadow-2xl"
                                 >
                                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle,rgba(255,255,255,0.8)_0%,transparent_70%)] z-10" />
                                     <Image
@@ -259,7 +265,18 @@ export default function PregnancyCarePage() {
                                     <div className="absolute left-8 md:left-1/2 top-0 md:top-6 w-4 h-4 bg-white border-4 border-[#C21975] rounded-full -translate-x-1/2 z-10 shadow-[0_0_0_8px_rgba(194,25,117,0.1)]" />
 
                                     {/* Empty Side for layout balance */}
-                                    <div className="flex-1 hidden md:block" />
+                                    <div className="flex-1 hidden md:block relative h-[350px] rounded-[2rem] overflow-hidden shadow-lg border-4 border-white">
+                                        <Image
+                                            src={[
+                                                "/images/fertility-couple-hope.jpg",
+                                                "/images/pregnancy-care-india.jpg",
+                                                "/images/high-risk-pregnancy-care.jpg"
+                                            ][i]}
+                                            alt={tri.title}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
                                 </motion.div>
                             ))}
                         </div>
@@ -305,7 +322,7 @@ export default function PregnancyCarePage() {
                             className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl"
                         >
                             <Image
-                                src="/images/2023-04-23 (1).webp"
+                                src="/images/pcos_consultation_img_1771254403690.png"
                                 alt="Postnatal consultation"
                                 fill
                                 className="object-cover"
@@ -351,9 +368,9 @@ export default function PregnancyCarePage() {
             {/* Maternal Health in India - Long-form Content */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Indian Context</span>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Maternal Health Reality</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Pregnancy Care in India: <br /><span className="text-[#C21975]">Why Quality Matters</span></h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
                                 India has made remarkable strides in reducing maternal mortality — from 556 per 100,000 live births in 1990 to approximately 97 per 100,000 in recent years. Yet, significant gaps remain, particularly in the quality of antenatal care. According to NFHS-5, while 83% of Indian women receive at least one antenatal checkup, only 58% receive the WHO-recommended 4+ visits, and comprehensive monitoring for blood pressure, blood sugar, and fetal growth remains inconsistent.
@@ -374,9 +391,11 @@ export default function PregnancyCarePage() {
                                 </span>
                             </button>
                         </div>
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <Image src="/images/pregnancy-care-india.jpg" alt="Pregnancy care and antenatal monitoring" fill className="object-cover" />
-                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
+                        <div className="relative sticky top-32">
+                            <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                                <Image src="/images/2023-04-23.webp" alt="Pregnancy care and antenatal monitoring" fill className="object-cover" />
+                            </div>
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-20">
                                 <p className="text-sm font-bold text-gray-900 mb-1">Comprehensive Care</p>
                                 <p className="text-xs text-gray-600">From preconception to postpartum — complete pregnancy management under one trusted gynecologist.</p>
                             </div>
@@ -406,11 +425,11 @@ export default function PregnancyCarePage() {
             {/* Dr. Khemani&apos;s Approach */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
-                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Pregnancy Care Specialist" fill className="object-cover" />
+                    <div className="grid lg:grid-cols-2 gap-12 items-stretch bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
+                        <div className="relative min-h-[500px] h-full rounded-[2rem] overflow-hidden shadow-xl">
+                            <Image src="/images/doctor_portrait_scrubs_1771254318496.png" alt="Dr. Vinita Khemani - Pregnancy Care Specialist" fill className="object-cover" />
                         </div>
-                        <div>
+                        <div className="flex flex-col justify-center items-start">
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Trusted Obstetric Care</span>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Dr. Khemani for Pregnancy Care?</h3>
                             <p className="text-gray-600 leading-relaxed mb-4">
