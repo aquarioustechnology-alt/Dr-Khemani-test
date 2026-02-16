@@ -56,10 +56,12 @@ export default function EndometriosisPage() {
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
-                                        className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                     >
                                         Book Consultation
-                                        <ArrowUpRight className="w-5 h-5 transition-transform group-hover:rotate-45" />
+                                        <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                            <ArrowUpRight className="w-6 h-6" />
+                                        </span>
                                     </button>
                                 </motion.div>
                                 <motion.div className="relative h-[450px] md:h-[550px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
@@ -184,6 +186,186 @@ export default function EndometriosisPage() {
                         <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
                             <div className="flex items-center gap-3 mb-4 text-red-500 font-bold"><AlertOctagon className="w-5 h-5" /> MYTH: Hysterectomy is the only cure.</div>
                             <p className="text-gray-600">Removing the uterus doesn&apos;t remove endometriosis deposits elsewhere in the pelvis. Excision surgery is more effective.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Endometriosis in India: Delayed Diagnosis */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white order-last lg:order-first">
+                            <Image src="/images/endometriosis-awareness.jpg" alt="Endometriosis awareness campaign for Indian women" fill className="object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#540d2d]/50 via-transparent to-transparent" />
+                            <div className="absolute bottom-8 left-8 right-8 text-white">
+                                <p className="text-lg font-bold">7+ Years to Diagnose</p>
+                                <p className="text-sm opacity-90">Most women visit 4-5 doctors before receiving the correct diagnosis</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">The Indian Reality</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Endometriosis in India: <br /><span className="text-[#C21975]">The Delayed Diagnosis Crisis</span></h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                An estimated 25 million Indian women suffer from endometriosis, yet it remains one of the most under-diagnosed conditions in the country. The average delay in diagnosis is 7-10 years — far longer than the global average. This delay is largely due to the normalization of menstrual pain in Indian culture, where phrases like &quot;it&apos;s just your period&quot; or &quot;it will get better after marriage&quot; are commonly heard.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                Dr. Vinita Khemani is deeply committed to changing this narrative in Kolkata and across Bengal. With advanced diagnostic laparoscopy and a keen clinical eye developed over 23+ years of practice, she has helped hundreds of women finally receive the correct diagnosis and begin their journey toward pain-free living.
+                            </p>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+                                {[
+                                    { num: "25M+", label: "Indian women affected" },
+                                    { num: "7-10", label: "Years avg. diagnosis delay" },
+                                    { num: "30-50%", label: "Face fertility issues" }
+                                ].map((stat, i) => (
+                                    <div key={i} className="text-center p-4 bg-[#fff9fc] rounded-2xl shadow-sm border border-pink-50">
+                                        <p className="text-2xl md:text-3xl font-bold text-[#C21975]">{stat.num}</p>
+                                        <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Get an Expert Diagnosis
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Mid-Page CTA Banner */}
+            <section className="py-16 bg-gradient-to-r from-[#C21975] to-[#8a2f5e] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
+                <div className="container-fluid mx-auto max-w-[1200px] px-6 text-center relative z-10">
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">Is Your Pain &quot;Normal&quot;?</h3>
+                    <p className="text-pink-100 text-lg mb-8 max-w-2xl mx-auto">If your period pain disrupts your daily life, causes you to miss work or school, or requires strong painkillers — it may not be &quot;normal.&quot; A specialist evaluation can identify treatable causes.</p>
+                    <button
+                        onClick={() => setIsEnquiryModalOpen(true)}
+                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg transition-transform hover:scale-105 shadow-xl"
+                    >
+                        Schedule a Pain Evaluation
+                        <span className="w-12 h-12 rounded-full bg-[#C21975] text-white flex items-center justify-center transition-transform group-hover:rotate-45">
+                            <ArrowUpRight className="w-6 h-6" />
+                        </span>
+                    </button>
+                </div>
+            </section>
+
+            {/* Endometriosis & Fertility */}
+            <section className="py-24 bg-[#fdf8fa]">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Fertility Preservation</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Endometriosis <br /><span className="text-[#C21975]">&amp; Your Fertility</span></h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                One of the most distressing aspects of endometriosis is its impact on fertility. Approximately 30-50% of women with endometriosis experience difficulty conceiving. The condition can block fallopian tubes, create adhesions that distort pelvic anatomy, reduce egg quality through chronic inflammation, and produce toxic substances that impair sperm function and embryo implantation.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                However, having endometriosis does not mean you cannot become a mother. With the right treatment approach — whether through expert laparoscopic surgery to remove disease, fertility-enhancing medications, or assisted reproduction techniques like IUI or IVF — many women with endometriosis go on to have healthy pregnancies.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                Dr. Vinita Khemani has helped numerous women with endometriosis-related infertility achieve their dream of motherhood. Her surgical technique prioritizes ovarian tissue preservation, ensuring that your egg reserve is protected during cyst removal. For patients requiring IVF, she coordinates closely with leading fertility centers in Kolkata to provide seamless, comprehensive care.
+                            </p>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Discuss Your Fertility Options
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                            <Image src="/images/endometriosis-fertility.jpg" alt="Fertility treatment and hope for women with endometriosis" fill className="object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Living with Endometriosis */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last lg:order-first">
+                            <Image src="/images/endometriosis-lifestyle.jpg" alt="Healthy lifestyle management for endometriosis" fill className="object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#540d2d]/50 via-transparent to-transparent" />
+                        </div>
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Self-Care Guide</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Living Well with <br /><span className="text-[#C21975]">Endometriosis</span></h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                While medical treatment is essential, lifestyle modifications can significantly complement your management plan and reduce the frequency and intensity of flare-ups. Dr. Khemani recommends a holistic approach that addresses diet, exercise, stress, and emotional wellbeing.
+                            </p>
+                            <div className="space-y-4">
+                                {[
+                                    { title: "Anti-Inflammatory Diet", desc: "Focus on turmeric, ginger, leafy greens, omega-3 rich foods (fish, flaxseeds), and avoid processed foods, refined sugar, and excessive dairy which can worsen inflammation." },
+                                    { title: "Gentle Exercise", desc: "Yoga, swimming, and walking help reduce pain perception, improve mood, and decrease estrogen levels. Avoid high-impact exercise during flare-ups." },
+                                    { title: "Heat Therapy", desc: "Applying a warm compress to the pelvic area during pain episodes can relax muscles and improve blood flow, providing natural relief." },
+                                    { title: "Stress Management", desc: "Chronic stress elevates cortisol which worsens inflammation. Pranayama, meditation, and adequate sleep (7-8 hours) are essential." },
+                                    { title: "Track Your Symptoms", desc: "Maintaining a pain diary helps identify triggers, track cycle patterns, and provides valuable data for your doctor to personalize treatment." }
+                                ].map((item, i) => (
+                                    <div key={i} className="flex gap-4 p-4 bg-[#fff9fc] rounded-xl border border-pink-50">
+                                        <CheckCircle className="w-5 h-5 text-[#C21975] shrink-0 mt-1" />
+                                        <div>
+                                            <p className="font-bold text-gray-900 text-sm">{item.title}</p>
+                                            <p className="text-gray-600 text-sm">{item.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Why Choose Dr. Khemani */}
+            <section className="py-24 bg-[#fdf8fa]">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="text-center mb-16">
+                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Expert Endometriosis Care</span>
+                        <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-4">Why Dr. Khemani for <span className="text-[#C21975]">Endometriosis?</span></h2>
+                        <p className="text-gray-600 text-lg max-w-3xl mx-auto">Specialized expertise in advanced laparoscopic excision surgery combined with a compassionate, patient-first approach.</p>
+                    </div>
+                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-pink-50">
+                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Endometriosis Specialist Kolkata" fill className="object-cover" />
+                        </div>
+                        <div>
+                            <div className="grid grid-cols-2 gap-4 mb-8">
+                                {[
+                                    { num: "23+", label: "Years of Experience" },
+                                    { num: "608+", label: "Successful Surgeries" },
+                                    { num: "500+", label: "Endo Cases Managed" },
+                                    { num: "6", label: "Hospital Affiliations" }
+                                ].map((stat, i) => (
+                                    <div key={i} className="text-center p-4 bg-[#fff9fc] rounded-2xl border border-pink-100">
+                                        <p className="text-2xl font-bold text-[#C21975]">{stat.num}</p>
+                                        <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <p className="text-gray-600 leading-relaxed mb-4">
+                                Dr. Vinita Khemani brings over two decades of surgical expertise to endometriosis care. Unlike many practitioners who still rely on ablation (burning) techniques, Dr. Khemani performs thorough excision surgery — the gold standard — which removes disease from the root and significantly reduces recurrence rates.
+                            </p>
+                            <p className="text-gray-600 leading-relaxed mb-6">
+                                Affiliated with Bhagirathi Neotia, Charnock Hospital, Apollo Clinic, and ILS Hospital in Kolkata, she ensures access to state-of-the-art laparoscopic equipment and operating facilities for optimal surgical outcomes.
+                            </p>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Book Your Consultation
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>

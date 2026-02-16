@@ -45,7 +45,7 @@ export function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="sm:max-w-[500px] bg-[#540d2d] text-white border-none p-0 overflow-hidden rounded-[2rem]">
+            <DialogContent className="sm:max-w-[500px] bg-[#540d2d] text-white border-none p-0 overflow-hidden rounded-[2rem] [&>button]:hidden">
                 <div className="relative p-8 md:p-10 overflow-y-auto max-h-[90vh] scrollbar-hide">
                     {/* Close Button Override */}
                     <button

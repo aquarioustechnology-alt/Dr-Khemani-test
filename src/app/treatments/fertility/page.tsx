@@ -172,6 +172,138 @@ export default function FertilityPage() {
                 </div>
             </section>
 
+            {/* Infertility in India */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">The Reality</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Infertility in India: <br /><span className="text-[#C21975]">Breaking the Silence</span></h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                According to the Indian Society of Assisted Reproduction (ISAR), approximately 10-15% of Indian couples face infertility challenges, affecting an estimated 27.5 million couples actively trying to conceive. Despite these staggering numbers, infertility remains heavily stigmatized in Indian society, with women often bearing the brunt of blame and social pressure.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                The truth is that infertility is a medical condition — not a failing. And in approximately 40% of cases, male factors contribute significantly to the difficulty. Dr. Vinita Khemani approaches fertility evaluation as a couple&apos;s journey, ensuring both partners are assessed thoroughly and treated with dignity and compassion.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                In Kolkata, where cultural expectations around motherhood can be overwhelming, Dr. Khemani&apos;s clinic provides a safe, non-judgmental space for couples to explore their options and receive evidence-based treatment without unnecessary interventions.
+                            </p>
+                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+                                {[
+                                    { num: "27.5M", label: "Couples affected" },
+                                    { num: "40%", label: "Male factor involved" },
+                                    { num: "80%", label: "Treatable cases" },
+                                    { num: "23+", label: "Years experience" }
+                                ].map((stat, i) => (
+                                    <div key={i} className="text-center p-4 bg-[#fff9fc] rounded-2xl shadow-sm border border-pink-50">
+                                        <p className="text-2xl md:text-3xl font-bold text-[#C21975]">{stat.num}</p>
+                                        <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Start Your Fertility Assessment
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                            <Image src="/images/fertility-couple-hope.jpg" alt="Indian couple consulting for fertility treatment in Kolkata" fill className="object-cover" />
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
+                                <p className="text-sm font-bold text-gray-900 mb-1">You Are Not Alone</p>
+                                <p className="text-xs text-gray-600">1 in 6 couples in India face fertility challenges. Most cases are treatable with the right medical guidance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Mid-Page CTA Banner */}
+            <section className="py-16 bg-gradient-to-r from-[#C21975] to-[#8a2f5e] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
+                <div className="container-fluid mx-auto max-w-[1200px] px-6 text-center relative z-10">
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">Trying to Conceive?</h3>
+                    <p className="text-pink-100 text-lg mb-8 max-w-2xl mx-auto">Don&apos;t let months of uncertainty become years. A systematic fertility evaluation can identify the cause and the solution — often simpler than you think.</p>
+                    <button
+                        onClick={() => setIsEnquiryModalOpen(true)}
+                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg transition-transform hover:scale-105 shadow-xl"
+                    >
+                        Book a Fertility Consultation
+                        <span className="w-12 h-12 rounded-full bg-[#C21975] text-white flex items-center justify-center transition-transform group-hover:rotate-45">
+                            <ArrowUpRight className="w-6 h-6" />
+                        </span>
+                    </button>
+                </div>
+            </section>
+
+            {/* Understanding Infertility Causes */}
+            <section className="py-24 bg-[#fdf8fa]">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last lg:order-first">
+                            <Image src="/images/fertility-diagnosis.jpg" alt="Comprehensive fertility diagnosis and evaluation" fill className="object-cover" />
+                        </div>
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Root Cause Analysis</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Understanding <br /><span className="text-[#C21975]">Why Conception Delays</span></h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                Infertility can stem from various factors in either partner. Dr. Khemani conducts a thorough, systematic evaluation to identify the exact cause before recommending any treatment.
+                            </p>
+                            <div className="space-y-4">
+                                {[
+                                    { title: "Female Factor (40%)", desc: "PCOS, tubal blockage, endometriosis, uterine fibroids, age-related egg decline, thyroid disorders, and premature ovarian insufficiency." },
+                                    { title: "Male Factor (40%)", desc: "Low sperm count, poor motility, abnormal morphology, varicocele, hormonal imbalances, and lifestyle factors like smoking and stress." },
+                                    { title: "Combined Factors (10%)", desc: "Both partners have contributing issues, requiring coordinated treatment to address all factors simultaneously." },
+                                    { title: "Unexplained (10%)", desc: "All tests appear normal but conception does not occur. Often responds well to IUI or IVF." }
+                                ].map((item, i) => (
+                                    <div key={i} className="flex gap-4 p-4 bg-white rounded-xl border border-pink-50 shadow-sm">
+                                        <CheckCircle className="w-5 h-5 text-[#C21975] shrink-0 mt-1" />
+                                        <div>
+                                            <p className="font-bold text-gray-900 text-sm">{item.title}</p>
+                                            <p className="text-gray-600 text-sm">{item.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Dr. Khemani's Fertility Approach */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
+                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Fertility Specialist Kolkata" fill className="object-cover" />
+                        </div>
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Trusted Expertise</span>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Dr. Khemani&apos;s Fertility Philosophy</h3>
+                            <p className="text-gray-600 leading-relaxed mb-4">
+                                &quot;Every couple&apos;s fertility journey is unique, and it deserves a thoughtful, personalized approach. We don&apos;t rush into expensive treatments. Instead, we start with a comprehensive evaluation, address treatable causes first, and escalate only when necessary — always keeping the couple informed and involved in every decision.&quot;
+                            </p>
+                            <p className="text-gray-600 leading-relaxed mb-6">
+                                With 23+ years of experience and affiliations with Bhagirathi Neotia, Charnock Hospital, and Apollo Clinic, Dr. Khemani offers the full spectrum of fertility care from basic evaluation to IVF coordination with leading reproductive medicine centers in Kolkata.
+                            </p>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Consult Dr. Khemani
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* FAQ Section with Updated Style */}
             <section className="py-24 bg-gradient-to-b from-white to-[#fff0f5]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">

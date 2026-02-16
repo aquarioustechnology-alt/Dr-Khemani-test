@@ -155,6 +155,102 @@ export default function LaparoscopicSurgeryPage() {
                 </div>
             </section>
 
+            {/* Understanding Laparoscopy - Long-form Content */}
+            <section className="py-24 bg-[#fdf8fa]">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">In-Depth Guide</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">The Revolution of <br /><span className="text-[#C21975]">Minimally Invasive Surgery</span></h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                Laparoscopic surgery has fundamentally transformed gynecological care over the past two decades. What once required large abdominal incisions, week-long hospital stays, and months of recovery can now be accomplished through 2-3 tiny keyhole incisions (5-10mm each), enabling same-day or next-day discharge with minimal pain.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                In India, the adoption of laparoscopic gynecological surgery has been steadily growing, but many women are still unaware that their conditions — fibroids, ovarian cysts, endometriosis, ectopic pregnancy, and even hysterectomy — can be treated through keyhole techniques. The advantages are substantial: 80% less postoperative pain, virtually invisible scars, dramatically lower infection rates, and return to normal activities within days.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                Dr. Vinita Khemani has been at the forefront of laparoscopic gynecological surgery in Kolkata, having performed 583+ successful laparoscopic procedures. Her expertise spans the full spectrum — from simple diagnostic laparoscopy to complex procedures like total laparoscopic hysterectomy (TLH), laparoscopic myomectomy for large fibroids, and deep endometriosis excision. Each surgery is performed with meticulous precision, prioritizing organ preservation and patient safety.
+                            </p>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Explore Laparoscopic Options
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                            <Image src="/images/laparoscopy-technology.jpg" alt="Advanced laparoscopic surgery technology" fill className="object-cover" />
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
+                                <p className="text-sm font-bold text-gray-900 mb-1">583+ Procedures</p>
+                                <p className="text-xs text-gray-600">Dr. Khemani&apos;s laparoscopic expertise spans diagnostic, operative, and complex cases.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Mid-Page CTA Banner */}
+            <section className="py-16 bg-gradient-to-r from-[#C21975] to-[#8a2f5e] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
+                <div className="container-fluid mx-auto max-w-[1200px] px-6 text-center relative z-10">
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">Is Your Condition Treatable Laparoscopically?</h3>
+                    <p className="text-pink-100 text-lg mb-8 max-w-2xl mx-auto">Many conditions that once required open surgery can now be treated through keyhole incisions. Find out if laparoscopy is right for you.</p>
+                    <button
+                        onClick={() => setIsEnquiryModalOpen(true)}
+                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg transition-transform hover:scale-105 shadow-xl"
+                    >
+                        Get a Surgical Opinion
+                        <span className="w-12 h-12 rounded-full bg-[#C21975] text-white flex items-center justify-center transition-transform group-hover:rotate-45">
+                            <ArrowUpRight className="w-6 h-6" />
+                        </span>
+                    </button>
+                </div>
+            </section>
+
+            {/* Dr. Khemani&apos;s Expertise */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
+                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Laparoscopic Surgery Expert" fill className="object-cover" />
+                        </div>
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Surgical Excellence</span>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Dr. Khemani for Laparoscopy?</h3>
+                            <p className="text-gray-600 leading-relaxed mb-4">
+                                Dr. Khemani is one of Kolkata&apos;s most experienced laparoscopic gynecological surgeons. Her comprehensive surgical skills, combined with compassionate patient care, ensure the best possible outcomes.
+                            </p>
+                            <div className="space-y-3 mb-6">
+                                {[
+                                    "583+ successful laparoscopic surgeries",
+                                    "Full spectrum: diagnostic to complex operative",
+                                    "Total Laparoscopic Hysterectomy (TLH) expertise",
+                                    "Laparoscopic myomectomy with uterus preservation",
+                                    "Same-day/next-day discharge for most procedures"
+                                ].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-3">
+                                        <Shield className="w-4 h-4 text-[#C21975] shrink-0" />
+                                        <span className="text-gray-700 text-sm font-medium">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Consult Dr. Khemani
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* FAQ Section with Updated Style */}
             <section className="py-24 bg-gradient-to-b from-white to-[#fff0f5]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">

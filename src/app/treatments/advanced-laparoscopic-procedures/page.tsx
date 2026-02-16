@@ -55,10 +55,12 @@ export default function AdvancedLaparoscopyPage() {
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
-                                        className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                     >
                                         Book Consultation
-                                        <ArrowUpRight className="w-5 h-5 transition-transform group-hover:rotate-45" />
+                                        <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                            <ArrowUpRight className="w-6 h-6" />
+                                        </span>
                                     </button>
                                 </motion.div>
                                 <motion.div className="relative h-[400px] md:h-[500px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
@@ -175,6 +177,146 @@ export default function AdvancedLaparoscopyPage() {
                         <div className="relative h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl">
                             <Image src="/images/unnamed.webp" alt="Surgical precision" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-tr from-pink-900/20 to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Understanding Laparoscopy - Deep Dive */}
+            <section className="py-24 bg-[#fdf8fa]">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Understanding the Procedure</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">What is <br /><span className="text-[#C21975]">Laparoscopic Surgery?</span></h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                Laparoscopic surgery, often called &quot;keyhole surgery&quot; or &quot;minimally invasive surgery,&quot; is a modern surgical technique where operations are performed through tiny incisions (usually 5-10mm) instead of large open cuts. A thin telescope with a high-definition camera (laparoscope) is inserted through one incision, providing a magnified view of the internal organs on a monitor.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                Specialized instruments are then inserted through additional small incisions to perform the surgery with precision. The surgeon operates while watching the magnified images on a screen, allowing for greater accuracy than what is possible with the naked eye during open surgery. Carbon dioxide gas is used to gently inflate the abdomen, creating a working space for the surgeon.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                Dr. Vinita Khemani has performed over 608 laparoscopic procedures across multiple hospitals in Kolkata, ranging from routine diagnostic laparoscopies to complex procedures like Total Laparoscopic Hysterectomy (TLH) for large uteri and laparoscopic myomectomy for multiple fibroids. Her expertise ensures that even complex cases that might traditionally require open surgery are safely handled through minimally invasive techniques.
+                            </p>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Ask About Your Case
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                            <Image src="/images/laparoscopy-explanation.jpg" alt="Understanding laparoscopic keyhole surgery procedure" fill className="object-cover" />
+                            <div className="absolute -bottom-4 -right-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[260px] hidden md:block">
+                                <p className="text-sm font-bold text-gray-900 mb-1">Open vs Laparoscopic</p>
+                                <p className="text-xs text-gray-600">Laparoscopy uses 5mm incisions vs 15-20cm cuts in open surgery — 80% faster recovery</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Mid-Page CTA Banner */}
+            <section className="py-16 bg-gradient-to-r from-[#C21975] to-[#8a2f5e] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
+                <div className="container-fluid mx-auto max-w-[1200px] px-6 text-center relative z-10">
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">Considering Surgery?</h3>
+                    <p className="text-pink-100 text-lg mb-8 max-w-2xl mx-auto">Most gynecological surgeries that were traditionally done through large abdominal incisions can now be performed laparoscopically. Discuss your options with Dr. Khemani today.</p>
+                    <button
+                        onClick={() => setIsEnquiryModalOpen(true)}
+                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg transition-transform hover:scale-105 shadow-xl"
+                    >
+                        Get a Surgical Consultation
+                        <span className="w-12 h-12 rounded-full bg-[#C21975] text-white flex items-center justify-center transition-transform group-hover:rotate-45">
+                            <ArrowUpRight className="w-6 h-6" />
+                        </span>
+                    </button>
+                </div>
+            </section>
+
+            {/* Dr. Khemani's Surgical Excellence */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="text-center mb-16">
+                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Surgical Expertise</span>
+                        <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-4">Dr. Khemani&apos;s <span className="text-[#C21975]">Surgical Mastery</span></h2>
+                        <p className="text-gray-600 text-lg max-w-3xl mx-auto">A surgeon&apos;s skill directly determines outcomes in laparoscopic surgery. Experience matters — and Dr. Khemani brings decades of it.</p>
+                    </div>
+                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
+                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Expert Laparoscopic Surgeon Kolkata" fill className="object-cover" />
+                        </div>
+                        <div>
+                            <div className="grid grid-cols-2 gap-4 mb-8">
+                                {[
+                                    { num: "608+", label: "Laparoscopic Surgeries" },
+                                    { num: "23+", label: "Years Experience" },
+                                    { num: "6", label: "Hospital Affiliations" },
+                                    { num: "99%", label: "Patient Satisfaction" }
+                                ].map((stat, i) => (
+                                    <div key={i} className="text-center p-4 bg-white rounded-2xl border border-pink-100 shadow-sm">
+                                        <p className="text-2xl font-bold text-[#C21975]">{stat.num}</p>
+                                        <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <p className="text-gray-600 leading-relaxed mb-4">
+                                Dr. Vinita Khemani is one of the most experienced laparoscopic gynecological surgeons in Kolkata. Her surgical portfolio includes complex Total Laparoscopic Hysterectomies for large uteri (up to 20-week size), myomectomies for multiple fibroids, extensive endometriosis excision, and difficult ovarian cystectomies.
+                            </p>
+                            <p className="text-gray-600 leading-relaxed mb-6">
+                                She operates across premier hospitals including Bhagirathi Neotia (New Town), Charnock Hospital (VIP Road), Apollo Clinic (Chinar Park), Spandan Hospital, and ILS Hospital (Dumdum), ensuring patients can access advanced laparoscopic care at a location convenient to them.
+                            </p>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Consult Dr. Khemani
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Recovery & Aftercare */}
+            <section className="py-24 bg-[#fdf8fa]">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last lg:order-first">
+                            <Image src="/images/laparoscopy-recovery.jpg" alt="Recovery after laparoscopic surgery at home" fill className="object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#540d2d]/50 via-transparent to-transparent" />
+                            <div className="absolute bottom-8 left-8 right-8 text-white">
+                                <p className="text-lg font-bold">24-48 Hour Discharge</p>
+                                <p className="text-sm opacity-90">Most patients go home within a day and return to work in 1-2 weeks</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Post-Surgery Guide</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Recovery &amp; <br /><span className="text-[#C21975]">Aftercare</span></h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                One of the biggest advantages of laparoscopic surgery is the dramatically faster recovery compared to open surgery. Dr. Khemani provides detailed post-operative care instructions and close follow-up to ensure a smooth recovery.
+                            </p>
+                            <div className="space-y-4">
+                                {[
+                                    { title: "First 24 Hours", desc: "Mild abdominal discomfort and shoulder tip pain from residual CO2 gas is normal. You will be mobilized early and encouraged to walk within hours of surgery." },
+                                    { title: "Days 2-7", desc: "Gradual return to light activities. Incision sites should be kept clean and dry. Mild painkillers are sufficient for most patients." },
+                                    { title: "Week 2-3", desc: "Most patients return to desk jobs and light household work. Avoid heavy lifting (over 5kg) and strenuous exercise." },
+                                    { title: "Week 4-6", desc: "Full recovery. Resume all activities including exercise and intimacy (as advised). Follow-up appointment to confirm complete healing." }
+                                ].map((item, i) => (
+                                    <div key={i} className="flex gap-4 p-4 bg-white rounded-xl border border-pink-50 shadow-sm">
+                                        <div className="w-10 h-10 rounded-full bg-[#fff0f5] flex items-center justify-center text-[#C21975] font-bold shrink-0">{i + 1}</div>
+                                        <div>
+                                            <p className="font-bold text-gray-900 text-sm">{item.title}</p>
+                                            <p className="text-gray-600 text-sm">{item.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

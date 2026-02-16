@@ -62,10 +62,12 @@ export default function HysterectomyPage() {
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
-                                        className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                     >
                                         Plan Your Surgery
-                                        <ArrowUpRight className="w-5 h-5 transition-transform group-hover:rotate-45" />
+                                        <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                            <ArrowUpRight className="w-6 h-6" />
+                                        </span>
                                     </button>
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[400px] md:h-[500px]">
@@ -178,6 +180,102 @@ export default function HysterectomyPage() {
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3">Pain Relief</h3>
                             <p className="text-gray-600">Permanent relief from fibroids, endometriosis pain, and pelvic pressure.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Hysterectomy in India - Long-form Content */}
+            <section className="py-24 bg-[#fdf8fa]">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Indian Context</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Hysterectomy in India: <br /><span className="text-[#C21975]">Separating Facts from Fear</span></h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                Hysterectomy remains one of the most commonly performed gynecological surgeries in India, yet it is surrounded by fear and misinformation. Many women delay necessary surgery due to myths about losing femininity, premature aging, or drastic lifestyle changes — none of which are true when the surgery is performed by experienced hands with proper ovarian preservation.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                Studies published in the Indian Journal of Medical Research show that approximately 6-8% of Indian women undergo hysterectomy, with fibroids and abnormal uterine bleeding being the most common indications. Tragically, many women in India suffer for years with debilitating symptoms before seeking surgical intervention, often because they were never properly counseled about minimally invasive options.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                Dr. Vinita Khemani believes in exhausting all conservative treatments first. Hysterectomy is recommended only when medications, hormonal therapy, and other less invasive procedures have failed — or when there is a clear medical necessity such as malignancy risk. When surgery is indicated, her expertise in Total Laparoscopic Hysterectomy (TLH) ensures patients return to normal life within days, not weeks.
+                            </p>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Get a Second Opinion
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                            <Image src="/images/hysterectomy-awareness.jpg" alt="Hysterectomy awareness and patient education" fill className="object-cover" />
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
+                                <p className="text-sm font-bold text-gray-900 mb-1">Key Fact</p>
+                                <p className="text-xs text-gray-600">Over 90% of hysterectomies can now be performed laparoscopically with discharge in 24-48 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Mid-Page CTA Banner */}
+            <section className="py-16 bg-gradient-to-r from-[#C21975] to-[#8a2f5e] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
+                <div className="container-fluid mx-auto max-w-[1200px] px-6 text-center relative z-10">
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">Considering Hysterectomy?</h3>
+                    <p className="text-pink-100 text-lg mb-8 max-w-2xl mx-auto">Get an honest assessment from Dr. Khemani. Not every condition requires surgery — and when it does, minimally invasive is the way forward.</p>
+                    <button
+                        onClick={() => setIsEnquiryModalOpen(true)}
+                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg transition-transform hover:scale-105 shadow-xl"
+                    >
+                        Book a Surgical Consultation
+                        <span className="w-12 h-12 rounded-full bg-[#C21975] text-white flex items-center justify-center transition-transform group-hover:rotate-45">
+                            <ArrowUpRight className="w-6 h-6" />
+                        </span>
+                    </button>
+                </div>
+            </section>
+
+            {/* Dr. Khemani's Approach */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
+                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Hysterectomy Specialist Kolkata" fill className="object-cover" />
+                        </div>
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Trusted Expertise</span>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Dr. Khemani for Hysterectomy?</h3>
+                            <p className="text-gray-600 leading-relaxed mb-4">
+                                Dr. Vinita Khemani has performed hundreds of successful hysterectomies using advanced laparoscopic techniques. Her philosophy is simple: surgery should be the last resort, not the first suggestion. When surgery is needed, her patients benefit from:
+                            </p>
+                            <div className="space-y-3 mb-6">
+                                {[
+                                    "23+ years of surgical experience",
+                                    "Expertise in Total Laparoscopic Hysterectomy (TLH)",
+                                    "Ovarian preservation whenever safely possible",
+                                    "Hospital affiliations with NICU and ICU backup",
+                                    "Comprehensive pre-operative counseling and post-operative care"
+                                ].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-[#C21975] shrink-0" />
+                                        <span className="text-gray-700 text-sm font-medium">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Consult Dr. Khemani
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>

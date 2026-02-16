@@ -125,10 +125,12 @@ export default function PregnancyCarePage() {
                                     <div className="flex flex-col sm:flex-row gap-4 mb-10">
                                         <button
                                             onClick={() => setIsEnquiryModalOpen(true)}
-                                            className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl hover:shadow-pink-500/20 bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                                            className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl hover:shadow-pink-500/20 bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                         >
                                             Book Prenatal Visit
-                                            <ArrowUpRight className="w-5 h-5 transition-transform group-hover:rotate-45" />
+                                            <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                                <ArrowUpRight className="w-6 h-6" />
+                                            </span>
                                         </button>
                                         <div className="flex items-center gap-4 px-6 py-4 rounded-full bg-white border border-pink-100 shadow-sm">
                                             <div className="flex -space-x-3">
@@ -342,6 +344,102 @@ export default function PregnancyCarePage() {
                                 ))}
                             </div>
                         </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Maternal Health in India - Long-form Content */}
+            <section className="py-24 bg-[#fdf8fa]">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Indian Context</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Pregnancy Care in India: <br /><span className="text-[#C21975]">Why Quality Matters</span></h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                India has made remarkable strides in reducing maternal mortality — from 556 per 100,000 live births in 1990 to approximately 97 per 100,000 in recent years. Yet, significant gaps remain, particularly in the quality of antenatal care. According to NFHS-5, while 83% of Indian women receive at least one antenatal checkup, only 58% receive the WHO-recommended 4+ visits, and comprehensive monitoring for blood pressure, blood sugar, and fetal growth remains inconsistent.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                In urban Kolkata, the challenges are different but equally important. The rising trends of late marriages, career-first family planning, and increasing rates of gestational diabetes and hypertension mean that today&apos;s pregnancies require more sophisticated monitoring than ever before. Modern pregnancy care must address not just the physical aspects but also nutritional guidance, mental health support, and birth plan counseling.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                Dr. Vinita Khemani provides comprehensive, evidence-based pregnancy care that covers every aspect of the maternal journey — from preconception counseling and first-trimester screening through regular growth monitoring, anomaly scans, gestational diabetes screening, and finally, personalized delivery planning. Her approach prioritizes normal delivery whenever safely possible, while keeping emergency surgical capabilities readily available.
+                            </p>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Start Your Pregnancy Journey
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                            <Image src="/images/pregnancy-care-india.jpg" alt="Pregnancy care and antenatal monitoring" fill className="object-cover" />
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
+                                <p className="text-sm font-bold text-gray-900 mb-1">Comprehensive Care</p>
+                                <p className="text-xs text-gray-600">From preconception to postpartum — complete pregnancy management under one trusted gynecologist.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Mid-Page CTA Banner */}
+            <section className="py-16 bg-gradient-to-r from-[#C21975] to-[#8a2f5e] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
+                <div className="container-fluid mx-auto max-w-[1200px] px-6 text-center relative z-10">
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">Expecting or Planning to Conceive?</h3>
+                    <p className="text-pink-100 text-lg mb-8 max-w-2xl mx-auto">Begin your pregnancy journey with expert guidance. From preconception planning to safe delivery — Dr. Khemani is with you every step.</p>
+                    <button
+                        onClick={() => setIsEnquiryModalOpen(true)}
+                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg transition-transform hover:scale-105 shadow-xl"
+                    >
+                        Book Antenatal Consultation
+                        <span className="w-12 h-12 rounded-full bg-[#C21975] text-white flex items-center justify-center transition-transform group-hover:rotate-45">
+                            <ArrowUpRight className="w-6 h-6" />
+                        </span>
+                    </button>
+                </div>
+            </section>
+
+            {/* Dr. Khemani&apos;s Approach */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
+                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Pregnancy Care Specialist" fill className="object-cover" />
+                        </div>
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Trusted Obstetric Care</span>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Dr. Khemani for Pregnancy Care?</h3>
+                            <p className="text-gray-600 leading-relaxed mb-4">
+                                With 23+ years of experience and thousands of successful deliveries, Dr. Khemani provides the kind of comprehensive, personalized pregnancy care that every expecting mother deserves. Her approach prioritizes normal delivery while maintaining full emergency preparedness.
+                            </p>
+                            <div className="space-y-3 mb-6">
+                                {[
+                                    "Comprehensive antenatal care with scheduled monitoring",
+                                    "High normal delivery rates with minimal intervention",
+                                    "GDM screening and specialized diet counseling",
+                                    "Hospital affiliations with NICU and 24/7 emergency OT",
+                                    "Postnatal care including lactation support"
+                                ].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-3">
+                                        <CheckCircle className="w-4 h-4 text-[#C21975] shrink-0" />
+                                        <span className="text-gray-700 text-sm font-medium">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Consult Dr. Khemani
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>

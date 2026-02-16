@@ -56,10 +56,12 @@ export default function HysteroscopyPage() {
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
-                                        className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                     >
                                         Book Evaluation
-                                        <ArrowUpRight className="w-5 h-5 transition-transform group-hover:rotate-45" />
+                                        <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                            <ArrowUpRight className="w-6 h-6" />
+                                        </span>
                                     </button>
                                 </motion.div>
                                 <motion.div className="relative h-[500px] lg:h-[600px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
@@ -131,6 +133,105 @@ export default function HysteroscopyPage() {
                                 </div>
                             </motion.div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Understanding Hysteroscopy - Long-form Content */}
+            <section className="py-24 bg-[#fdf8fa]">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">In-Depth Guide</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Diagnostic vs. Operative <br /><span className="text-[#C21975]">Hysteroscopy: What to Expect</span></h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                Hysteroscopy is one of the most valuable tools in modern gynecology, allowing direct visualization of the uterine cavity. Unlike ultrasound or MRI, which provide indirect images, hysteroscopy gives the surgeon a real-time, magnified view of the uterine lining — making diagnosis incredibly accurate.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                <strong>Diagnostic hysteroscopy</strong> is a quick, often outpatient procedure used to investigate abnormal bleeding, recurrent miscarriages, or infertility. A thin telescope (2-5mm) is inserted through the cervix — no incisions are needed. Most women describe mild cramping, similar to a period.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                <strong>Operative hysteroscopy</strong> goes a step further — the surgeon can remove polyps, fibroids (myomectomy), adhesions (synechiae), or correct uterine septum in the same sitting. This &quot;see and treat&quot; approach eliminates the need for a second procedure, saving the patient time, cost, and anxiety.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                Dr. Vinita Khemani performs hysteroscopy at well-equipped hospital settings in Kolkata, ensuring patient safety with anesthesia support and advanced resectoscope technology. For many women struggling with unexplained infertility or recurrent pregnancy loss, a single hysteroscopy can identify and correct the problem.
+                            </p>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Ask About Hysteroscopy
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                            <Image src="/images/hysteroscopy-procedure.jpg" alt="Hysteroscopy procedure in Kolkata" fill className="object-cover" />
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
+                                <p className="text-sm font-bold text-gray-900 mb-1">See &amp; Treat</p>
+                                <p className="text-xs text-gray-600">Diagnose and treat uterine conditions in a single sitting — no incisions needed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Mid-Page CTA Banner */}
+            <section className="py-16 bg-gradient-to-r from-[#C21975] to-[#8a2f5e] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
+                <div className="container-fluid mx-auto max-w-[1200px] px-6 text-center relative z-10">
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">Need a Uterine Evaluation?</h3>
+                    <p className="text-pink-100 text-lg mb-8 max-w-2xl mx-auto">Hysteroscopy provides the most accurate diagnosis for abnormal bleeding, polyps, fibroids, and infertility-related uterine issues.</p>
+                    <button
+                        onClick={() => setIsEnquiryModalOpen(true)}
+                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg transition-transform hover:scale-105 shadow-xl"
+                    >
+                        Book Hysteroscopy Consultation
+                        <span className="w-12 h-12 rounded-full bg-[#C21975] text-white flex items-center justify-center transition-transform group-hover:rotate-45">
+                            <ArrowUpRight className="w-6 h-6" />
+                        </span>
+                    </button>
+                </div>
+            </section>
+
+            {/* Dr. Khemani&apos;s Expertise */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
+                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Hysteroscopy Expert" fill className="object-cover" />
+                        </div>
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Expert Care</span>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Dr. Khemani for Hysteroscopy?</h3>
+                            <p className="text-gray-600 leading-relaxed mb-4">
+                                Dr. Khemani performs both diagnostic and operative hysteroscopy with precision honed over 23+ years. Her expertise in &quot;see and treat&quot; techniques means many patients resolve their condition in a single procedure.
+                            </p>
+                            <div className="space-y-3 mb-6">
+                                {[
+                                    "Advanced resectoscope and hysteroscope technology",
+                                    "Single-sitting diagnose-and-treat approach",
+                                    "Expert polyp and fibroid removal",
+                                    "Adhesiolysis for Asherman syndrome",
+                                    "Uterine septum correction for recurrent miscarriage"
+                                ].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-3">
+                                        <CheckCircle className="w-4 h-4 text-[#C21975] shrink-0" />
+                                        <span className="text-gray-700 text-sm font-medium">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Consult Dr. Khemani
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>

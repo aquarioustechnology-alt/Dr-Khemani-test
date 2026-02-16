@@ -50,10 +50,12 @@ export default function FamilyPlanningPage() {
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
-                                        className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                     >
                                         Private Consultation
-                                        <ArrowUpRight className="w-5 h-5 transition-transform group-hover:rotate-45" />
+                                        <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                            <ArrowUpRight className="w-6 h-6" />
+                                        </span>
                                     </button>
                                 </motion.div>
                                 <motion.div className="relative h-[400px] md:h-[500px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
@@ -94,6 +96,102 @@ export default function FamilyPlanningPage() {
                                 </div>
                             </motion.div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Family Planning in India - Long-form Content */}
+            <section className="py-24 bg-[#fdf8fa]">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Indian Context</span>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Family Planning in India: <br /><span className="text-[#C21975]">Empowering Informed Choices</span></h2>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                Despite being home to one of the world&apos;s largest family planning programs, India still faces significant gaps in contraceptive awareness and access. According to NFHS-5 data, the unmet need for family planning in India remains around 9.4%, meaning millions of women who want to delay or prevent pregnancy lack access to effective contraception.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                In urban settings like Kolkata, women today have more choices than ever — from hormonal pills and IUDs to long-acting reversible contraceptives (LARCs) and permanent methods. Yet, many women rely on outdated or ineffective methods simply because they were never properly counseled about modern options. The key to effective family planning is informed, non-judgmental counseling from a trusted gynecologist.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                Dr. Vinita Khemani provides comprehensive family planning counseling that respects each woman&apos;s unique circumstances — her health, age, family goals, and medical history. Whether you&apos;re looking to space pregnancies, prevent future pregnancies, or reverse a previous procedure, Dr. Khemani ensures you understand all your options and their implications before making a decision.
+                            </p>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Book Family Planning Session
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                            <Image src="/images/family-planning-counseling.jpg" alt="Family planning consultation" fill className="object-cover" />
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
+                                <p className="text-sm font-bold text-gray-900 mb-1">Your Choice</p>
+                                <p className="text-xs text-gray-600">Personalized contraceptive counseling tailored to your health, lifestyle, and family goals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Mid-Page CTA Banner */}
+            <section className="py-16 bg-gradient-to-r from-[#C21975] to-[#8a2f5e] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
+                <div className="container-fluid mx-auto max-w-[1200px] px-6 text-center relative z-10">
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">Planning Your Family&apos;s Future?</h3>
+                    <p className="text-pink-100 text-lg mb-8 max-w-2xl mx-auto">Get expert, confidential counseling on the best contraceptive method for your individual needs.</p>
+                    <button
+                        onClick={() => setIsEnquiryModalOpen(true)}
+                        className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg transition-transform hover:scale-105 shadow-xl"
+                    >
+                        Schedule a Consultation
+                        <span className="w-12 h-12 rounded-full bg-[#C21975] text-white flex items-center justify-center transition-transform group-hover:rotate-45">
+                            <ArrowUpRight className="w-6 h-6" />
+                        </span>
+                    </button>
+                </div>
+            </section>
+
+            {/* Dr. Khemani&apos;s Approach */}
+            <section className="py-24 bg-white">
+                <div className="container-fluid mx-auto max-w-[1400px] px-6">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
+                        <div className="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
+                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Family Planning Expert" fill className="object-cover" />
+                        </div>
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Trusted Guidance</span>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Consult Dr. Khemani?</h3>
+                            <p className="text-gray-600 leading-relaxed mb-4">
+                                Dr. Khemani provides judgment-free, evidence-based family planning counseling. Whether you need temporary contraception or a permanent solution, she ensures you make an informed decision that aligns with your life goals.
+                            </p>
+                            <div className="space-y-3 mb-6">
+                                {[
+                                    "Non-judgmental, confidential counseling",
+                                    "Full range of contraceptive options explained",
+                                    "Expert IUD insertion and hormonal implant services",
+                                    "Laparoscopic sterilization when desired",
+                                    "Pre-conception planning and fertility awareness"
+                                ].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-3">
+                                        <CheckCircle className="w-4 h-4 text-[#C21975] shrink-0" />
+                                        <span className="text-gray-700 text-sm font-medium">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <button
+                                onClick={() => setIsEnquiryModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
+                            >
+                                Consult Dr. Khemani
+                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
