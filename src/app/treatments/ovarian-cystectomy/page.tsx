@@ -5,7 +5,7 @@ import { Footer } from "@/app/sections/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { CircleDot, ArrowUpRight, ChevronDown, Egg, Flame, Droplets, Layers, Heart, Stethoscope, FlaskConical, Microscope, Timer, ShieldCheck, Scissors, Sparkles, ClipboardCheck } from "lucide-react";
+import { CircleDot, ArrowUpRight, ChevronDown, Egg, Flame, Droplets, Layers, Heart, Stethoscope, FlaskConical, Microscope, Timer, ShieldCheck, ClipboardCheck } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
 

@@ -9,7 +9,7 @@ import { useState } from "react";
 import {
     HeartPulse, CheckCircle, ArrowUpRight, ChevronDown,
     Activity, Scale, Pill, AlertOctagon, Brain, Baby,
-    ClipboardCheck, Utensils, X, Check
+    Utensils, X, Check
 } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";

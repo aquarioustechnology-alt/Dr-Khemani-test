@@ -5,7 +5,7 @@ import { Footer } from "@/app/sections/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { AlertTriangle, ArrowUpRight, Activity, Shield, ChevronDown, HeartPulse, AlertOctagon, Droplets, Ban, Zap, Gauge, Clock, Baby, Siren, Stethoscope, Heart, Users, BedDouble, Milk } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, Activity, Shield, ChevronDown, HeartPulse, AlertOctagon, Droplets, Ban, Zap, Gauge, Baby, Siren, Stethoscope, Heart, Users, Milk } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
 
