@@ -68,20 +68,24 @@ const dietaryTips = [
 
 const faqs = [
     {
+        q: "Who is the best doctor for pregnancy care in Kolkata?",
+        a: "Dr. Vinita Khemani is highly regarded in Kolkata for her comprehensive pregnancy care, high normal delivery rates, and management of high-risk pregnancies at top hospitals like Bhagirathi Neotia and AMRI."
+    },
+    {
         q: "When should I book my first appointment?",
-        a: "Ideally, as soon as you miss your period or get a positive home pregnancy test. An early scan at 6-7 weeks is crucial to confirm the pregnancy location and heartbeat."
+        a: "Ideally, as soon as you miss your period or get a positive home pregnancy test. An early scan at 6-7 weeks at Dr. Khemani's Kolkata clinic is crucial to confirm the pregnancy location and heartbeat."
     },
     {
         q: "What are the chances of a normal delivery?",
-        a: "Dr. Vinita Khemani is a strong proponent of vaginal delivery. Unless there is a specific medical indication for a C-section (like placenta previa or fetal distress), we always trial for a normal delivery. Our normal delivery rates are significantly higher than the city average."
+        a: "Dr. Vinita Khemani is a strong proponent of vaginal delivery. Unless there is a specific medical indication for a C-section (like placenta previa or fetal distress), we always trial for a normal delivery. Our normal delivery rates are significantly higher than the Kolkata city average."
     },
     {
         q: "Is it safe to exercise during pregnancy?",
-        a: "Yes! Unless you have a high-risk condition (like low-lying placenta), antenatal yoga and walking are highly recommended. They help position the baby correctly and build stamina for labor."
+        a: "Yes! Unless you have a high-risk condition (like low-lying placenta), antenatal yoga and walking are highly recommended. Dr. Khemani often advises prenatal yoga classes available in Kolkata to build stamina for labor."
     },
     {
         q: "Do you handle high-risk pregnancies?",
-        a: "Yes, Dr. Khemani specializes in high-risk cases including pregnancy with diabetes, hypertension, thyroid issues, and previous recurrent miscarriages. We have advanced monitoring protocols for such cases."
+        a: "Yes, Dr. Khemani specializes in high-risk cases including pregnancy with diabetes, hypertension, and thyroid issues. We have advanced monitoring protocols at our Kolkata clinics for such cases."
     },
     {
         q: "What hospitals are you affiliated with?",
@@ -113,13 +117,13 @@ export default function PregnancyCarePage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Obstetrics & Maternity Care</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-gray-900">Journey to</span> <br />
+                                        <span className="text-gray-900">Pregnancy Care &</span> <br />
                                         <span className="italic text-[#C21975]">
-                                            Motherhood.
+                                            Delivery in Kolkata.
                                         </span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Safe, supported, and joyful pregnancy care. From the first heartbeat to the first cry, Dr. Vinita Khemani walks with you every step of the way.
+                                        Safe, supported, and joyful pregnancy care in Kolkata. From the first heartbeat to the first cry, Dr. Vinita Khemani walks with you every step of the way.
                                     </p>
 
                                     <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -535,12 +539,12 @@ export default function PregnancyCarePage() {
             </section>
 
             {/* Shared CTA Section */}
-            <SharedCTA title="Start Your Journey" subtitle="Book your first prenatal consultation with Dr. Vinita Khemani today." />
+            <SharedCTA title="Start Your Pregnancy Journey in Kolkata" subtitle="Book your first prenatal consultation with Dr. Vinita Khemani today." />
 
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />
-        </main>
+        </main >
     );
 }

@@ -19,9 +19,11 @@ const uses = [
 ];
 
 const faqs = [
-    { q: "Is hysteroscopy painful?", a: "Diagnostic hysteroscopy is often painless or causes only mild cramping, similar to a period. Does not always require anesthesia. Operative hysteroscopy (removing polyps/fibroids) is done under mild sedation or short anesthesia so you sleep through it." },
+    { q: "Who is the best doctor for hysteroscopy in Kolkata?", a: "Dr. Vinita Khemani is a highly experienced gynecologist in Kolkata known for her skill in diagnostic and operative hysteroscopy. She successfully treats uterine polyps, fibroids, and septums with minimal intervention." },
+    { q: "What is the cost of hysteroscopy in Kolkata?", a: "The cost depends on whether it is diagnostic or operative and the hospital chosen. Dr. Khemani strives to provide affordable, transparent pricing packages for hysteroscopy at leading Kolkata hospitals." },
+    { q: "Is hysteroscopy painful?", a: "Diagnostic hysteroscopy is often painless or causes only mild cramping, similar to a period. Does not always require anesthesia. Operative hysteroscopy (removing polyps/fibroids) is done under mild sedation or short anesthesia at our Kolkata facilities so you sleep through it." },
     { q: "How long is the procedure?", a: "A diagnostic look takes only 5-10 minutes. If a procedure is needed (like polyp removal), it may take 20-30 minutes." },
-    { q: "Do I need to stay in the hospital?", a: "No. Hysteroscopy is almost always a Day Care procedure. You come in the morning and go home by afternoon." },
+    { q: "Do I need to stay in the hospital?", a: "No. Hysteroscopy is almost always a Day Care procedure. You come in the morning to the hospital in Kolkata and go home by afternoon." },
     { q: "When is the best time to do it?", a: "Ideally, just after your period finishes (Day 6-10 of your cycle). This is when the lining is thinnest and the view is clearest." },
 ];
 
@@ -48,11 +50,11 @@ export default function HysteroscopyPage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">No-Cut Surgery</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-gray-900">Advanced </span> <br />
-                                        <span className="italic text-[#C21975]">Hysteroscopy.</span>
+                                        <span className="text-gray-900">Advanced Hysteroscopy</span> <br />
+                                        <span className="italic text-[#C21975]">Surgery in Kolkata.</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        A revolutionary diagnostic and treatment method that allows Dr. Khemani to see and treat inside the womb without a single incision. Gold standard care for abnormal bleeding and infertility.
+                                        A revolutionary diagnostic and treatment method that allows Dr. Khemani to see and treat inside the womb without a single incision. Gold standard care for abnormal bleeding and infertility in Kolkata.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -66,7 +68,7 @@ export default function HysteroscopyPage() {
                                 </motion.div>
                                 <motion.div className="relative h-[500px] lg:h-[600px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white">
-                                        <Image src="/images/2023-04-23 (1).webp" alt="Hysteroscopy Procedure" fill className="object-cover" />
+                                        <Image src="/images/2023-04-23 (1).webp" alt="Hysteroscopy Procedure in Kolkata" fill className="object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-tr from-pink-900/30 to-transparent"></div>
                                     </div>
                                 </motion.div>
@@ -202,7 +204,7 @@ export default function HysteroscopyPage() {
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="grid lg:grid-cols-2 gap-12 items-stretch bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
                         <div className="relative min-h-[500px] h-full rounded-[2rem] overflow-hidden shadow-xl">
-                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Hysteroscopy Expert" fill className="object-cover" />
+                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Hysteroscopy Expert in Kolkata" fill className="object-cover" />
                         </div>
                         <div className="flex flex-col justify-center items-start">
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Expert Care</span>
@@ -309,9 +311,10 @@ export default function HysteroscopyPage() {
                 </div>
             </section>
 
-            <SharedCTA title="Day Care Procedure" subtitle="Most patients go home the same day. Book your evaluation now." />
+            <SharedCTA title="Day Care Hysteroscopy in Kolkata" subtitle="Most patients go home the same day. Book your evaluation now." />
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />
-        </main>
+        </main >
     );
 }

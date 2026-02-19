@@ -28,10 +28,12 @@ const methods = [
 ];
 
 const faqs = [
-    { q: "Will I go into menopause after a hysterectomy?", a: "Not necessarily. If your ovaries are preserved during the surgery, you will not enter menopause immediately. If ovaries are removed (oophorectomy), surgical menopause will begin. Dr. Khemani discusses this detailedly before surgery." },
-    { q: "How long is the recovery time?", a: "For laparoscopic hysterectomy (TLH), recovery is quick. Patients are discharged in 1-2 days and return to light activities in a week. Full recovery takes 2-3 weeks. Abdominal hysterectomy takes 4-6 weeks." },
-    { q: "Is it a major surgery?", a: "Yes, it is a major procedure, but with modern laparoscopic techniques, the impact on the body is minimized. It is excessively safe when performed by experienced hands." },
-    { q: "Will it affect my sex life?", a: "For most women, sex life improves after recovery because they are free from pain and bleeding. We recommend waiting 6-8 weeks after surgery to resume intercourse." },
+    { q: "Who is the best doctor for hysterectomy in Kolkata?", a: "Dr. Vinita Khemani is one of the most experienced gynecological surgeons in Kolkata for hysterectomy, with expertise in total laparoscopic hysterectomy (TLH), LAVH, and vaginal hysterectomy. She operates at leading hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital." },
+    { q: "Will I go into menopause after a hysterectomy?", a: "Not necessarily. If your ovaries are preserved during the surgery, you will not enter menopause immediately. If ovaries are removed (oophorectomy), surgical menopause will begin. Dr. Khemani discusses this in detail before surgery to help you make an informed decision." },
+    { q: "How long is the recovery time?", a: "For laparoscopic hysterectomy (TLH), recovery is quick. Patients are discharged in 1-2 days and return to light activities in a week. Full recovery takes 2-3 weeks. Abdominal hysterectomy takes 4-6 weeks. Dr. Khemani\u2019s minimally invasive approach ensures faster recovery." },
+    { q: "What is the cost of hysterectomy in Kolkata?", a: "The cost varies based on the type of procedure (TLH, LAVH, NDVH, or abdominal) and hospital chosen. Dr. Khemani operates at multiple hospitals in Kolkata, offering options for different budgets while maintaining the highest surgical standards." },
+    { q: "Is it a major surgery?", a: "Yes, it is a major procedure, but with modern laparoscopic techniques performed by Dr. Khemani in Kolkata, the impact on the body is minimized. It is very safe when performed by experienced hands with proper pre-operative evaluation." },
+    { q: "Will it affect my sex life?", a: "For most women, sex life improves after recovery because they are free from pain and bleeding. Dr. Khemani recommends waiting 6-8 weeks after surgery to resume intercourse." },
 ];
 
 export default function HysterectomyPage() {
@@ -54,17 +56,17 @@ export default function HysterectomyPage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Surgical Solutions</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[60px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-gray-900">Advanced </span> <br />
-                                        <span className="italic text-[#C21975]">Hysterectomy.</span>
+                                        <span className="text-gray-900">Laparoscopic Hysterectomy </span> <br />
+                                        <span className="italic text-[#C21975]">in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        When medication isn&apos;t enough, hysterectomy (uterus removal) can offer permanent relief from fibroids, heavy bleeding, or cancer risk. Dr. Vinita Khemani specializes in minimally invasive removal for faster recovery.
+                                        When medication isn&apos;t enough, hysterectomy (uterus removal) can offer permanent relief from fibroids, heavy bleeding, or cancer risk. Dr. Vinita Khemani, a leading gynecological surgeon in Kolkata, specializes in minimally invasive laparoscopic removal for faster recovery and minimal scarring.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
                                         className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                     >
-                                        Plan Your Surgery
+                                        Consult Dr. Khemani in Kolkata
                                         <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                             <ArrowUpRight className="w-6 h-6" />
                                         </span>
@@ -72,7 +74,7 @@ export default function HysterectomyPage() {
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[400px] md:h-[500px]">
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                        <Image src="/images/Laparoscopic Surgery.jpg" alt="Laparoscopic Hysterectomy" fill className="object-cover" />
+                                        <Image src="/images/Laparoscopic Surgery.jpg" alt="Laparoscopic hysterectomy surgery by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
                                     </div>
                                 </motion.div>
                             </div>
@@ -430,8 +432,9 @@ export default function HysterectomyPage() {
                 </div>
             </section>
 
-            <SharedCTA title="Is Surgery Right for You?" subtitle="Get a detailed assessment with Dr. Vinita Khemani before deciding." />
+            <SharedCTA title="Is Hysterectomy Right for You?" subtitle="Schedule a consultation with Dr. Vinita Khemani at her Kolkata clinics for a detailed assessment before deciding." />
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />
         </main>
     );

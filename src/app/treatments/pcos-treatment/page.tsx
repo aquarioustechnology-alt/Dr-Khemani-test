@@ -9,7 +9,8 @@ import { useState } from "react";
 import {
     HeartPulse, CheckCircle, ArrowUpRight, ChevronDown,
     Activity, Scale, Pill, AlertOctagon, Brain, Baby,
-    Utensils, X, Check
+    Utensils, X, Check, Stethoscope, ClipboardList,
+    Calendar, MapPin
 } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
@@ -30,7 +31,7 @@ const symptoms = [
 const causes = [
     {
         title: "Insulin Resistance",
-        desc: "Up to 70% of women with PCOS exhibit insulin resistance, where cells don't respond effectively to insulin. The body compensates by producing excess insulin, which directly stimulates the ovaries to release too many male hormones. This hormonal surge disrupts ovulation and causes common symptoms like resistant weight gain and dark patches on the skin.",
+        desc: "Up to 70% of women with PCOS exhibit insulin resistance, where cells don\u2019t respond effectively to insulin. The body compensates by producing excess insulin, which directly stimulates the ovaries to release too many male hormones. This hormonal surge disrupts ovulation and causes common symptoms like resistant weight gain and dark patches on the skin. Insulin resistance is particularly prevalent among women in Kolkata and urban West Bengal due to carb-heavy Bengali diets.",
         icon: Activity
     },
     {
@@ -71,11 +72,14 @@ const myths = [
 ];
 
 const faqs = [
-    { q: "Can PCOS be cured permanently?", a: "PCOS is a chronic, lifelong condition, meaning it cannot be 'cured' in the traditional sense. However, symptoms can be effectively managed and even reversed with the right combination of lifestyle changes, diet, and medical treatment, allowing women to live varied, healthy lives." },
-    { q: "Will I be able to get pregnant with PCOS?", a: "Yes, absolutely. PCOS is one of the most treatable causes of infertility. While irregular ovulation makes natural conception harder, treatments like ovulation induction (medicine to stimulate egg release), lifestyle changes, and IUI have very high success rates." },
-    { q: "Do I need to take birth control pills?", a: "Not necessarily. While oral contraceptives are a common treatment to regulate periods and reduce acne/hair growth, they are not the only option. Dr. Khemani prescribes treatment based on your primary goal—whether it's regularising cycles, managing symptoms, or planning pregnancy." },
-    { q: "How is PCOS diagnosed?", a: "Diagnosis follows the Rotterdam Criteria, requiring at least 2 of 3 signs: 1) Irregular periods, 2) Signs of high androgens (acne, excess hair) or blood tests showing it, 3) Polycystic ovaries seen on ultrasound. Dr. Khemani also checks insulin and thyroid levels." },
-    { q: "Does PCOS cause diabetes?", a: "More than half of women with PCOS develop Type 2 diabetes by age 40. This is due to insulin resistance. Regular screening and maintaining a healthy weight significantly reduce this risk." },
+    { q: "Who is the best doctor for PCOS treatment in Kolkata?", a: "Dr. Vinita Khemani is one of the most experienced gynecologists for PCOS treatment in Kolkata, with over 23 years of specialization in hormonal disorders and reproductive health. She practices at leading hospitals including Bhagirathi Neotia (New Town), Charnock Hospital (VIP Road), and ILS Hospital (Dumdum), offering evidence-based, personalized PCOS care to thousands of women across West Bengal." },
+    { q: "Can PCOS be cured permanently?", a: "PCOS is a chronic, lifelong condition, meaning it cannot be \u2018cured\u2019 in the traditional sense. However, symptoms can be effectively managed and even reversed with the right combination of lifestyle changes, diet, and medical treatment, allowing women to lead healthy, fulfilling lives. Dr. Vinita Khemani\u2019s holistic approach at her Kolkata clinics focuses on long-term symptom reversal rather than temporary fixes." },
+    { q: "How long does PCOS treatment take?", a: "The duration of PCOS treatment varies depending on the severity of symptoms and individual goals. Initial hormonal improvements are often visible within 3\u20136 months of consistent treatment. However, since PCOS is a lifelong condition, ongoing lifestyle management is recommended. Dr. Khemani creates phased treatment plans that progressively reduce medication dependency while building sustainable habits." },
+    { q: "What is the cost of PCOS treatment in Kolkata?", a: "The cost of PCOS treatment in Kolkata depends on the specific investigations and treatment plan required. An initial consultation with Dr. Vinita Khemani includes a detailed hormonal evaluation and ultrasound assessment. Subsequent costs vary based on whether the treatment involves medication alone, fertility support, or lifestyle counseling. Dr. Khemani\u2019s clinics are affiliated with multiple hospitals across Kolkata, offering flexible options for different budgets." },
+    { q: "Where is Dr. Vinita Khemani's clinic located?", a: "Dr. Vinita Khemani consults at multiple locations across Kolkata for patient convenience: Bhagirathi Neotia Woman and Child Care Centre (New Town), Charnock Hospital (VIP Road), Apollo Clinic (Chinar Park), Spandan Hospital, and ILS Hospital (Dumdum). You can book an appointment at the location most convenient to you." },
+    { q: "Will I be able to get pregnant with PCOS?", a: "Yes, absolutely. PCOS is one of the most treatable causes of infertility. While irregular ovulation makes natural conception harder, treatments like ovulation induction (medicine to stimulate egg release), lifestyle changes, and IUI have very high success rates. Dr. Khemani has helped thousands of women in Kolkata achieve successful pregnancies despite PCOS." },
+    { q: "How is PCOS diagnosed?", a: "Diagnosis follows the Rotterdam Criteria, requiring at least 2 of 3 signs: 1) Irregular periods, 2) Signs of high androgens (acne, excess hair) or blood tests showing it, 3) Polycystic ovaries seen on ultrasound. At her Kolkata clinics, Dr. Khemani also conducts comprehensive screening including insulin levels, thyroid function, and metabolic markers for a complete hormonal profile." },
+    { q: "Does PCOS cause diabetes?", a: "More than half of women with PCOS develop Type 2 diabetes by age 40. This is due to insulin resistance, which is particularly common among Indian women. Regular screening and maintaining a healthy weight significantly reduce this risk. Dr. Khemani recommends annual metabolic screening for all her PCOS patients in Kolkata." },
 ];
 
 export default function PCOSTreatmentPage() {
@@ -101,20 +105,20 @@ export default function PCOSTreatmentPage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Polycystic Ovary Syndrome</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[60px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-gray-900">Holistic Control Over</span> <br />
+                                        <span className="text-gray-900">Expert PCOS Treatment</span> <br />
                                         <span className="italic text-[#C21975]">
-                                            PCOS & Hormonal Health.
+                                            in Kolkata
                                         </span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        It&apos;s not just about irregular periods. Dr. Vinita Khemani offers a comprehensive, evidence-based approach to manage PCOS—tackling insulin resistance, fertility, body weight, and emotional well-being together.
+                                        It&apos;s not just about irregular periods. Dr. Vinita Khemani, one of Kolkata&apos;s most experienced gynecologists, offers a comprehensive, evidence-based approach to manage PCOS — tackling insulin resistance, fertility, body weight, and emotional well-being together.
                                     </p>
                                     <div className="flex flex-wrap gap-4">
                                         <button
                                             onClick={() => setIsEnquiryModalOpen(true)}
                                             className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-transform hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                         >
-                                            Book Consultation
+                                            Book PCOS Consultation in Kolkata
                                             <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                                 <ArrowUpRight className="w-6 h-6" />
                                             </span>
@@ -126,7 +130,7 @@ export default function PCOSTreatmentPage() {
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[450px] md:h-[550px] order-first">
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                        <Image src="/images/PCOS-bg.png" alt="PCOS Awareness and Treatment" fill className="object-cover" priority />
+                                        <Image src="/images/PCOS-bg.png" alt="PCOS treatment and awareness by Dr. Vinita Khemani in Kolkata" fill className="object-cover" priority />
                                     </div>
                                     {/* Float Card */}
                                     <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-lg max-w-[240px] hidden md:block border border-pink-100">
@@ -149,12 +153,12 @@ export default function PCOSTreatmentPage() {
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">India&apos;s Silent Epidemic</span>
-                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">PCOS in India: <br /><span className="text-[#C21975]">A Growing Concern</span></h2>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">PCOS in Kolkata <br /><span className="text-[#C21975]">&amp; West Bengal</span></h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                Polycystic Ovary Syndrome affects an estimated 1 in 5 Indian women of reproductive age, making it one of the most prevalent endocrine disorders in the country. According to studies published in the Indian Journal of Endocrinology and Metabolism, the prevalence of PCOS in India ranges from 3.7% to 22.5%, with urban areas showing significantly higher rates due to sedentary lifestyles and dietary changes.
+                                Polycystic Ovary Syndrome affects an estimated 1 in 5 Indian women of reproductive age, making it one of the most prevalent endocrine disorders in the country. In Kolkata and across West Bengal, the prevalence is particularly high — studies published in the Indian Journal of Endocrinology and Metabolism show rates ranging from 3.7% to 22.5% in urban populations, driven by sedentary lifestyles, high-carbohydrate Bengali diets, and increasing professional stress.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                What makes PCOS particularly challenging for Indian women is the intersection of genetic predisposition, high-carbohydrate diets (rice, roti, and sweets being dietary staples), increasing stress levels in urban environments, and cultural stigma around discussing reproductive health openly. Dr. Vinita Khemani has been at the forefront of PCOS awareness and treatment in Kolkata for over 23 years, helping thousands of women understand, manage, and overcome PCOS.
+                                What makes PCOS particularly challenging for women in Kolkata is the intersection of genetic predisposition, carb-heavy diets (rice, mishti, and traditional sweets being dietary staples), increasing stress levels in urban environments, and cultural stigma around discussing reproductive health openly. Dr. Vinita Khemani has been at the forefront of PCOS awareness and treatment in Kolkata for over 23 years, helping thousands of women across West Bengal understand, manage, and overcome PCOS.
                             </p>
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
                                 {[
@@ -173,7 +177,7 @@ export default function PCOSTreatmentPage() {
                                 onClick={() => setIsEnquiryModalOpen(true)}
                                 className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                             >
-                                Get Expert PCOS Assessment
+                                Book PCOS Assessment in Kolkata
                                 <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                     <ArrowUpRight className="w-6 h-6" />
                                 </span>
@@ -181,7 +185,7 @@ export default function PCOSTreatmentPage() {
                         </div>
                         <div className="relative">
                             <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                <Image src="/images/pcos-awareness-indian.jpg" alt="PCOS awareness among Indian women - Dr. Vinita Khemani Kolkata" fill className="object-cover" />
+                                <Image src="/images/pcos-awareness-indian.jpg" alt="PCOS awareness and treatment for women in Kolkata by Dr. Vinita Khemani" fill className="object-cover" />
                             </div>
                             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
                                 <p className="text-sm font-bold text-gray-900 mb-1">Did You Know?</p>
@@ -200,10 +204,10 @@ export default function PCOSTreatmentPage() {
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Root Causes</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Understanding <span className="text-[#C21975]">Why It Happens</span></h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                PCOS is complex and presents differently in every woman. It often stems from a combination of genetic and environmental factors that disrupt hormonal harmony.
+                                PCOS is complex and presents differently in every woman. It often stems from a combination of genetic and environmental factors that disrupt hormonal harmony. Dr. Vinita Khemani&apos;s diagnostic approach in Kolkata focuses on identifying the specific root cause in each patient.
                             </p>
                             <div className="relative h-[400px] rounded-[2rem] overflow-hidden shadow-2xl">
-                                <Image src="/images/2023-04-23 (1).webp" alt="Doctor explaining causes" fill className="object-cover" />
+                                <Image src="/images/2023-04-23 (1).webp" alt="Dr. Vinita Khemani explaining PCOS causes during consultation in Kolkata" fill className="object-cover" />
                             </div>
                         </div>
 
@@ -259,12 +263,12 @@ export default function PCOSTreatmentPage() {
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
                 <div className="container-fluid mx-auto max-w-[1200px] px-6 text-center relative z-10">
                     <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">Worried About PCOS Symptoms?</h3>
-                    <p className="text-pink-100 text-lg mb-8 max-w-2xl mx-auto">Don&apos;t wait for symptoms to worsen. Early intervention can prevent long-term complications like diabetes, heart disease, and infertility. Get a comprehensive evaluation today.</p>
+                    <p className="text-pink-100 text-lg mb-8 max-w-2xl mx-auto">Don&apos;t wait for symptoms to worsen. Early intervention can prevent long-term complications like diabetes, heart disease, and infertility. Schedule an appointment with Dr. Vinita Khemani at her Kolkata clinics for a comprehensive evaluation today.</p>
                     <button
                         onClick={() => setIsEnquiryModalOpen(true)}
                         className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg transition-transform hover:scale-105 shadow-xl"
                     >
-                        Schedule Your PCOS Checkup
+                        Schedule Appointment with Dr. Khemani
                         <span className="w-12 h-12 rounded-full bg-[#C21975] text-white flex items-center justify-center transition-transform group-hover:rotate-45">
                             <ArrowUpRight className="w-6 h-6" />
                         </span>
@@ -283,7 +287,7 @@ export default function PCOSTreatmentPage() {
                                 Could You Have <span className="text-[#C21975]">PCOS?</span>
                             </h2>
                             <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-                                Symptoms vary widely. You don&apos;t need to have cysts on your ovaries to have PCOS. If you experience two or more of these signs, a clinical evaluation is recommended.
+                                Symptoms vary widely. You don&apos;t need to have cysts on your ovaries to have PCOS. If you experience two or more of these signs, consult a PCOS specialist in Kolkata for a clinical evaluation.
                             </p>
                             <div className="grid sm:grid-cols-2 gap-4">
                                 {symptoms.map((s, i) => (
@@ -296,7 +300,7 @@ export default function PCOSTreatmentPage() {
                         </div>
                         <div className="relative lg:order-first">
                             <div className="relative h-[600px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white">
-                                <Image src="/images/2023-04-06.webp" alt="PCOS Awareness" fill className="object-cover" />
+                                <Image src="/images/2023-04-06.webp" alt="PCOS symptom awareness and diagnosis in Kolkata" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#540d2d]/80 via-transparent to-transparent" />
                                 <div className="absolute bottom-0 left-0 p-8 w-full text-white">
                                     <div className="flex items-center gap-4 mb-4">
@@ -325,7 +329,7 @@ export default function PCOSTreatmentPage() {
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Clinical Evaluation</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Accurate <span className="text-[#C21975]">PCOS Diagnosis</span></h2>
                             <p className="text-gray-600 text-lg mb-8">
-                                Diagnosis is confirmed if you meet <strong>2 out of 3</strong> Rotterdam Criteria. We ensure a thorough check to rule out other hormonal issues.
+                                At her Kolkata clinics, Dr. Vinita Khemani confirms diagnosis using the internationally recognized Rotterdam Criteria — requiring at least <strong>2 out of 3</strong> markers. A thorough evaluation rules out other hormonal conditions like thyroid dysfunction.
                             </p>
 
                             <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -352,7 +356,7 @@ export default function PCOSTreatmentPage() {
 
                             <div className="flex flex-wrap gap-4">
                                 <button onClick={() => setIsEnquiryModalOpen(true)} className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-3 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]">
-                                    Book Consultation
+                                    Book PCOS Diagnosis in Kolkata
                                     <span className="w-8 h-8 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45"><ArrowUpRight className="w-4 h-4" /></span>
                                 </button>
                                 <div className="px-6 py-3 rounded-full border border-pink-200 bg-white/50 text-sm text-gray-600 flex items-center gap-2">
@@ -364,7 +368,7 @@ export default function PCOSTreatmentPage() {
 
                         {/* Right Image */}
                         <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.29 PM.jpeg" alt="PCOS Diagnosis Consultation Dr. Khemani" fill className="object-cover" />
+                            <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.29 PM.jpeg" alt="PCOS diagnosis and hormonal evaluation by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
                         </div>
                     </div>
                 </div>
@@ -376,7 +380,7 @@ export default function PCOSTreatmentPage() {
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         {/* Left Image */}
                         <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl">
-                            <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg" alt="Consultation regarding long-term risks" fill className="object-cover" />
+                            <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg" alt="PCOS long-term health risk consultation at Dr. Khemani clinic Kolkata" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                             <div className="absolute bottom-8 left-8 right-8 text-white">
                                 <p className="text-lg font-bold">Holistic Health</p>
@@ -389,7 +393,7 @@ export default function PCOSTreatmentPage() {
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-red-200 text-red-600 bg-red-50">Health Alert</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Long-Term <span className="text-red-500">Risks</span></h2>
                             <p className="text-gray-600 text-lg mb-10 leading-relaxed">
-                                Untreated PCOS is more than just irregular periods. The chronic hormonal imbalance and inflammation can lead to serious lifelong health complications if not managed early.
+                                Untreated PCOS is more than just irregular periods. The chronic hormonal imbalance and inflammation can lead to serious lifelong health complications if not managed early. Dr. Khemani emphasizes preventive screening for all her PCOS patients in Kolkata to detect risks before they escalate.
                             </p>
 
                             <div className="grid sm:grid-cols-2 gap-6">
@@ -469,7 +473,7 @@ export default function PCOSTreatmentPage() {
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="relative h-[600px] rounded-[3rem] overflow-hidden hidden lg:block shadow-2xl">
-                            <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM.jpeg" alt="PCOS Treatment Personalized Plan" fill className="object-cover" />
+                            <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM.jpeg" alt="Personalized PCOS treatment plan by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
                             <div className="absolute inset-0 bg-black/20" />
                             <div className="absolute bottom-10 left-10 right-10 text-white">
                                 <h3 className="text-3xl font-bold mb-2">Holistic Care</h3>
@@ -479,7 +483,7 @@ export default function PCOSTreatmentPage() {
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Clinical Approach</span>
                             <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-12">
-                                Personalized <br />
+                                Personalized PCOS <br />
                                 <span className="text-[#C21975]">Treatment Plan</span>
                             </h2>
                             <div className="space-y-8">
@@ -522,6 +526,63 @@ export default function PCOSTreatmentPage() {
                             </div>
                         </div>
                     </div>
+
+                    {/* Dr. Khemani's Approach Sub-Section */}
+                    <div className="mt-20 bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
+                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Specialist Care</span>
+                                <h3 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-6">Dr. Vinita Khemani&apos;s Approach to <span className="text-[#C21975]">PCOS Treatment in Kolkata</span></h3>
+                                <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                    With over 23 years of experience treating PCOS in Kolkata, Dr. Vinita Khemani follows a structured, multi-phase approach that goes beyond just prescribing medication. Every patient receives a tailored care plan designed to address her unique hormonal profile, lifestyle, and health goals.
+                                </p>
+                                <div className="space-y-4">
+                                    {[
+                                        { icon: Stethoscope, title: "Personalized Hormonal Evaluation", desc: "Complete hormonal panel including LH, FSH, testosterone, DHEAS, insulin fasting, and thyroid profile to identify your specific PCOS phenotype." },
+                                        { icon: ClipboardList, title: "Ultrasound-Based Diagnosis", desc: "High-resolution pelvic ultrasound to assess ovarian morphology, follicle count, and endometrial thickness for accurate staging." },
+                                        { icon: Utensils, title: "Lifestyle & Nutrition Counseling", desc: "Customized diet plans adapted for Indian/Bengali cuisine, exercise protocols, and stress management strategies proven to reduce insulin resistance." },
+                                        { icon: Baby, title: "Fertility-Focused Planning", desc: "For women trying to conceive, structured ovulation induction with follicular monitoring, timed intercourse guidance, or IUI coordination." },
+                                        { icon: Calendar, title: "Long-Term Monitoring & Follow-Up", desc: "Regular follow-ups with metabolic screening, hormone tracking, and treatment adjustments to ensure sustained improvement over time." }
+                                    ].map((item, i) => (
+                                        <div key={i} className="flex gap-4 p-4 bg-white rounded-xl border border-pink-50 shadow-sm hover:shadow-md transition-shadow">
+                                            <div className="w-10 h-10 rounded-full bg-[#fdeef6] text-[#C21975] flex items-center justify-center shrink-0">
+                                                <item.icon className="w-5 h-5" />
+                                            </div>
+                                            <div>
+                                                <p className="font-bold text-gray-900 text-sm">{item.title}</p>
+                                                <p className="text-gray-600 text-sm">{item.desc}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-6">
+                                <div className="bg-white p-8 rounded-2xl shadow-sm border border-pink-100">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <MapPin className="w-6 h-6 text-[#C21975]" />
+                                        <h4 className="font-bold text-gray-900 text-lg">Clinic Locations in Kolkata</h4>
+                                    </div>
+                                    <div className="space-y-3">
+                                        {["Bhagirathi Neotia — New Town", "Charnock Hospital — VIP Road", "Apollo Clinic — Chinar Park", "Spandan Hospital", "ILS Hospital — Dumdum"].map((loc, i) => (
+                                            <div key={i} className="flex items-center gap-2">
+                                                <CheckCircle className="w-4 h-4 text-[#C21975] shrink-0" />
+                                                <span className="text-sm text-gray-700">{loc}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                <button
+                                    onClick={() => setIsEnquiryModalOpen(true)}
+                                    className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e] w-fit"
+                                >
+                                    Schedule Appointment with Dr. Khemani
+                                    <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+                                        <ArrowUpRight className="w-6 h-6" />
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -530,7 +591,7 @@ export default function PCOSTreatmentPage() {
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last lg:order-first sticky top-32">
-                            <Image src="/images/pcos-exercise-yoga.jpg" alt="Indian woman doing yoga exercise for PCOS management" fill className="object-cover" />
+                            <Image src="/images/pcos-exercise-yoga.jpg" alt="Yoga and exercise for PCOS management recommended by Dr. Khemani in Kolkata" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#540d2d]/60 via-transparent to-transparent" />
                             <div className="absolute bottom-8 left-8 right-8 text-white">
                                 <p className="text-lg font-bold">30 Minutes Daily</p>
@@ -566,7 +627,7 @@ export default function PCOSTreatmentPage() {
                                 onClick={() => setIsEnquiryModalOpen(true)}
                                 className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                             >
-                                Get Personalized Lifestyle Plan
+                                Get PCOS Lifestyle Plan in Kolkata
                                 <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                     <ArrowUpRight className="w-6 h-6" />
                                 </span>
@@ -602,7 +663,7 @@ export default function PCOSTreatmentPage() {
                             </div>
                         </div>
                         <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white sticky top-32">
-                            <Image src="/images/family-planning-counseling.jpg" alt="Mental health counseling and support for PCOS" fill className="object-cover object-top" />
+                            <Image src="/images/family-planning-counseling.jpg" alt="PCOS mental health and emotional support counseling in Kolkata" fill className="object-cover object-top" />
                         </div>
                     </div>
                 </div>
@@ -613,8 +674,8 @@ export default function PCOSTreatmentPage() {
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="text-center mb-16">
                         <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Trusted Expertise</span>
-                        <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-4">Why Women in Kolkata <span className="text-[#C21975]">Trust Dr. Khemani</span></h2>
-                        <p className="text-gray-600 text-lg max-w-3xl mx-auto">With over 23 years of clinical experience specializing in PCOS, Dr. Vinita Khemani combines evidence-based medicine with a deeply empathetic approach to patient care.</p>
+                        <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-4">Why Women in Kolkata <span className="text-[#C21975]">Trust Dr. Khemani</span> for PCOS</h2>
+                        <p className="text-gray-600 text-lg max-w-3xl mx-auto">With over 23 years of clinical experience specializing in PCOS treatment in Kolkata, Dr. Vinita Khemani combines evidence-based medicine with a deeply empathetic approach to patient care across multiple hospitals in West Bengal.</p>
                     </div>
                     <div className="grid lg:grid-cols-3 gap-8 mb-12">
                         {[
@@ -632,7 +693,7 @@ export default function PCOSTreatmentPage() {
                     </div>
                     <div className="grid lg:grid-cols-2 gap-12 items-stretch bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
                         <div className="relative min-h-[500px] h-full rounded-[2rem] overflow-hidden shadow-xl">
-                            <Image src="/images/pcos_doctor_consult_1771254617510.png" alt="Dr. Vinita Khemani consulting patient about PCOS treatment in Kolkata" fill className="object-cover" />
+                            <Image src="/images/pcos_doctor_consult_1771254617510.png" alt="Dr. Vinita Khemani - best PCOS specialist in Kolkata during patient consultation" fill className="object-cover" />
                         </div>
                         <div className="flex flex-col justify-center items-start">
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Dr. Vinita Khemani&apos;s PCOS Philosophy</h3>
@@ -662,7 +723,7 @@ export default function PCOSTreatmentPage() {
                                 onClick={() => setIsEnquiryModalOpen(true)}
                                 className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e] w-fit"
                             >
-                                Consult Dr. Khemani Today
+                                Book PCOS Consultation in Kolkata
                                 <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                     <ArrowUpRight className="w-6 h-6" />
                                 </span>
@@ -687,7 +748,7 @@ export default function PCOSTreatmentPage() {
                                     <span className="text-[#C21975]">Questions</span>
                                 </h2>
                                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                                    Expert answers to help you navigate your PCOS journey with confidence.
+                                    Expert answers from Dr. Vinita Khemani to help you navigate your PCOS journey in Kolkata with confidence.
                                 </p>
                                 <button
                                     onClick={() => setIsEnquiryModalOpen(true)}
@@ -744,11 +805,49 @@ export default function PCOSTreatmentPage() {
             </section>
 
             {/* Shared CTA Section */}
-            <SharedCTA title="Take Control of Your PCOS" subtitle="Get a comprehensive evaluation and personalized treatment plan from Dr. Vinita Khemani." />
+            <SharedCTA title="Take Control of Your PCOS in Kolkata" subtitle="Schedule an appointment with Dr. Vinita Khemani for a comprehensive PCOS evaluation and personalized treatment plan at her Kolkata clinics." />
 
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@graph": [
+                        {
+                            "@type": "FAQPage",
+                            "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
+                        },
+                        {
+                            "@type": "MedicalWebPage",
+                            "name": "PCOS Treatment in Kolkata | Dr. Vinita Khemani",
+                            "description": "Comprehensive PCOS/PCOD management by Dr. Vinita Khemani in Kolkata including hormonal evaluation, lifestyle counseling, fertility support, and long-term monitoring.",
+                            "about": {
+                                "@type": "MedicalCondition",
+                                "name": "Polycystic Ovary Syndrome (PCOS)",
+                                "alternateName": "PCOD"
+                            },
+                            "specialty": "Gynecology",
+                            "lastReviewed": "2026-02-19"
+                        },
+                        {
+                            "@type": "Physician",
+                            "name": "Dr. Vinita Khemani",
+                            "medicalSpecialty": "Gynecology & Obstetrics",
+                            "description": "Senior gynecologist in Kolkata with 23+ years of experience specializing in PCOS treatment, laparoscopic surgery, and fertility care.",
+                            "areaServed": {
+                                "@type": "City",
+                                "name": "Kolkata",
+                                "containedInPlace": { "@type": "State", "name": "West Bengal" }
+                            },
+                            "availableService": {
+                                "@type": "MedicalProcedure",
+                                "name": "PCOS Treatment",
+                                "procedureType": "Therapeutic"
+                            }
+                        }
+                    ]
+                })
+            }} />
             <Footer />
         </main>
     );

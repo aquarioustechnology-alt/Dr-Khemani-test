@@ -54,10 +54,11 @@ const journeySteps = [
 ];
 
 const faqs = [
-    { q: "When should I see a fertility specialist?", a: "If you've been trying to conceive for over 12 months (or 6 months if over 35) without success, it's time to consult a fertility specialist. Dr. Vinita Khemani provides comprehensive evaluation and treatment." },
-    { q: "What are the common causes of infertility?", a: "Common causes include PCOS, tubal blockage, endometriosis, low sperm count/motility, thyroid disorders, and age-related decline. About 30% of cases involve both partners." },
-    { q: "What is the success rate of IUI?", a: "IUI success rates range from 10-20% per cycle depending on age, cause of infertility, and sperm quality. Multiple cycles may be recommended for optimal results." },
-    { q: "Does Dr. Khemani perform IVF?", a: "Dr. Khemani provides fertility evaluation, ovulation induction, and IUI at her clinic. For IVF, she coordinates with leading IVF centers in Kolkata and manages the complete care pathway." },
+    { q: "Who is the best fertility doctor in Kolkata?", a: "Dr. Vinita Khemani is a renowned fertility specialist in Kolkata offering success-oriented treatment plans, including ovulation induction and IUI. She coordinates advanced IVF care with top fertility centers in the city when needed." },
+    { q: "When should I see a fertility specialist?", a: "If you've been trying to conceive for over 12 months (or 6 months if over 35) without success, it's time to consult Dr. Khemani in Kolkata for a comprehensive evaluation and personalized treatment plan." },
+    { q: "What are the common causes of infertility?", a: "Common causes include PCOS, tubal blockage, endometriosis, low sperm count/motility, thyroid disorders, and age-related decline. About 30% of cases involve both partners, which is why Dr. Khemani evaluates couples together." },
+    { q: "What is the success rate of IUI in Kolkata?", a: "IUI success rates typically range from 10-20% per cycle depending on age and underlying causes. Dr. Khemani optimizes protocols to maximize success chances at her Kolkata clinic." },
+    { q: "Does Dr. Khemani perform IVF?", a: "Dr. Khemani provides extensive fertility evaluation, ovulation induction, and IUI at her clinic. For IVF, she coordinates seamlessly with leading IVF centers in Kolkata, managing your care pathway personally." },
 ];
 
 export default function FertilityPage() {
@@ -80,11 +81,11 @@ export default function FertilityPage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Fertility Solutions</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[56px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Your Dream of</span> <br />
-                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">Parenthood Awaits.</span>
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Fertility Specialist</span> <br />
+                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Evidence-based fertility treatment by Dr. Vinita Khemani. From thorough evaluation to IUI and IVF coordination — compassionate care for every couple&apos;s unique journey.
+                                        Evidence-based fertility treatment by Dr. Vinita Khemani. From thorough evaluation to IUI and IVF coordination in Kolkata — compassionate care for every couple&apos;s unique journey.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -95,7 +96,7 @@ export default function FertilityPage() {
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[400px] md:h-[500px] order-first lg:order-none">
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl">
-                                        <Image src="/images/best-lady-gynecologist-kolkata.webp" alt="Fertility Treatment in Kolkata" fill className="object-cover" priority />
+                                        <Image src="/images/best-lady-gynecologist-kolkata.webp" alt="Fertility treatment and counseling by Dr. Vinita Khemani in Kolkata" fill className="object-cover" priority />
                                     </div>
                                 </motion.div>
                             </div>
@@ -465,12 +466,12 @@ export default function FertilityPage() {
             </section>
 
             {/* Shared CTA Section */}
-            <SharedCTA title="Start Your Journey Today" subtitle="Consult Dr. Vinita Khemani for personalized fertility guidance and compassionate care." />
+            <SharedCTA title="Start Your Fertility Journey in Kolkata" subtitle="Consult Dr. Vinita Khemani for personalized fertility guidance and compassionate care." />
 
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />
-        </main>
+        </main >
     );
 }

@@ -19,8 +19,10 @@ const procedures = [
 ];
 
 const faqs = [
-    { q: "Why choose advanced laparoscopy over open surgery?", a: "Advanced laparoscopy offers significant benefits: minimal scarring (tiny 5mm incisions), less post-operative pain, shorter hospital stay (often 24 hours), and a much faster return to daily life (1-2 weeks vs 6 weeks)." },
-    { q: "Is it safe for large fibroids?", a: "Yes. With advanced morcellation techniques, even large fibroids can be safely removed through tiny incisions. Dr. Khemani has extensive experience in handling complex, large-volume uteri laparoscopically." },
+    { q: "Who is the best doctor for laparoscopic surgery in Kolkata?", a: "Dr. Vinita Khemani is a leading laparoscopic surgeon in Kolkata, known for her expertise in complex minimally invasive procedures like TLH, myomectomy, and endometriosis excision. She operates at top hospitals including Bhagirathi Neotia, Charnock Hospital, and Apollo Clinic." },
+    { q: "Why choose advanced laparoscopy over open surgery?", a: "Advanced laparoscopy offers significant benefits: minimal scarring (tiny 5mm incisions), less post-operative pain, shorter hospital stay (often 24 hours), and a much faster return to daily life (1-2 weeks vs 6 weeks). Dr. Khemani specializes in these minimally invasive techniques." },
+    { q: "What is the cost of laparoscopic surgery in Kolkata?", a: "The cost varies depending on the procedure (e.g., diagnostic vs. operative, hysterectomy vs. cystectomy) and the hospital chosen. Dr. Khemani offers surgical options at multiple hospitals in Kolkata to suit different insurance and budget requirements." },
+    { q: "Is it safe for large fibroids?", a: "Yes. With advanced morcellation techniques, even large fibroids can be safely removed through tiny incisions. Dr. Khemani has extensive experience in handling complex, large-volume uteri laparoscopically in Kolkata." },
     { q: "Can previous C-sections affect laparoscopy?", a: "Previous surgeries can cause adhesions (scar tissue), but they are not a contraindication. Advanced laparoscopic skills allow for safe adhesiolysis (clearing of scars) to proceed with the surgery." },
     { q: "How long does the surgery take?", a: "Duration varies by procedure. A diagnostic laparoscopy may take 30 minutes, while a complex TLH or myomectomy could take 1-3 hours depending on severity." },
 ];
@@ -47,17 +49,17 @@ export default function AdvancedLaparoscopyPage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Minimally Invasive Excellence</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[60px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-gray-900">Advanced </span> <br />
-                                        <span className="italic text-[#C21975]">Laparoscopy.</span>
+                                        <span className="text-gray-900">Advanced Laparoscopic </span> <br />
+                                        <span className="italic text-[#C21975]">Procedures in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Complex gynecological surgeries performed through tiny incision. Less pain, minimal scarring, and faster return to normal life. Dr. Vinita Khemani is a master of keyhole surgery.
+                                        Complex gynecological surgeries performed through tiny incision. Less pain, minimal scarring, and faster return to normal life. Dr. Vinita Khemani is a master of keyhole surgery in Kolkata with over 608+ successful procedures.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
                                         className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                     >
-                                        Book Consultation
+                                        Book Surgical Consultation
                                         <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                             <ArrowUpRight className="w-6 h-6" />
                                         </span>
@@ -65,7 +67,7 @@ export default function AdvancedLaparoscopyPage() {
                                 </motion.div>
                                 <motion.div className="relative h-[400px] md:h-[500px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                        <Image src="/images/Laparoscopic Surgery.jpg" alt="Keyhole Surgery" fill className="object-cover" />
+                                        <Image src="/images/Laparoscopic Surgery.jpg" alt="Advanced laparoscopic keyhole surgery in Kolkata by Dr. Vinita Khemani" fill className="object-cover" />
                                     </div>
                                     {/* Float Card */}
                                     <motion.div
@@ -458,9 +460,10 @@ export default function AdvancedLaparoscopyPage() {
                 </div>
             </section>
 
-            <SharedCTA title="Advanced Care, Minimal Pain" subtitle="Choose the best for your surgical needs." />
+            <SharedCTA title="Advanced Laparoscopic Care in Kolkata" subtitle="Choose Dr. Vinita Khemani for safe, minimally invasive surgical solutions." />
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />
-        </main>
+        </main >
     );
 }

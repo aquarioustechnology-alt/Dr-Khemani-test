@@ -29,8 +29,10 @@ const benefits = [
 ];
 
 const faqs = [
+    { q: "Who is the best laparoscopic surgeon in Kolkata?", a: "Dr. Vinita Khemani is one of the most trusted laparoscopic surgeons in Kolkata with over 23 years of experience. She has performed 583+ successful surgeries, specializing in fibroid removal, ovarian cysts, and hysterectomy with minimal scarring." },
     { q: "What is laparoscopic surgery?", a: "Laparoscopic surgery (keyhole surgery) is a minimally invasive technique where operations are performed through 2-3 tiny incisions (5-10mm) using a camera and specialized instruments. It offers less pain, faster recovery, and minimal scarring compared to open surgery." },
-    { q: "How long is the recovery after laparoscopic surgery?", a: "Most patients can go home the same day or within 24 hours. Normal activities can be resumed within 48 hours, and full recovery typically takes 1-2 weeks compared to 4-6 weeks for open surgery." },
+    { q: "How long is the recovery after laparoscopic surgery?", a: "Most patients can go home the same day or within 24 hours. Normal activities can be resumed within 48 hours, and full recovery typically takes 1-2 weeks compared to 4-6 weeks for open surgery. Dr. Khemani ensures rapid recovery protocols." },
+    { q: "What is the cost of laparoscopic surgery in Kolkata?", a: "The cost depends on the complexity of the procedure (e.g., diagnostic vs operative) and the hospital facility chosen. Dr. Khemani operates at multiple reputable hospitals in Kolkata to provide flexible options for her patients." },
     { q: "Is laparoscopic surgery safe?", a: "Yes. Laparoscopic surgery is extremely safe when performed by an experienced surgeon. Dr. Vinita Khemani has performed 583+ successful laparoscopic procedures with excellent outcomes." },
     { q: "What conditions can be treated laparoscopically?", a: "Fibroids, ovarian cysts, endometriosis, ectopic pregnancy, adhesions, tubal ligation, diagnostic evaluation of infertility, and hysterectomy can all be performed laparoscopically." },
 ];
@@ -55,11 +57,11 @@ export default function LaparoscopicSurgeryPage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Minimally Invasive</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[56px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Advanced Laparoscopic</span> <br />
-                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">Surgery in Kolkata.</span>
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Laparoscopic Surgery</span> <br />
+                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        583+ successful laparoscopic surgeries by Dr. Vinita Khemani. Keyhole procedures with minimal pain, tiny scars, and recovery in days — not weeks.
+                                        Dr. Vinita Khemani, a leading gynecological surgeon in Kolkata, has performed 583+ successful laparoscopic surgeries. Keyhole procedures with minimal pain, tiny scars, and recovery in days — not weeks.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -319,7 +321,7 @@ export default function LaparoscopicSurgeryPage() {
             </section>
 
             {/* Shared CTA Section */}
-            <SharedCTA title="Need Surgery Consultation?" subtitle="Discuss your condition with Dr. Vinita Khemani and explore minimally invasive options." />
+            <SharedCTA title="Need Laparoscopic Surgery in Kolkata?" subtitle="Consult Dr. Vinita Khemani for safe, minimally invasive surgical solutions tailored to your needs." />
 
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 

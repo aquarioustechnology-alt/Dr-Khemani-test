@@ -19,10 +19,12 @@ const symptoms = [
 ];
 
 const faqs = [
-    { q: "What is Endometriosis?", a: "Endometriosis is a condition where tissue similar to the lining of the uterus grows outside it—on the ovaries, fallopian tubes, and pelvic lining. This tissue sheds during periods but has no way to exit, causing intense pain, inflammation, and scar tissue." },
-    { q: "Can Endometriosis cause infertility?", a: "Yes, about 30-50% of women with endometriosis face fertility issues. The condition can block fallopian tubes, distort pelvic anatomy, or create an inflammatory environment that affects egg quality. However, with proper treatment (like laparoscopic excision or IVF), pregnancy is very much possible." },
+    { q: "Who is the best doctor for endometriosis in Kolkata?", a: "Dr. Vinita Khemani is one of the most experienced gynecologists for endometriosis treatment in Kolkata, with over 23 years of expertise in advanced laparoscopic excision surgery. She practices at leading hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital." },
+    { q: "What is Endometriosis?", a: "Endometriosis is a condition where tissue similar to the lining of the uterus grows outside it—on the ovaries, fallopian tubes, and pelvic lining. This tissue sheds during periods but has no way to exit, causing intense pain, inflammation, and scar tissue. It affects approximately 1 in 10 women of reproductive age." },
+    { q: "Can Endometriosis cause infertility?", a: "Yes, about 30-50% of women with endometriosis face fertility issues. The condition can block fallopian tubes, distort pelvic anatomy, or create an inflammatory environment that affects egg quality. Dr. Khemani\u2019s laparoscopic excision approach in Kolkata preserves fertility while removing disease." },
+    { q: "What is the cost of endometriosis treatment in Kolkata?", a: "The cost depends on the severity and treatment approach. Hormonal management is more affordable, while laparoscopic excision surgery costs vary based on the hospital and complexity. Dr. Khemani practices at multiple hospitals in Kolkata, offering options for different budgets." },
     { q: "Is surgery the only option?", a: "Not always. For mild cases or those not planning immediate pregnancy, hormonal medications (pills, injections) are the first line of treatment to suppress pain. However, for deep infiltrating endometriosis or large cysts (Endometriomas), laparoscopic surgery is the gold standard." },
-    { q: "Will Endometriosis come back after surgery?", a: "There is a chance of recurrence, but expert excision surgery significantly lowers this risk compared to simple ablation. Dr. Khemani focuses on removing the disease from the root to provide long-term relief." },
+    { q: "Will Endometriosis come back after surgery?", a: "There is a chance of recurrence, but expert excision surgery significantly lowers this risk compared to simple ablation. Dr. Khemani focuses on removing the disease from the root to provide long-term relief, combined with post-operative medical management." },
 ];
 
 export default function EndometriosisPage() {
@@ -48,17 +50,17 @@ export default function EndometriosisPage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Endometriosis Care</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[60px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-gray-900">Relief from </span> <br />
-                                        <span className="italic text-[#C21975]">Chronic Pain.</span>
+                                        <span className="text-gray-900">Endometriosis Treatment </span> <br />
+                                        <span className="italic text-[#C21975]">in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Endometriosis is often dismissed as &quot;just a bad period,&quot; but we know it&apos;s a whole-body condition. Dr. Vinita Khemani offers expert diagnosis and advanced laparoscopic excision to restore your quality of life and fertility.
+                                        Endometriosis is often dismissed as &quot;just a bad period,&quot; but it&apos;s a whole-body condition affecting 1 in 10 women. Dr. Vinita Khemani, an experienced gynecologist in Kolkata, offers expert diagnosis and advanced laparoscopic excision to restore your quality of life and fertility.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
                                         className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                     >
-                                        Book Consultation
+                                        Book Endometriosis Consultation in Kolkata
                                         <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                             <ArrowUpRight className="w-6 h-6" />
                                         </span>
@@ -66,7 +68,7 @@ export default function EndometriosisPage() {
                                 </motion.div>
                                 <motion.div className="relative h-[450px] md:h-[550px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                        <Image src="/images/2023-04-23.webp" alt="Endometriosis Treatment" fill className="object-cover" />
+                                        <Image src="/images/2023-04-23.webp" alt="Endometriosis treatment and diagnosis by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
                                     </div>
                                     {/* Stats Card */}
                                     <div className="absolute bottom-10 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[260px] hidden md:block">
@@ -513,8 +515,9 @@ export default function EndometriosisPage() {
                 </div>
             </section>
 
-            <SharedCTA title="Stop Living with Pain" subtitle="Get an expert evaluation for Endometriosis today." />
+            <SharedCTA title="Stop Living with Endometriosis Pain" subtitle="Schedule an appointment with Dr. Vinita Khemani for expert endometriosis evaluation and treatment at her Kolkata clinics." />
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />
         </main>
     );

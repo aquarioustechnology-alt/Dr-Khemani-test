@@ -88,10 +88,12 @@ const services = [
 ];
 
 const faqs = [
-    { q: "At what age does menopause typically start?", a: "The average age of natural menopause in Indian women is 46-48 years. Perimenopause (the transitional phase) can begin 4-8 years earlier. Some women may experience early menopause before 40." },
-    { q: "Is HRT safe?", a: "Modern HRT is very safe when prescribed appropriately and individualized. Dr. Khemani carefully evaluates each patient's risk profile before recommending hormone therapy. For most women, benefits significantly outweigh risks when started within 10 years of menopause." },
+    { q: "Who is the best doctor for menopause treatment in Kolkata?", a: "Dr. Vinita Khemani is a leading menopause specialist in Kolkata, offering holistic care that includes HRT, bone health screening, and lifestyle counseling. She practices at top clinics in Kolkata including Bhagirathi Neotia and Apollo Clinic." },
+    { q: "At what age does menopause typically start?", a: "The average age of natural menopause in Indian women is 46-48 years. Perimenopause (the transitional phase) can begin 4-8 years earlier. Some women in Kolkata may experience early menopause due to lifestyle or genetic factors." },
+    { q: "Is HRT safe?", a: "Modern HRT is very safe when prescribed appropriately and individualized. Dr. Khemani carefully evaluates each patient's risk profile (history of breast cancer, clots) before recommending hormone therapy at her Kolkata clinics." },
+    { q: "What is the cost of menopause treatment in Kolkata?", a: "Consultation and treatment costs vary based on the required tests (DEXA, lipid profile) and therapy type (HRT vs non-hormonal). Dr. Khemani offers comprehensive menopause packages suited for different needs." },
     { q: "What are the alternatives to HRT?", a: "For women who cannot or prefer not to take HRT, alternatives include non-hormonal medications (SSRIs, gabapentin), herbal supplements, cognitive behavioral therapy for hot flashes, and intensive lifestyle modifications." },
-    { q: "How do I know if I'm in menopause?", a: "Classic signs include irregular periods (eventually stopping), hot flashes, night sweats, vaginal dryness, mood changes, and sleep problems. Blood tests for FSH and estradiol can confirm menopause." },
+    { q: "How do I know if I'm in menopause?", a: "Classic signs include irregular periods (eventually stopping), hot flashes, night sweats, vaginal dryness, mood changes, and sleep problems. Dr. Khemani can confirm menopause with blood tests (FSH, estradiol) at her Kolkata clinic." },
 ];
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -181,11 +183,11 @@ export default function MenopausePage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Menopause Care</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[56px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Graceful Menopause</span> <br />
-                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">Management & HRT.</span>
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Menopause Management</span> <br />
+                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">& HRT in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Dr. Vinita Khemani provides compassionate menopause care — from symptom relief and HRT to bone health and long-term wellness strategies for every stage of the journey.
+                                        Dr. Vinita Khemani provides compassionate menopause care in Kolkata — from symptom relief and HRT to bone health and long-term wellness strategies for every stage of the journey.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -196,7 +198,7 @@ export default function MenopausePage() {
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[400px] md:h-[500px] order-first lg:order-none">
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl">
-                                        <Image src="/images/2023-04-23.webp" alt="Menopause care and HRT" fill className="object-cover" priority />
+                                        <Image src="/images/2023-04-23.webp" alt="Menopause care and hormone replacement therapy by Dr. Vinita Khemani in Kolkata" fill className="object-cover" priority />
                                     </div>
                                 </motion.div>
                             </div>
@@ -262,7 +264,7 @@ export default function MenopausePage() {
                                 Indian women typically experience menopause between ages 46-52, slightly earlier than the global average of 51. The menopausal transition (perimenopause) can begin 4-8 years before the final period, bringing symptoms like hot flashes, mood swings, sleep disturbances, joint pain, and vaginal dryness. Studies from AIIMS show that over 70% of Indian perimenopausal women report significant quality-of-life impacts.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                Dr. Vinita Khemani provides comprehensive menopause management that goes beyond simply prescribing hormones. Her approach includes detailed hormonal assessment, bone density screening, cardiovascular risk evaluation, nutritional counseling, and evidence-based hormone replacement therapy (HRT) when indicated — tailored to each woman&apos;s individual risk profile and symptom severity.
+                                Dr. Vinita Khemani provides comprehensive menopause management in Kolkata that goes beyond simply prescribing hormones. Her approach includes detailed hormonal assessment, bone density screening, cardiovascular risk evaluation, and evidence-based hormone replacement therapy (HRT) when indicated — tailored to each woman&apos;s individual risk profile.
                             </p>
                             <button
                                 onClick={() => setIsEnquiryModalOpen(true)}
@@ -499,7 +501,10 @@ export default function MenopausePage() {
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
+            <SharedCTA title="Struggling with Menopause in Kolkata?" subtitle="Consult Dr. Vinita Khemani for expert menopause management and personalized HRT plans." />
+            <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />
-        </main>
+        </main >
     );
 }
