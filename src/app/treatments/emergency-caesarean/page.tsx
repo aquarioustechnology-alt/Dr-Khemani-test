@@ -24,6 +24,7 @@ const faqs = [
     { q: "What is the cost of emergency C-section in Kolkata?", a: "Costs vary depending on the hospital and urgency level. However, ensuring the safety of mother and baby is our priority. Dr. Khemani works with hospitals offering a range of packages to suit different needs." },
     { q: "Will I be awake during the surgery?", a: "Unless there is an immediate life-threat requiring general anesthesia, we strictly use spinal or epidural anesthesia. This allows you to be awake, hear your baby's first cry, and hold them immediately, without feeling pain." },
     { q: "Does an emergency C-section mean I can't have a normal delivery later?", a: "Not at all. With Dr. Khemani’s 'tissue-respecting' surgical techniques used in Kolkata, uterine integrity is maintained, making VBAC (Vaginal Birth After Cesarean) a strong possibility for future pregnancies." },
+    { q: "Is emergency C-section safe?", a: "Yes, it is a life-saving procedure. Dr. Khemani ensures maximum safety through 24/7 obstetric emergency care readiness, advanced monitoring, and coordinated hospital-based care in Kolkata to handle any complication instantly." },
     { q: "How is the recovery different from a planned C-section?", a: "Physical recovery is similar, but we understand the emotional toll of an emergency. Our post-op care includes emotional support, lactation consulting, and debriefing sessions to help you process the experience positively." },
 ];
 
@@ -56,7 +57,7 @@ export default function EmergencyCSectionPage() {
                                     </h1>
                                     <div className="h-1 w-24 bg-[#C21975] mb-8 rounded-full" />
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        When seconds count, expertise matters. Dr. Vinita Khemani provides rapid-response surgical care for obstetric emergencies in Kolkata, ensuring the highest safety standards for both mother and child.
+                                        When seconds count, expertise matters. Dr. Vinita Khemani is an Emergency C-Section Specialist in Kolkata providing 24/7 obstetric emergency care. Experienced in high-risk emergency deliveries, she ensures rapid, life-saving intervention for both mother and child.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}

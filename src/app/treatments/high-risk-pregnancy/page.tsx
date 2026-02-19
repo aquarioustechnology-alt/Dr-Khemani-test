@@ -33,6 +33,7 @@ const faqs = [
     { q: "What makes a pregnancy high-risk?", a: "Factors include advanced age (35+), pre-existing conditions (diabetes, hypertension, thyroid), previous pregnancy complications, multiple pregnancies, obesity, or history of miscarriage. Dr. Khemani evaluates each case individually at her Kolkata clinics." },
     { q: "How often do high-risk patients need checkups?", a: "High-risk pregnancies typically require visits every 2 weeks until 28 weeks, then weekly until delivery. Additional visits are scheduled based on specific conditions. Dr. Khemani is available at multiple hospitals across Kolkata for convenient follow-ups." },
     { q: "Can high-risk pregnancies result in normal delivery?", a: "Yes! Many high-risk pregnancies with proper management result in healthy normal deliveries. Dr. Khemani aims for the safest delivery mode based on each patient\u2019s unique situation and closely monitors progress throughout." },
+    { q: "When is hospitalization required?", a: "Hospitalization is recommended if there are signs of preterm labor, severe preeclampsia, uncontrolled bleeding, or fetal distress requiring continuous monitoring. Dr. Khemani will guide you based on your specific condition." },
     { q: "What hospital facilities are available for high-risk delivery in Kolkata?", a: "Dr. Khemani operates at top hospitals in Kolkata equipped with NICU, blood bank, ICU, and 24/7 anesthesia \u2014 including Bhagirathi Neotia (New Town), Charnock Hospital (VIP Road), and ILS Hospital (Dumdum) \u2014 ensuring complete emergency preparedness." },
 ];
 
@@ -56,11 +57,11 @@ export default function HighRiskPregnancyPage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">High-Risk Pregnancy</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[56px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">High-Risk Pregnancy Care</span> <br />
-                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">in Kolkata</span>
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">High-Risk Pregnancy</span> <br />
+                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">Specialist in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Dr. Vinita Khemani, a leading obstetrician in Kolkata, specializes in managing high-risk pregnancies with advanced monitoring, timely intervention, and hospital-grade safety at NICU-equipped facilities — giving every mother the best chance for a healthy delivery.
+                                        Dr. Vinita Khemani provides expert management of gestational diabetes, preeclampsia care, and Level III monitoring support. She works with Coordinated NICU-ready hospitals in Kolkata to ensure the safest delivery for high-risk cases.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}

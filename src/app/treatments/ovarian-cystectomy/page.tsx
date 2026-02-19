@@ -22,6 +22,7 @@ const faqs = [
     { q: "Do all ovarian cysts need surgery?", a: "No. Most functional cysts disappear on their own. We recommend surgery at our Kolkata clinic only if the cyst is large (>5-6cm), persistent, looks suspicious on ultrasound, or causes severe pain." },
     { q: "Is the surgery done laparoscopically?", a: "Yes, we specialize in 3D Laparoscopic Cystectomy in Kolkata. This minimally invasive technique uses tiny incisions, ensuring less pain, minimal scarring, and a much faster return to normal life compared to open surgery." },
     { q: "Will cyst removal affect my fertility?", a: "Dr. Khemani is an expert in 'Ovarian Sparing Surgery'. Using precise energy sources, she carefully peels the cyst wall (cystectomy) while preserving the healthy ovarian tissue and egg reserve, protecting your future fertility." },
+    { q: "Is ovarian cystectomy painful?", a: "Since we perform minimally invasive laparoscopic cystectomy, pain is significantly less compared to open surgery. Most patients experience only mild discomfort for 1-2 days, which is easily managed with oral painkillers." },
     { q: "Can cysts come back after removal?", a: "Functional cysts can recur. Conditions like endometriosis also have a recurrence risk. We don't just operate; we provide long-term medical management and lifestyle guidance to minimize this risk." },
 ];
 
@@ -52,7 +53,7 @@ export default function OvarianCystectomyPage() {
                                         <span className="italic text-[#C21975]">Surgery in Kolkata.</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Advanced laparoscopic removal of ovarian cysts in Kolkata with a focus on preserving your healthy ovarian tissue and fertility. Get back to a pain-free life with Dr. Vinita Khemani&apos;s minimally invasive expertise.
+                                        Looking for ovarian cyst removal surgery in Kolkata? Dr. Vinita Khemani is a leading laparoscopic cystectomy specialist in Kolkata focused on preserving your healthy ovarian tissue and fertility. Get back to a pain-free life with expert, minimally invasive care.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -161,8 +162,8 @@ export default function OvarianCystectomyPage() {
                 <div className="container-fluid mx-auto max-w-[1200px] px-6">
                     <div className="text-center mb-16">
                         <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Our Approach</span>
-                        <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                            Personalized <span className="text-[#C21975]">Care</span>
+                        <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                            Fertility-Preserving <span className="text-[#C21975]">Ovarian Surgery</span><br />by Dr. Vinita Khemani
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
                             Every woman&apos;s journey is unique. Dr. Khemani tailors each treatment plan to your specific needs and health goals.

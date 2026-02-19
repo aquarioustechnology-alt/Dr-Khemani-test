@@ -21,6 +21,7 @@ const symptoms = [
 const faqs = [
     { q: "Who is the best doctor for endometriosis in Kolkata?", a: "Dr. Vinita Khemani is one of the most experienced gynecologists for endometriosis treatment in Kolkata, with over 23 years of expertise in advanced laparoscopic excision surgery. She practices at leading hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital." },
     { q: "What is Endometriosis?", a: "Endometriosis is a condition where tissue similar to the lining of the uterus grows outside it—on the ovaries, fallopian tubes, and pelvic lining. This tissue sheds during periods but has no way to exit, causing intense pain, inflammation, and scar tissue. It affects approximately 1 in 10 women of reproductive age." },
+    { q: "Can endometriosis be cured?", a: "While there is no permanent cure, symptoms can be effectively managed. Laparoscopic excision by a specialist like Dr. Khemani offers the best chance for long-term relief and fertility restoration." },
     { q: "Can Endometriosis cause infertility?", a: "Yes, about 30-50% of women with endometriosis face fertility issues. The condition can block fallopian tubes, distort pelvic anatomy, or create an inflammatory environment that affects egg quality. Dr. Khemani\u2019s laparoscopic excision approach in Kolkata preserves fertility while removing disease." },
     { q: "What is the cost of endometriosis treatment in Kolkata?", a: "The cost depends on the severity and treatment approach. Hormonal management is more affordable, while laparoscopic excision surgery costs vary based on the hospital and complexity. Dr. Khemani practices at multiple hospitals in Kolkata, offering options for different budgets." },
     { q: "Is surgery the only option?", a: "Not always. For mild cases or those not planning immediate pregnancy, hormonal medications (pills, injections) are the first line of treatment to suppress pain. However, for deep infiltrating endometriosis or large cysts (Endometriomas), laparoscopic surgery is the gold standard." },
@@ -50,11 +51,11 @@ export default function EndometriosisPage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Endometriosis Care</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[60px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-gray-900">Endometriosis Treatment </span> <br />
+                                        <span className="text-gray-900">Endometriosis Specialist </span> <br />
                                         <span className="italic text-[#C21975]">in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Endometriosis is often dismissed as &quot;just a bad period,&quot; but it&apos;s a whole-body condition affecting 1 in 10 women. Dr. Vinita Khemani, an experienced gynecologist in Kolkata, offers expert diagnosis and advanced laparoscopic excision to restore your quality of life and fertility.
+                                        Dr. Vinita Khemani offers expert medical management of endometriosis and laparoscopic cystectomy (chocolate cyst removal). She provides specialized treatment for painful periods and infertility to restore your quality of life in Kolkata.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}

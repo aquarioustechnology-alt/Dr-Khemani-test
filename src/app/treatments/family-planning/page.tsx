@@ -22,6 +22,7 @@ const faqs = [
     { q: "What is the cost of Copper-T insertion in Kolkata?", a: "The cost of IUD (Copper-T or Mirena) insertion is affordable and depends on the specific device chosen. Dr. Khemani provides safe, hygienic insertion procedures at her clinic." },
     { q: "Does the Copper-T cause pain?", a: "Placement might cause mild cramping, but it subsides quickly. Some women may experience heavier periods initially, but modern IUDs are very well tolerated." },
     { q: "Will birth control pills affect my future fertility?", a: "No. Fertility typically returns very quickly (often within days or weeks) after you stop taking the pill. There is no long-term negative effect on your ability to conceive." },
+    { q: "Does IUD affect fertility?", a: "No. The IUD (Copper-T or Mirena) is completely reversible. As soon as it is removed by Dr. Khemani, your natural fertility returns almost immediately." },
     { q: "What is emergency contraception?", a: "Emergency contraceptive pills (Morning-after pills) can promote pregnancy prevention if taken within 72 hours of unprotected sex. They should not be used as a regular method." },
 ];
 
@@ -45,10 +46,10 @@ export default function FamilyPlanningPage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Contraception & Counseling</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[60px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-gray-900">Family Planning &</span> <br /> <span className="text-[#C21975]">Contraception in Kolkata.</span>
+                                        <span className="text-gray-900">Family Planning &</span> <br /> <span className="text-[#C21975]">Contraception Specialist in Kolkata.</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Empowering you to make informed decisions about your reproductive health. Dr. Vinita Khemani provides private, non-judgmental counseling on the full range of contraceptive options in Kolkata.
+                                        Empowering you to make informed decisions about your reproductive health. Dr. Vinita Khemani is the best gynecologist for birth control options, offering services like Copper-T insertion in Kolkata and contraceptive counselling in South Kolkata.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}

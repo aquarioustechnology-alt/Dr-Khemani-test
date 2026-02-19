@@ -91,6 +91,8 @@ const faqs = [
     { q: "Who is the best doctor for menopause treatment in Kolkata?", a: "Dr. Vinita Khemani is a leading menopause specialist in Kolkata, offering holistic care that includes HRT, bone health screening, and lifestyle counseling. She practices at top clinics in Kolkata including Bhagirathi Neotia and Apollo Clinic." },
     { q: "At what age does menopause typically start?", a: "The average age of natural menopause in Indian women is 46-48 years. Perimenopause (the transitional phase) can begin 4-8 years earlier. Some women in Kolkata may experience early menopause due to lifestyle or genetic factors." },
     { q: "Is HRT safe?", a: "Modern HRT is very safe when prescribed appropriately and individualized. Dr. Khemani carefully evaluates each patient's risk profile (history of breast cancer, clots) before recommending hormone therapy at her Kolkata clinics." },
+    { q: "Should menopause be treated medically in Kolkata?", a: "Yes, if symptoms affect your quality of life. Dr. Khemani evaluates your condition to recommend medical or non-medical treatments tailored to your needs." },
+    { q: "What hormone therapy options are available?", a: "We offer Bioidentical Hormone Replacement Therapy (BHRT) in patches, gels, or pills, customized to your hormonal needs for safe and effective relief." },
     { q: "What is the cost of menopause treatment in Kolkata?", a: "Consultation and treatment costs vary based on the required tests (DEXA, lipid profile) and therapy type (HRT vs non-hormonal). Dr. Khemani offers comprehensive menopause packages suited for different needs." },
     { q: "What are the alternatives to HRT?", a: "For women who cannot or prefer not to take HRT, alternatives include non-hormonal medications (SSRIs, gabapentin), herbal supplements, cognitive behavioral therapy for hot flashes, and intensive lifestyle modifications." },
     { q: "How do I know if I'm in menopause?", a: "Classic signs include irregular periods (eventually stopping), hot flashes, night sweats, vaginal dryness, mood changes, and sleep problems. Dr. Khemani can confirm menopause with blood tests (FSH, estradiol) at her Kolkata clinic." },
@@ -183,11 +185,11 @@ export default function MenopausePage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Menopause Care</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[56px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Menopause Management</span> <br />
-                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">& HRT in Kolkata</span>
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Menopause Care &</span> <br />
+                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">Management in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Dr. Vinita Khemani provides compassionate menopause care in Kolkata — from symptom relief and HRT to bone health and long-term wellness strategies for every stage of the journey.
+                                        Led by Dr. Vinita Khemani — women’s health specialist, our clinic offers comprehensive menopause management in Kolkata. We provide expert care for symptom relief, HRT, and bone health, ensuring the best menopause treatment in West Bengal.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -236,8 +238,8 @@ export default function MenopausePage() {
                 <div className="container-fluid mx-auto px-6 mb-20 text-center max-w-3xl">
                     <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Our Services</span>
                     <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Menopause</span>{" "}
-                        <span className="text-[#C21975]">Services</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Personalized Menopause</span>{" "}
+                        <span className="text-[#C21975]">Support in Kolkata</span>
                     </h2>
                     <p className="text-lg text-gray-600 mt-6">Comprehensive care designed to support you through every aspect of the menopausal transition.</p>
                 </div>

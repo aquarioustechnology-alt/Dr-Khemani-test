@@ -51,10 +51,10 @@ export default function HysteroscopyPage() {
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight mb-6">
                                         <span className="text-gray-900">Advanced Hysteroscopy</span> <br />
-                                        <span className="italic text-[#C21975]">Surgery in Kolkata.</span>
+                                        <span className="italic text-[#C21975]">&amp; Uterine Evaluation in Kolkata.</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        A revolutionary diagnostic and treatment method that allows Dr. Khemani to see and treat inside the womb without a single incision. Gold standard care for abnormal bleeding and infertility in Kolkata.
+                                        A revolutionary diagnostic and treatment method that allows Dr. Khemani to see and treat inside the womb without a single incision. As a specialist in Day-care hysteroscopy in Kolkata, Dr. Khemani is also a uterine polyp removal specialist, offering gold standard care for abnormal bleeding and infertility.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}

@@ -30,9 +30,9 @@ const methods = [
 const faqs = [
     { q: "Who is the best doctor for hysterectomy in Kolkata?", a: "Dr. Vinita Khemani is one of the most experienced gynecological surgeons in Kolkata for hysterectomy, with expertise in total laparoscopic hysterectomy (TLH), LAVH, and vaginal hysterectomy. She operates at leading hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital." },
     { q: "Will I go into menopause after a hysterectomy?", a: "Not necessarily. If your ovaries are preserved during the surgery, you will not enter menopause immediately. If ovaries are removed (oophorectomy), surgical menopause will begin. Dr. Khemani discusses this in detail before surgery to help you make an informed decision." },
-    { q: "How long is the recovery time?", a: "For laparoscopic hysterectomy (TLH), recovery is quick. Patients are discharged in 1-2 days and return to light activities in a week. Full recovery takes 2-3 weeks. Abdominal hysterectomy takes 4-6 weeks. Dr. Khemani\u2019s minimally invasive approach ensures faster recovery." },
+    { q: "How long is recovery time in Kolkata after surgery?", a: "For laparoscopic hysterectomy (TLH), recovery is quick. Patients are discharged in 1-2 days and return to light activities in a week. Full recovery takes 2-3 weeks. Abdominal hysterectomy takes 4-6 weeks. Dr. Khemani\u2019s minimally invasive approach ensures faster recovery." },
     { q: "What is the cost of hysterectomy in Kolkata?", a: "The cost varies based on the type of procedure (TLH, LAVH, NDVH, or abdominal) and hospital chosen. Dr. Khemani operates at multiple hospitals in Kolkata, offering options for different budgets while maintaining the highest surgical standards." },
-    { q: "Is it a major surgery?", a: "Yes, it is a major procedure, but with modern laparoscopic techniques performed by Dr. Khemani in Kolkata, the impact on the body is minimized. It is very safe when performed by experienced hands with proper pre-operative evaluation." },
+    { q: "Is laparoscopic hysterectomy safe?", a: "Yes, it is a major procedure, but with modern laparoscopic techniques performed by Dr. Khemani in Kolkata, the impact on the body is minimized. It is very safe when performed by experienced hands with proper pre-operative evaluation." },
     { q: "Will it affect my sex life?", a: "For most women, sex life improves after recovery because they are free from pain and bleeding. Dr. Khemani recommends waiting 6-8 weeks after surgery to resume intercourse." },
 ];
 
@@ -60,7 +60,7 @@ export default function HysterectomyPage() {
                                         <span className="italic text-[#C21975]">in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        When medication isn&apos;t enough, hysterectomy (uterus removal) can offer permanent relief from fibroids, heavy bleeding, or cancer risk. Dr. Vinita Khemani, a leading gynecological surgeon in Kolkata, specializes in minimally invasive laparoscopic removal for faster recovery and minimal scarring.
+                                        When medication isn&apos;t enough, hysterectomy (uterus removal) offers permanent relief. Laparoscopic hysterectomy in Kolkata is performed by Dr. Vinita Khemani — experienced gynecologic surgeon, specializing in minimally invasive techniques for faster recovery.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -250,11 +250,11 @@ export default function HysterectomyPage() {
                     {/* Header Row */}
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Dr. Khemani</span>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Expert Care</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-                                Minimally invasive expertise for{" "}
+                                Why Choose Dr. Vinita Khemani for{" "}
                                 <br />
-                                <span className="italic text-[#C21975]">faster, safer hysterectomy</span>
+                                <span className="italic text-[#C21975]">Hysterectomy in Kolkata</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">

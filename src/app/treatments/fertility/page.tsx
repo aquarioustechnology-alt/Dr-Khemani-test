@@ -58,6 +58,7 @@ const faqs = [
     { q: "When should I see a fertility specialist?", a: "If you've been trying to conceive for over 12 months (or 6 months if over 35) without success, it's time to consult Dr. Khemani in Kolkata for a comprehensive evaluation and personalized treatment plan." },
     { q: "What are the common causes of infertility?", a: "Common causes include PCOS, tubal blockage, endometriosis, low sperm count/motility, thyroid disorders, and age-related decline. About 30% of cases involve both partners, which is why Dr. Khemani evaluates couples together." },
     { q: "What is the success rate of IUI in Kolkata?", a: "IUI success rates typically range from 10-20% per cycle depending on age and underlying causes. Dr. Khemani optimizes protocols to maximize success chances at her Kolkata clinic." },
+    { q: "What is IVF cost in Kolkata?", a: "The cost of IVF in Kolkata varies depending on the protocol and clinic. Dr. Khemani offers transparent pricing for preliminary investigations and coordinates with partner IVF centers to ensure you receive affordable, high-quality care within your budget." },
     { q: "Does Dr. Khemani perform IVF?", a: "Dr. Khemani provides extensive fertility evaluation, ovulation induction, and IUI at her clinic. For IVF, she coordinates seamlessly with leading IVF centers in Kolkata, managing your care pathway personally." },
 ];
 
@@ -82,10 +83,10 @@ export default function FertilityPage() {
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[56px] leading-[1.1] font-bold tracking-tight mb-6">
                                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Fertility Specialist</span> <br />
-                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">in Kolkata</span>
+                                        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">&amp; IVF Consultation in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Evidence-based fertility treatment by Dr. Vinita Khemani. From thorough evaluation to IUI and IVF coordination in Kolkata — compassionate care for every couple&apos;s unique journey.
+                                        Evidence-based fertility care by Dr. Vinita Khemani, the best infertility specialist in Kolkata. From thorough evaluation to IVF treatment coordination, we provide a personalized fertility roadmap and emotional support during infertility treatment.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -187,7 +188,7 @@ export default function FertilityPage() {
                                 The truth is that infertility is a medical condition — not a failing. And in approximately 40% of cases, male factors contribute significantly to the difficulty. Dr. Vinita Khemani approaches fertility evaluation as a couple&apos;s journey, ensuring both partners are assessed thoroughly and treated with dignity and compassion.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                In Kolkata, where cultural expectations around motherhood can be overwhelming, Dr. Khemani&apos;s clinic provides a safe, non-judgmental space for couples to explore their options and receive evidence-based treatment without unnecessary interventions.
+                                As a trusted fertility doctor in South Kolkata, Dr. Khemani provides a safe, non-judgmental space for couples to explore their options. She focuses on IVF treatment in Kolkata coordination when necessary, ensuring you receive the best possible care without unnecessary interventions.
                             </p>
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
                                 {[

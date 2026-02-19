@@ -88,6 +88,14 @@ const faqs = [
         a: "Yes, Dr. Khemani specializes in high-risk cases including pregnancy with diabetes, hypertension, and thyroid issues. We have advanced monitoring protocols at our Kolkata clinics for such cases."
     },
     {
+        q: "Normal delivery vs C-section?",
+        a: "We prioritize normal delivery for a faster recovery. However, C-section is recommended for medical necessity (like fetal distress). Dr. Khemani discusses all options with you to ensure the safest birth."
+    },
+    {
+        q: "What is the delivery package cost in Kolkata?",
+        a: "Delivery packages vary by hospital and room choice. Dr. Khemani offers transparent guidance on costs at her affiliated hospitals (like Bhagirathi Neotia and AMRI) to help you plan your maternity finances."
+    },
+    {
         q: "What hospitals are you affiliated with?",
         a: "Dr. Khemani delivers at top maternity hospitals in Kolkata including AMRI, Bhagirathi Neotia, and others, ensuring you have access to the best NICU and emergency facilities."
     },
@@ -117,13 +125,13 @@ export default function PregnancyCarePage() {
                                         <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Obstetrics & Maternity Care</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[64px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-gray-900">Pregnancy Care &</span> <br />
+                                        <span className="text-gray-900">Comprehensive</span> <br />
                                         <span className="italic text-[#C21975]">
-                                            Delivery in Kolkata.
+                                            Pregnancy Care &amp; Delivery in Kolkata.
                                         </span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Safe, supported, and joyful pregnancy care in Kolkata. From the first heartbeat to the first cry, Dr. Vinita Khemani walks with you every step of the way.
+                                        Experience safe, supported, and joyful maternity care in South Kolkata with Dr. Vinita Khemani, regarded as the best gynecologist for pregnancy in Kolkata. From the first heartbeat to the first cry, we walk with you every step.
                                     </p>
 
                                     <div className="flex flex-col sm:flex-row gap-4 mb-10">
