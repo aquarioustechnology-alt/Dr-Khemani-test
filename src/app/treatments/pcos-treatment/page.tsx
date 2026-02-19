@@ -473,7 +473,7 @@ export default function PCOSTreatmentPage() {
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div className="relative h-[600px] rounded-[3rem] overflow-hidden hidden lg:block shadow-2xl sticky top-32">
-                            <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM.jpeg" alt="Personalized PCOS treatment plan by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
+                            <Image src="/images/pcos_doctor_consult_1771254346129.png" alt="Dr. Vinita Khemani consulting with a PCOS patient in Kolkata" fill className="object-cover" />
                             <div className="absolute inset-0 bg-black/20" />
                             <div className="absolute bottom-10 left-10 right-10 text-white">
                                 <h3 className="text-3xl font-bold mb-2">Holistic Care</h3>
