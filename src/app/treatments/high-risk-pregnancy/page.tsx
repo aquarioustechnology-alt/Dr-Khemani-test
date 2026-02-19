@@ -147,9 +147,9 @@ export default function HighRiskPregnancyPage() {
             {/* Safety Section */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-                            className="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                            className="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl sticky top-32">
                             <Image src="/images/unnamed (1).webp" alt="Hospital NICU facility for high-risk pregnancies" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                         </motion.div>
@@ -229,37 +229,109 @@ export default function HighRiskPregnancyPage() {
                 </div>
             </section>
 
-            {/* Why Choose Us — Bento Grid */}
+            {/* Why Choose Us — Enhanced Bento Grid */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Us</span>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Dr. Khemani</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-                                Your trusted partner in{" "}<br />
-                                <span className="italic text-[#C21975]">high-risk pregnancy care</span>
+                                Expert high-risk pregnancy care{" "}<br />
+                                <span className="italic text-[#C21975]">for mother and baby</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">
-                            With 23+ years of obstetric experience, Dr. Khemani has successfully managed thousands of high-risk pregnancies with advanced monitoring and compassionate care.
+                            India&apos;s maternal mortality ratio remains a concern. With 23+ years of obstetric experience, Dr. Khemani&apos;s protocol-driven approach ensures the safest possible outcome for both mother and child.
                         </p>
                     </div>
+
+                    {/* Enhanced Bento Grid */}
                     <div className="grid lg:grid-cols-3 gap-6">
-                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
-                            <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">Access to Level III NICU facilities and 24/7 emergency readiness</h3>
-                            <p className="text-[#C21975] text-base leading-relaxed">Multi-disciplinary coordination with cardiologists and endocrinologists, ensuring comprehensive safety for mother and baby.</p>
+                        {/* Left Column — 2 stacked cards */}
+                        <div className="flex flex-col gap-6">
+                            <div className="bg-[#f5f0f2] rounded-[2rem] p-8 flex flex-col justify-between flex-1 hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Level III NICU &amp; Emergency-Ready Hospitals
+                                </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Operating at hospitals with Level III NICUs (Bhagirathi Neotia, Charnock, ILS) — ensuring round-the-clock neonatal intensivist access, ventilator support, and emergency C-section readiness within minutes if needed.
+                                </p>
+                            </div>
+                            <div className="bg-gradient-to-br from-[#C21975] to-[#8a2f5e] rounded-[2rem] p-8 flex flex-col justify-between flex-1 shadow-sm">
+                                <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-white leading-snug mb-4">
+                                    Multi-Specialist Coordination
+                                </h3>
+                                <p className="text-pink-100 text-sm leading-relaxed">
+                                    High-risk pregnancies often require cardiologists, endocrinologists, and nephrologists. Dr. Khemani maintains a trusted network of specialists, ensuring seamless coordinated care — from diabetes management to cardiac monitoring throughout pregnancy.
+                                </p>
+                            </div>
                         </div>
-                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
-                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - High-Risk Pregnancy Specialist" fill className="object-cover" />
+
+                        {/* Center — Image + Stats */}
+                        <div className="flex flex-col gap-6">
+                            <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
+                                <Image src="/images/high-risk-pregnancy-care.jpg" alt="High-risk pregnancy monitoring and care by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                                <div className="absolute bottom-6 left-6 right-6">
+                                    <p className="text-white text-sm font-semibold">&quot;Every high-risk pregnancy is unique — close monitoring and timely intervention save lives.&quot;</p>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">23+</p>
+                                    <p className="text-xs text-gray-500 mt-1">Years Experience</p>
+                                </div>
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">Level III</p>
+                                    <p className="text-xs text-gray-500 mt-1">NICU Access</p>
+                                </div>
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">24/7</p>
+                                    <p className="text-xs text-gray-500 mt-1">Emergency Ready</p>
+                                </div>
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">High</p>
+                                    <p className="text-xs text-gray-500 mt-1">Normal Delivery Rate</p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
-                            <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">High normal delivery rates even in complex cases</h3>
-                            <p className="text-gray-600 text-base leading-relaxed">Every pregnancy deserves expert guidance. From gestational diabetes to preeclampsia, comprehensive care plans designed for the best possible outcome.</p>
+
+                        {/* Right Column — 2 stacked cards */}
+                        <div className="flex flex-col gap-6">
+                            <div className="bg-[#f5f0f2] rounded-[2rem] p-8 flex flex-col justify-between flex-1 hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Advanced Fetal Monitoring Protocols
+                                </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Serial growth scans, Doppler studies, non-stress tests, and biophysical profiles — Dr. Khemani uses evidence-based monitoring schedules tailored to each risk factor, detecting complications early when intervention is most effective.
+                                </p>
+                            </div>
+                            <div className="bg-[#f5f0f2] rounded-[2rem] p-8 flex flex-col justify-between flex-1 hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Advocating Normal Delivery Wherever Safe
+                                </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    High-risk does not always mean C-section. Dr. Khemani carefully evaluates each case and encourages vaginal delivery whenever safely possible — with emergency backup always on standby for the mother&apos;s and baby&apos;s protection.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div className="mt-10 text-center">
+
+                    <div className="mt-12 text-center">
                         <button onClick={() => setIsEnquiryModalOpen(true)} className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]">
-                            Consult Dr. Khemani
+                            Book High-Risk Pregnancy Consultation
                             <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45"><ArrowUpRight className="w-6 h-6" /></span>
                         </button>
                     </div>

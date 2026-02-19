@@ -175,7 +175,7 @@ export default function FertilityPage() {
             {/* Infertility in India */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">The Reality</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Infertility in India: <br /><span className="text-[#C21975]">Breaking the Silence</span></h2>
@@ -211,9 +211,11 @@ export default function FertilityPage() {
                                 </span>
                             </button>
                         </div>
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <Image src="/images/fertility-couple-hope.jpg" alt="Indian couple consulting for fertility treatment in Kolkata" fill className="object-cover" />
-                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
+                        <div className="relative sticky top-32">
+                            <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                                <Image src="/images/fertility-couple-hope.jpg" alt="Indian couple consulting for fertility treatment in Kolkata" fill className="object-cover" />
+                            </div>
+                            <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-10">
                                 <p className="text-sm font-bold text-gray-900 mb-1">You Are Not Alone</p>
                                 <p className="text-xs text-gray-600">1 in 6 couples in India face fertility challenges. Most cases are treatable with the right medical guidance.</p>
                             </div>
@@ -243,8 +245,8 @@ export default function FertilityPage() {
             {/* Understanding Infertility Causes */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last lg:order-first">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last lg:order-first sticky top-32">
                             <Image src="/images/fertility-diagnosis.jpg" alt="Comprehensive fertility diagnosis and evaluation" fill className="object-cover" />
                         </div>
                         <div>
@@ -274,63 +276,115 @@ export default function FertilityPage() {
                 </div>
             </section>
 
-            {/* Why Choose Us — Bento Grid */}
+            {/* Why Choose Us — Enhanced Bento Grid */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     {/* Header Row */}
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Us</span>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Dr. Khemani</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-                                Your trusted partner in{" "}
+                                A compassionate, science-driven{" "}
                                 <br />
-                                <span className="italic text-[#C21975]">fertility care</span>
+                                <span className="italic text-[#C21975]">approach to fertility</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">
-                            With 23+ years of experience and affiliations with leading hospitals in Kolkata, Dr. Khemani offers the full spectrum of fertility care — from evaluation to IVF coordination.
+                            In India, 1 in 6 couples face infertility. Dr. Khemani believes every couple deserves an honest, step-by-step evaluation before being rushed into expensive treatments like IVF.
                         </p>
                     </div>
 
-                    {/* Bento Grid: 3 columns */}
+                    {/* Enhanced Bento Grid */}
                     <div className="grid lg:grid-cols-3 gap-6">
-                        {/* Left Card */}
-                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
-                            <div>
-                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
-                                    Every couple&apos;s fertility journey is unique, deserving a thoughtful, personalized approach
+                        {/* Left Column — 2 stacked cards */}
+                        <div className="flex flex-col gap-6">
+                            <div className="bg-[#f5f0f2] rounded-[2rem] p-8 flex flex-col justify-between flex-1 hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Comprehensive Evaluation First, Not IVF First
                                 </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Many clinics push couples towards IVF immediately. Dr. Khemani starts with thorough hormonal panels, semen analysis, HSG, and ovulation tracking — often discovering treatable causes that make expensive procedures unnecessary.
+                                </p>
                             </div>
-                            <p className="text-[#C21975] text-base leading-relaxed">
-                                We don&apos;t rush into expensive treatments. Instead, we start with comprehensive evaluation, address treatable causes first, and escalate only when necessary — keeping couples informed at every step.
-                            </p>
+                            <div className="bg-gradient-to-br from-[#C21975] to-[#8a2f5e] rounded-[2rem] p-8 flex flex-col justify-between flex-1 shadow-sm">
+                                <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-white leading-snug mb-4">
+                                    Seamless IVF Coordination Network
+                                </h3>
+                                <p className="text-pink-100 text-sm leading-relaxed">
+                                    When advanced treatment is needed, Dr. Khemani coordinates with top IVF specialists at Bhagirathi Neotia and Charnock Hospital — ensuring continuity of care from initial workup through embryo transfer and beyond.
+                                </p>
+                            </div>
                         </div>
 
-                        {/* Center Image */}
-                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
-                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Fertility Specialist Kolkata" fill className="object-cover" />
+                        {/* Center — Image + Stats */}
+                        <div className="flex flex-col gap-6">
+                            <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
+                                <Image src="/images/fertility-couple-hope.jpg" alt="Hopeful couple during fertility consultation with Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                                <div className="absolute bottom-6 left-6 right-6">
+                                    <p className="text-white text-sm font-semibold">&quot;Your fertility journey deserves patience, science, and a doctor who truly listens.&quot;</p>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">23+</p>
+                                    <p className="text-xs text-gray-500 mt-1">Years Experience</p>
+                                </div>
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">6</p>
+                                    <p className="text-xs text-gray-500 mt-1">Hospital Partners</p>
+                                </div>
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">100%</p>
+                                    <p className="text-xs text-gray-500 mt-1">Personalized Care</p>
+                                </div>
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">IUI/IVF</p>
+                                    <p className="text-xs text-gray-500 mt-1">Full Coordination</p>
+                                </div>
+                            </div>
                         </div>
 
-                        {/* Right Card */}
-                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
-                            <div>
-                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
-                                    Coordinated care with leading IVF centers for seamless advanced treatment
+                        {/* Right Column — 2 stacked cards */}
+                        <div className="flex flex-col gap-6">
+                            <div className="bg-[#f5f0f2] rounded-[2rem] p-8 flex flex-col justify-between flex-1 hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Emotional Support Through the Journey
                                 </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Infertility takes an enormous emotional toll. Dr. Khemani provides a judgment-free space where couples can openly discuss fears, cultural pressures, and family expectations — ensuring mental well-being alongside medical treatment.
+                                </p>
                             </div>
-                            <p className="text-gray-600 text-base leading-relaxed">
-                                From basic hormonal evaluation and ovulation induction to IUI and IVF coordination with Bhagirathi Neotia and Charnock Hospital, our approach ensures no gap in your fertility journey.
-                            </p>
+                            <div className="bg-[#f5f0f2] rounded-[2rem] p-8 flex flex-col justify-between flex-1 hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Hormonal Optimization &amp; Ovulation Tracking
+                                </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Precise cycle monitoring with serial ultrasounds and hormonal assays helps identify the optimal window for conception. Ovulation induction protocols are carefully tailored to minimize risks like ovarian hyperstimulation.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
                     {/* CTA Button */}
-                    <div className="mt-10 text-center">
+                    <div className="mt-12 text-center">
                         <button
                             onClick={() => setIsEnquiryModalOpen(true)}
                             className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                         >
-                            Consult Dr. Khemani
+                            Start Your Fertility Journey
                             <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                 <ArrowUpRight className="w-6 h-6" />
                             </span>

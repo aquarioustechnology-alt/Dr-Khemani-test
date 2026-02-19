@@ -194,8 +194,8 @@ export default function EndometriosisPage() {
             {/* Endometriosis in India: Delayed Diagnosis */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white order-last lg:order-first">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white order-last lg:order-first sticky top-32">
                             <Image src="/images/endometriosis-awareness.jpg" alt="Endometriosis awareness campaign for Indian women" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#540d2d]/50 via-transparent to-transparent" />
                             <div className="absolute bottom-8 left-8 right-8 text-white">
@@ -259,7 +259,7 @@ export default function EndometriosisPage() {
             {/* Endometriosis & Fertility */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Fertility Preservation</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Endometriosis <br /><span className="text-[#C21975]">&amp; Your Fertility</span></h2>
@@ -282,7 +282,7 @@ export default function EndometriosisPage() {
                                 </span>
                             </button>
                         </div>
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white sticky top-32">
                             <Image src="/images/endometriosis-fertility.jpg" alt="Fertility treatment and hope for women with endometriosis" fill className="object-cover" />
                         </div>
                     </div>
@@ -292,8 +292,8 @@ export default function EndometriosisPage() {
             {/* Living with Endometriosis */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last lg:order-first">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last lg:order-first sticky top-32">
                             <Image src="/images/endometriosis-lifestyle.jpg" alt="Healthy lifestyle management for endometriosis" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#540d2d]/50 via-transparent to-transparent" />
                         </div>
@@ -325,63 +325,115 @@ export default function EndometriosisPage() {
                 </div>
             </section>
 
-            {/* Why Choose Us — Bento Grid */}
+            {/* Why Choose Us — Enhanced Bento Grid */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     {/* Header Row */}
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Us</span>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Dr. Khemani</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-                                Your trusted partner in{" "}
+                                Kolkata&apos;s trusted expert in{" "}
                                 <br />
-                                <span className="italic text-[#C21975]">endometriosis care</span>
+                                <span className="italic text-[#C21975]">endometriosis excision surgery</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">
-                            Specialized expertise in advanced laparoscopic excision surgery combined with a compassionate, patient-first approach. 23+ years, 608+ successful surgeries.
+                            Most endometriosis cases in India go undiagnosed for 7-10 years. Dr. Khemani&apos;s specialized approach ensures accurate diagnosis and gold-standard excision surgery — not just symptom suppression.
                         </p>
                     </div>
 
-                    {/* Bento Grid: 3 columns */}
+                    {/* Enhanced Bento Grid */}
                     <div className="grid lg:grid-cols-3 gap-6">
-                        {/* Left Card */}
-                        <div className="bg-white rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px] border border-pink-50 shadow-sm">
-                            <div>
-                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
-                                    Gold-standard excision surgery that removes disease from the root
+                        {/* Left Column — 2 stacked cards */}
+                        <div className="flex flex-col gap-6">
+                            <div className="bg-white rounded-[2rem] p-8 flex flex-col justify-between flex-1 border border-pink-50 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-[#fff0f5] flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Excision Over Ablation — The Gold Standard
                                 </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    While many surgeons use ablation (burning) which leaves disease behind, Dr. Khemani performs thorough excision surgery — cutting out endometrial implants completely. Studies show excision reduces recurrence by up to 80% compared to ablation techniques.
+                                </p>
                             </div>
-                            <p className="text-[#C21975] text-base leading-relaxed">
-                                Unlike many practitioners who rely on ablation (burning) techniques, Dr. Khemani performs thorough excision surgery — significantly reducing recurrence rates and preserving fertility.
-                            </p>
+                            <div className="bg-gradient-to-br from-[#C21975] to-[#8a2f5e] rounded-[2rem] p-8 flex flex-col justify-between flex-1 shadow-sm">
+                                <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-white leading-snug mb-4">
+                                    Fertility-Preserving Approach
+                                </h3>
+                                <p className="text-pink-100 text-sm leading-relaxed">
+                                    Every surgical decision is made keeping your future fertility in mind. Ovarian tissue is carefully preserved, adhesions are meticulously released, and tubal patency is maintained — giving you the best chance of natural conception or successful IVF.
+                                </p>
+                            </div>
                         </div>
 
-                        {/* Center Image */}
-                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
-                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Endometriosis Specialist Kolkata" fill className="object-cover" />
+                        {/* Center — Image + Stats */}
+                        <div className="flex flex-col gap-6">
+                            <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
+                                <Image src="/images/endometriosis-awareness.jpg" alt="Dr. Vinita Khemani performing endometriosis excision surgery in Kolkata" fill className="object-cover" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                                <div className="absolute bottom-6 left-6 right-6">
+                                    <p className="text-white text-sm font-semibold">&quot;Endometriosis is not just painful periods — it&apos;s a chronic disease that deserves expert surgical management.&quot;</p>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="bg-white rounded-2xl p-5 text-center border border-pink-50 shadow-sm">
+                                    <p className="text-2xl font-bold text-[#C21975]">23+</p>
+                                    <p className="text-xs text-gray-500 mt-1">Years Experience</p>
+                                </div>
+                                <div className="bg-white rounded-2xl p-5 text-center border border-pink-50 shadow-sm">
+                                    <p className="text-2xl font-bold text-[#C21975]">608+</p>
+                                    <p className="text-xs text-gray-500 mt-1">Surgeries Done</p>
+                                </div>
+                                <div className="bg-white rounded-2xl p-5 text-center border border-pink-50 shadow-sm">
+                                    <p className="text-2xl font-bold text-[#C21975]">6</p>
+                                    <p className="text-xs text-gray-500 mt-1">Hospital Affiliations</p>
+                                </div>
+                                <div className="bg-white rounded-2xl p-5 text-center border border-pink-50 shadow-sm">
+                                    <p className="text-2xl font-bold text-[#C21975]">90%+</p>
+                                    <p className="text-xs text-gray-500 mt-1">Patient Satisfaction</p>
+                                </div>
+                            </div>
                         </div>
 
-                        {/* Right Card */}
-                        <div className="bg-white rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px] border border-pink-50 shadow-sm">
-                            <div>
-                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
-                                    Access to state-of-the-art facilities at Kolkata&apos;s leading hospitals
+                        {/* Right Column — 2 stacked cards */}
+                        <div className="flex flex-col gap-6">
+                            <div className="bg-white rounded-[2rem] p-8 flex flex-col justify-between flex-1 border border-pink-50 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-[#fff0f5] flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Multi-Disciplinary Pain Management
                                 </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Endometriosis pain is complex and requires more than painkillers. Dr. Khemani offers a combined approach — hormonal therapy, laparoscopic nerve-sparing surgery, dietary guidance, and psychological support for chronic pain management.
+                                </p>
                             </div>
-                            <p className="text-gray-600 text-base leading-relaxed">
-                                Affiliated with Bhagirathi Neotia, Charnock Hospital, Apollo Clinic, and ILS Hospital — ensuring optimal laparoscopic equipment and operating facilities for the best outcomes.
-                            </p>
+                            <div className="bg-white rounded-[2rem] p-8 flex flex-col justify-between flex-1 border border-pink-50 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-[#fff0f5] flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    One-Stop Diagnostic Precision
+                                </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    From initial ultrasound evaluation and CA-125 markers to definitive diagnostic laparoscopy — all under one roof. No referral chains. Dr. Khemani personally performs and interprets every diagnostic procedure to ensure nothing is missed.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
                     {/* CTA Button */}
-                    <div className="mt-10 text-center">
+                    <div className="mt-12 text-center">
                         <button
                             onClick={() => setIsEnquiryModalOpen(true)}
                             className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                         >
-                            Book Your Consultation
+                            Book Your Endometriosis Consultation
                             <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                 <ArrowUpRight className="w-6 h-6" />
                             </span>

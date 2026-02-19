@@ -151,7 +151,7 @@ export default function AdvancedLaparoscopyPage() {
             {/* Why Choose Section (Updated) */}
             <section className="py-24 bg-white relative overflow-hidden">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6 relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Us?</span>
                             <h2 className="font-display text-4xl lg:text-5xl font-bold mb-8 text-gray-900">Why Advanced <br /><span className="text-[#C21975]">Laparoscopy?</span></h2>
@@ -174,7 +174,7 @@ export default function AdvancedLaparoscopyPage() {
                                 ))}
                             </div>
                         </div>
-                        <div className="relative h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <div className="relative h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl sticky top-32">
                             <Image src="/images/unnamed.webp" alt="Surgical precision" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-tr from-pink-900/20 to-transparent"></div>
                         </div>
@@ -239,37 +239,109 @@ export default function AdvancedLaparoscopyPage() {
                 </div>
             </section>
 
-            {/* Why Choose Us — Bento Grid */}
+            {/* Why Choose Us — Enhanced Bento Grid */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Us</span>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Dr. Khemani</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-                                Your trusted partner in{" "}<br />
-                                <span className="italic text-[#C21975]">advanced laparoscopy</span>
+                                Kolkata&apos;s leading expert in{" "}<br />
+                                <span className="italic text-[#C21975]">advanced laparoscopic surgery</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">
-                            608+ successful laparoscopic surgeries, 23+ years of experience, and affiliations with 6 premier hospitals across Kolkata. A surgeon&apos;s skill directly determines outcomes.
+                            A surgeon&apos;s skill directly determines your outcome. With 608+ laparoscopic surgeries and 23+ years of experience, Dr. Khemani brings precision and safety to every procedure.
                         </p>
                     </div>
+
+                    {/* Enhanced Bento Grid */}
                     <div className="grid lg:grid-cols-3 gap-6">
-                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
-                            <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">Complex surgical portfolio including TLH for large uteri up to 20-week size</h3>
-                            <p className="text-[#C21975] text-base leading-relaxed">Myomectomies for multiple fibroids, extensive endometriosis excision, and difficult ovarian cystectomies — all performed laparoscopically.</p>
+                        {/* Left Column — 2 stacked cards */}
+                        <div className="flex flex-col gap-6">
+                            <div className="bg-[#f5f0f2] rounded-[2rem] p-8 flex flex-col justify-between flex-1 hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Complex Surgical Portfolio
+                                </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    From TLH for uteri up to 20-week size, myomectomies for multiple or large fibroids, extensive endometriosis excision, to challenging ovarian cystectomies and ectopic pregnancies — all performed through tiny 5mm incisions.
+                                </p>
+                            </div>
+                            <div className="bg-gradient-to-br from-[#C21975] to-[#8a2f5e] rounded-[2rem] p-8 flex flex-col justify-between flex-1 shadow-sm">
+                                <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-white leading-snug mb-4">
+                                    Advanced Energy Devices &amp; Bloodless Technique
+                                </h3>
+                                <p className="text-pink-100 text-sm leading-relaxed">
+                                    Using harmonic scalpels, bipolar vessel sealers, and HD 4K visualization systems for near-bloodless surgical fields. This precision minimizes tissue damage, reduces operative time, and accelerates healing.
+                                </p>
+                            </div>
                         </div>
-                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
-                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Expert Laparoscopic Surgeon Kolkata" fill className="object-cover" />
+
+                        {/* Center — Image + Stats */}
+                        <div className="flex flex-col gap-6">
+                            <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
+                                <Image src="/images/laparoscopy-technology.jpg" alt="Advanced laparoscopic surgical equipment used by Dr. Vinita Khemani" fill className="object-cover" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                                <div className="absolute bottom-6 left-6 right-6">
+                                    <p className="text-white text-sm font-semibold">&quot;Laparoscopic surgery is not just a technique — it&apos;s a commitment to better outcomes for every patient.&quot;</p>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">608+</p>
+                                    <p className="text-xs text-gray-500 mt-1">Surgeries Done</p>
+                                </div>
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">5mm</p>
+                                    <p className="text-xs text-gray-500 mt-1">Tiny Incisions</p>
+                                </div>
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">6</p>
+                                    <p className="text-xs text-gray-500 mt-1">Hospitals Across Kolkata</p>
+                                </div>
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">24-48h</p>
+                                    <p className="text-xs text-gray-500 mt-1">Avg Discharge</p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
-                            <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">Operating across 6 premier hospitals for convenient access</h3>
-                            <p className="text-gray-600 text-base leading-relaxed">Bhagirathi Neotia (New Town), Charnock Hospital (VIP Road), Apollo Clinic (Chinar Park), Spandan Hospital, and ILS Hospital (Dumdum).</p>
+
+                        {/* Right Column — 2 stacked cards */}
+                        <div className="flex flex-col gap-6">
+                            <div className="bg-[#f5f0f2] rounded-[2rem] p-8 flex flex-col justify-between flex-1 hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Complete Surgical Care Pathway
+                                </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    From initial consultation and pre-operative workup through surgery and post-op recovery — every step is personally overseen by Dr. Khemani. Clear communication, detailed consent discussions, and structured follow-up protocols ensure peace of mind.
+                                </p>
+                            </div>
+                            <div className="bg-[#f5f0f2] rounded-[2rem] p-8 flex flex-col justify-between flex-1 hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Multi-Hospital Access Across Kolkata
+                                </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Operating at Bhagirathi Neotia (New Town), Charnock Hospital (VIP Road), Apollo Clinic (Chinar Park), Spandan Hospital, and ILS Hospital (Dumdum) — choose the location most convenient to you, with the same expert surgical care.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div className="mt-10 text-center">
+
+                    <div className="mt-12 text-center">
                         <button onClick={() => setIsEnquiryModalOpen(true)} className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]">
-                            Consult Dr. Khemani
+                            Schedule a Surgical Consultation
                             <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45"><ArrowUpRight className="w-6 h-6" /></span>
                         </button>
                     </div>
@@ -279,8 +351,8 @@ export default function AdvancedLaparoscopyPage() {
             {/* Recovery & Aftercare */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl order-last sticky top-32">
                             <Image src="/images/laparoscopy-recovery.jpg" alt="Recovery after laparoscopic surgery at home" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#540d2d]/50 via-transparent to-transparent" />
                             <div className="absolute bottom-8 left-8 right-8 text-white">

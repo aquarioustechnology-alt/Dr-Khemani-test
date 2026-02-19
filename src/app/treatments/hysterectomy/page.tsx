@@ -242,63 +242,115 @@ export default function HysterectomyPage() {
                 </div>
             </section>
 
-            {/* Why Choose Us — Bento Grid */}
+            {/* Why Choose Us — Enhanced Bento Grid */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     {/* Header Row */}
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Us</span>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Dr. Khemani</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-                                Your trusted partner in{" "}
+                                Minimally invasive expertise for{" "}
                                 <br />
-                                <span className="italic text-[#C21975]">surgical excellence</span>
+                                <span className="italic text-[#C21975]">faster, safer hysterectomy</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">
-                            Surgery should be the last resort, not the first suggestion. When it is needed, Dr. Khemani ensures minimally invasive techniques for the best outcomes.
+                            Over 90% of hysterectomies can now be done laparoscopically. Dr. Khemani ensures you benefit from the latest minimally invasive techniques — smaller incisions, less pain, and recovery in days, not weeks.
                         </p>
                     </div>
 
-                    {/* Bento Grid: 3 columns */}
+                    {/* Enhanced Bento Grid */}
                     <div className="grid lg:grid-cols-3 gap-6">
-                        {/* Left Card */}
-                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
-                            <div>
-                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
-                                    23+ years of surgical expertise with advanced laparoscopic hysterectomy (TLH)
+                        {/* Left Column — 2 stacked cards */}
+                        <div className="flex flex-col gap-6">
+                            <div className="bg-[#f5f0f2] rounded-[2rem] p-8 flex flex-col justify-between flex-1 hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-5">
+                                    <Scissors className="w-6 h-6 text-[#C21975]" />
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Total Laparoscopic Hysterectomy (TLH) Mastery
                                 </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Dr. Khemani has performed TLH for uteri up to 20-week size through tiny 5mm incisions. Her technique prioritizes ovarian preservation whenever safely possible — preventing premature surgical menopause and maintaining hormonal balance.
+                                </p>
                             </div>
-                            <p className="text-[#C21975] text-base leading-relaxed">
-                                Ovarian preservation whenever safely possible, comprehensive pre-operative counseling, and meticulous post-operative care for optimal recovery.
-                            </p>
+                            <div className="bg-gradient-to-br from-[#C21975] to-[#8a2f5e] rounded-[2rem] p-8 flex flex-col justify-between flex-1 shadow-sm">
+                                <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center mb-5">
+                                    <Shield className="w-6 h-6 text-white" />
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-white leading-snug mb-4">
+                                    Conservative-First Philosophy
+                                </h3>
+                                <p className="text-pink-100 text-sm leading-relaxed">
+                                    Not every condition requires a hysterectomy. Dr. Khemani exhausts all conservative treatments first — hormonal therapy, uterine artery embolization, and myomectomy — recommending surgery only when truly necessary.
+                                </p>
+                            </div>
                         </div>
 
-                        {/* Center Image */}
-                        <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
-                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Hysterectomy Specialist Kolkata" fill className="object-cover" />
+                        {/* Center — Image + Stats */}
+                        <div className="flex flex-col gap-6">
+                            <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
+                                <Image src="/images/hysterectomy-awareness.jpg" alt="Advanced laparoscopic hysterectomy by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                                <div className="absolute bottom-6 left-6 right-6">
+                                    <p className="text-white text-sm font-semibold">&quot;Surgery should be the last resort — but when needed, minimally invasive is the way forward.&quot;</p>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">24-48h</p>
+                                    <p className="text-xs text-gray-500 mt-1">Discharge Time</p>
+                                </div>
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">5mm</p>
+                                    <p className="text-xs text-gray-500 mt-1">Tiny Incisions</p>
+                                </div>
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">90%+</p>
+                                    <p className="text-xs text-gray-500 mt-1">Laparoscopic Rate</p>
+                                </div>
+                                <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
+                                    <p className="text-2xl font-bold text-[#C21975]">2-3 wk</p>
+                                    <p className="text-xs text-gray-500 mt-1">Full Recovery</p>
+                                </div>
+                            </div>
                         </div>
 
-                        {/* Right Card */}
-                        <div className="bg-[#f5f0f2] rounded-[2rem] p-8 md:p-10 flex flex-col justify-between min-h-[380px]">
-                            <div>
-                                <h3 className="font-display text-2xl md:text-[26px] font-bold text-gray-900 leading-snug mb-6">
-                                    Hospital affiliations with NICU and ICU backup for complete safety
+                        {/* Right Column — 2 stacked cards */}
+                        <div className="flex flex-col gap-6">
+                            <div className="bg-[#f5f0f2] rounded-[2rem] p-8 flex flex-col justify-between flex-1 hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-5">
+                                    <UserCheck className="w-6 h-6 text-[#C21975]" />
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Rapid Recovery &amp; Same-Day Mobilization
                                 </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Most laparoscopic hysterectomy patients are walking within hours of surgery and discharged in 24-48 hours. Comprehensive pre and post-operative protocols ensure a smooth, pain-managed recovery — back to routine in 2-3 weeks.
+                                </p>
                             </div>
-                            <p className="text-gray-600 text-base leading-relaxed">
-                                Smaller incisions, less pain, faster recovery — most patients go home within 24-48 hours. Every surgery backed by comprehensive pre and post-operative protocols.
-                            </p>
+                            <div className="bg-[#f5f0f2] rounded-[2rem] p-8 flex flex-col justify-between flex-1 hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-5">
+                                    <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                                </div>
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
+                                    Multi-Hospital Surgical Access
+                                </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Operating at 6 premier hospitals across Kolkata — Bhagirathi Neotia, Charnock, Apollo Clinic, ILS — each equipped with advanced laparoscopic suites, NICU backup, and round-the-clock anesthesia teams for complete safety.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
                     {/* CTA Button */}
-                    <div className="mt-10 text-center">
+                    <div className="mt-12 text-center">
                         <button
                             onClick={() => setIsEnquiryModalOpen(true)}
                             className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                         >
-                            Consult Dr. Khemani
+                            Get a Surgical Consultation
                             <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                 <ArrowUpRight className="w-6 h-6" />
                             </span>
