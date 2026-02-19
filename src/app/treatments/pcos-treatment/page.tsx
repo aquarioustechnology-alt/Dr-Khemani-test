@@ -556,7 +556,7 @@ export default function PCOSTreatmentPage() {
                                     ))}
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-6">
+                            <div className="flex flex-col gap-6 sticky top-32">
                                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-pink-100">
                                     <div className="flex items-center gap-3 mb-4">
                                         <MapPin className="w-6 h-6 text-[#C21975]" />
@@ -570,13 +570,13 @@ export default function PCOSTreatmentPage() {
                                             { name: "Spandan Hospital", loc: "Teghoria", src: "/images/spandan-hospital-logo.jpg" },
                                             { name: "ILS Hospitals", loc: "Dumdum", src: "/images/images.png" }
                                         ].map((hospital, i) => (
-                                            <div key={i} className="flex items-center gap-4 p-3 bg-white/50 rounded-xl hover:bg-white transition-colors border border-transparent hover:border-pink-100 group">
-                                                <div className="w-16 h-12 relative flex-shrink-0 bg-white rounded-lg p-1 border border-pink-50 shadow-sm group-hover:scale-105 transition-transform">
+                                            <div key={i} className="flex items-center gap-6 p-4 bg-white/50 rounded-2xl hover:bg-white transition-all border border-transparent hover:border-pink-100 hover:shadow-md group">
+                                                <div className="w-28 h-20 relative flex-shrink-0 bg-white rounded-xl p-2 border border-pink-50 shadow-sm group-hover:scale-105 transition-transform flex items-center justify-center">
                                                     <Image src={hospital.src} alt={`${hospital.name} logo`} fill className="object-contain p-1" />
                                                 </div>
                                                 <div>
-                                                    <p className="text-sm font-bold text-gray-900 group-hover:text-[#C21975] transition-colors">{hospital.name}</p>
-                                                    {hospital.loc && <p className="text-xs text-gray-600">{hospital.loc}</p>}
+                                                    <p className="text-lg font-bold text-gray-900 group-hover:text-[#C21975] transition-colors">{hospital.name}</p>
+                                                    {hospital.loc && <p className="text-sm text-gray-600">{hospital.loc}</p>}
                                                 </div>
                                             </div>
                                         ))}
