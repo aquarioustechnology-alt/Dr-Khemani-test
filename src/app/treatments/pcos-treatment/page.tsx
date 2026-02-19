@@ -150,7 +150,7 @@ export default function PCOSTreatmentPage() {
             {/* PCOS in India: The Growing Concern */}
             <section className="py-24 bg-[#fdf8fa]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">India&apos;s Silent Epidemic</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">PCOS in Kolkata <br /><span className="text-[#C21975]">&amp; West Bengal</span></h2>
@@ -183,7 +183,7 @@ export default function PCOSTreatmentPage() {
                                 </span>
                             </button>
                         </div>
-                        <div className="relative">
+                        <div className="relative sticky top-32">
                             <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
                                 <Image src="/images/pcos-awareness-indian.jpg" alt="PCOS awareness and treatment for women in Kolkata by Dr. Vinita Khemani" fill className="object-cover" />
                             </div>
