@@ -83,35 +83,80 @@ export default function EndometriosisPage() {
                 </div>
             </section>
 
-            {/* Understanding Section */}
-            <section className="py-24 bg-white">
-                <div className="container-fluid mx-auto max-w-[1200px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">The Condition</span>
-                            <h2 className="font-display text-4xl font-bold text-gray-900 mb-6">What is <span className="text-[#C21975]">Endometriosis?</span></h2>
-                            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                                It is a condition where tissue similar to the lining of the uterus grows outside it—on ovaries, fallopian tubes, and pelvic tissue. This tissue bleeds during each period but has nowhere to exit, causing inflammation, scar tissue (adhesions), and severe pain.
-                            </p>
-                            <h3 className="font-bold text-xl text-gray-900 mb-4 mt-8">Common Symptoms</h3>
-                            <div className="grid sm:grid-cols-2 gap-y-3 gap-x-4">
-                                {symptoms.map((s, i) => (
-                                    <div key={i} className="flex items-start gap-3">
-                                        <CheckCircle className="w-5 h-5 text-[#C21975] shrink-0 mt-1" />
-                                        <span className="text-gray-700 font-medium">{s}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="aspect-square rounded-[2.5rem] bg-[#fff0f5] relative overflow-hidden flex items-center justify-center p-8">
-                                <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-30" />
-                                <div className="text-center relative z-10">
-                                    <p className="text-[#C21975] font-display text-8xl font-bold mb-2">10%</p>
-                                    <p className="text-gray-600 text-xl font-medium">of women worldwide <br />suffer from Endometriosis.</p>
-                                    <div className="mt-8 inline-block px-6 py-3 bg-white rounded-full shadow-md text-[#C21975] font-bold">Don&apos;t suffer in silence.</div>
+            {/* Understanding Section - Redesigned */}
+            <section className="py-24 bg-gradient-to-br from-white via-pink-50/30 to-white relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-200 to-transparent opacity-50" />
+                <div className="container-fluid mx-auto max-w-[1240px] px-6 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                        {/* Left Content */}
+                        <div className="flex flex-col justify-center h-full">
+                            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                                <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-[#fff0f5] border border-[#fce7f3] text-[#C21975] text-xs font-bold uppercase tracking-wider">
+                                    <div className="w-2 h-2 rounded-full bg-[#C21975]" />
+                                    The Condition
                                 </div>
-                            </div>
+                                <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                                    What exactly is <br />
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#8a2f5e]">Endometriosis?</span>
+                                </h2>
+                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                    It is a condition where tissue similar to the lining of the uterus grows outside it—on ovaries, fallopian tubes, and pelvic tissue. This tissue bleeds during each period but has nowhere to exit, causing inflammation, scar tissue (adhesions), and severe pain.
+                                </p>
+
+                                <div className="mb-8">
+                                    <h3 className="font-bold text-xl text-gray-900 mb-5 flex items-center gap-3">
+                                        <div className="w-10 h-10 rounded-xl bg-[#fff0f5] flex items-center justify-center text-[#C21975]">
+                                            <AlertOctagon className="w-5 h-5" />
+                                        </div>
+                                        Common Symptoms
+                                    </h3>
+                                    <div className="grid sm:grid-cols-2 gap-4">
+                                        {symptoms.map((s, i) => (
+                                            <div key={i} className="flex items-start gap-3 p-4 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-pink-100 transition-all duration-300 group">
+                                                <div className="mt-1 w-5 h-5 rounded-full bg-[#fff0f5] flex items-center justify-center shrink-0 group-hover:bg-[#C21975] transition-colors duration-300">
+                                                    <CheckCircle className="w-3.5 h-3.5 text-[#C21975] group-hover:text-white transition-colors duration-300" />
+                                                </div>
+                                                <span className="text-gray-700 font-medium text-sm leading-snug group-hover:text-gray-900 transition-colors">{s}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <button
+                                    onClick={() => setIsEnquiryModalOpen(true)}
+                                    className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gray-50 text-gray-600 font-semibold hover:bg-[#fff0f5] hover:text-[#C21975] transition-colors border border-gray-200 hover:border-[#fce7f3]"
+                                >
+                                    <span>Don&apos;t suffer in silence. Help is available.</span>
+                                    <ArrowUpRight className="w-4 h-4" />
+                                </button>
+                            </motion.div>
+                        </div>
+
+                        {/* Right Visual */}
+                        <div className="relative lg:h-[600px] h-[500px] w-full rounded-[3rem] overflow-hidden shadow-2xl border-[8px] border-white bg-gray-100">
+                            <Image
+                                src="/images/endometriosis_consultation_1771475255001.png"
+                                alt="Dr. Vinita Khemani explaining endometriosis treatment options to a patient"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+
+                            {/* Floating Stat Card */}
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                transition={{ delay: 0.3 }}
+                                className="absolute bottom-8 right-8 left-8 md:left-auto bg-white/95 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/50 max-w-sm"
+                            >
+                                <div className="flex items-end gap-4 mb-2">
+                                    <p className="text-[#C21975] font-display text-6xl md:text-7xl font-bold leading-none tracking-tight">10%</p>
+                                    <span className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Global Impact</span>
+                                </div>
+                                <p className="text-gray-700 font-medium text-lg leading-tight">
+                                    of women worldwide suffer from Endometriosis, often undiagnosed.
+                                </p>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
