@@ -200,7 +200,7 @@ export default function PCOSTreatmentPage() {
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
-                        <div className="max-w-xl">
+                        <div className="max-w-xl sticky top-32">
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Root Causes</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Understanding <span className="text-[#C21975]">Why It Happens</span></h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
@@ -280,7 +280,7 @@ export default function PCOSTreatmentPage() {
             <section id="symptoms" className="py-24 bg-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-full h-full bg-[url('/images/noise.png')] opacity-20 pointer-events-none" />
                 <div className="container-fluid mx-auto max-w-[1400px] px-6 relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Symptoms Checklist</span>
                             <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
@@ -298,7 +298,7 @@ export default function PCOSTreatmentPage() {
                                 ))}
                             </div>
                         </div>
-                        <div className="relative lg:order-first">
+                        <div className="relative lg:order-first sticky top-32">
                             <div className="relative h-[600px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white">
                                 <Image src="/images/2023-04-06.webp" alt="PCOS symptom awareness and diagnosis in Kolkata" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#540d2d]/80 via-transparent to-transparent" />
@@ -323,7 +323,7 @@ export default function PCOSTreatmentPage() {
             {/* Diagnosis Section - Structured like Reference */}
             <section className="py-24 bg-[#fff0f5]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div className="grid lg:grid-cols-2 gap-12 items-start">
                         {/* Left Content */}
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Clinical Evaluation</span>
@@ -367,7 +367,7 @@ export default function PCOSTreatmentPage() {
                         </div>
 
                         {/* Right Image */}
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white sticky top-32">
                             <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.29 PM.jpeg" alt="PCOS diagnosis and hormonal evaluation by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
                         </div>
                     </div>
@@ -377,9 +377,9 @@ export default function PCOSTreatmentPage() {
             {/* Long Term Risks Section */}
             <section className="py-24 bg-white">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         {/* Left Image */}
-                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl sticky top-32">
                             <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg" alt="PCOS long-term health risk consultation at Dr. Khemani clinic Kolkata" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                             <div className="absolute bottom-8 left-8 right-8 text-white">
@@ -471,8 +471,8 @@ export default function PCOSTreatmentPage() {
             {/* Treatment Pillars - Refactored */}
             <section className="py-24 bg-[#F9F9F9]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="relative h-[600px] rounded-[3rem] overflow-hidden hidden lg:block shadow-2xl">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                        <div className="relative h-[600px] rounded-[3rem] overflow-hidden hidden lg:block shadow-2xl sticky top-32">
                             <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM.jpeg" alt="Personalized PCOS treatment plan by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
                             <div className="absolute inset-0 bg-black/20" />
                             <div className="absolute bottom-10 left-10 right-10 text-white">
