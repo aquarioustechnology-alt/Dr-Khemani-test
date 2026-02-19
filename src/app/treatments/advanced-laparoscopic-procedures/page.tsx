@@ -5,17 +5,17 @@ import { Footer } from "@/app/sections/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { ArrowUpRight, Microscope, Target, ChevronDown, Zap, Award } from "lucide-react";
+import { ArrowUpRight, Microscope, Target, ChevronDown, Zap, Award, Stethoscope, Scissors, RefreshCw, AlertCircle, Search } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
 
 const procedures = [
-    { title: "Total Laparoscopic Hysterectomy (TLH)", desc: "Complete removal of the uterus using minimally invasive techniques, widely considered the gold standard for hysterectomy." },
-    { title: "Laparoscopic Myomectomy", desc: "Surgical removal of fibroids while preserving the uterus. Crucial for women wishing to retain fertility." },
-    { title: "Corrective Surgeries", desc: "Repair of uterine anomalies (like septum), tubal recanalization, or adhesiolysis to restore normal anatomy." },
-    { title: "Ectopic Pregnancy", desc: "Emergency laparoscopic management of tubal pregnancies, prioritizing tube preservation whenever possible." },
-    { title: "Ovarian Cystectomy", desc: "Precise removal of cysts (Dermoid, Endometriotic, Simple) while sparing healthy ovarian tissue." },
-    { title: "Diagnostic Laparoscopy", desc: "The definitive method for diagnosing unexplained pelvic pain, endometriosis, or infertility factors." }
+    { title: "Total Laparoscopic Hysterectomy (TLH)", desc: "Complete removal of the uterus using minimally invasive techniques, widely considered the gold standard for hysterectomy.", icon: Stethoscope },
+    { title: "Laparoscopic Myomectomy", desc: "Surgical removal of fibroids while preserving the uterus. Crucial for women wishing to retain fertility.", icon: Scissors },
+    { title: "Corrective Surgeries", desc: "Repair of uterine anomalies (like septum), tubal recanalization, or adhesiolysis to restore normal anatomy.", icon: RefreshCw },
+    { title: "Ectopic Pregnancy", desc: "Emergency laparoscopic management of tubal pregnancies, prioritizing tube preservation whenever possible.", icon: AlertCircle },
+    { title: "Ovarian Cystectomy", desc: "Precise removal of cysts (Dermoid, Endometriotic, Simple) while sparing healthy ovarian tissue.", icon: Target },
+    { title: "Diagnostic Laparoscopy", desc: "The definitive method for diagnosing unexplained pelvic pain, endometriosis, or infertility factors.", icon: Search }
 ];
 
 const faqs = [
@@ -106,7 +106,7 @@ export default function AdvancedLaparoscopyPage() {
                                 className="flex flex-col gap-4 p-8 rounded-[2rem] bg-gray-50 hover:bg-white border border-gray-100 hover:shadow-xl transition-all group hover:-translate-y-2"
                             >
                                 <div className="w-12 h-12 rounded-xl bg-white text-[#C21975] flex items-center justify-center shadow-sm shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300">
-                                    <Target className="w-6 h-6" />
+                                    <item.icon className="w-6 h-6" />
                                 </div>
                                 <div>
                                     <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#C21975] transition-colors">{item.title}</h4>
@@ -150,39 +150,7 @@ export default function AdvancedLaparoscopyPage() {
                 </div>
             </section>
 
-            {/* Why Choose Section (Updated) */}
-            <section className="py-24 bg-white relative overflow-hidden">
-                <div className="container-fluid mx-auto max-w-[1400px] px-6 relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-16 items-start">
-                        <div>
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Us?</span>
-                            <h2 className="font-display text-4xl lg:text-5xl font-bold mb-8 text-gray-900">Why Advanced <br /><span className="text-[#C21975]">Laparoscopy?</span></h2>
-                            <div className="space-y-6">
-                                {[
-                                    { t: "Micro-Precision", d: "Magnified view allows for precise dissection of tissues." },
-                                    { t: "Minimal Blood Loss", d: "Advanced sealing devices ensure minimal bleeding." },
-                                    { t: "Cosmetic Advantage", d: "Tiny scars that fade over time, unlike large abdominal cuts." },
-                                    { t: "Faster Recovery", d: "Return to work/home routine in days." }
-                                ].map((adv, i) => (
-                                    <div key={i} className="flex gap-4">
-                                        <div className="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center text-[#C21975] shrink-0 mt-1 border border-pink-200">
-                                            <Award className="w-4 h-4" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-lg text-gray-900">{adv.t}</h4>
-                                            <p className="text-gray-600 text-sm">{adv.d}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="relative h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl sticky top-32">
-                            <Image src="/images/unnamed.webp" alt="Surgical precision" fill className="object-cover" />
-                            <div className="absolute inset-0 bg-gradient-to-tr from-pink-900/20 to-transparent"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
 
             {/* Understanding Laparoscopy - Deep Dive */}
             <section className="py-24 bg-[#fdf8fa]">
