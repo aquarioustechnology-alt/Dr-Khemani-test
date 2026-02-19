@@ -562,7 +562,7 @@ export default function PCOSTreatmentPage() {
                                         <MapPin className="w-6 h-6 text-[#C21975]" />
                                         <h4 className="font-bold text-gray-900 text-lg">Clinic Locations in Kolkata</h4>
                                     </div>
-                                    <div className="space-y-3">
+                                    <div className="flex flex-col">
                                         {[
                                             { name: "Bhagirathi Neotia", loc: "New Town", src: "/images/hospitals/bhagirathi.png" },
                                             { name: "Charnock Hospital", loc: "VIP Road", src: "/images/charnock-hospital-logo.webp" },
@@ -570,8 +570,8 @@ export default function PCOSTreatmentPage() {
                                             { name: "Spandan Hospital", loc: "Teghoria", src: "/images/spandan-hospital-logo.jpg" },
                                             { name: "ILS Hospitals", loc: "Dumdum", src: "/images/images.png" }
                                         ].map((hospital, i) => (
-                                            <div key={i} className="flex items-center gap-6 p-4 bg-white/50 rounded-2xl hover:bg-white transition-all border border-transparent hover:border-pink-100 hover:shadow-md group">
-                                                <div className="w-28 h-20 relative flex-shrink-0 bg-white rounded-xl p-2 border border-pink-50 shadow-sm group-hover:scale-105 transition-transform flex items-center justify-center">
+                                            <div key={i} className="flex items-center gap-6 py-5 border-b border-gray-100 last:border-0 group hover:bg-gray-50/50 transition-colors -mx-4 px-4 rounded-xl">
+                                                <div className="w-24 h-16 relative flex-shrink-0 bg-white rounded-lg p-2 border border-pink-50 shadow-sm group-hover:scale-105 transition-transform flex items-center justify-center">
                                                     <Image src={hospital.src} alt={`${hospital.name} logo`} fill className="object-contain p-1" />
                                                 </div>
                                                 <div>
