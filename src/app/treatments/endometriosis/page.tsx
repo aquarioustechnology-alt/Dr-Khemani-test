@@ -88,7 +88,34 @@ export default function EndometriosisPage() {
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-200 to-transparent opacity-50" />
                 <div className="container-fluid mx-auto max-w-[1240px] px-6 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                        {/* Left Content */}
+                        {/* Left Visual (Now First) */}
+                        <div className="relative lg:h-[600px] h-[500px] w-full rounded-[3rem] overflow-hidden shadow-2xl border-[8px] border-white bg-gray-100 order-last lg:order-first">
+                            <Image
+                                src="/images/endometriosis_consultation_1771475255001.png"
+                                alt="Dr. Vinita Khemani explaining endometriosis treatment options to a patient"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+
+                            {/* Floating Stat Card */}
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                transition={{ delay: 0.3 }}
+                                className="absolute bottom-8 right-8 left-8 md:left-auto bg-white/95 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/50 max-w-sm"
+                            >
+                                <div className="flex items-end gap-4 mb-2">
+                                    <p className="text-[#C21975] font-display text-6xl md:text-7xl font-bold leading-none tracking-tight">10%</p>
+                                    <span className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Global Impact</span>
+                                </div>
+                                <p className="text-gray-700 font-medium text-lg leading-tight">
+                                    of women worldwide suffer from Endometriosis, often undiagnosed.
+                                </p>
+                            </motion.div>
+                        </div>
+
+                        {/* Right Content (Now Second) */}
                         <div className="flex flex-col justify-center h-full">
                             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                                 <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-[#fff0f5] border border-[#fce7f3] text-[#C21975] text-xs font-bold uppercase tracking-wider">
@@ -131,56 +158,44 @@ export default function EndometriosisPage() {
                                 </button>
                             </motion.div>
                         </div>
-
-                        {/* Right Visual */}
-                        <div className="relative lg:h-[600px] h-[500px] w-full rounded-[3rem] overflow-hidden shadow-2xl border-[8px] border-white bg-gray-100">
-                            <Image
-                                src="/images/endometriosis_consultation_1771475255001.png"
-                                alt="Dr. Vinita Khemani explaining endometriosis treatment options to a patient"
-                                fill
-                                className="object-cover"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-                            {/* Floating Stat Card */}
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                                transition={{ delay: 0.3 }}
-                                className="absolute bottom-8 right-8 left-8 md:left-auto bg-white/95 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/50 max-w-sm"
-                            >
-                                <div className="flex items-end gap-4 mb-2">
-                                    <p className="text-[#C21975] font-display text-6xl md:text-7xl font-bold leading-none tracking-tight">10%</p>
-                                    <span className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Global Impact</span>
-                                </div>
-                                <p className="text-gray-700 font-medium text-lg leading-tight">
-                                    of women worldwide suffer from Endometriosis, often undiagnosed.
-                                </p>
-                            </motion.div>
-                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Stages Section (New) */}
-            <section className="py-20 bg-[#F9F9F9]">
-                <div className="container-fluid mx-auto max-w-[1200px] px-6">
-                    <div className="text-center mb-12">
-                        <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">Stages of <span className="text-[#C21975]">Severity</span></h2>
-                        <p className="text-gray-600">Endometriosis is classified into four stages based on location and depth.</p>
+            {/* Stages of Severity - Enhanced Design */}
+            <section className="py-24 bg-[#fff0f5] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white rounded-full mix-blend-overlay filter blur-[100px] opacity-60 pointer-events-none" />
+                <div className="container-fluid mx-auto max-w-[1240px] px-6 relative z-10">
+                    <div className="text-center mb-16">
+                        <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white/60 backdrop-blur-sm">Classification</span>
+                        <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-6">Stages of <span className="text-[#C21975]">Severity</span></h2>
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">Endometriosis is clinically classified into four stages based on the location, extent, and depth of the endometrial implants.</p>
                     </div>
-                    <div className="grid md:grid-cols-4 gap-6">
+
+                    <div className="grid md:grid-cols-4 gap-6 relative">
+                        {/* Connecting Line (Desktop) */}
+                        <div className="hidden md:block absolute top-[2.5rem] left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#C21975]/30 to-transparent z-0" />
+
                         {[
-                            { s: "Stage 1", t: "Minimal", d: "Small isolated implants, no significant scarring." },
-                            { s: "Stage 2", t: "Mild", d: "More implants deeper in tissue, some scar tissue." },
-                            { s: "Stage 3", t: "Moderate", d: "Deep cysts (Chocolate Cysts) may form on ovaries." },
-                            { s: "Stage 4", t: "Severe", d: "Deep implants, large cysts, and extensive adhesions." }
+                            { s: "1", t: "Minimal", d: "Small, isolated implants. No significant scarring or inflammation visible.", color: "from-pink-100 to-white" },
+                            { s: "2", t: "Mild", d: "More implants are deeper in the tissue. Some scar tissue may be present.", color: "from-pink-200 to-pink-50" },
+                            { s: "3", t: "Moderate", d: "Deep cysts (Chocolate Cysts) on ovaries and adhesions affecting organs.", color: "from-pink-300 to-pink-100" },
+                            { s: "4", t: "Severe", d: "Deep implants, large cysts, and extensive adhesions binding pelvic organs.", color: "from-[#C21975] to-pink-500", text: "text-white", desc: "text-pink-100", title: "text-white" }
                         ].map((stage, i) => (
-                            <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100/50 hover:border-[#C21975]/30 transition-colors">
-                                <span className="text-5xl font-display font-bold text-gray-100 mb-4 block">{stage.s}</span>
-                                <h4 className="text-xl font-bold text-gray-900 mb-2">{stage.t}</h4>
-                                <p className="text-sm text-gray-600">{stage.d}</p>
-                            </div>
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: i * 0.1 }}
+                                viewport={{ once: true }}
+                                className={`relative z-10 rounded-[2rem] p-8 h-full flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-white/50 ${stage.s === "4" ? "bg-gradient-to-br from-[#C21975] to-[#8a2f5e] shadow-lg shadow-pink-900/20" : "bg-white shadow-sm hover:border-pink-200"}`}
+                            >
+                                <div className={`w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold font-display mb-6 shadow-inner ${stage.s === "4" ? "bg-white text-[#C21975]" : "bg-[#fff0f5] text-[#C21975]"}`}>
+                                    {stage.s}
+                                </div>
+                                <h4 className={`text-xl font-bold mb-3 ${stage.title || "text-gray-900"}`}>{stage.t}</h4>
+                                <p className={`text-sm leading-relaxed ${stage.desc || "text-gray-600"}`}>{stage.d}</p>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
@@ -225,15 +240,41 @@ export default function EndometriosisPage() {
             {/* Myths vs Facts */}
             <section className="py-24 bg-gray-50">
                 <div className="container-fluid mx-auto max-w-[1200px] px-6">
-                    <h2 className="font-display text-3xl font-bold text-center mb-12">Debunking Myths</h2>
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-                            <div className="flex items-center gap-3 mb-4 text-red-500 font-bold"><AlertOctagon className="w-5 h-5" /> MYTH: Pregnancy cures Endometriosis.</div>
-                            <p className="text-gray-600">Pregnancy suppresses symptoms temporarily proper to hormonal changes, but the disease often returns after delivery.</p>
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Clarifying Doubts</span>
+                            <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-8">Debunking Common <span className="text-[#C21975]">Myths</span></h2>
+                            <div className="space-y-6">
+                                <div className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-red-500 hover:shadow-md transition-shadow">
+                                    <div className="flex items-center gap-2 text-red-500 font-bold mb-3">
+                                        <AlertOctagon className="w-5 h-5" />
+                                        <span>MYTH: Pregnancy cures Endometriosis.</span>
+                                    </div>
+                                    <div className="pl-7">
+                                        <p className="text-sm font-bold text-gray-900 mb-1 uppercase tracking-wider">The Reality</p>
+                                        <p className="text-gray-600 leading-relaxed">Pregnancy suppresses symptoms temporarily proper to hormonal changes, but the disease often returns after delivery.</p>
+                                    </div>
+                                </div>
+                                <div className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-red-500 hover:shadow-md transition-shadow">
+                                    <div className="flex items-center gap-2 text-red-500 font-bold mb-3">
+                                        <AlertOctagon className="w-5 h-5" />
+                                        <span>MYTH: Hysterectomy is the only cure.</span>
+                                    </div>
+                                    <div className="pl-7">
+                                        <p className="text-sm font-bold text-gray-900 mb-1 uppercase tracking-wider">The Reality</p>
+                                        <p className="text-gray-600 leading-relaxed">Removing the uterus doesn&apos;t remove endometriosis deposits elsewhere in the pelvis. Excision surgery is more effective.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-                            <div className="flex items-center gap-3 mb-4 text-red-500 font-bold"><AlertOctagon className="w-5 h-5" /> MYTH: Hysterectomy is the only cure.</div>
-                            <p className="text-gray-600">Removing the uterus doesn&apos;t remove endometriosis deposits elsewhere in the pelvis. Excision surgery is more effective.</p>
+                        <div className="relative h-[400px] lg:h-[500px] rounded-[2.5rem] overflow-hidden shadow-xl border-4 border-white">
+                            <Image
+                                src="/images/endometriosis_consultation_1771475548975.png"
+                                alt="Dr. Vinita Khemani clarifying doubts about endometriosis"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent" />
                         </div>
                     </div>
                 </div>
