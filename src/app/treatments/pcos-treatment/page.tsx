@@ -674,7 +674,7 @@ export default function PCOSTreatmentPage() {
                             </div>
                         </div>
                         <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white sticky top-32">
-                            <Image src="/images/family-planning-counseling.jpg" alt="PCOS mental health and emotional support counseling in Kolkata" fill className="object-cover object-top" />
+                            <Image src="/images/pcos-mental-health.jpg" alt="PCOS mental health and emotional support counseling in Kolkata" fill className="object-cover object-top" />
                         </div>
                     </div>
                 </div>

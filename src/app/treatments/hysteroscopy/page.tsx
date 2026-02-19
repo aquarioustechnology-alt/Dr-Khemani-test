@@ -10,12 +10,12 @@ import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
 
 const uses = [
-    { title: "Abnormal Bleeding", desc: "Finding the cause of heavy or prolonged periods (polyps, fibroids, or hyperplasia).", icon: FileSearch },
-    { title: "Polyp Removal", desc: "Small growths in the uterine lining can be identified and removed in the same sitting.", icon: CheckCircle },
-    { title: "Fibroid Resection", desc: "Removing submucosal fibroids that bulge into the cavity and cause bleeding or infertility.", icon: Layers },
-    { title: "Infertility Evaluation", desc: "Ensuring the womb is healthy and ready for implantation before IVF or IUI.", icon: Microscope },
-    { title: "Septum Correction", desc: "Removing a uterine septum (a partition inside the womb) that causes miscarriages.", icon: CheckCircle },
-    { title: "Lost IUCD Removal", desc: "Locating and removing an IUCD (Copper-T) whose threads are not visible.", icon: Eye }
+    { title: "Abnormal Bleeding", desc: "Investigating the root cause of heavy, prolonged, or irregular periods. Hysteroscopy allows direct visualization to identify polyps, submucosal fibroids, or endometrial hyperplasia that ultrasounds might miss, often allowing for immediate biopsy or treatment.", icon: FileSearch },
+    { title: "Polyp Removal (Polypectomy)", desc: " uterine polyps are common causes of spotting and infertility. Dr. Khemani uses precision hysteroscopic techniques to remove these growths completely from the root without damaging the surrounding healthy uterine lining, ensuring immediate symptom relief.", icon: CheckCircle },
+    { title: "Submucosal Fibroid Resection", desc: "Removing fibroids that bulge into the uterine cavity (submucosal) and cause severe bleeding or fertility issues. Using a resectoscope, these can often be shaved down completely through the cervix, avoiding the need for open surgery or cuts on the abdomen.", icon: Layers },
+    { title: "Infertility Evaluation", desc: "A critical step before IVF or IUI. We assess the uterine cavity for any anatomical barriers to implantation, such as adhesions, scar tissue, or congenital anomalies, ensuring the 'soil' is perfect for the embryo.", icon: Microscope },
+    { title: "Septum Correction (Metroplasty)", desc: "Correcting a septate uterus (a congenital partition inside the womb) is vital for women with a history of recurrent miscarriage. Hysteroscopic resection restores the normal cavity shape, significantly improving the chances of carrying a pregnancy to term.", icon: CheckCircle },
+    { title: "Lost IUCD Retrieval", desc: "Locating and safely removing an Intrauterine Contraceptive Device (Copper-T) when its strings are no longer visible. Hysteroscopy avoids blind manipulation and ensures the device is removed without injury to the uterine walls.", icon: Eye }
 ];
 
 const faqs = [
@@ -68,7 +68,7 @@ export default function HysteroscopyPage() {
                                 </motion.div>
                                 <motion.div className="relative h-[500px] lg:h-[600px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white">
-                                        <Image src="/images/2023-04-23 (1).webp" alt="Hysteroscopy Procedure in Kolkata" fill className="object-cover" />
+                                        <Image src="/images/2023-02-08.webp" alt="Hysteroscopy Procedure in Kolkata" fill className="object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-tr from-pink-900/30 to-transparent"></div>
                                     </div>
                                 </motion.div>
@@ -199,42 +199,121 @@ export default function HysteroscopyPage() {
                 </div>
             </section>
 
-            {/* Dr. Khemani&apos;s Expertise */}
-            <section className="py-24 bg-white">
+            {/* Why Choose Dr. Khemani - Complex Grid Section */}
+            <section className="py-24 bg-[#fff9fc]">
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
-                    <div className="grid lg:grid-cols-2 gap-12 items-stretch bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
-                        <div className="relative min-h-[500px] h-full rounded-[2rem] overflow-hidden shadow-xl">
-                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani - Hysteroscopy Expert in Kolkata" fill className="object-cover" />
+                    {/* Section Header */}
+                    <div className="flex flex-col lg:flex-row justify-between items-end gap-8 mb-16">
+                        <div className="max-w-3xl">
+                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">
+                                Why Choose Dr. Khemani
+                            </span>
+                            <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                                Expert Hysteroscopy Care <br />
+                                <span className="text-[#C21975] italic">for Uterine Preservation</span>
+                            </h2>
                         </div>
-                        <div className="flex flex-col justify-center items-start">
-                            <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Expert Care</span>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Dr. Khemani for Hysteroscopy?</h3>
-                            <p className="text-gray-600 leading-relaxed mb-4">
-                                Dr. Khemani performs both diagnostic and operative hysteroscopy with precision honed over 23+ years. Her expertise in &quot;see and treat&quot; techniques means many patients resolve their condition in a single procedure.
-                            </p>
-                            <div className="space-y-3 mb-6">
-                                {[
-                                    "Advanced resectoscope and hysteroscope technology",
-                                    "Single-sitting diagnose-and-treat approach",
-                                    "Expert polyp and fibroid removal",
-                                    "Adhesiolysis for Asherman syndrome",
-                                    "Uterine septum correction for recurrent miscarriage"
-                                ].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-3">
-                                        <CheckCircle className="w-4 h-4 text-[#C21975] shrink-0" />
-                                        <span className="text-gray-700 text-sm font-medium">{item}</span>
-                                    </div>
-                                ))}
+                        <p className="text-gray-600 text-lg max-w-xl leading-relaxed">
+                            With 23+ years of surgical excellence, Dr. Khemani uses advanced "See & Treat" hysteroscope technology to ensure safe, scarless, and effective outcomes for every patient.
+                        </p>
+                    </div>
+
+                    {/* Complex Grid Layout */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+                        {/* Left Column */}
+                        <div className="flex flex-col gap-6 h-full">
+                            {/* Card 1: White */}
+                            <div className="bg-white p-8 rounded-[2.5rem] flex-1 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                                <div className="w-12 h-12 rounded-xl bg-pink-50 text-[#C21975] flex items-center justify-center mb-6">
+                                    <Microscope className="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3">Advanced German Optics</h3>
+                                    <p className="text-gray-600 leading-relaxed">
+                                        Utilizing high-definition Storz/Wolf hysteroscopes for crystal-clear visualization, permitting Dr. Khemani to identify even the smallest pathologies that standard ultrasounds often miss.
+                                    </p>
+                                </div>
                             </div>
-                            <button
-                                onClick={() => setIsEnquiryModalOpen(true)}
-                                className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-base transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
-                            >
-                                Consult Dr. Khemani
-                                <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
+
+                            {/* Card 2: Dark Purple */}
+                            <div className="bg-[#8a2f5e] p-8 rounded-[2.5rem] flex-1 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow text-white">
+                                <div className="w-12 h-12 rounded-xl bg-white/10 text-white flex items-center justify-center mb-6">
+                                    <CheckCircle className="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-white mb-3">Single-Sitting "See & Treat"</h3>
+                                    <p className="text-white/90 leading-relaxed">
+                                        A unique approach where diagnosis and treatment happen simultaneously. If a polyp or fibroid is found, it is removed immediately, sparing you a second surgery.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Center Column: Image & Stats */}
+                        <div className="space-y-6">
+                            {/* Image with Quote */}
+                            <div className="relative h-[400px] lg:h-[420px] rounded-[2.5rem] overflow-hidden group">
+                                <Image
+                                    src="/images/WhatsApp Image 2026-01-14 at 12.55.29 PM.jpeg"
+                                    alt="Dr. Vinita Khemani Hysteroscopy Specialist"
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+                                    <p className="text-white font-medium text-lg leading-relaxed">
+                                        "Accurate diagnosis is the first step to a cure. Hysteroscopy allows us to see the problem directly and fix it instantly."
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Stats Grid */}
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="bg-[#efebeb] p-6 rounded-[2rem] text-center">
+                                    <p className="text-[#C21975] font-display text-3xl font-bold mb-1">23+</p>
+                                    <p className="text-gray-600 text-sm font-medium">Years Experience</p>
+                                </div>
+                                <div className="bg-[#efebeb] p-6 rounded-[2rem] text-center">
+                                    <p className="text-[#C21975] font-display text-3xl font-bold mb-1">10k+</p>
+                                    <p className="text-gray-600 text-sm font-medium">Procedures Done</p>
+                                </div>
+                                <div className="bg-[#efebeb] p-6 rounded-[2rem] text-center">
+                                    <p className="text-[#C21975] font-display text-3xl font-bold mb-1">Day Care</p>
+                                    <p className="text-gray-600 text-sm font-medium">No Overnight Stay</p>
+                                </div>
+                                <div className="bg-[#efebeb] p-6 rounded-[2rem] text-center">
+                                    <p className="text-[#C21975] font-display text-3xl font-bold mb-1">Painless</p>
+                                    <p className="text-gray-600 text-sm font-medium">Minimal Recovery</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Column */}
+                        <div className="flex flex-col gap-6 h-full">
+                            {/* Card 3: White */}
+                            <div className="bg-white p-8 rounded-[2.5rem] flex-1 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                                <div className="w-12 h-12 rounded-xl bg-pink-50 text-[#C21975] flex items-center justify-center mb-6">
+                                    <Layers className="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3">Fertility Optimization</h3>
+                                    <p className="text-gray-600 leading-relaxed">
+                                        Special focus on restoring the uterine cavity's shape and lining health to maximize implantation success rates for natural conception or IVF cycles.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Card 4: White */}
+                            <div className="bg-white p-8 rounded-[2.5rem] flex-1 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                                <div className="w-12 h-12 rounded-xl bg-pink-50 text-[#C21975] flex items-center justify-center mb-6">
                                     <ArrowUpRight className="w-6 h-6" />
-                                </span>
-                            </button>
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3">Painless Day Care</h3>
+                                    <p className="text-gray-600 leading-relaxed">
+                                        Performed under safe short sedation in top hospital settings. Patients typically walk in and walk out the same day with minimal to no downtime.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

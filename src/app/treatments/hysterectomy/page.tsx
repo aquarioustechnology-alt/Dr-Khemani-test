@@ -121,27 +121,26 @@ export default function HysterectomyPage() {
                             <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
                                 Path to <span className="text-[#C21975]">Fast Recovery</span>
                             </h2>
-                            <div className="relative border-l-2 border-[#C21975]/20 pl-8 ml-4 space-y-12">
-                                <div className="relative">
-                                    <span className="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-[#C21975] border-4 border-[#F5F5F5]" />
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Day 1-2: Hospital Stay</h3>
-                                    <p className="text-gray-600">Most laparoscopic patients are walking within hours and discharged in 24-48 hours. Pain is managed effectively.</p>
-                                </div>
-                                <div className="relative">
-                                    <span className="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-[#C21975] border-4 border-[#F5F5F5]" />
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Week 1: Rest & Light Activity</h3>
-                                    <p className="text-gray-600">Rest at home, but short walks are encouraged to aid healing. No heavy lifting.</p>
-                                </div>
-                                <div className="relative">
-                                    <span className="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-[#C21975] border-4 border-[#F5F5F5]" />
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Week 2-3: Returning to Routine</h3>
-                                    <p className="text-gray-600">Many return to desk jobs. Energy levels improve significantly.</p>
-                                </div>
-                                <div className="relative">
-                                    <span className="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-[#C21975] border-4 border-[#F5F5F5]" />
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Week 4-6: Full Recovery</h3>
-                                    <p className="text-gray-600">Clearance for exercise and normal activities. Feel the freedom from pain and bleeding!</p>
-                                </div>
+                            <div className="relative border-l-2 border-[#C21975]/20 pl-8 ml-6 space-y-12">
+                                {[
+                                    { title: "Day 1–2: Hospital Stay", desc: "Most laparoscopic patients are walking within hours and discharged in 24–48 hours. Pain is managed effectively." },
+                                    { title: "Week 1: Rest & Light Activity", desc: "Rest at home, but short walks are encouraged to aid healing. No heavy lifting." },
+                                    { title: "Week 2–3: Returning to Routine", desc: "Many return to desk jobs. Energy levels improve significantly." },
+                                    { title: "Week 4–6: Full Recovery", desc: "Clearance for exercise and normal activities. Feel the freedom from pain and bleeding!" }
+                                ].map((step, index) => (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, x: -30 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true, margin: "-50px" }}
+                                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                                        className="relative"
+                                    >
+                                        <span className="absolute -left-[45px] top-[2px] w-6 h-6 rounded-full bg-[#C21975] border-4 border-[#F5F5F5] z-10 shadow-sm" />
+                                        <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
+                                        <p className="text-gray-600">{step.desc}</p>
+                                    </motion.div>
+                                ))}
                             </div>
                         </div>
                         <div className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
@@ -293,7 +292,7 @@ export default function HysterectomyPage() {
                         {/* Center — Image + Stats */}
                         <div className="flex flex-col gap-6">
                             <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
-                                <Image src="/images/hysterectomy-awareness.jpg" alt="Advanced laparoscopic hysterectomy by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
+                                <Image src="/images/2023-04-23 (1).webp" alt="Advanced laparoscopic hysterectomy by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                                 <div className="absolute bottom-6 left-6 right-6">
                                     <p className="text-white text-sm font-semibold">&quot;Surgery should be the last resort — but when needed, minimally invasive is the way forward.&quot;</p>

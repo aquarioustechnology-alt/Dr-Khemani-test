@@ -327,7 +327,7 @@ export default function FertilityPage() {
                         {/* Center — Image + Stats */}
                         <div className="flex flex-col gap-6">
                             <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
-                                <Image src="/images/fertility-couple-hope.jpg" alt="Hopeful couple during fertility consultation with Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
+                                <Image src="/images/fertility_couple_hope_1771475604648.png" alt="Hopeful couple during fertility consultation with Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                                 <div className="absolute bottom-6 left-6 right-6">
                                     <p className="text-white text-sm font-semibold">&quot;Your fertility journey deserves patience, science, and a doctor who truly listens.&quot;</p>

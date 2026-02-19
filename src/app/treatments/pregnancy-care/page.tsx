@@ -280,9 +280,9 @@ export default function PregnancyCarePage() {
                                     <div className="flex-1 hidden md:block relative h-[350px] rounded-[2rem] overflow-hidden shadow-lg border-4 border-white">
                                         <Image
                                             src={[
-                                                "/images/fertility-couple-hope.jpg",
+                                                "/images/unnamed (2).webp",
                                                 "/images/pregnancy-care-india.jpg",
-                                                "/images/high-risk-pregnancy-care.jpg"
+                                                "/images/high_risk_monitoring_1771475096742.png"
                                             ][i]}
                                             alt={tri.title}
                                             fill
@@ -405,7 +405,7 @@ export default function PregnancyCarePage() {
                         </div>
                         <div className="relative sticky top-32">
                             <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                <Image src="/images/2023-04-23.webp" alt="Pregnancy care and antenatal monitoring" fill className="object-cover" />
+                                <Image src="/images/unnamed.webp" alt="Pregnancy care and antenatal monitoring" fill className="object-cover" />
                             </div>
                             <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-20">
                                 <p className="text-sm font-bold text-gray-900 mb-1">Comprehensive Care</p>

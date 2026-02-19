@@ -10,12 +10,36 @@ import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
 
 const procedures = [
-    { title: "Total Laparoscopic Hysterectomy (TLH)", desc: "Complete removal of the uterus using minimally invasive techniques, widely considered the gold standard for hysterectomy.", icon: Stethoscope },
-    { title: "Laparoscopic Myomectomy", desc: "Surgical removal of fibroids while preserving the uterus. Crucial for women wishing to retain fertility.", icon: Scissors },
-    { title: "Corrective Surgeries", desc: "Repair of uterine anomalies (like septum), tubal recanalization, or adhesiolysis to restore normal anatomy.", icon: RefreshCw },
-    { title: "Ectopic Pregnancy", desc: "Emergency laparoscopic management of tubal pregnancies, prioritizing tube preservation whenever possible.", icon: AlertCircle },
-    { title: "Ovarian Cystectomy", desc: "Precise removal of cysts (Dermoid, Endometriotic, Simple) while sparing healthy ovarian tissue.", icon: Target },
-    { title: "Diagnostic Laparoscopy", desc: "The definitive method for diagnosing unexplained pelvic pain, endometriosis, or infertility factors.", icon: Search }
+    {
+        title: "Total Laparoscopic Hysterectomy (TLH)",
+        desc: "Complete removal of the uterus (and cervix) using precision minimally invasive techniques. This is widely considered the gold standard for hysterectomy, offering less pain, minimal blood loss, and a recovery time of just 1-2 weeks compared to 6-8 weeks for open surgery.",
+        icon: Stethoscope
+    },
+    {
+        title: "Laparoscopic Myomectomy",
+        desc: "Surgical removal of uterine fibroids while meticulously preserving the uterus. This procedure is crucial for women wishing to retain future fertility or those who simply want to keep their uterus, removing even large or multiple fibroids safely.",
+        icon: Scissors
+    },
+    {
+        title: "Corrective Surgeries",
+        desc: "Specialized repair of uterine anomalies (like septum or bicornuate uterus), tubal recanalization for reversal of ligation, or severe adhesiolysis. These procedures aim to restore normal pelvic anatomy and improve natural fertility potential.",
+        icon: RefreshCw
+    },
+    {
+        title: "Ectopic Pregnancy",
+        desc: "Urgent laparoscopic management of tubal pregnancies to prevent rupture and internal bleeding. Dr. Khemani prioritizes 'salpingostomy' (tube preservation) whenever possible, saving the fallopian tube to protect future fertility.",
+        icon: AlertCircle
+    },
+    {
+        title: "Ovarian Cystectomy",
+        desc: "Precise removal of pathological cysts (Dermoid, Endometriotic, Mucinous) while carefully sparing healthy ovarian tissue. This technique preserves ovarian reserve and hormonal function, which is critical for women of reproductive age.",
+        icon: Target
+    },
+    {
+        title: "Diagnostic Laparoscopy",
+        desc: "The gold-standard investigation for unexplained pelvic pain, infertility, or suspected endometriosis. It allows for direct visualization of pelvic organs and often permits 'see-and-treat' intervention during the same anesthesia.",
+        icon: Search
+    }
 ];
 
 const faqs = [
@@ -343,13 +367,20 @@ export default function AdvancedLaparoscopyPage() {
                                     { title: "Week 2-3", desc: "Most patients return to desk jobs and light household work. Avoid heavy lifting (over 5kg) and strenuous exercise." },
                                     { title: "Week 4-6", desc: "Full recovery. Resume all activities including exercise and intimacy (as advised). Follow-up appointment to confirm complete healing." }
                                 ].map((item, i) => (
-                                    <div key={i} className="flex gap-4 p-4 bg-white rounded-xl border border-pink-50 shadow-sm">
+                                    <motion.div
+                                        key={i}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: i * 0.1 }}
+                                        className="flex gap-4 p-4 bg-white rounded-xl border border-pink-50 shadow-sm hover:shadow-md transition-all"
+                                    >
                                         <div className="w-10 h-10 rounded-full bg-[#fff0f5] flex items-center justify-center text-[#C21975] font-bold shrink-0">{i + 1}</div>
                                         <div>
                                             <p className="font-bold text-gray-900 text-sm">{item.title}</p>
                                             <p className="text-gray-600 text-sm">{item.desc}</p>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
                         </div>

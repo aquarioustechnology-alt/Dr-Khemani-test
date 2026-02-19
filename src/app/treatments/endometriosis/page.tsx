@@ -463,7 +463,7 @@ export default function EndometriosisPage() {
                         {/* Center — Image + Stats */}
                         <div className="flex flex-col gap-6">
                             <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
-                                <Image src="/images/endometriosis-awareness.jpg" alt="Dr. Vinita Khemani performing endometriosis excision surgery in Kolkata" fill className="object-cover" />
+                                <Image src="/images/endometriosis_surgery_1771474650242.png" alt="Dr. Vinita Khemani performing endometriosis excision surgery in Kolkata" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                                 <div className="absolute bottom-6 left-6 right-6">
                                     <p className="text-white text-sm font-semibold">&quot;Endometriosis is not just painful periods — it&apos;s a chronic disease that deserves expert surgical management.&quot;</p>

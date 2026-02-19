@@ -26,7 +26,7 @@ const services = [
         subtitle: "Cooling the fire within",
         description: "Hot flashes and night sweats are among the most common and bothersome symptoms of menopause. We offer a comprehensive approach to manage these vasomotor symptoms. From non-hormonal medications and lifestyle modifications to advanced hormonal therapies, we tailor the treatment to your specific severity and medical history, helping you regain comfort and sleep quality.",
         features: ["Lifestyle Triggers Analysis", "Non-Hormonal Medications", "Low-Dose HRT Options", "Cooling Techniques"],
-        image: "/images/hot-flash-abstract.svg",
+        image: "/images/menopause_wellness_1771240250559.png",
         color: "#fff0f5",
         badgeText: "Symptom Relief"
     },
@@ -37,7 +37,7 @@ const services = [
         subtitle: "Strengthening your foundation",
         description: "Estrogen plays a crucial role in maintaining bone density. After menopause, bone loss accelerates, increasing the risk of osteoporosis and fractures. We provide comprehensive bone health assessments, including DEXA scans, and create personalized plans involving calcium/vitamin D supplementation, weight-bearing exercise protocols, and medical therapy when necessary to keep your bones strong.",
         features: ["DEXA Screening", "Nutritional Counseling", "Strength Training Guide", "Fracture Prevention"],
-        image: "/images/bone-health-abstract.svg",
+        image: "/images/pcos_exercise_yoga_1771239380179.png",
         color: "#f5e6ef",
         badgeText: "Preventive Care"
     },
@@ -48,7 +48,7 @@ const services = [
         subtitle: "Protecting your heart",
         description: "Heart disease risk increases significantly for women after menopause. We go beyond basic checkups to offer in-depth cardiovascular risk assessments. Our program includes monitoring cholesterol levels, blood pressure, and blood sugar, along with lifestyle coaching to manage weight and stress, ensuring your heart remains healthy for the years to come.",
         features: ["Lipid Profile Analysis", "Blood Pressure Monitoring", "Metabolic Syndrome Check", "Heart-Healthy Diet Plans"],
-        image: "/images/cardio-abstract.svg",
+        image: "/images/menopause_wellness_1771240312997.png",
         color: "#fff0f5",
         badgeText: "Heart Health"
     },
@@ -59,7 +59,7 @@ const services = [
         subtitle: "Mental clarity and emotional balance",
         description: "Hormonal fluctuations can lead to mood swings, anxiety, depression, and 'brain fog'. We understand these are real physiological changes, not just 'in your head'. Our holistic approach integrates medical management, counseling support, and cognitive strategies to help you navigate these emotional tides and maintain mental sharpness.",
         features: ["Mood Assessment", "Cognitive Exercises", "Sleep Hygiene Protocols", "Supportive Counseling"],
-        image: "/images/mood-abstract.svg",
+        image: "/images/pcos_mental_health_1771239396709.png",
         color: "#f5e6ef",
         badgeText: "Mental Wellness"
     },
@@ -70,7 +70,7 @@ const services = [
         subtitle: "Restoring balance safely",
         description: "Hormone Replacement Therapy (HRT) is the most effective treatment for many menopausal symptoms. We specialize in Bioidentical Hormone Replacement Therapy (BHRT), customizing the dosage and delivery method (patch, gel, pill) to your unique needs. We carefully evaluate your personal and family history to ensure the safest and most effective approach.",
         features: ["Bioidentical Hormones", "Customized Dosing", "Regular Safety Monitoring", "Risk-Benefit Analysis"],
-        image: "/images/hrt-abstract.svg",
+        image: "/images/menopause_wellness_1771239357179.png",
         color: "#fff0f5",
         badgeText: "Advanced Therapy"
     },
@@ -81,7 +81,7 @@ const services = [
         subtitle: "Thriving in your second spring",
         description: "Menopause is a time for renewal. Our holistic wellness programs focus on nutrition, physical activity, and stress management. We help you embrace this life stage with vitality, offering guidance on weight management, sexual health, and overall well-being to ensure you feel your best every day.",
         features: ["Nutritional Planning", "Sexual Health Support", "Yoga & Meditation", "Weight Management"],
-        image: "/images/wellness-abstract.svg",
+        image: "/images/menopause_wellness_1771240070819.png",
         color: "#f5e6ef",
         badgeText: "Holistic Living"
     },
@@ -358,7 +358,7 @@ export default function MenopausePage() {
                         {/* Center — Image + Stats */}
                         <div className="flex flex-col gap-6">
                             <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
-                                <Image src="/images/menopause-wellness.jpg" alt="Menopause wellness consultation with Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
+                                <Image src="/images/menopause_wellness_1771239357179.png" alt="Menopause wellness consultation with Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                                 <div className="absolute bottom-6 left-6 right-6">
                                     <p className="text-white text-sm font-semibold">&quot;Menopause is not an ending — it&apos;s the beginning of a new chapter that deserves expert support.&quot;</p>

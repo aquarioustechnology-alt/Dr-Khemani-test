@@ -67,7 +67,7 @@ export default function OvarianCystectomyPage() {
                                 </motion.div>
                                 <motion.div className="relative h-[500px] lg:h-[600px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white">
-                                        <Image src="/images/Laparoscopic Surgery.jpg" alt="Laparoscopic Ovarian Cyst Removal in Kolkata" fill className="object-cover" />
+                                        <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg" alt="Laparoscopic Ovarian Cyst Removal in Kolkata" fill className="object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-tr from-pink-900/40 to-transparent"></div>
                                     </div>
                                 </motion.div>
@@ -229,7 +229,7 @@ export default function OvarianCystectomyPage() {
                         </div>
                         <div className="relative sticky top-32">
                             <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                <Image src="/images/laparoscopy-explanation.jpg" alt="Laparoscopic ovarian cystectomy consultation and evaluation in Kolkata" fill className="object-cover" />
+                                <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM.jpeg" alt="Laparoscopic ovarian cystectomy consultation and evaluation in Kolkata" fill className="object-cover" />
                             </div>
                             <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-20">
                                 <p className="text-sm font-bold text-gray-900 mb-1">Ovary Preserved</p>
@@ -290,7 +290,7 @@ export default function OvarianCystectomyPage() {
                             <p className="text-gray-600 text-base leading-relaxed">Using precise stripping technique instead of cautery-heavy methods, Dr. Khemani minimizes thermal damage to surrounding follicles — preserving your AMH levels and egg reserve for future pregnancies.</p>
                         </div>
                         <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
-                            <Image src="/images/laparoscopy-technology.jpg" alt="3D Laparoscopic cystectomy technology used in Kolkata for precise ovarian surgery" fill className="object-cover" />
+                            <Image src="/images/WhatsApp_Image_2025-12-22_at_12.22.00_PM.jpeg" alt="3D Laparoscopic cystectomy technology used in Kolkata for precise ovarian surgery" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                             <div className="absolute bottom-6 left-6 right-6 text-white">
                                 <p className="font-bold text-lg mb-1">3D HD Laparoscopy</p>
@@ -308,7 +308,7 @@ export default function OvarianCystectomyPage() {
                             <p className="text-gray-600 text-base leading-relaxed">Laparoscopic cystectomy typically takes 45-90 minutes. With just 3 tiny incisions (5mm each), most patients go home the same day and return to normal activities within 5-7 days.</p>
                         </div>
                         <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
-                            <Image src="/images/dr-vinita-about-hero.webp" alt="Dr. Vinita Khemani performing laparoscopic cystectomy consultation in Kolkata" fill className="object-cover" />
+                            <Image src="/images/WhatsApp Image 2025-12-22 at 12.22.01 PM.jpeg" alt="Dr. Vinita Khemani performing laparoscopic cystectomy consultation in Kolkata" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                             <div className="absolute bottom-6 left-6 right-6 text-white">
                                 <p className="font-bold text-lg mb-1">Dr. Vinita Khemani</p>

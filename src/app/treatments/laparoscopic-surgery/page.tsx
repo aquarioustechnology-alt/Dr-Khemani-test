@@ -72,7 +72,7 @@ export default function LaparoscopicSurgeryPage() {
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[400px] md:h-[500px] order-first lg:order-none">
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl">
-                                        <Image src="/images/Laparoscopic Surgery.jpg" alt="Laparoscopic Surgery in Kolkata" fill className="object-cover" priority />
+                                        <Image src="/images/emergency_ot_ready_1771254301635.png" alt="Laparoscopic Surgery in Kolkata" fill className="object-cover" priority />
                                     </div>
                                 </motion.div>
                             </div>
@@ -184,7 +184,7 @@ export default function LaparoscopicSurgeryPage() {
                             </button>
                         </div>
                         <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <Image src="/images/laparoscopy-technology.jpg" alt="Advanced laparoscopic surgery technology" fill className="object-cover" />
+                            <Image src="/images/endometriosis_surgery_1771474850115.png" alt="Advanced laparoscopic surgery technology" fill className="object-cover" />
                             <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block">
                                 <p className="text-sm font-bold text-gray-900 mb-1">583+ Procedures</p>
                                 <p className="text-xs text-gray-600">Dr. Khemani&apos;s laparoscopic expertise spans diagnostic, operative, and complex cases.</p>
