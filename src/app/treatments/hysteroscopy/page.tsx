@@ -214,7 +214,7 @@ export default function HysteroscopyPage() {
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-xl leading-relaxed">
-                            With 23+ years of surgical excellence, Dr. Khemani uses advanced "See & Treat" hysteroscope technology to ensure safe, scarless, and effective outcomes for every patient.
+                            With 23+ years of surgical excellence, Dr. Khemani uses advanced &quot;See &amp; Treat&quot; hysteroscope technology to ensure safe, scarless, and effective outcomes for every patient.
                         </p>
                     </div>
 
@@ -241,7 +241,7 @@ export default function HysteroscopyPage() {
                                     <CheckCircle className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-white mb-3">Single-Sitting "See & Treat"</h3>
+                                    <h3 className="text-xl font-bold text-white mb-3">Single-Sitting &quot;See &amp; Treat&quot;</h3>
                                     <p className="text-white/90 leading-relaxed">
                                         A unique approach where diagnosis and treatment happen simultaneously. If a polyp or fibroid is found, it is removed immediately, sparing you a second surgery.
                                     </p>
@@ -261,7 +261,7 @@ export default function HysteroscopyPage() {
                                 />
                                 <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
                                     <p className="text-white font-medium text-lg leading-relaxed">
-                                        "Accurate diagnosis is the first step to a cure. Hysteroscopy allows us to see the problem directly and fix it instantly."
+                                        &quot;Accurate diagnosis is the first step to a cure. Hysteroscopy allows us to see the problem directly and fix it instantly.&quot;
                                     </p>
                                 </div>
                             </div>
@@ -297,7 +297,7 @@ export default function HysteroscopyPage() {
                                 <div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-3">Fertility Optimization</h3>
                                     <p className="text-gray-600 leading-relaxed">
-                                        Special focus on restoring the uterine cavity's shape and lining health to maximize implantation success rates for natural conception or IVF cycles.
+                                        Special focus on restoring the uterine cavity&apos;s shape and lining health to maximize implantation success rates for natural conception or IVF cycles.
                                     </p>
                                 </div>
                             </div>

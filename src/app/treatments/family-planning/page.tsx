@@ -109,7 +109,7 @@ export default function FamilyPlanningPage() {
                     <div className="text-center mb-16">
                         <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Detailed Guide</span>
                         <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-6">Finding the Right <span className="text-[#C21975]">Fit for You</span></h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">There is no "one size fits all" in contraception. The best method depends on your reproductive goals, lifestyle, and medical history.</p>
+                        <p className="text-gray-600 max-w-2xl mx-auto">There is no &quot;one size fits all&quot; in contraception. The best method depends on your reproductive goals, lifestyle, and medical history.</p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
@@ -141,7 +141,7 @@ export default function FamilyPlanningPage() {
                                 <Shield className="w-7 h-7" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4">Long-Acting (LARC)</h3>
-                            <p className="text-gray-600 mb-6 text-sm leading-relaxed">"Set and forget" methods for women who want reliable protection for 3-10 years.</p>
+                            <p className="text-gray-600 mb-6 text-sm leading-relaxed">&quot;Set and forget&quot; methods for women who want reliable protection for 3-10 years.</p>
                             <ul className="space-y-3">
                                 {[
                                     { name: "Copper-T (IUD)", desc: "Hormone-free, 5-10 years." },
@@ -233,7 +233,7 @@ export default function FamilyPlanningPage() {
                                 <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Planning Ahead</span>
                                 <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Pre-Conception <br /><span className="text-[#C21975]">Counseling</span></h2>
                                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                    Family planning isn't just about preventing pregnancy; it&apos;s also about planning for a healthy one when you are ready. Dr. Khemani emphasizes the importance of a pre-conception checkup at least 3 months before you try to conceive.
+                                    Family planning isn&apos;t just about preventing pregnancy; it&apos;s also about planning for a healthy one when you are ready. Dr. Khemani emphasizes the importance of a pre-conception checkup at least 3 months before you try to conceive.
                                 </p>
                                 <div className="grid sm:grid-cols-2 gap-4 mb-8">
                                     {[
