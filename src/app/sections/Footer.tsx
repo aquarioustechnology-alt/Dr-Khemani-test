@@ -19,9 +19,15 @@ const medicalServices = [
   { title: "Pregnancy Care", href: "/treatments/pregnancy-care" },
   { title: "High-Risk Pregnancy", href: "/treatments/high-risk-pregnancy" },
   { title: "Fertility Treatment", href: "/treatments/fertility" },
-  { title: "Laparoscopic Surgery", href: "/treatments/laparoscopic-surgery" },
   { title: "PCOS / PCOD Management", href: "/treatments/pcos-treatment" },
+  { title: "Advanced Laparoscopic Procedures", href: "/treatments/advanced-laparoscopic-procedures" },
+  { title: "Hysterectomy", href: "/treatments/hysterectomy" },
+  { title: "Hysteroscopy", href: "/treatments/hysteroscopy" },
+  { title: "Endometriosis", href: "/treatments/endometriosis" },
+  { title: "Ovarian Cystectomy", href: "/treatments/ovarian-cystectomy" },
   { title: "Menopause Care", href: "/treatments/menopause" },
+  { title: "Family Planning", href: "/treatments/family-planning" },
+  { title: "Emergency Caesarean", href: "/treatments/emergency-caesarean" },
 ];
 
 export function Footer() {
@@ -181,7 +187,7 @@ export function Footer() {
               </div>
             </div>
 
-            <Link href="/book-appointment" className="w-full flex items-center justify-center gap-2 bg-white text-[#C21975] px-6 py-3.5 rounded-xl font-bold hover:bg-gray-50 transition-all shadow-xl group">
+            <Link href="/contact" className="w-full flex items-center justify-center gap-2 bg-white text-[#C21975] px-6 py-3.5 rounded-xl font-bold hover:bg-gray-50 transition-all shadow-xl group">
               <Calendar className="w-4 h-4" />
               Book Appointment
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -190,14 +196,21 @@ export function Footer() {
         </div>
 
         {/* Footer Bottom */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-pink-200/60">
-            © {new Date().getFullYear()} Healing Touch Clinic. All rights reserved.
-          </p>
-          <div className="flex items-center gap-6">
-            <p className="text-xs text-pink-200/60">
-              Designed by <a href="#" className="hover:text-white transition-colors">Aquarious Technology</a>
-            </p>
+        <div className="pt-8 border-t border-white/5 space-y-4">
+          <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+            <div className="text-center md:text-left">
+              <p className="text-xs text-pink-200/60 mb-2">
+                © {new Date().getFullYear()} Healing Touch Clinic. All rights reserved.
+              </p>
+              <p className="text-[10px] text-pink-200/40 max-w-3xl leading-relaxed">
+                * To protect patient privacy, some imagery used across this website may be AI-generated and does not depict actual patients.
+              </p>
+            </div>
+            <div className="flex items-center gap-6 shrink-0">
+              <p className="text-xs text-pink-200/60">
+                Designed by <a href="#" className="hover:text-white transition-colors">Aquarious Technology</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>

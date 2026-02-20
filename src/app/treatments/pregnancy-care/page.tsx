@@ -68,36 +68,36 @@ const dietaryTips = [
 
 const faqs = [
     {
-        q: "Who is the best doctor for pregnancy care in Kolkata?",
-        a: "Dr. Vinita Khemani is highly regarded in Kolkata for her comprehensive pregnancy care, high normal delivery rates, and management of high-risk pregnancies at top hospitals like Bhagirathi Neotia and AMRI."
+        q: "Who is the best doctor for pregnancy care?",
+        a: "Dr. Vinita Khemani is highly regarded for her comprehensive pregnancy care, high normal delivery rates, and management of high-risk pregnancies at top hospitals like Bhagirathi Neotia and AMRI."
     },
     {
         q: "When should I book my first appointment?",
-        a: "Ideally, as soon as you miss your period or get a positive home pregnancy test. An early scan at 6-7 weeks at Dr. Khemani's Kolkata clinic is crucial to confirm the pregnancy location and heartbeat."
+        a: "Ideally, as soon as you miss your period or get a positive home pregnancy test. An early scan at 6-7 weeks at Dr. Khemani's the city clinic is crucial to confirm the pregnancy location and heartbeat."
     },
     {
         q: "What are the chances of a normal delivery?",
-        a: "Dr. Vinita Khemani is a strong proponent of vaginal delivery. Unless there is a specific medical indication for a C-section (like placenta previa or fetal distress), we always trial for a normal delivery. Our normal delivery rates are significantly higher than the Kolkata city average."
+        a: "Dr. Vinita Khemani is a strong proponent of vaginal delivery. Unless there is a specific medical indication for a C-section (like placenta previa or fetal distress), we always trial for a normal delivery. Our normal delivery rates are significantly higher than the the city city average."
     },
     {
         q: "Is it safe to exercise during pregnancy?",
-        a: "Yes! Unless you have a high-risk condition (like low-lying placenta), antenatal yoga and walking are highly recommended. Dr. Khemani often advises prenatal yoga classes available in Kolkata to build stamina for labor."
+        a: "Yes! Unless you have a high-risk condition (like low-lying placenta), antenatal yoga and walking are highly recommended. Dr. Khemani often advises prenatal yoga classes available to build stamina for labor."
     },
     {
         q: "Do you handle high-risk pregnancies?",
-        a: "Yes, Dr. Khemani specializes in high-risk cases including pregnancy with diabetes, hypertension, and thyroid issues. We have advanced monitoring protocols at our Kolkata clinics for such cases."
+        a: "Yes, Dr. Khemani specializes in high-risk cases including pregnancy with diabetes, hypertension, and thyroid issues. We have advanced monitoring protocols at our the city clinics for such cases."
     },
     {
         q: "Normal delivery vs C-section?",
         a: "We prioritize normal delivery for a faster recovery. However, C-section is recommended for medical necessity (like fetal distress). Dr. Khemani discusses all options with you to ensure the safest birth."
     },
     {
-        q: "What is the delivery package cost in Kolkata?",
+        q: "What is the delivery package cost?",
         a: "Delivery packages vary by hospital and room choice. Dr. Khemani offers transparent guidance on costs at her affiliated hospitals (like Bhagirathi Neotia and AMRI) to help you plan your maternity finances."
     },
     {
         q: "What hospitals are you affiliated with?",
-        a: "Dr. Khemani delivers at top maternity hospitals in Kolkata including AMRI, Bhagirathi Neotia, and others, ensuring you have access to the best NICU and emergency facilities."
+        a: "Dr. Khemani delivers at top maternity hospitals including AMRI, Bhagirathi Neotia, and others, ensuring you have access to the best NICU and emergency facilities."
     },
 ];
 
@@ -131,7 +131,7 @@ export default function PregnancyCarePage() {
                                         </span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Experience safe, supported, and joyful maternity care in South Kolkata with Dr. Vinita Khemani, regarded as the best gynecologist for pregnancy in Kolkata. From the first heartbeat to the first cry, we walk with you every step.
+                                        Experience safe, supported, and joyful maternity care in South the city with Dr. Vinita Khemani, regarded as the best gynecologist for pregnancy. From the first heartbeat to the first cry, we walk with you every step.
                                     </p>
 
                                     <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -388,7 +388,7 @@ export default function PregnancyCarePage() {
                                 India has made remarkable strides in reducing maternal mortality — from 556 per 100,000 live births in 1990 to approximately 97 per 100,000 in recent years. Yet, significant gaps remain, particularly in the quality of antenatal care. According to NFHS-5, while 83% of Indian women receive at least one antenatal checkup, only 58% receive the WHO-recommended 4+ visits, and comprehensive monitoring for blood pressure, blood sugar, and fetal growth remains inconsistent.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                In urban Kolkata, the challenges are different but equally important. The rising trends of late marriages, career-first family planning, and increasing rates of gestational diabetes and hypertension mean that today&apos;s pregnancies require more sophisticated monitoring than ever before. Modern pregnancy care must address not just the physical aspects but also nutritional guidance, mental health support, and birth plan counseling.
+                                In urban the city, the challenges are different but equally important. The rising trends of late marriages, career-first family planning, and increasing rates of gestational diabetes and hypertension mean that today&apos;s pregnancies require more sophisticated monitoring than ever before. Modern pregnancy care must address not just the physical aspects but also nutritional guidance, mental health support, and birth plan counseling.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
                                 Dr. Vinita Khemani provides comprehensive, evidence-based pregnancy care that covers every aspect of the maternal journey — from preconception counseling and first-trimester screening through regular growth monitoring, anomaly scans, gestational diabetes screening, and finally, personalized delivery planning. Her approach prioritizes normal delivery whenever safely possible, while keeping emergency surgical capabilities readily available.
@@ -547,7 +547,7 @@ export default function PregnancyCarePage() {
             </section>
 
             {/* Shared CTA Section */}
-            <SharedCTA title="Start Your Pregnancy Journey in Kolkata" subtitle="Book your first prenatal consultation with Dr. Vinita Khemani today." />
+            <SharedCTA title="Start Your Pregnancy Journey" subtitle="Book your first prenatal consultation with Dr. Vinita Khemani today." />
 
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 

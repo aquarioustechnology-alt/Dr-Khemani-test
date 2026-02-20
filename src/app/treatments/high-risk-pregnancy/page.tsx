@@ -29,12 +29,12 @@ const monitoringProtocol = [
 ];
 
 const faqs = [
-    { q: "Who is the best high-risk pregnancy doctor in Kolkata?", a: "Dr. Vinita Khemani is one of the most experienced obstetricians in Kolkata for high-risk pregnancy management, with over 23 years of expertise and 2,348+ successful deliveries. She operates at NICU-equipped hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital." },
-    { q: "What makes a pregnancy high-risk?", a: "Factors include advanced age (35+), pre-existing conditions (diabetes, hypertension, thyroid), previous pregnancy complications, multiple pregnancies, obesity, or history of miscarriage. Dr. Khemani evaluates each case individually at her Kolkata clinics." },
-    { q: "How often do high-risk patients need checkups?", a: "High-risk pregnancies typically require visits every 2 weeks until 28 weeks, then weekly until delivery. Additional visits are scheduled based on specific conditions. Dr. Khemani is available at multiple hospitals across Kolkata for convenient follow-ups." },
+    { q: "Who is the best high-risk pregnancy doctor?", a: "Dr. Vinita Khemani is one of the most experienced obstetricians for high-risk pregnancy management, with over 23 years of expertise and 2,348+ successful deliveries. She operates at NICU-equipped hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital." },
+    { q: "What makes a pregnancy high-risk?", a: "Factors include advanced age (35+), pre-existing conditions (diabetes, hypertension, thyroid), previous pregnancy complications, multiple pregnancies, obesity, or history of miscarriage. Dr. Khemani evaluates each case individually at her clinics." },
+    { q: "How often do high-risk patients need checkups?", a: "High-risk pregnancies typically require visits every 2 weeks until 28 weeks, then weekly until delivery. Additional visits are scheduled based on specific conditions. Dr. Khemani is available at multiple hospitals across the region for convenient follow-ups." },
     { q: "Can high-risk pregnancies result in normal delivery?", a: "Yes! Many high-risk pregnancies with proper management result in healthy normal deliveries. Dr. Khemani aims for the safest delivery mode based on each patient\u2019s unique situation and closely monitors progress throughout." },
     { q: "When is hospitalization required?", a: "Hospitalization is recommended if there are signs of preterm labor, severe preeclampsia, uncontrolled bleeding, or fetal distress requiring continuous monitoring. Dr. Khemani will guide you based on your specific condition." },
-    { q: "What hospital facilities are available for high-risk delivery in Kolkata?", a: "Dr. Khemani operates at top hospitals in Kolkata equipped with NICU, blood bank, ICU, and 24/7 anesthesia \u2014 including Bhagirathi Neotia (New Town), Charnock Hospital (VIP Road), and ILS Hospital (Dumdum) \u2014 ensuring complete emergency preparedness." },
+    { q: "What hospital facilities are available for high-risk delivery?", a: "Dr. Khemani operates at top hospitals equipped with NICU, blood bank, ICU, and 24/7 anesthesia \u2014 including Bhagirathi Neotia (New Town), Charnock Hospital (VIP Road), and ILS Hospital (Dumdum) \u2014 ensuring complete emergency preparedness." },
 ];
 
 export default function HighRiskPregnancyPage() {
@@ -61,7 +61,7 @@ export default function HighRiskPregnancyPage() {
                                         <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">Specialist in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Dr. Vinita Khemani provides expert management of gestational diabetes, preeclampsia care, and Level III monitoring support. She works with Coordinated NICU-ready hospitals in Kolkata to ensure the safest delivery for high-risk cases.
+                                        Dr. Vinita Khemani provides expert management of gestational diabetes, preeclampsia care, and Level III monitoring support. She works with Coordinated NICU-ready hospitals to ensure the safest delivery for high-risk cases.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -72,7 +72,7 @@ export default function HighRiskPregnancyPage() {
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[400px] md:h-[500px] order-first lg:order-none">
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl">
-                                        <Image src="/images/dr-vinita-khemani-kolkata-ymcrv.jpg" alt="High-risk pregnancy specialist Dr. Vinita Khemani in Kolkata" fill className="object-cover" priority />
+                                        <Image src="/images/dr-vinita-khemani-kolkata-ymcrv.jpg" alt="High-risk pregnancy specialist Dr. Vinita Khemani" fill className="object-cover" priority />
                                     </div>
                                 </motion.div>
                             </div>
@@ -185,7 +185,7 @@ export default function HighRiskPregnancyPage() {
                                 India accounts for nearly 12% of global maternal deaths, with complications during high-risk pregnancies being a leading contributor. According to the National Family Health Survey (NFHS-5), approximately 20-30% of all pregnancies in India are classified as high-risk due to factors such as advanced maternal age, gestational diabetes, hypertension, and pre-existing medical conditions.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                In urban centers like Kolkata, the rise of late marriages, career-focused family planning, and increasing prevalence of lifestyle diseases (PCOS, thyroid disorders, obesity) has significantly increased the proportion of high-risk pregnancies. Yet, with proper monitoring, timely intervention, and expert care, the vast majority of these pregnancies result in healthy deliveries.
+                                In urban centers like the city, the rise of late marriages, career-focused family planning, and increasing prevalence of lifestyle diseases (PCOS, thyroid disorders, obesity) has significantly increased the proportion of high-risk pregnancies. Yet, with proper monitoring, timely intervention, and expert care, the vast majority of these pregnancies result in healthy deliveries.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
                                 Dr. Vinita Khemani&apos;s approach to high-risk pregnancy care is deeply rooted in prevention and early detection. Rather than waiting for complications to escalate, her enhanced monitoring protocols identify risks at the earliest stage, enabling proactive interventions that protect both mother and baby.
@@ -202,7 +202,7 @@ export default function HighRiskPregnancyPage() {
                         </div>
                         <div className="relative sticky top-32">
                             <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                <Image src="/images/high-risk-pregnancy-care.jpg" alt="High-risk pregnancy monitoring in Kolkata" fill className="object-cover" />
+                                <Image src="/images/high-risk-pregnancy-care.jpg" alt="High-risk pregnancy monitoring" fill className="object-cover" />
                             </div>
                             <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-20">
                                 <p className="text-sm font-bold text-gray-900 mb-1">Expert Monitoring</p>
@@ -278,7 +278,7 @@ export default function HighRiskPregnancyPage() {
                         {/* Center — Image + Stats */}
                         <div className="flex flex-col gap-6">
                             <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
-                                <Image src="/images/high_risk_pregnancy_1771475340308.png" alt="High-risk pregnancy monitoring and care by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
+                                <Image src="/images/high_risk_pregnancy_1771475340308.png" alt="High-risk pregnancy monitoring and care by Dr. Vinita Khemani" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                                 <div className="absolute bottom-6 left-6 right-6">
                                     <p className="text-white text-sm font-semibold">&quot;Every high-risk pregnancy is unique — close monitoring and timely intervention save lives.&quot;</p>
@@ -412,7 +412,7 @@ export default function HighRiskPregnancyPage() {
             </section>
 
             {/* Shared CTA Section */}
-            <SharedCTA title="Need Expert High-Risk Pregnancy Care in Kolkata?" subtitle="Schedule an appointment with Dr. Vinita Khemani for specialized high-risk pregnancy management at her Kolkata clinics." />
+            <SharedCTA title="Need Expert High-Risk Pregnancy Care?" subtitle="Schedule an appointment with Dr. Vinita Khemani for specialized high-risk pregnancy management at her clinics." />
 
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 

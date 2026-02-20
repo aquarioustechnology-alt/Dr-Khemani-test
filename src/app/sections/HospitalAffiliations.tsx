@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const hospitals = [
-    { name: "Spandan Hospital", logo: "/images/hospitals/spandan.webp" },
-    { name: "Charnock Hospital", logo: "/images/hospitals/charnock.webp" },
-    { name: "Lotus Hospital", logo: "/images/hospitals/lotus.webp" },
-    { name: "ILS Hospital", logo: "/images/hospitals/ils.webp" },
-    { name: "Bhagirathi Neotia Hospital", logo: "/images/hospitals/bhagirathi.png" },
+    { name: "Spandan Hospital", logo: "/images/spandan-hospital-logo.jpg" },
+    { name: "Charnock Hospital", logo: "/images/charnock-hospital-logo.webp" },
+    { name: "Apollo Clinic", logo: "/images/apollo-clinic-logo.webp" },
+    { name: "ILS Hospital", logo: "/images/images.png" },
+    { name: "Bhagirathi Neotia Hospital", logo: "/images/neotia-logo.svg" },
 ];
 
 // Duplicate array multiple times to ensure seamless loop

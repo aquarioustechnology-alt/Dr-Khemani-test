@@ -169,7 +169,7 @@ export function ServicesParallax() {
       </section>
 
       <div className="flex items-center justify-center relative z-10 py-8 bg-[#fffefe] -mt-32">
-        <Link href="#contact" className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-gray-900 border border-gray-200 text-lg font-semibold hover:bg-[#C21975] hover:text-white hover:border-[#C21975] transition-all shadow-lg hover:shadow-2xl hover:-translate-y-1">
+        <Link href="/contact" className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-gray-900 border border-gray-200 text-lg font-semibold hover:bg-[#C21975] hover:text-white hover:border-[#C21975] transition-all shadow-lg hover:shadow-2xl hover:-translate-y-1">
           Explore All Treatments
           <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
         </Link>

@@ -43,10 +43,10 @@ const procedures = [
 ];
 
 const faqs = [
-    { q: "Who is the best doctor for laparoscopic surgery in Kolkata?", a: "Dr. Vinita Khemani is a leading laparoscopic surgeon in Kolkata, known for her expertise in complex minimally invasive procedures like TLH, myomectomy, and endometriosis excision. She operates at top hospitals including Bhagirathi Neotia, Charnock Hospital, and Apollo Clinic." },
+    { q: "Who is the best doctor for laparoscopic surgery?", a: "Dr. Vinita Khemani is a leading laparoscopic surgeon, known for her expertise in complex minimally invasive procedures like TLH, myomectomy, and endometriosis excision. She operates at top hospitals including Bhagirathi Neotia, Charnock Hospital, and Apollo Clinic." },
     { q: "Why choose advanced laparoscopy over open surgery?", a: "Advanced laparoscopy offers significant benefits: minimal scarring (tiny 5mm incisions), less post-operative pain, shorter hospital stay (often 24 hours), and a much faster return to daily life (1-2 weeks vs 6 weeks). Dr. Khemani specializes in these minimally invasive techniques." },
-    { q: "What is the cost of laparoscopic surgery in Kolkata?", a: "The cost varies depending on the procedure (e.g., diagnostic vs. operative, hysterectomy vs. cystectomy) and the hospital chosen. Dr. Khemani offers surgical options at multiple hospitals in Kolkata to suit different insurance and budget requirements." },
-    { q: "Is it safe for large fibroids?", a: "Yes. With advanced morcellation techniques, even large fibroids can be safely removed through tiny incisions. Dr. Khemani has extensive experience in handling complex, large-volume uteri laparoscopically in Kolkata." },
+    { q: "What is the cost of laparoscopic surgery?", a: "The cost varies depending on the procedure (e.g., diagnostic vs. operative, hysterectomy vs. cystectomy) and the hospital chosen. Dr. Khemani offers surgical options at multiple hospitals to suit different insurance and budget requirements." },
+    { q: "Is it safe for large fibroids?", a: "Yes. With advanced morcellation techniques, even large fibroids can be safely removed through tiny incisions. Dr. Khemani has extensive experience in handling complex, large-volume uteri laparoscopically." },
     { q: "Can previous C-sections affect laparoscopy?", a: "Previous surgeries can cause adhesions (scar tissue), but they are not a contraindication. Advanced laparoscopic skills allow for safe adhesiolysis (clearing of scars) to proceed with the surgery." },
     { q: "How long does the surgery take?", a: "Duration varies by procedure. A diagnostic laparoscopy may take 30 minutes, while a complex TLH or myomectomy could take 1-3 hours depending on severity." },
 ];
@@ -77,7 +77,7 @@ export default function AdvancedLaparoscopyPage() {
                                         <span className="italic text-[#C21975]">Procedures in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Complex gynecological surgeries performed through tiny incision. Less pain, minimal scarring, and faster return to normal life. Dr. Vinita Khemani is a master of keyhole surgery in Kolkata with over 608+ successful procedures.
+                                        Complex gynecological surgeries performed through tiny incision. Less pain, minimal scarring, and faster return to normal life. Dr. Vinita Khemani is a master of keyhole surgery with over 608+ successful procedures.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -91,7 +91,7 @@ export default function AdvancedLaparoscopyPage() {
                                 </motion.div>
                                 <motion.div className="relative h-[400px] md:h-[500px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                        <Image src="/images/Laparoscopic Surgery.jpg" alt="Advanced laparoscopic keyhole surgery in Kolkata by Dr. Vinita Khemani" fill className="object-cover" />
+                                        <Image src="/images/Laparoscopic Surgery.jpg" alt="Advanced laparoscopic keyhole surgery by Dr. Vinita Khemani" fill className="object-cover" />
                                     </div>
                                     {/* Float Card */}
                                     <motion.div
@@ -190,7 +190,7 @@ export default function AdvancedLaparoscopyPage() {
                                 Specialized instruments are then inserted through additional small incisions to perform the surgery with precision. The surgeon operates while watching the magnified images on a screen, allowing for greater accuracy than what is possible with the naked eye during open surgery. Carbon dioxide gas is used to gently inflate the abdomen, creating a working space for the surgeon.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                Dr. Vinita Khemani has performed over 608 laparoscopic procedures across multiple hospitals in Kolkata, ranging from routine diagnostic laparoscopies to complex procedures like Total Laparoscopic Hysterectomy (TLH) for large uteri and laparoscopic myomectomy for multiple fibroids. Her expertise ensures that even complex cases that might traditionally require open surgery are safely handled through minimally invasive techniques.
+                                Dr. Vinita Khemani has performed over 608 laparoscopic procedures across multiple hospitals, ranging from routine diagnostic laparoscopies to complex procedures like Total Laparoscopic Hysterectomy (TLH) for large uteri and laparoscopic myomectomy for multiple fibroids. Her expertise ensures that even complex cases that might traditionally require open surgery are safely handled through minimally invasive techniques.
                             </p>
                             <button
                                 onClick={() => setIsEnquiryModalOpen(true)}
@@ -240,7 +240,7 @@ export default function AdvancedLaparoscopyPage() {
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Dr. Khemani</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-                                Kolkata&apos;s leading expert in{" "}<br />
+                                the city&apos;s leading expert in{" "}<br />
                                 <span className="italic text-[#C21975]">advanced laparoscopic surgery</span>
                             </h2>
                         </div>
@@ -297,7 +297,7 @@ export default function AdvancedLaparoscopyPage() {
                                 </div>
                                 <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
                                     <p className="text-2xl font-bold text-[#C21975]">6</p>
-                                    <p className="text-xs text-gray-500 mt-1">Hospitals Across Kolkata</p>
+                                    <p className="text-xs text-gray-500 mt-1">Hospitals across the region</p>
                                 </div>
                                 <div className="bg-[#f5f0f2] rounded-2xl p-5 text-center">
                                     <p className="text-2xl font-bold text-[#C21975]">24-48h</p>
@@ -324,7 +324,7 @@ export default function AdvancedLaparoscopyPage() {
                                     <svg className="w-6 h-6 text-[#C21975]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
                                 </div>
                                 <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
-                                    Multi-Hospital Access Across Kolkata
+                                    Multi-Hospital Access across the region
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">
                                     Operating at Bhagirathi Neotia (New Town), Charnock Hospital (VIP Road), Apollo Clinic (Chinar Park), Spandan Hospital, and ILS Hospital (Dumdum) — choose the location most convenient to you, with the same expert surgical care.
@@ -459,7 +459,7 @@ export default function AdvancedLaparoscopyPage() {
                 </div>
             </section>
 
-            <SharedCTA title="Advanced Laparoscopic Care in Kolkata" subtitle="Choose Dr. Vinita Khemani for safe, minimally invasive surgical solutions." />
+            <SharedCTA title="Advanced Laparoscopic Care" subtitle="Choose Dr. Vinita Khemani for safe, minimally invasive surgical solutions." />
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />

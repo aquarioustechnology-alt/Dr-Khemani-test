@@ -17,10 +17,10 @@ const types = [
 ];
 
 const faqs = [
-    { q: "Who is the best doctor for ovarian cyst treatment in Kolkata?", a: "Dr. Vinita Khemani is a leading laparoscopic surgeon in Kolkata specializing in ovarian cystectomy. She focuses on fertility-preserving techniques to remove cysts while keeping ovaries healthy." },
-    { q: "What is the cost of ovarian cyst surgery in Kolkata?", a: "The cost depends on the type of cyst (dermoid, endometrioma) and the hospital facility. Dr. Khemani offers affordable laparoscopic packages at top hospitals in Kolkata." },
-    { q: "Do all ovarian cysts need surgery?", a: "No. Most functional cysts disappear on their own. We recommend surgery at our Kolkata clinic only if the cyst is large (>5-6cm), persistent, looks suspicious on ultrasound, or causes severe pain." },
-    { q: "Is the surgery done laparoscopically?", a: "Yes, we specialize in 3D Laparoscopic Cystectomy in Kolkata. This minimally invasive technique uses tiny incisions, ensuring less pain, minimal scarring, and a much faster return to normal life compared to open surgery." },
+    { q: "Who is the best doctor for ovarian cyst treatment?", a: "Dr. Vinita Khemani is a leading laparoscopic surgeon specializing in ovarian cystectomy. She focuses on fertility-preserving techniques to remove cysts while keeping ovaries healthy." },
+    { q: "What is the cost of ovarian cyst surgery?", a: "The cost depends on the type of cyst (dermoid, endometrioma) and the hospital facility. Dr. Khemani offers affordable laparoscopic packages at top hospitals." },
+    { q: "Do all ovarian cysts need surgery?", a: "No. Most functional cysts disappear on their own. We recommend surgery at our the city clinic only if the cyst is large (>5-6cm), persistent, looks suspicious on ultrasound, or causes severe pain." },
+    { q: "Is the surgery done laparoscopically?", a: "Yes, we specialize in 3D Laparoscopic Cystectomy. This minimally invasive technique uses tiny incisions, ensuring less pain, minimal scarring, and a much faster return to normal life compared to open surgery." },
     { q: "Will cyst removal affect my fertility?", a: "Dr. Khemani is an expert in 'Ovarian Sparing Surgery'. Using precise energy sources, she carefully peels the cyst wall (cystectomy) while preserving the healthy ovarian tissue and egg reserve, protecting your future fertility." },
     { q: "Is ovarian cystectomy painful?", a: "Since we perform minimally invasive laparoscopic cystectomy, pain is significantly less compared to open surgery. Most patients experience only mild discomfort for 1-2 days, which is easily managed with oral painkillers." },
     { q: "Can cysts come back after removal?", a: "Functional cysts can recur. Conditions like endometriosis also have a recurrence risk. We don't just operate; we provide long-term medical management and lifestyle guidance to minimize this risk." },
@@ -53,7 +53,7 @@ export default function OvarianCystectomyPage() {
                                         <span className="italic text-[#C21975]">Surgery in Kolkata.</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Looking for ovarian cyst removal surgery in Kolkata? Dr. Vinita Khemani is a leading laparoscopic cystectomy specialist in Kolkata focused on preserving your healthy ovarian tissue and fertility. Get back to a pain-free life with expert, minimally invasive care.
+                                        Looking for ovarian cyst removal surgery? Dr. Vinita Khemani is a leading laparoscopic cystectomy specialist focused on preserving your healthy ovarian tissue and fertility. Get back to a pain-free life with expert, minimally invasive care.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -67,7 +67,7 @@ export default function OvarianCystectomyPage() {
                                 </motion.div>
                                 <motion.div className="relative h-[500px] lg:h-[600px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white">
-                                        <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg" alt="Laparoscopic Ovarian Cyst Removal in Kolkata" fill className="object-cover" />
+                                        <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg" alt="Laparoscopic Ovarian Cyst Removal" fill className="object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-tr from-pink-900/40 to-transparent"></div>
                                     </div>
                                 </motion.div>
@@ -229,7 +229,7 @@ export default function OvarianCystectomyPage() {
                         </div>
                         <div className="relative sticky top-32">
                             <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM.jpeg" alt="Laparoscopic ovarian cystectomy consultation and evaluation in Kolkata" fill className="object-cover" />
+                                <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM.jpeg" alt="Laparoscopic ovarian cystectomy consultation and evaluation" fill className="object-cover" />
                             </div>
                             <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-20">
                                 <p className="text-sm font-bold text-gray-900 mb-1">Ovary Preserved</p>
@@ -290,7 +290,7 @@ export default function OvarianCystectomyPage() {
                             <p className="text-gray-600 text-base leading-relaxed">Using precise stripping technique instead of cautery-heavy methods, Dr. Khemani minimizes thermal damage to surrounding follicles — preserving your AMH levels and egg reserve for future pregnancies.</p>
                         </div>
                         <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
-                            <Image src="/images/WhatsApp_Image_2025-12-22_at_12.22.00_PM.jpeg" alt="3D Laparoscopic cystectomy technology used in Kolkata for precise ovarian surgery" fill className="object-cover" />
+                            <Image src="/images/WhatsApp_Image_2025-12-22_at_12.22.00_PM.jpeg" alt="3D Laparoscopic cystectomy technology used for precise ovarian surgery" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                             <div className="absolute bottom-6 left-6 right-6 text-white">
                                 <p className="font-bold text-lg mb-1">3D HD Laparoscopy</p>
@@ -308,7 +308,7 @@ export default function OvarianCystectomyPage() {
                             <p className="text-gray-600 text-base leading-relaxed">Laparoscopic cystectomy typically takes 45-90 minutes. With just 3 tiny incisions (5mm each), most patients go home the same day and return to normal activities within 5-7 days.</p>
                         </div>
                         <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
-                            <Image src="/images/WhatsApp Image 2025-12-22 at 12.22.01 PM.jpeg" alt="Dr. Vinita Khemani performing laparoscopic cystectomy consultation in Kolkata" fill className="object-cover" />
+                            <Image src="/images/WhatsApp Image 2025-12-22 at 12.22.01 PM.jpeg" alt="Dr. Vinita Khemani performing laparoscopic cystectomy consultation" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                             <div className="absolute bottom-6 left-6 right-6 text-white">
                                 <p className="font-bold text-lg mb-1">Dr. Vinita Khemani</p>
@@ -403,7 +403,7 @@ export default function OvarianCystectomyPage() {
                 </div>
             </section>
 
-            <SharedCTA title="Worried about Ovarian Cysts in Kolkata?" subtitle="Get a precise diagnosis and fertility-sparing treatment plan with Dr. Vinita Khemani." />
+            <SharedCTA title="Worried about Ovarian Cysts?" subtitle="Get a precise diagnosis and fertility-sparing treatment plan with Dr. Vinita Khemani." />
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />

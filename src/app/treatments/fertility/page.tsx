@@ -30,7 +30,7 @@ const treatmentOptions = [
     },
     {
         title: "IVF Coordination",
-        desc: "Dr. Khemani coordinates with leading IVF centers in Kolkata for cases requiring in-vitro fertilization, ensuring seamless care throughout the process.",
+        desc: "Dr. Khemani coordinates with leading IVF centers for cases requiring in-vitro fertilization, ensuring seamless care throughout the process.",
         icon: FlaskConical,
     },
     {
@@ -54,12 +54,12 @@ const journeySteps = [
 ];
 
 const faqs = [
-    { q: "Who is the best fertility doctor in Kolkata?", a: "Dr. Vinita Khemani is a renowned fertility specialist in Kolkata offering success-oriented treatment plans, including ovulation induction and IUI. She coordinates advanced IVF care with top fertility centers in the city when needed." },
-    { q: "When should I see a fertility specialist?", a: "If you've been trying to conceive for over 12 months (or 6 months if over 35) without success, it's time to consult Dr. Khemani in Kolkata for a comprehensive evaluation and personalized treatment plan." },
+    { q: "Who is the best fertility doctor?", a: "Dr. Vinita Khemani is a renowned fertility specialist offering success-oriented treatment plans, including ovulation induction and IUI. She coordinates advanced IVF care with top fertility centers in the city when needed." },
+    { q: "When should I see a fertility specialist?", a: "If you've been trying to conceive for over 12 months (or 6 months if over 35) without success, it's time to consult Dr. Khemani for a comprehensive evaluation and personalized treatment plan." },
     { q: "What are the common causes of infertility?", a: "Common causes include PCOS, tubal blockage, endometriosis, low sperm count/motility, thyroid disorders, and age-related decline. About 30% of cases involve both partners, which is why Dr. Khemani evaluates couples together." },
-    { q: "What is the success rate of IUI in Kolkata?", a: "IUI success rates typically range from 10-20% per cycle depending on age and underlying causes. Dr. Khemani optimizes protocols to maximize success chances at her Kolkata clinic." },
-    { q: "What is IVF cost in Kolkata?", a: "The cost of IVF in Kolkata varies depending on the protocol and clinic. Dr. Khemani offers transparent pricing for preliminary investigations and coordinates with partner IVF centers to ensure you receive affordable, high-quality care within your budget." },
-    { q: "Does Dr. Khemani perform IVF?", a: "Dr. Khemani provides extensive fertility evaluation, ovulation induction, and IUI at her clinic. For IVF, she coordinates seamlessly with leading IVF centers in Kolkata, managing your care pathway personally." },
+    { q: "What is the success rate of IUI?", a: "IUI success rates typically range from 10-20% per cycle depending on age and underlying causes. Dr. Khemani optimizes protocols to maximize success chances at her the city clinic." },
+    { q: "What is IVF cost?", a: "The cost of IVF varies depending on the protocol and clinic. Dr. Khemani offers transparent pricing for preliminary investigations and coordinates with partner IVF centers to ensure you receive affordable, high-quality care within your budget." },
+    { q: "Does Dr. Khemani perform IVF?", a: "Dr. Khemani provides extensive fertility evaluation, ovulation induction, and IUI at her clinic. For IVF, she coordinates seamlessly with leading IVF centers, managing your care pathway personally." },
 ];
 
 export default function FertilityPage() {
@@ -86,7 +86,7 @@ export default function FertilityPage() {
                                         <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">&amp; IVF Consultation in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Evidence-based fertility care by Dr. Vinita Khemani, the best infertility specialist in Kolkata. From thorough evaluation to IVF treatment coordination, we provide a personalized fertility roadmap and emotional support during infertility treatment.
+                                        Evidence-based fertility care by Dr. Vinita Khemani, the best infertility specialist. From thorough evaluation to IVF treatment coordination, we provide a personalized fertility roadmap and emotional support during infertility treatment.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -97,7 +97,7 @@ export default function FertilityPage() {
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[400px] md:h-[500px] order-first lg:order-none">
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl">
-                                        <Image src="/images/best-lady-gynecologist-kolkata.webp" alt="Fertility treatment and counseling by Dr. Vinita Khemani in Kolkata" fill className="object-cover" priority />
+                                        <Image src="/images/best-lady-gynecologist-kolkata.webp" alt="Fertility treatment and counseling by Dr. Vinita Khemani" fill className="object-cover" priority />
                                     </div>
                                 </motion.div>
                             </div>
@@ -188,7 +188,7 @@ export default function FertilityPage() {
                                 The truth is that infertility is a medical condition — not a failing. And in approximately 40% of cases, male factors contribute significantly to the difficulty. Dr. Vinita Khemani approaches fertility evaluation as a couple&apos;s journey, ensuring both partners are assessed thoroughly and treated with dignity and compassion.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                As a trusted fertility doctor in South Kolkata, Dr. Khemani provides a safe, non-judgmental space for couples to explore their options. She focuses on IVF treatment in Kolkata coordination when necessary, ensuring you receive the best possible care without unnecessary interventions.
+                                As a trusted fertility doctor in South the city, Dr. Khemani provides a safe, non-judgmental space for couples to explore their options. She focuses on IVF treatment coordination when necessary, ensuring you receive the best possible care without unnecessary interventions.
                             </p>
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
                                 {[
@@ -215,7 +215,7 @@ export default function FertilityPage() {
                         </div>
                         <div className="relative sticky top-32">
                             <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                <Image src="/images/fertility-couple-hope.jpg" alt="Indian couple consulting for fertility treatment in Kolkata" fill className="object-cover" />
+                                <Image src="/images/fertility-couple-hope.jpg" alt="Indian couple consulting for fertility treatment" fill className="object-cover" />
                             </div>
                             <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-10">
                                 <p className="text-sm font-bold text-gray-900 mb-1">You Are Not Alone</p>
@@ -327,7 +327,7 @@ export default function FertilityPage() {
                         {/* Center — Image + Stats */}
                         <div className="flex flex-col gap-6">
                             <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
-                                <Image src="/images/fertility_couple_hope_1771475604648.png" alt="Hopeful couple during fertility consultation with Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
+                                <Image src="/images/fertility_couple_hope_1771475604648.png" alt="Hopeful couple during fertility consultation with Dr. Vinita Khemani" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                                 <div className="absolute bottom-6 left-6 right-6">
                                     <p className="text-white text-sm font-semibold">&quot;Your fertility journey deserves patience, science, and a doctor who truly listens.&quot;</p>
@@ -467,7 +467,7 @@ export default function FertilityPage() {
             </section>
 
             {/* Shared CTA Section */}
-            <SharedCTA title="Start Your Fertility Journey in Kolkata" subtitle="Consult Dr. Vinita Khemani for personalized fertility guidance and compassionate care." />
+            <SharedCTA title="Start Your Fertility Journey" subtitle="Consult Dr. Vinita Khemani for personalized fertility guidance and compassionate care." />
 
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 

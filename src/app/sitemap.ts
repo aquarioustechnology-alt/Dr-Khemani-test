@@ -1,32 +1,16 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://drvinitakhemani.com'
+    const baseUrl = 'https://drvinitakhemani.com';
 
-    // Core pages
-    const routes = [
-        '',
-        '/about',
-        '/services',
-        '/treatments/pregnancy-care',
-        '/treatments/high-risk-pregnancy',
-        '/treatments/fertility',
-        '/treatments/laparoscopic-surgery',
-        '/treatments/pcos-treatment',
-        '/treatments/menopause',
-        '/stories',
-        '/blog',
-        '/clinic-schedule',
-        '/contact',
-        '/privacy-policy',
-        '/terms-of-service',
-        '/blog/10-essential-tips-healthy-pregnancy',
-    ].map((route) => ({
-        url: `${baseUrl}${route}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
-        priority: route === '' ? 1 : 0.8,
-    }))
-
-    return routes
+    // Note: Add dynamic routes (like specific treatment pages and blog posts) here as needed.
+    return [
+        { url: baseUrl, lastModified: new Date(), changeFrequency: 'yearly', priority: 1 },
+        { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+        { url: `${baseUrl}/stories`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+        { url: `${baseUrl}/treatments`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+        { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+        { url: `${baseUrl}/privacy-policy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.5 },
+        { url: `${baseUrl}/terms-of-service`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.5 },
+    ]
 }

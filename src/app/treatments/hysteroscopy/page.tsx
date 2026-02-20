@@ -19,11 +19,11 @@ const uses = [
 ];
 
 const faqs = [
-    { q: "Who is the best doctor for hysteroscopy in Kolkata?", a: "Dr. Vinita Khemani is a highly experienced gynecologist in Kolkata known for her skill in diagnostic and operative hysteroscopy. She successfully treats uterine polyps, fibroids, and septums with minimal intervention." },
-    { q: "What is the cost of hysteroscopy in Kolkata?", a: "The cost depends on whether it is diagnostic or operative and the hospital chosen. Dr. Khemani strives to provide affordable, transparent pricing packages for hysteroscopy at leading Kolkata hospitals." },
-    { q: "Is hysteroscopy painful?", a: "Diagnostic hysteroscopy is often painless or causes only mild cramping, similar to a period. Does not always require anesthesia. Operative hysteroscopy (removing polyps/fibroids) is done under mild sedation or short anesthesia at our Kolkata facilities so you sleep through it." },
+    { q: "Who is the best doctor for hysteroscopy?", a: "Dr. Vinita Khemani is a highly experienced gynecologist known for her skill in diagnostic and operative hysteroscopy. She successfully treats uterine polyps, fibroids, and septums with minimal intervention." },
+    { q: "What is the cost of hysteroscopy?", a: "The cost depends on whether it is diagnostic or operative and the hospital chosen. Dr. Khemani strives to provide affordable, transparent pricing packages for hysteroscopy at leading the city hospitals." },
+    { q: "Is hysteroscopy painful?", a: "Diagnostic hysteroscopy is often painless or causes only mild cramping, similar to a period. Does not always require anesthesia. Operative hysteroscopy (removing polyps/fibroids) is done under mild sedation or short anesthesia at our the city facilities so you sleep through it." },
     { q: "How long is the procedure?", a: "A diagnostic look takes only 5-10 minutes. If a procedure is needed (like polyp removal), it may take 20-30 minutes." },
-    { q: "Do I need to stay in the hospital?", a: "No. Hysteroscopy is almost always a Day Care procedure. You come in the morning to the hospital in Kolkata and go home by afternoon." },
+    { q: "Do I need to stay in the hospital?", a: "No. Hysteroscopy is almost always a Day Care procedure. You come in the morning to the hospital and go home by afternoon." },
     { q: "When is the best time to do it?", a: "Ideally, just after your period finishes (Day 6-10 of your cycle). This is when the lining is thinnest and the view is clearest." },
 ];
 
@@ -54,7 +54,7 @@ export default function HysteroscopyPage() {
                                         <span className="italic text-[#C21975]">&amp; Uterine Evaluation in Kolkata.</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        A revolutionary diagnostic and treatment method that allows Dr. Khemani to see and treat inside the womb without a single incision. As a specialist in Day-care hysteroscopy in Kolkata, Dr. Khemani is also a uterine polyp removal specialist, offering gold standard care for abnormal bleeding and infertility.
+                                        A revolutionary diagnostic and treatment method that allows Dr. Khemani to see and treat inside the womb without a single incision. As a specialist in Day-care hysteroscopy, Dr. Khemani is also a uterine polyp removal specialist, offering gold standard care for abnormal bleeding and infertility.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -68,7 +68,7 @@ export default function HysteroscopyPage() {
                                 </motion.div>
                                 <motion.div className="relative h-[500px] lg:h-[600px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white">
-                                        <Image src="/images/2023-02-08.webp" alt="Hysteroscopy Procedure in Kolkata" fill className="object-cover" />
+                                        <Image src="/images/2023-02-08.webp" alt="Hysteroscopy Procedure" fill className="object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-tr from-pink-900/30 to-transparent"></div>
                                     </div>
                                 </motion.div>
@@ -156,7 +156,7 @@ export default function HysteroscopyPage() {
                                 <strong>Operative hysteroscopy</strong> goes a step further — the surgeon can remove polyps, fibroids (myomectomy), adhesions (synechiae), or correct uterine septum in the same sitting. This &quot;see and treat&quot; approach eliminates the need for a second procedure, saving the patient time, cost, and anxiety.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                Dr. Vinita Khemani performs hysteroscopy at well-equipped hospital settings in Kolkata, ensuring patient safety with anesthesia support and advanced resectoscope technology. For many women struggling with unexplained infertility or recurrent pregnancy loss, a single hysteroscopy can identify and correct the problem.
+                                Dr. Vinita Khemani performs hysteroscopy at well-equipped hospital settings, ensuring patient safety with anesthesia support and advanced resectoscope technology. For many women struggling with unexplained infertility or recurrent pregnancy loss, a single hysteroscopy can identify and correct the problem.
                             </p>
                             <button
                                 onClick={() => setIsEnquiryModalOpen(true)}
@@ -170,7 +170,7 @@ export default function HysteroscopyPage() {
                         </div>
                         <div className="relative sticky top-32">
                             <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                <Image src="/images/hysteroscopy-procedure.jpg" alt="Hysteroscopy procedure in Kolkata" fill className="object-cover" />
+                                <Image src="/images/hysteroscopy-procedure.jpg" alt="Hysteroscopy procedure" fill className="object-cover" />
                             </div>
                             <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-20">
                                 <p className="text-sm font-bold text-gray-900 mb-1">See &amp; Treat</p>
@@ -310,7 +310,7 @@ export default function HysteroscopyPage() {
                                 <div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-3">Painless Day Care</h3>
                                     <p className="text-gray-600 leading-relaxed">
-                                        Performed under safe short sedation in top hospital settings. Patients typically walk in and walk out the same day with minimal to no downtime.
+                                        Performed under safe short sedation in top hospital settings. Patients typically walk and walk out the same day with minimal to no downtime.
                                     </p>
                                 </div>
                             </div>
@@ -390,7 +390,7 @@ export default function HysteroscopyPage() {
                 </div>
             </section>
 
-            <SharedCTA title="Day Care Hysteroscopy in Kolkata" subtitle="Most patients go home the same day. Book your evaluation now." />
+            <SharedCTA title="Day Care Hysteroscopy" subtitle="Most patients go home the same day. Book your evaluation now." />
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />

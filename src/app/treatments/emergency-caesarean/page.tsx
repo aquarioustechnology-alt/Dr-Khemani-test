@@ -19,12 +19,12 @@ const reasons = [
 ];
 
 const faqs = [
-    { q: "Which is the best hospital for emergency C-section in Kolkata?", a: "Dr. Vinita Khemani performs emergency C-sections at top Kolkata hospitals like Bhagirathi Neotia and Charnock Hospital, which are equipped with 24/7 NICU, blood banks, and immediate OT readiness." },
-    { q: "How fast can an emergency C-section be done?", a: "In critical situations, our team in Kolkata acts with 'Code Blue' urgency, capable of delivering the baby within minutes (often under 30 minutes) to prevent oxygen deprivation and ensure safety." },
-    { q: "What is the cost of emergency C-section in Kolkata?", a: "Costs vary depending on the hospital and urgency level. However, ensuring the safety of mother and baby is our priority. Dr. Khemani works with hospitals offering a range of packages to suit different needs." },
+    { q: "Which is the best hospital for emergency C-section?", a: "Dr. Vinita Khemani performs emergency C-sections at top the city hospitals like Bhagirathi Neotia and Charnock Hospital, which are equipped with 24/7 NICU, blood banks, and immediate OT readiness." },
+    { q: "How fast can an emergency C-section be done?", a: "In critical situations, our team acts with 'Code Blue' urgency, capable of delivering the baby within minutes (often under 30 minutes) to prevent oxygen deprivation and ensure safety." },
+    { q: "What is the cost of emergency C-section?", a: "Costs vary depending on the hospital and urgency level. However, ensuring the safety of mother and baby is our priority. Dr. Khemani works with hospitals offering a range of packages to suit different needs." },
     { q: "Will I be awake during the surgery?", a: "Unless there is an immediate life-threat requiring general anesthesia, we strictly use spinal or epidural anesthesia. This allows you to be awake, hear your baby's first cry, and hold them immediately, without feeling pain." },
-    { q: "Does an emergency C-section mean I can't have a normal delivery later?", a: "Not at all. With Dr. Khemani’s 'tissue-respecting' surgical techniques used in Kolkata, uterine integrity is maintained, making VBAC (Vaginal Birth After Cesarean) a strong possibility for future pregnancies." },
-    { q: "Is emergency C-section safe?", a: "Yes, it is a life-saving procedure. Dr. Khemani ensures maximum safety through 24/7 obstetric emergency care readiness, advanced monitoring, and coordinated hospital-based care in Kolkata to handle any complication instantly." },
+    { q: "Does an emergency C-section mean I can't have a normal delivery later?", a: "Not at all. With Dr. Khemani’s 'tissue-respecting' surgical techniques used, uterine integrity is maintained, making VBAC (Vaginal Birth After Cesarean) a strong possibility for future pregnancies." },
+    { q: "Is emergency C-section safe?", a: "Yes, it is a life-saving procedure. Dr. Khemani ensures maximum safety through 24/7 obstetric emergency care readiness, advanced monitoring, and coordinated hospital-based care to handle any complication instantly." },
     { q: "How is the recovery different from a planned C-section?", a: "Physical recovery is similar, but we understand the emotional toll of an emergency. Our post-op care includes emotional support, lactation consulting, and debriefing sessions to help you process the experience positively." },
 ];
 
@@ -57,7 +57,7 @@ export default function EmergencyCSectionPage() {
                                     </h1>
                                     <div className="h-1 w-24 bg-[#C21975] mb-8 rounded-full" />
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        When seconds count, expertise matters. Dr. Vinita Khemani is an Emergency C-Section Specialist in Kolkata providing 24/7 obstetric emergency care. Experienced in high-risk emergency deliveries, she ensures rapid, life-saving intervention for both mother and child.
+                                        When seconds count, expertise matters. Dr. Vinita Khemani is an Emergency C-Section Specialist providing 24/7 obstetric emergency care. Experienced in high-risk emergency deliveries, she ensures rapid, life-saving intervention for both mother and child.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -71,7 +71,7 @@ export default function EmergencyCSectionPage() {
                                 </motion.div>
                                 <motion.div className="relative h-[500px] lg:h-[600px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white">
-                                        <Image src="/images/High-Risk Pregnancy.webp" alt="Emergency Delivery Care Team in Kolkata" fill className="object-cover" />
+                                        <Image src="/images/High-Risk Pregnancy.webp" alt="Emergency Delivery Care Team" fill className="object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                                         <div className="absolute bottom-8 left-8 text-white max-w-xs">
                                             <p className="font-bold text-xl mb-1">24/7 Readiness</p>
@@ -151,7 +151,7 @@ export default function EmergencyCSectionPage() {
                             </div>
                         </div>
                         <div className="order-1 lg:order-1 relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
-                            <Image src="/images/Pregnancy Care.png" alt="Mother and newborn post-delivery care in Kolkata" fill className="object-cover" />
+                            <Image src="/images/Pregnancy Care.png" alt="Mother and newborn post-delivery care" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#2D0C1E]/60 to-transparent" />
                             <div className="absolute bottom-10 left-10 right-10 text-white">
                                 <blockquote className="text-xl italic font-medium mb-4">&quot;Even in an emergency, the moment you hold your baby should be magical. We make sure safety never overshadows that joy.&quot;</blockquote>
@@ -251,7 +251,7 @@ export default function EmergencyCSectionPage() {
                             <p className="text-gray-600 text-base leading-relaxed">An emergency C-section involves the obstetrician, anesthesiologist, neonatologist, nurses, and blood bank — all pre-briefed and ready. Dr. Khemani leads this coordinated effort with calm precision.</p>
                         </div>
                         <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
-                            <Image src="/images/emergency_ot_ready_1771254301635.png" alt="Emergency caesarean section operating theatre readiness in Kolkata" fill className="object-cover" />
+                            <Image src="/images/emergency_ot_ready_1771254301635.png" alt="Emergency caesarean section operating theatre readiness" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                             <div className="absolute bottom-6 left-6 right-6 text-white">
                                 <p className="font-bold text-lg mb-1">24/7 OT Readiness</p>
@@ -269,7 +269,7 @@ export default function EmergencyCSectionPage() {
                             <p className="text-gray-600 text-base leading-relaxed">Even in emergencies, we practice the &quot;Gentle Caesarean&quot; approach — delayed cord clamping when safe, immediate skin-to-skin contact, and allowing the mother to see and hear her baby&apos;s first cry.</p>
                         </div>
                         <div className="relative rounded-[2rem] overflow-hidden min-h-[380px] shadow-lg">
-                            <Image src="/images/best-lady-gynecologist-kolkata.webp" alt="NICU team ready for newborn care after emergency delivery in Kolkata" fill className="object-cover" />
+                            <Image src="/images/best-lady-gynecologist-kolkata.webp" alt="NICU team ready for newborn care after emergency delivery" fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                             <div className="absolute bottom-6 left-6 right-6 text-white">
                                 <p className="font-bold text-lg mb-1">NICU On Standby</p>
@@ -306,7 +306,7 @@ export default function EmergencyCSectionPage() {
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div className="relative sticky top-32">
                             <div className="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl">
-                                <Image src="/images/pregnancy_ultrasound_1771254283977.png" alt="Post-operative monitoring and recovery after emergency C-section in Kolkata" fill className="object-cover" />
+                                <Image src="/images/pregnancy_ultrasound_1771254283977.png" alt="Post-operative monitoring and recovery after emergency C-section" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                             </div>
                         </div>
@@ -422,7 +422,7 @@ export default function EmergencyCSectionPage() {
                 </div>
             </section>
 
-            <SharedCTA title="Emergency Obstetric Care in Kolkata" subtitle="24/7 Rapid Response for Obstetric Emergencies with Dr. Vinita Khemani." />
+            <SharedCTA title="Emergency Obstetric Care" subtitle="24/7 Rapid Response for Obstetric Emergencies with Dr. Vinita Khemani." />
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />

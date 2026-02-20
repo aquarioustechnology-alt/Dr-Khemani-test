@@ -6,62 +6,9 @@ import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Jayosree Saha",
-    role: "New Mother",
-    text: "Dr. Vinita Khemani is an angel for us. For her we were blessed with our little princess. I came when my 3rd month was running with excessive vomiting. Her care throughout was remarkable.",
-    rating: 5,
-    initial: "J",
-    image: "/images/1656409765121.webp",
-  },
-  {
-    id: 2,
-    name: "Sharmila Sinha",
-    role: "Patient",
-    text: "Had a great experience from Day 1. She took time to explain everything. Answered all queries over WhatsApp in emergencies. Never felt uncomfortable for a moment.",
-    rating: 5,
-    initial: "S",
-    image: "/images/2023-02-08.webp",
-  },
-  {
-    id: 3,
-    name: "Shanta Ghatak",
-    role: "Patient",
-    text: "She is not just a gynaecologist but a manifestation of the Almighty. She performed my hysterectomy and freed me from years of pain. Highly satisfied with treatment.",
-    rating: 5,
-    initial: "S",
-    image: "/images/2023-04-06.webp",
-  },
-  {
-    id: 4,
-    name: "Khushboo Khemka",
-    role: "New Mother",
-    text: "Amazing doctor, very patient and friendly. Always available to clear doubts. Carries a very positive feeling. Every hospital visit post-delivery was reassuring.",
-    rating: 5,
-    initial: "K",
-    image: "/images/2023-04-23.webp",
-  },
-  {
-    id: 5,
-    name: "Soma Saha",
-    role: "Patient",
-    text: "I started seeing Ma'am for period problems and later for fertility. Just delivered 2 weeks back. Changed two doctors before but nobody understood the issue like her.",
-    rating: 5,
-    initial: "S",
-    image: "/images/unnamed (1).webp",
-  },
-  {
-    id: 6,
-    name: "Simon Baranwal",
-    role: "Visitor",
-    text: "Great experience under her guidance, without any complications. Doctor is sweet and helpful, treats you like a guardian. Very thankful for the care provided.",
-    rating: 5,
-    initial: "S",
-    image: "/images/unnamed (2).webp",
-  },
-];
+import { realStories } from "@/data/stories";
+
+const testimonials = realStories.filter(story => story.size === "small" || story.size === "medium").slice(0, 6);
 
 export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -168,9 +115,15 @@ export function Testimonials() {
                     </div>
 
                     <div className="mt-auto flex items-center gap-4 border-t border-gray-100 pt-8">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#C21975] to-[#8a2f5e] flex items-center justify-center text-white font-bold text-xl shadow-md">
-                        {current.initial}
-                      </div>
+                      {current.image ? (
+                        <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 shadow-md">
+                          <Image src={current.image} alt={current.name} fill className="object-cover" />
+                        </div>
+                      ) : (
+                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#C21975] to-[#8a2f5e] flex items-center justify-center text-white font-bold text-xl shadow-md shrink-0">
+                          {current.initial}
+                        </div>
+                      )}
                       <div>
                         <h4 className="font-bold text-gray-900 text-lg">{current.name}</h4>
                         <div className="flex items-center gap-2 text-sm text-gray-500">
@@ -188,12 +141,14 @@ export function Testimonials() {
 
                   {/* Right Image */}
                   <div className="relative h-64 md:h-full bg-gray-100 overflow-hidden order-first md:order-last">
-                    <Image
-                      src={current.image}
-                      alt={current.name}
-                      fill
-                      className="object-cover"
-                    />
+                    {current.image && (
+                      <Image
+                        src={current.image}
+                        alt={current.name}
+                        fill
+                        className="object-cover"
+                      />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
 
                     {/* Floating Badge on Image */}
@@ -203,7 +158,7 @@ export function Testimonials() {
                           <div className="flex -space-x-2">
                             {[0, 1, 2].map(i => (
                               <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-gray-200 overflow-hidden relative">
-                                <Image src={testimonials[i % testimonials.length].image} alt="user" fill className="object-cover" />
+                                <Image src={testimonials[i % testimonials.length].image || '/images/logo-icon.png'} alt="user" fill className="object-cover" />
                               </div>
                             ))}
                           </div>

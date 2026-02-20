@@ -139,7 +139,7 @@ export function Services() {
           <div className="mt-16 text-center">
             <p className="text-gray-600 mb-4">Not sure which service you need?</p>
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-medical-600 text-white rounded-full font-semibold hover:bg-medical-700 transition-colors shadow-lg shadow-medical-600/20"
             >
               <Stethoscope className="w-5 h-5" />

@@ -53,7 +53,7 @@ export function ParallaxCTA() {
 
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="#contact"
+                  href="/contact"
                   className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#a43971] font-semibold text-lg transition-transform hover:scale-105 shadow-xl hover:shadow-2xl"
                 >
                   Book Appointment

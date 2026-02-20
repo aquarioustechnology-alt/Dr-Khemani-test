@@ -17,9 +17,9 @@ const methods = [
 ];
 
 const faqs = [
-    { q: "Who provides the best family planning counseling in Kolkata?", a: "Dr. Vinita Khemani offers confidential, non-judgmental family planning services in Kolkata. She helps couples choose the best contraceptive methods based on their health, age, and future goals." },
-    { q: "Which contraceptive method is best for me?", a: "The best method depends on your health, age, lifestyle, and future pregnancy plans. Dr. Khemani will discuss all suitable options (hormonal, IUD, pills) available at her Kolkata clinic to help you make an informed choice." },
-    { q: "What is the cost of Copper-T insertion in Kolkata?", a: "The cost of IUD (Copper-T or Mirena) insertion is affordable and depends on the specific device chosen. Dr. Khemani provides safe, hygienic insertion procedures at her clinic." },
+    { q: "Who provides the best family planning counseling?", a: "Dr. Vinita Khemani offers confidential, non-judgmental family planning services. She helps couples choose the best contraceptive methods based on their health, age, and future goals." },
+    { q: "Which contraceptive method is best for me?", a: "The best method depends on your health, age, lifestyle, and future pregnancy plans. Dr. Khemani will discuss all suitable options (hormonal, IUD, pills) available at her the city clinic to help you make an informed choice." },
+    { q: "What is the cost of Copper-T insertion?", a: "The cost of IUD (Copper-T or Mirena) insertion is affordable and depends on the specific device chosen. Dr. Khemani provides safe, hygienic insertion procedures at her clinic." },
     { q: "Does the Copper-T cause pain?", a: "Placement might cause mild cramping, but it subsides quickly. Some women may experience heavier periods initially, but modern IUDs are very well tolerated." },
     { q: "Will birth control pills affect my future fertility?", a: "No. Fertility typically returns very quickly (often within days or weeks) after you stop taking the pill. There is no long-term negative effect on your ability to conceive." },
     { q: "Does IUD affect fertility?", a: "No. The IUD (Copper-T or Mirena) is completely reversible. As soon as it is removed by Dr. Khemani, your natural fertility returns almost immediately." },
@@ -49,7 +49,7 @@ export default function FamilyPlanningPage() {
                                         <span className="text-gray-900">Family Planning &</span> <br /> <span className="text-[#C21975]">Contraception Specialist in Kolkata.</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Empowering you to make informed decisions about your reproductive health. Dr. Vinita Khemani is the best gynecologist for birth control options, offering services like Copper-T insertion in Kolkata and contraceptive counselling in South Kolkata.
+                                        Empowering you to make informed decisions about your reproductive health. Dr. Vinita Khemani is the best gynecologist for birth control options, offering services like Copper-T insertion and contraceptive counselling in South the city.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -63,7 +63,7 @@ export default function FamilyPlanningPage() {
                                 </motion.div>
                                 <motion.div className="relative h-[400px] md:h-[500px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                        <Image src="/images/2023-04-23.webp" alt="Family Planning Advice in Kolkata" fill className="object-cover" />
+                                        <Image src="/images/2023-04-23.webp" alt="Family Planning Advice" fill className="object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-tr from-pink-900/10 to-transparent"></div>
                                     </div>
                                 </motion.div>
@@ -189,7 +189,7 @@ export default function FamilyPlanningPage() {
                                     Despite being home to one of the world&apos;s largest family planning programs, India still faces significant gaps in contraceptive awareness and access. According to NFHS-5 data, the unmet need for family planning in India remains around 9.4%, meaning millions of women who want to delay or prevent pregnancy lack access to effective contraception.
                                 </p>
                                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                    In urban settings like Kolkata, women today have more choices than ever — from hormonal pills and IUDs to long-acting reversible contraceptives (LARCs) and permanent methods. Yet, many women rely on outdated or ineffective methods simply because they were never properly counseled about modern options. The key to effective family planning is informed, non-judgmental counseling from a trusted gynecologist.
+                                    In urban settings like the city, women today have more choices than ever — from hormonal pills and IUDs to long-acting reversible contraceptives (LARCs) and permanent methods. Yet, many women rely on outdated or ineffective methods simply because they were never properly counseled about modern options. The key to effective family planning is informed, non-judgmental counseling from a trusted gynecologist.
                                 </p>
                                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
                                     Dr. Vinita Khemani provides comprehensive family planning counseling that respects each woman&apos;s unique circumstances — her health, age, family goals, and medical history. Whether you&apos;re looking to space pregnancies, prevent future pregnancies, or reverse a previous procedure, Dr. Khemani ensures you understand all your options and their implications before making a decision.
@@ -206,7 +206,7 @@ export default function FamilyPlanningPage() {
                             </div>
                             <div className="relative sticky top-32">
                                 <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                    <Image src="/images/family-planning-counseling.jpg" alt="Family planning consultation with Dr. Vinita Khemani in Kolkata" fill className="object-cover object-top" />
+                                    <Image src="/images/family-planning-counseling.jpg" alt="Family planning consultation with Dr. Vinita Khemani" fill className="object-cover object-top" />
                                 </div>
                                 <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-20">
                                     <p className="text-sm font-bold text-gray-900 mb-1">Your Choice</p>
@@ -222,7 +222,7 @@ export default function FamilyPlanningPage() {
                     <div className="container-fluid mx-auto max-w-[1400px] px-6">
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
                             <div className="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-[#fff0f5]">
-                                <Image src="/images/fertility-still-life-arrangement.jpg" alt="Planning for pregnancy - Pre-conception counseling in Kolkata" fill className="object-cover" />
+                                <Image src="/images/fertility-still-life-arrangement.jpg" alt="Planning for pregnancy - Pre-conception counseling" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                                 <div className="absolute bottom-6 left-6 text-white max-w-xs">
                                     <p className="font-bold text-xl mb-1">Planning a Baby?</p>
@@ -402,7 +402,7 @@ export default function FamilyPlanningPage() {
             </section>
 
 
-            <SharedCTA title="Plan Your Future in Kolkata" subtitle="Discuss suitable contraception methods in confidence with Dr. Vinita Khemani." />
+            <SharedCTA title="Plan Your Future" subtitle="Discuss suitable contraception methods in confidence with Dr. Vinita Khemani." />
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />

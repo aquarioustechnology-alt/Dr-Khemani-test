@@ -67,7 +67,7 @@ export function StickyCTA() {
                       <span className="text-sm font-medium">WhatsApp</span>
                     </a>
                     <a
-                      href="#contact"
+                      href="/contact"
                       className="flex items-center gap-2 px-5 py-2 rounded-full bg-medical-600 text-white hover:bg-medical-700 transition-colors shadow-lg shadow-medical-600/20"
                     >
                       <Calendar className="w-4 h-4" />
@@ -104,7 +104,7 @@ export function StickyCTA() {
                   <span className="text-sm font-semibold">WhatsApp</span>
                 </a>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="flex-[1.5] flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-medical-600 text-white active:bg-medical-700 transition-colors"
                 >
                   <Calendar className="w-5 h-5" />

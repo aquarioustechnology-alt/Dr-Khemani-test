@@ -19,11 +19,11 @@ const symptoms = [
 ];
 
 const faqs = [
-    { q: "Who is the best doctor for endometriosis in Kolkata?", a: "Dr. Vinita Khemani is one of the most experienced gynecologists for endometriosis treatment in Kolkata, with over 23 years of expertise in advanced laparoscopic excision surgery. She practices at leading hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital." },
+    { q: "Who is the best doctor for endometriosis?", a: "Dr. Vinita Khemani is one of the most experienced gynecologists for endometriosis treatment, with over 23 years of expertise in advanced laparoscopic excision surgery. She practices at leading hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital." },
     { q: "What is Endometriosis?", a: "Endometriosis is a condition where tissue similar to the lining of the uterus grows outside it—on the ovaries, fallopian tubes, and pelvic lining. This tissue sheds during periods but has no way to exit, causing intense pain, inflammation, and scar tissue. It affects approximately 1 in 10 women of reproductive age." },
     { q: "Can endometriosis be cured?", a: "While there is no permanent cure, symptoms can be effectively managed. Laparoscopic excision by a specialist like Dr. Khemani offers the best chance for long-term relief and fertility restoration." },
-    { q: "Can Endometriosis cause infertility?", a: "Yes, about 30-50% of women with endometriosis face fertility issues. The condition can block fallopian tubes, distort pelvic anatomy, or create an inflammatory environment that affects egg quality. Dr. Khemani\u2019s laparoscopic excision approach in Kolkata preserves fertility while removing disease." },
-    { q: "What is the cost of endometriosis treatment in Kolkata?", a: "The cost depends on the severity and treatment approach. Hormonal management is more affordable, while laparoscopic excision surgery costs vary based on the hospital and complexity. Dr. Khemani practices at multiple hospitals in Kolkata, offering options for different budgets." },
+    { q: "Can Endometriosis cause infertility?", a: "Yes, about 30-50% of women with endometriosis face fertility issues. The condition can block fallopian tubes, distort pelvic anatomy, or create an inflammatory environment that affects egg quality. Dr. Khemani\u2019s laparoscopic excision approach preserves fertility while removing disease." },
+    { q: "What is the cost of endometriosis treatment?", a: "The cost depends on the severity and treatment approach. Hormonal management is more affordable, while laparoscopic excision surgery costs vary based on the hospital and complexity. Dr. Khemani practices at multiple hospitals, offering options for different budgets." },
     { q: "Is surgery the only option?", a: "Not always. For mild cases or those not planning immediate pregnancy, hormonal medications (pills, injections) are the first line of treatment to suppress pain. However, for deep infiltrating endometriosis or large cysts (Endometriomas), laparoscopic surgery is the gold standard." },
     { q: "Will Endometriosis come back after surgery?", a: "There is a chance of recurrence, but expert excision surgery significantly lowers this risk compared to simple ablation. Dr. Khemani focuses on removing the disease from the root to provide long-term relief, combined with post-operative medical management." },
 ];
@@ -55,13 +55,13 @@ export default function EndometriosisPage() {
                                         <span className="italic text-[#C21975]">in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Dr. Vinita Khemani offers expert medical management of endometriosis and laparoscopic cystectomy (chocolate cyst removal). She provides specialized treatment for painful periods and infertility to restore your quality of life in Kolkata.
+                                        Dr. Vinita Khemani offers expert medical management of endometriosis and laparoscopic cystectomy (chocolate cyst removal). She provides specialized treatment for painful periods and infertility to restore your quality of life.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
                                         className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                     >
-                                        Book Endometriosis Consultation in Kolkata
+                                        Book Endometriosis Consultation
                                         <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                             <ArrowUpRight className="w-6 h-6" />
                                         </span>
@@ -69,7 +69,7 @@ export default function EndometriosisPage() {
                                 </motion.div>
                                 <motion.div className="relative h-[450px] md:h-[550px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                        <Image src="/images/2023-04-23.webp" alt="Endometriosis treatment and diagnosis by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
+                                        <Image src="/images/2023-04-23.webp" alt="Endometriosis treatment and diagnosis by Dr. Vinita Khemani" fill className="object-cover" />
                                     </div>
                                     {/* Stats Card */}
                                     <div className="absolute bottom-10 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[260px] hidden md:block">
@@ -299,7 +299,7 @@ export default function EndometriosisPage() {
                                 An estimated 25 million Indian women suffer from endometriosis, yet it remains one of the most under-diagnosed conditions in the country. The average delay in diagnosis is 7-10 years — far longer than the global average. This delay is largely due to the normalization of menstrual pain in Indian culture, where phrases like &quot;it&apos;s just your period&quot; or &quot;it will get better after marriage&quot; are commonly heard.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                Dr. Vinita Khemani is deeply committed to changing this narrative in Kolkata and across Bengal. With advanced diagnostic laparoscopy and a keen clinical eye developed over 23+ years of practice, she has helped hundreds of women finally receive the correct diagnosis and begin their journey toward pain-free living.
+                                Dr. Vinita Khemani is deeply committed to changing this narrative and across Bengal. With advanced diagnostic laparoscopy and a keen clinical eye developed over 23+ years of practice, she has helped hundreds of women finally receive the correct diagnosis and begin their journey toward pain-free living.
                             </p>
                             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
                                 {[
@@ -359,7 +359,7 @@ export default function EndometriosisPage() {
                                 However, having endometriosis does not mean you cannot become a mother. With the right treatment approach — whether through expert laparoscopic surgery to remove disease, fertility-enhancing medications, or assisted reproduction techniques like IUI or IVF — many women with endometriosis go on to have healthy pregnancies.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                Dr. Vinita Khemani has helped numerous women with endometriosis-related infertility achieve their dream of motherhood. Her surgical technique prioritizes ovarian tissue preservation, ensuring that your egg reserve is protected during cyst removal. For patients requiring IVF, she coordinates closely with leading fertility centers in Kolkata to provide seamless, comprehensive care.
+                                Dr. Vinita Khemani has helped numerous women with endometriosis-related infertility achieve their dream of motherhood. Her surgical technique prioritizes ovarian tissue preservation, ensuring that your egg reserve is protected during cyst removal. For patients requiring IVF, she coordinates closely with leading fertility centers to provide seamless, comprehensive care.
                             </p>
                             <button
                                 onClick={() => setIsEnquiryModalOpen(true)}
@@ -422,7 +422,7 @@ export default function EndometriosisPage() {
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Dr. Khemani</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-                                Kolkata&apos;s trusted expert in{" "}
+                                the city&apos;s trusted expert in{" "}
                                 <br />
                                 <span className="italic text-[#C21975]">endometriosis excision surgery</span>
                             </h2>
@@ -463,7 +463,7 @@ export default function EndometriosisPage() {
                         {/* Center — Image + Stats */}
                         <div className="flex flex-col gap-6">
                             <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
-                                <Image src="/images/endometriosis_surgery_1771474650242.png" alt="Dr. Vinita Khemani performing endometriosis excision surgery in Kolkata" fill className="object-cover" />
+                                <Image src="/images/endometriosis_surgery_1771474650242.png" alt="Dr. Vinita Khemani performing endometriosis excision surgery" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                                 <div className="absolute bottom-6 left-6 right-6">
                                     <p className="text-white text-sm font-semibold">&quot;Endometriosis is not just painful periods — it&apos;s a chronic disease that deserves expert surgical management.&quot;</p>
@@ -602,7 +602,7 @@ export default function EndometriosisPage() {
                 </div>
             </section>
 
-            <SharedCTA title="Stop Living with Endometriosis Pain" subtitle="Schedule an appointment with Dr. Vinita Khemani for expert endometriosis evaluation and treatment at her Kolkata clinics." />
+            <SharedCTA title="Stop Living with Endometriosis Pain" subtitle="Schedule an appointment with Dr. Vinita Khemani for expert endometriosis evaluation and treatment at her clinics." />
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />

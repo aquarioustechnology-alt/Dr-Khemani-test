@@ -88,14 +88,14 @@ const services = [
 ];
 
 const faqs = [
-    { q: "Who is the best doctor for menopause treatment in Kolkata?", a: "Dr. Vinita Khemani is a leading menopause specialist in Kolkata, offering holistic care that includes HRT, bone health screening, and lifestyle counseling. She practices at top clinics in Kolkata including Bhagirathi Neotia and Apollo Clinic." },
-    { q: "At what age does menopause typically start?", a: "The average age of natural menopause in Indian women is 46-48 years. Perimenopause (the transitional phase) can begin 4-8 years earlier. Some women in Kolkata may experience early menopause due to lifestyle or genetic factors." },
-    { q: "Is HRT safe?", a: "Modern HRT is very safe when prescribed appropriately and individualized. Dr. Khemani carefully evaluates each patient's risk profile (history of breast cancer, clots) before recommending hormone therapy at her Kolkata clinics." },
-    { q: "Should menopause be treated medically in Kolkata?", a: "Yes, if symptoms affect your quality of life. Dr. Khemani evaluates your condition to recommend medical or non-medical treatments tailored to your needs." },
+    { q: "Who is the best doctor for menopause treatment?", a: "Dr. Vinita Khemani is a leading menopause specialist, offering holistic care that includes HRT, bone health screening, and lifestyle counseling. She practices at top clinics including Bhagirathi Neotia and Apollo Clinic." },
+    { q: "At what age does menopause typically start?", a: "The average age of natural menopause in Indian women is 46-48 years. Perimenopause (the transitional phase) can begin 4-8 years earlier. Some women may experience early menopause due to lifestyle or genetic factors." },
+    { q: "Is HRT safe?", a: "Modern HRT is very safe when prescribed appropriately and individualized. Dr. Khemani carefully evaluates each patient's risk profile (history of breast cancer, clots) before recommending hormone therapy at her clinics." },
+    { q: "Should menopause be treated medically?", a: "Yes, if symptoms affect your quality of life. Dr. Khemani evaluates your condition to recommend medical or non-medical treatments tailored to your needs." },
     { q: "What hormone therapy options are available?", a: "We offer Bioidentical Hormone Replacement Therapy (BHRT) in patches, gels, or pills, customized to your hormonal needs for safe and effective relief." },
-    { q: "What is the cost of menopause treatment in Kolkata?", a: "Consultation and treatment costs vary based on the required tests (DEXA, lipid profile) and therapy type (HRT vs non-hormonal). Dr. Khemani offers comprehensive menopause packages suited for different needs." },
+    { q: "What is the cost of menopause treatment?", a: "Consultation and treatment costs vary based on the required tests (DEXA, lipid profile) and therapy type (HRT vs non-hormonal). Dr. Khemani offers comprehensive menopause packages suited for different needs." },
     { q: "What are the alternatives to HRT?", a: "For women who cannot or prefer not to take HRT, alternatives include non-hormonal medications (SSRIs, gabapentin), herbal supplements, cognitive behavioral therapy for hot flashes, and intensive lifestyle modifications." },
-    { q: "How do I know if I'm in menopause?", a: "Classic signs include irregular periods (eventually stopping), hot flashes, night sweats, vaginal dryness, mood changes, and sleep problems. Dr. Khemani can confirm menopause with blood tests (FSH, estradiol) at her Kolkata clinic." },
+    { q: "How do I know if I'm in menopause?", a: "Classic signs include irregular periods (eventually stopping), hot flashes, night sweats, vaginal dryness, mood changes, and sleep problems. Dr. Khemani can confirm menopause with blood tests (FSH, estradiol) at her the city clinic." },
 ];
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -189,7 +189,7 @@ export default function MenopausePage() {
                                         <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">Management in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        Led by Dr. Vinita Khemani — women’s health specialist, our clinic offers comprehensive menopause management in Kolkata. We provide expert care for symptom relief, HRT, and bone health, ensuring the best menopause treatment in West Bengal.
+                                        Led by Dr. Vinita Khemani — women’s health specialist, our clinic offers comprehensive menopause management. We provide expert care for symptom relief, HRT, and bone health, ensuring the best menopause treatment in West Bengal.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
@@ -200,7 +200,7 @@ export default function MenopausePage() {
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[400px] md:h-[500px] order-first lg:order-none">
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl">
-                                        <Image src="/images/2023-04-23.webp" alt="Menopause care and hormone replacement therapy by Dr. Vinita Khemani in Kolkata" fill className="object-cover" priority />
+                                        <Image src="/images/2023-04-23.webp" alt="Menopause care and hormone replacement therapy by Dr. Vinita Khemani" fill className="object-cover" priority />
                                     </div>
                                 </motion.div>
                             </div>
@@ -239,7 +239,7 @@ export default function MenopausePage() {
                     <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Our Services</span>
                     <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Personalized Menopause</span>{" "}
-                        <span className="text-[#C21975]">Support in Kolkata</span>
+                        <span className="text-[#C21975]">Support</span>
                     </h2>
                     <p className="text-lg text-gray-600 mt-6">Comprehensive care designed to support you through every aspect of the menopausal transition.</p>
                 </div>
@@ -266,7 +266,7 @@ export default function MenopausePage() {
                                 Indian women typically experience menopause between ages 46-52, slightly earlier than the global average of 51. The menopausal transition (perimenopause) can begin 4-8 years before the final period, bringing symptoms like hot flashes, mood swings, sleep disturbances, joint pain, and vaginal dryness. Studies from AIIMS show that over 70% of Indian perimenopausal women report significant quality-of-life impacts.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                Dr. Vinita Khemani provides comprehensive menopause management in Kolkata that goes beyond simply prescribing hormones. Her approach includes detailed hormonal assessment, bone density screening, cardiovascular risk evaluation, and evidence-based hormone replacement therapy (HRT) when indicated — tailored to each woman&apos;s individual risk profile.
+                                Dr. Vinita Khemani provides comprehensive menopause management that goes beyond simply prescribing hormones. Her approach includes detailed hormonal assessment, bone density screening, cardiovascular risk evaluation, and evidence-based hormone replacement therapy (HRT) when indicated — tailored to each woman&apos;s individual risk profile.
                             </p>
                             <button
                                 onClick={() => setIsEnquiryModalOpen(true)}
@@ -358,7 +358,7 @@ export default function MenopausePage() {
                         {/* Center — Image + Stats */}
                         <div className="flex flex-col gap-6">
                             <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
-                                <Image src="/images/menopause_wellness_1771239357179.png" alt="Menopause wellness consultation with Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
+                                <Image src="/images/menopause_wellness_1771239357179.png" alt="Menopause wellness consultation with Dr. Vinita Khemani" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                                 <div className="absolute bottom-6 left-6 right-6">
                                     <p className="text-white text-sm font-semibold">&quot;Menopause is not an ending — it&apos;s the beginning of a new chapter that deserves expert support.&quot;</p>
@@ -503,7 +503,7 @@ export default function MenopausePage() {
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
 
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
-            <SharedCTA title="Struggling with Menopause in Kolkata?" subtitle="Consult Dr. Vinita Khemani for expert menopause management and personalized HRT plans." />
+            <SharedCTA title="Struggling with Menopause?" subtitle="Consult Dr. Vinita Khemani for expert menopause management and personalized HRT plans." />
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />

@@ -180,8 +180,8 @@ export function Navigation() {
                       </AnimatePresence>
                     </div>
                   ) : (
-                    <Link href={link.label === "Contact" ? "#contact" : link.href}
-                      className="text-sm font-medium transition-colors relative group text-gray-700 hover:text-primary py-4 block whitespace-nowrap">
+                    <Link href={link.href}
+                      className="text-sm font-medium transition-colors relative group text-gray-700 hover:text-[#C21975] py-4 block whitespace-nowrap">
                       {link.label}
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all group-hover:w-full bg-[#C21975]" />
                     </Link>
@@ -283,7 +283,7 @@ export function Navigation() {
                     </div>
                   ) : (
                     <Link
-                      href={link.label === "Contact" ? "#contact" : link.href}
+                      href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className="text-3xl font-display font-medium text-gray-800 hover:text-[#C21975] transition-colors inline-block"
                     >

@@ -5,9 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Award, TrendingUp } from "lucide-react";
 import { calculateExperience } from "@/lib/utils";
+import { useState } from "react";
+import { EnquiryModal } from "@/components/EnquiryModal";
 
 
 export function AboutPreview() {
+  const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
+
   return (
     <section className="py-24 bg-white">
       <div className="container-fluid mx-auto max-w-[1400px] px-6">
@@ -140,20 +144,21 @@ export function AboutPreview() {
                 Learn More
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link
-                href="#contact"
+              <button
+                onClick={() => setIsEnquiryModalOpen(true)}
                 className="group inline-flex items-center justify-center gap-2 pr-1.5 pl-5 py-1 rounded-full bg-[#C21975] text-white font-semibold text-sm transition-transform hover:scale-105 shadow-md hover:shadow-lg"
               >
                 Schedule Visit
                 <span className="w-8 h-8 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                   <ArrowUpRight className="w-4 h-4" />
                 </span>
-              </Link>
+              </button>
             </div>
           </motion.div>
 
         </div>
       </div>
+      <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
     </section>
   );
 }

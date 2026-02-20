@@ -28,11 +28,11 @@ const methods = [
 ];
 
 const faqs = [
-    { q: "Who is the best doctor for hysterectomy in Kolkata?", a: "Dr. Vinita Khemani is one of the most experienced gynecological surgeons in Kolkata for hysterectomy, with expertise in total laparoscopic hysterectomy (TLH), LAVH, and vaginal hysterectomy. She operates at leading hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital." },
+    { q: "Who is the best doctor for hysterectomy?", a: "Dr. Vinita Khemani is one of the most experienced gynecological surgeons for hysterectomy, with expertise in total laparoscopic hysterectomy (TLH), LAVH, and vaginal hysterectomy. She operates at leading hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital." },
     { q: "Will I go into menopause after a hysterectomy?", a: "Not necessarily. If your ovaries are preserved during the surgery, you will not enter menopause immediately. If ovaries are removed (oophorectomy), surgical menopause will begin. Dr. Khemani discusses this in detail before surgery to help you make an informed decision." },
-    { q: "How long is recovery time in Kolkata after surgery?", a: "For laparoscopic hysterectomy (TLH), recovery is quick. Patients are discharged in 1-2 days and return to light activities in a week. Full recovery takes 2-3 weeks. Abdominal hysterectomy takes 4-6 weeks. Dr. Khemani\u2019s minimally invasive approach ensures faster recovery." },
-    { q: "What is the cost of hysterectomy in Kolkata?", a: "The cost varies based on the type of procedure (TLH, LAVH, NDVH, or abdominal) and hospital chosen. Dr. Khemani operates at multiple hospitals in Kolkata, offering options for different budgets while maintaining the highest surgical standards." },
-    { q: "Is laparoscopic hysterectomy safe?", a: "Yes, it is a major procedure, but with modern laparoscopic techniques performed by Dr. Khemani in Kolkata, the impact on the body is minimized. It is very safe when performed by experienced hands with proper pre-operative evaluation." },
+    { q: "How long is recovery time after surgery?", a: "For laparoscopic hysterectomy (TLH), recovery is quick. Patients are discharged in 1-2 days and return to light activities in a week. Full recovery takes 2-3 weeks. Abdominal hysterectomy takes 4-6 weeks. Dr. Khemani\u2019s minimally invasive approach ensures faster recovery." },
+    { q: "What is the cost of hysterectomy?", a: "The cost varies based on the type of procedure (TLH, LAVH, NDVH, or abdominal) and hospital chosen. Dr. Khemani operates at multiple hospitals, offering options for different budgets while maintaining the highest surgical standards." },
+    { q: "Is laparoscopic hysterectomy safe?", a: "Yes, it is a major procedure, but with modern laparoscopic techniques performed by Dr. Khemani, the impact on the body is minimized. It is very safe when performed by experienced hands with proper pre-operative evaluation." },
     { q: "Will it affect my sex life?", a: "For most women, sex life improves after recovery because they are free from pain and bleeding. Dr. Khemani recommends waiting 6-8 weeks after surgery to resume intercourse." },
 ];
 
@@ -60,13 +60,13 @@ export default function HysterectomyPage() {
                                         <span className="italic text-[#C21975]">in Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        When medication isn&apos;t enough, hysterectomy (uterus removal) offers permanent relief. Laparoscopic hysterectomy in Kolkata is performed by Dr. Vinita Khemani — experienced gynecologic surgeon, specializing in minimally invasive techniques for faster recovery.
+                                        When medication isn&apos;t enough, hysterectomy (uterus removal) offers permanent relief. Laparoscopic hysterectomy is performed by Dr. Vinita Khemani — experienced gynecologic surgeon, specializing in minimally invasive techniques for faster recovery.
                                     </p>
                                     <button
                                         onClick={() => setIsEnquiryModalOpen(true)}
                                         className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-all hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                     >
-                                        Consult Dr. Khemani in Kolkata
+                                        Consult Dr. Khemani
                                         <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                             <ArrowUpRight className="w-6 h-6" />
                                         </span>
@@ -74,7 +74,7 @@ export default function HysterectomyPage() {
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[400px] md:h-[500px]">
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                        <Image src="/images/Laparoscopic Surgery.jpg" alt="Laparoscopic hysterectomy surgery by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
+                                        <Image src="/images/Laparoscopic Surgery.jpg" alt="Laparoscopic hysterectomy surgery by Dr. Vinita Khemani" fill className="object-cover" />
                                     </div>
                                 </motion.div>
                             </div>
@@ -253,7 +253,7 @@ export default function HysterectomyPage() {
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
                                 Why Choose Dr. Vinita Khemani for{" "}
                                 <br />
-                                <span className="italic text-[#C21975]">Hysterectomy in Kolkata</span>
+                                <span className="italic text-[#C21975]">Hysterectomy</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">
@@ -292,7 +292,7 @@ export default function HysterectomyPage() {
                         {/* Center — Image + Stats */}
                         <div className="flex flex-col gap-6">
                             <div className="relative rounded-[2rem] overflow-hidden min-h-[300px] flex-1 shadow-lg">
-                                <Image src="/images/2023-04-23 (1).webp" alt="Advanced laparoscopic hysterectomy by Dr. Vinita Khemani in Kolkata" fill className="object-cover" />
+                                <Image src="/images/2023-04-23 (1).webp" alt="Advanced laparoscopic hysterectomy by Dr. Vinita Khemani" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                                 <div className="absolute bottom-6 left-6 right-6">
                                     <p className="text-white text-sm font-semibold">&quot;Surgery should be the last resort — but when needed, minimally invasive is the way forward.&quot;</p>
@@ -339,7 +339,7 @@ export default function HysterectomyPage() {
                                     Multi-Hospital Surgical Access
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">
-                                    Operating at 6 premier hospitals across Kolkata — Bhagirathi Neotia, Charnock, Apollo Clinic, ILS — each equipped with advanced laparoscopic suites, NICU backup, and round-the-clock anesthesia teams for complete safety.
+                                    Operating at 6 premier hospitals across the region — Bhagirathi Neotia, Charnock, Apollo Clinic, ILS — each equipped with advanced laparoscopic suites, NICU backup, and round-the-clock anesthesia teams for complete safety.
                                 </p>
                             </div>
                         </div>
@@ -431,7 +431,7 @@ export default function HysterectomyPage() {
                 </div>
             </section>
 
-            <SharedCTA title="Is Hysterectomy Right for You?" subtitle="Schedule a consultation with Dr. Vinita Khemani at her Kolkata clinics for a detailed assessment before deciding." />
+            <SharedCTA title="Is Hysterectomy Right for You?" subtitle="Schedule a consultation with Dr. Vinita Khemani at her clinics for a detailed assessment before deciding." />
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />

@@ -152,7 +152,7 @@ export function About() {
             <FadeInWhenVisible delay={0.6}>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-medical-600 text-white rounded-full font-semibold hover:bg-medical-700 transition-colors shadow-lg shadow-medical-600/20"
                 >
                   <Clock className="w-5 h-5" />
