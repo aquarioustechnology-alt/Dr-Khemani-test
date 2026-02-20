@@ -310,38 +310,46 @@ export default function ContactPage() {
                                 desc: "Women & Child Care Centre",
                                 area: "New Town",
                                 timings: "Wed & Fri: 4:00 PM",
-                                phone: "033-332350000"
+                                phone: "033-332350000",
+                                logo: "/images/neotia-logo.svg"
                             },
                             {
                                 name: "Charnock Hospital",
                                 desc: "Renowned Multi-Speciality",
                                 area: "VIP Road",
                                 timings: "Thursday: 11:00 AM",
-                                phone: "033-40500500"
+                                phone: "033-40500500",
+                                logo: "/images/charnock-hospital-logo.webp"
                             },
                             {
                                 name: "Apollo Clinic",
                                 desc: "Premium Medical Care",
                                 area: "Chinar Park",
                                 timings: "Mon, Wed: 11:00 AM",
-                                phone: "033-66263456"
+                                phone: "033-66263456",
+                                logo: "/images/apollo-clinic-logo.webp"
                             },
                             {
                                 name: "Spandan Hospital",
                                 desc: "Advanced Healthcare",
                                 area: "Teghoria, VIP Road",
                                 timings: "Wed & Sat: 5:00 PM",
-                                phone: "033-40045511"
+                                phone: "033-40045511",
+                                logo: "/images/spandan-hospital-logo.jpg"
                             },
                             {
                                 name: "ILS Dumdum",
                                 desc: "Multi-Speciality Centre",
                                 area: "Dumdum",
                                 timings: "Thursday: 1:00 PM",
-                                phone: "6292260651"
+                                phone: "6292260651",
+                                logo: "/images/images.png"
                             }
                         ].map((hospital, idx) => (
                             <div key={idx} className="bg-white p-8 rounded-3xl shadow-sm border border-neutral-100 hover:shadow-xl hover:shadow-pink-100 hover:-translate-y-1 transition-all duration-300">
+                                <div className="h-10 w-32 relative mb-6">
+                                    <Image src={hospital.logo} alt={hospital.name} fill className="object-contain object-left mix-blend-multiply" />
+                                </div>
                                 <h3 className="text-xl font-bold text-neutral-900 mb-1">{hospital.name}</h3>
                                 <p className="text-sm font-medium text-[#C21975] mb-5">{hospital.desc}</p>
 
