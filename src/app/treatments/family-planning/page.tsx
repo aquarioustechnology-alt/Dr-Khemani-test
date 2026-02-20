@@ -301,7 +301,7 @@ export default function FamilyPlanningPage() {
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">100% Confidential & Non-Judgmental</h3>
                             <p className="text-gray-600 leading-relaxed">
-                                We understand that reproductive choices are personal. Dr. Khemani provides a safe, private space where you can discuss birth control, unplaned pregnancies, or sterilization without fear of judgment.
+                                We understand that reproductive choices are personal. Dr. Khemani provides a safe, private space where you can discuss birth control, unplanned pregnancies, or sterilization without fear of judgment.
                             </p>
                         </div>
 
