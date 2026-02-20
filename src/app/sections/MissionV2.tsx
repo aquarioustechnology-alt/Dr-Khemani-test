@@ -16,7 +16,7 @@ export function MissionV2() {
                     </span>
                     <h2 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-bold text-gray-900 leading-[1.2] pb-2">
                         Empowering women through <br />
-                        <span className="text-[#C21975] italic pr-1">compassionate healthcare.</span>
+                        <span className="text-[#C21975] italic pr-1">Compassionate healthcare.</span>
                     </h2>
                     <p className="text-xl text-gray-600 mt-6 leading-relaxed">
                         We strive to create a safe, supportive environment where every woman feels heard, understood, and cared for at every stage of her life.

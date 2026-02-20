@@ -94,7 +94,7 @@ export default function StoriesPage() {
                                     )}
                                     <div>
                                         <p className="font-bold">{story.name}</p>
-                                        <p className={`text-sm ${isPink || isDark ? 'text-white/60' : 'text-neutral-500'}`}>via {story.source}</p>
+                                        <p className={`text-sm ${isPink || isDark ? 'text-white/60' : 'text-neutral-500'}`}>Via {story.source}</p>
                                     </div>
                                 </div>
                             </motion.div>

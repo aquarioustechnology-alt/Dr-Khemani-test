@@ -266,7 +266,7 @@ export default function OvarianCystectomyPage() {
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Surgical Excellence</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
                                 Precision surgery that{" "}<br />
-                                <span className="italic text-[#C21975]">protects your fertility</span>
+                                <span className="italic text-[#C21975]">Protects your fertility</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">

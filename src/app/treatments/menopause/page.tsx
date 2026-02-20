@@ -319,7 +319,7 @@ export default function MenopausePage() {
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
                                 Navigating menopause with{" "}
                                 <br />
-                                <span className="italic text-[#C21975]">dignity and expert care</span>
+                                <span className="italic text-[#C21975]">Dignity and expert care</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">

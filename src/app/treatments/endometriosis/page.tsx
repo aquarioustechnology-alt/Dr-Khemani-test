@@ -52,7 +52,7 @@ export default function EndometriosisPage() {
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[60px] leading-[1.1] font-bold tracking-tight mb-6">
                                         <span className="text-gray-900">Endometriosis Specialist </span> <br />
-                                        <span className="italic text-[#C21975]">in Kolkata</span>
+                                        <span className="italic text-[#C21975]">In Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
                                         Dr. Vinita Khemani offers expert medical management of endometriosis and laparoscopic cystectomy (chocolate cyst removal). She provides specialized treatment for painful periods and infertility to restore your quality of life.
@@ -424,7 +424,7 @@ export default function EndometriosisPage() {
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
                                 the city&apos;s trusted expert in{" "}
                                 <br />
-                                <span className="italic text-[#C21975]">endometriosis excision surgery</span>
+                                <span className="italic text-[#C21975]">Endometriosis excision surgery</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">

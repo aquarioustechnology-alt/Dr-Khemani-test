@@ -288,7 +288,7 @@ export default function FertilityPage() {
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
                                 A compassionate, science-driven{" "}
                                 <br />
-                                <span className="italic text-[#C21975]">approach to fertility</span>
+                                <span className="italic text-[#C21975]">Approach to fertility</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">

@@ -51,7 +51,7 @@ export default function ContactPage() {
                         </div>
                         <h1 className="font-display text-5xl md:text-6xl lg:text-[72px] font-bold text-neutral-900 leading-[1.1] mb-6 tracking-tight">
                             Let&apos;s start a <br className="hidden md:block" />
-                            <span className="italic font-light text-[#C21975]">conversation.</span>
+                            <span className="italic font-light text-[#C21975]">Conversation.</span>
                         </h1>
                         <p className="text-lg md:text-xl text-neutral-600 mb-10 max-w-lg leading-relaxed font-light">
                             Whether you need to book an appointment, ask a question, or seek urgent care, our dedicated team is just a message or phone call away.
@@ -102,7 +102,7 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <p className="font-bold text-neutral-900">Fast Reply</p>
-                                    <p className="text-sm text-neutral-500">within 2 hours</p>
+                                    <p className="text-sm text-neutral-500">Within 2 hours</p>
                                 </div>
                             </div>
                         </div>

@@ -83,7 +83,7 @@ export function ClinicTiming() {
             Visit Us
           </span>
           <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight text-balance">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">6 Clinic Locations</span> <span className="text-[#a43971]">in Kolkata</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">6 Clinic Locations</span> <span className="text-[#a43971]">In Kolkata</span>
           </h2>
         </div>
 

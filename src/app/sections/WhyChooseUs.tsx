@@ -17,7 +17,7 @@ export function WhyChooseUs() {
                             </span>
                             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.2] pb-1">
                                 Your trusted partner in <br />
-                                <span className="text-[#C21975]">compassionate care</span>
+                                <span className="text-[#C21975]">Compassionate care</span>
                             </h2>
                         </div>
                         <div className="max-w-xl pb-2">

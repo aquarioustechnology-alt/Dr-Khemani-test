@@ -180,7 +180,7 @@ export default function HighRiskPregnancyPage() {
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">The Urban Challenge</span>
-                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">High-Risk Pregnancies <br /><span className="text-[#C21975]">in India: A Growing Concern</span></h2>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">High-Risk Pregnancies <br /><span className="text-[#C21975]">In India: A Growing Concern</span></h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
                                 India accounts for nearly 12% of global maternal deaths, with complications during high-risk pregnancies being a leading contributor. According to the National Family Health Survey (NFHS-5), approximately 20-30% of all pregnancies in India are classified as high-risk due to factors such as advanced maternal age, gestational diabetes, hypertension, and pre-existing medical conditions.
                             </p>
@@ -239,7 +239,7 @@ export default function HighRiskPregnancyPage() {
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Why Choose Dr. Khemani</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
                                 Expert high-risk pregnancy care{" "}<br />
-                                <span className="italic text-[#C21975]">for mother and baby</span>
+                                <span className="italic text-[#C21975]">For mother and baby</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">

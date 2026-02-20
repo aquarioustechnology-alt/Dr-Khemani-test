@@ -307,7 +307,7 @@ export default function PCOSTreatmentPage() {
                                         <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl font-bold">1/5</div>
                                         <div>
                                             <p className="text-lg font-bold">Indian Women</p>
-                                            <p className="text-sm text-pink-100">suffer from PCOS symptoms</p>
+                                            <p className="text-sm text-pink-100">Suffer from PCOS symptoms</p>
                                         </div>
                                     </div>
                                     <p className="text-sm opacity-80 leading-relaxed">
@@ -329,7 +329,7 @@ export default function PCOSTreatmentPage() {
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Clinical Evaluation</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Accurate <span className="text-[#C21975]">PCOS Diagnosis</span></h2>
                             <p className="text-gray-600 text-lg mb-8">
-                                at her clinics, Dr. Vinita Khemani confirms diagnosis using the internationally recognized Rotterdam Criteria — requiring at least <strong>2 out of 3</strong> markers. A thorough evaluation rules out other hormonal conditions like thyroid dysfunction.
+                                At her clinics, Dr. Vinita Khemani confirms diagnosis using the internationally recognized Rotterdam Criteria — requiring at least <strong>2 out of 3</strong> markers. A thorough evaluation rules out other hormonal conditions like thyroid dysfunction.
                             </p>
 
                             <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -611,7 +611,7 @@ export default function PCOSTreatmentPage() {
                         </div>
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Lifestyle Medicine</span>
-                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Exercise &amp; Lifestyle <br /><span className="text-[#C21975]">for PCOS Reversal</span></h2>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Exercise &amp; Lifestyle <br /><span className="text-[#C21975]">For PCOS Reversal</span></h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
                                 Research consistently shows that lifestyle modification is the single most effective first-line treatment for PCOS. A structured exercise program of just 150 minutes per week can significantly improve insulin sensitivity, reduce androgen levels, restore ovulation, and improve mood — often more effectively than medication alone.
                             </p>

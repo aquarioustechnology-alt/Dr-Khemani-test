@@ -57,7 +57,7 @@ export default function HysterectomyPage() {
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[60px] leading-[1.1] font-bold tracking-tight mb-6">
                                         <span className="text-gray-900">Laparoscopic Hysterectomy </span> <br />
-                                        <span className="italic text-[#C21975]">in Kolkata</span>
+                                        <span className="italic text-[#C21975]">In Kolkata</span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
                                         When medication isn&apos;t enough, hysterectomy (uterus removal) offers permanent relief. Laparoscopic hysterectomy is performed by Dr. Vinita Khemani — experienced gynecologic surgeon, specializing in minimally invasive techniques for faster recovery.

@@ -227,7 +227,7 @@ export default function EmergencyCSectionPage() {
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">Emergency Protocol</span>
                             <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
                                 Prepared for every{" "}<br />
-                                <span className="italic text-[#C21975]">critical moment</span>
+                                <span className="italic text-[#C21975]">Critical moment</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-md leading-relaxed lg:text-right">

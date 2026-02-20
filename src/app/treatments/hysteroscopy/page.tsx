@@ -210,7 +210,7 @@ export default function HysteroscopyPage() {
                             </span>
                             <h2 className="font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                                 Expert Hysteroscopy Care <br />
-                                <span className="text-[#C21975] italic">for Uterine Preservation</span>
+                                <span className="text-[#C21975] italic">For Uterine Preservation</span>
                             </h2>
                         </div>
                         <p className="text-gray-600 text-lg max-w-xl leading-relaxed">
