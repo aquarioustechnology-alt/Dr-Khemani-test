@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, ArrowRight, UserPlus, Calendar } from "lucide-react";
 import { useState } from "react";
 import { calculateExperience } from "@/lib/utils";
+import { EnquiryModal } from "@/components/EnquiryModal";
 
 const quickLinks = [
   { label: "About Dr. Vinita", href: "/about" },
@@ -32,6 +33,7 @@ const medicalServices = [
 
 export function Footer() {
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -191,11 +193,11 @@ export function Footer() {
               </div>
             </div>
 
-            <Link href="/contact" className="w-full flex items-center justify-center gap-2 bg-white text-[#C21975] px-6 py-3.5 rounded-xl font-bold hover:bg-gray-50 transition-all shadow-xl group">
+            <button onClick={() => setIsEnquiryModalOpen(true)} className="w-full flex items-center justify-center gap-2 bg-white text-[#C21975] px-6 py-3.5 rounded-xl font-bold hover:bg-gray-50 transition-all shadow-xl group">
               <Calendar className="w-4 h-4" />
               Book Appointment
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </button>
           </div>
         </div>
 
@@ -218,6 +220,7 @@ export function Footer() {
           </div>
         </div>
       </div>
+      <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
     </footer>
   );
 }
