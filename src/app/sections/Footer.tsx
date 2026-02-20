@@ -84,8 +84,12 @@ export function Footer() {
             </div>
 
             <div className="flex gap-3">
-              {[Facebook, Instagram, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C21975] hover:border-[#C21975] transition-all group">
+              {[
+                { Icon: Facebook, href: "https://www.facebook.com" },
+                { Icon: Instagram, href: "https://www.instagram.com" },
+                { Icon: Youtube, href: "https://www.youtube.com" }
+              ].map(({ Icon, href }, i) => (
+                <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C21975] hover:border-[#C21975] transition-all group">
                   <Icon className="w-4 h-4 text-pink-100 group-hover:text-white" />
                 </a>
               ))}
@@ -208,7 +212,7 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-6 shrink-0">
               <p className="text-xs text-pink-200/60">
-                Designed by <a href="#" className="hover:text-white transition-colors">Aquarious Technology</a>
+                Designed by <a href="https://aquarioustechnology.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Aquarious Technology</a>
               </p>
             </div>
           </div>
