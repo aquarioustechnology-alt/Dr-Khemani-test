@@ -156,7 +156,7 @@ export const realStories = [
         id: 13,
         name: "Piyasa Pramanick",
         role: "New Mother",
-        text: "She is Goddess for us.. she can cure any kind of critical condition in pregnancy.. Thanks a lot mam 🙏🙏 ❤️",
+        text: "She is Goddess for us.. She can cure any kind of critical condition in pregnancy.. Thanks a lot mam 🙏🙏 ❤️",
         highlight: "Cure any kind of critical condition in pregnancy.",
         rating: 5,
         source: "Google Reviews",
