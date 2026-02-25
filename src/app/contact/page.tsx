@@ -34,7 +34,7 @@ export default function ContactPage() {
                     formType: "contact",
                     name: formState.name,
                     phone: formState.phone,
-                    email: formState.email || "not-provided@contact.form",
+                    email: formState.email,
                     clinic: formState.clinic,
                     date: formState.date,
                     message: formState.message,

@@ -54,7 +54,7 @@ export function Footer() {
           formType: "enquiry",
           name: "Callback Request",
           phone: phoneNumber,
-          email: "callback@healingtouchclinic.in",
+          email: "",
           message: `Patient requested a callback at phone number: ${phoneNumber}`,
         }),
       });

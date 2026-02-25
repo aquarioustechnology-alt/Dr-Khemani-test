@@ -1,37 +1,37 @@
 interface EmailData {
-    formType: "appointment" | "enquiry" | "contact";
-    name: string;
-    phone: string;
-    email: string;
-    date?: string;
-    clinic?: string;
-    message?: string;
-    subject?: string;
+  formType: "appointment" | "enquiry" | "contact";
+  name: string;
+  phone: string;
+  email: string;
+  date?: string;
+  clinic?: string;
+  message?: string;
+  subject?: string;
 }
 
 export function generateEmailTemplate(data: EmailData): string {
-    const formLabels: Record<string, string> = {
-        appointment: "Appointment Request",
-        enquiry: "General Enquiry",
-        contact: "Contact Form Submission",
-    };
+  const formLabels: Record<string, string> = {
+    appointment: "Appointment Request",
+    enquiry: "General Enquiry",
+    contact: "Contact Form Submission",
+  };
 
-    const formTitle = formLabels[data.formType] || "New Form Submission";
+  const formTitle = formLabels[data.formType] || "New Form Submission";
 
-    const rows: { label: string; value: string }[] = [
-        { label: "Full Name", value: data.name },
-        { label: "Phone Number", value: data.phone },
-        { label: "Email Address", value: data.email },
-    ];
+  const rows: { label: string; value: string }[] = [
+    { label: "Full Name", value: data.name },
+    { label: "Phone Number", value: data.phone },
+    { label: "Email Address", value: data.email || "None" },
+  ];
 
-    if (data.date) rows.push({ label: "Preferred Date", value: data.date });
-    if (data.clinic) rows.push({ label: "Preferred Clinic", value: data.clinic });
-    if (data.subject) rows.push({ label: "Subject", value: data.subject });
-    if (data.message) rows.push({ label: "Message", value: data.message });
+  if (data.date) rows.push({ label: "Preferred Date", value: data.date });
+  if (data.clinic) rows.push({ label: "Preferred Clinic", value: data.clinic });
+  if (data.subject) rows.push({ label: "Subject", value: data.subject });
+  if (data.message) rows.push({ label: "Message", value: data.message });
 
-    const tableRows = rows
-        .map(
-            (row) => `
+  const tableRows = rows
+    .map(
+      (row) => `
         <tr>
           <td style="padding: 14px 20px; font-weight: 600; color: #540d2d; font-size: 14px; border-bottom: 1px solid #f5e6ef; width: 160px; vertical-align: top;">
             ${row.label}
@@ -41,16 +41,16 @@ export function generateEmailTemplate(data: EmailData): string {
           </td>
         </tr>
       `
-        )
-        .join("");
+    )
+    .join("");
 
-    const now = new Date().toLocaleString("en-IN", {
-        timeZone: "Asia/Kolkata",
-        dateStyle: "full",
-        timeStyle: "short",
-    });
+  const now = new Date().toLocaleString("en-IN", {
+    timeZone: "Asia/Kolkata",
+    dateStyle: "full",
+    timeStyle: "short",
+  });
 
-    return `
+  return `
     <!DOCTYPE html>
     <html lang="en">
     <head>

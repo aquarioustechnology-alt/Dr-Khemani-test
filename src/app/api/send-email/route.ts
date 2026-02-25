@@ -11,9 +11,9 @@ export async function POST(request: NextRequest) {
         const { formType, name, phone, email, date, clinic, message, subject } = body;
 
         // Validate required fields
-        if (!name || !phone || !email) {
+        if (!name || !phone) {
             return NextResponse.json(
-                { error: "Name, phone, and email are required fields." },
+                { error: "Name and phone are required fields." },
                 { status: 400 }
             );
         }
@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
             to: ["dr.vinita.khemani@gmail.com"],
             subject: emailSubject,
             html: htmlContent,
-            replyTo: email,
+            replyTo: email || undefined,
         });
 
         if (error) {
