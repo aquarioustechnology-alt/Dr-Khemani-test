@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, ArrowRight, UserPlus, Calendar } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, ArrowRight, UserPlus, Calendar, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { calculateExperience } from "@/lib/utils";
 import { EnquiryModal } from "@/components/EnquiryModal";
+import { FormStatusDialog } from "@/components/FormStatusDialog";
 
 const quickLinks = [
   { label: "About Dr. Vinita", href: "/about" },
@@ -34,12 +35,43 @@ const medicalServices = [
 export function Footer() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusDialog, setStatusDialog] = useState<{
+    isOpen: boolean;
+    status: "success" | "error";
+    message?: string;
+  }>({ isOpen: false, status: "success" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Logic for callback request would go here
-    alert("Callback request received for " + phoneNumber);
-    setPhoneNumber("");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "enquiry",
+          name: "Callback Request",
+          phone: phoneNumber,
+          email: "callback@healingtouchclinic.in",
+          message: `Patient requested a callback at phone number: ${phoneNumber}`,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setStatusDialog({ isOpen: true, status: "success", message: `Callback request received for ${phoneNumber}. Our team will call you within 30 minutes during working hours.` });
+        setPhoneNumber("");
+      } else {
+        setStatusDialog({ isOpen: true, status: "error", message: result.error });
+      }
+    } catch {
+      setStatusDialog({ isOpen: true, status: "error", message: "Network error. Please check your connection and try again." });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -149,8 +181,12 @@ export function Footer() {
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     required
                   />
-                  <button type="submit" className="w-full bg-[#C21975] hover:bg-[#a43971] text-white text-xs font-bold uppercase tracking-wider py-3 rounded-lg transition-colors shadow-lg shadow-[#C21975]/20">
-                    Submit Request
+                  <button type="submit" disabled={isSubmitting} className="w-full bg-[#C21975] hover:bg-[#a43971] text-white text-xs font-bold uppercase tracking-wider py-3 rounded-lg transition-colors shadow-lg shadow-[#C21975]/20 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+                    {isSubmitting ? (
+                      <><Loader2 className="w-4 h-4 animate-spin" /> Sending...</>
+                    ) : (
+                      "Submit Request"
+                    )}
                   </button>
                 </form>
               </div>
@@ -221,6 +257,12 @@ export function Footer() {
         </div>
       </div>
       <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
+      <FormStatusDialog
+        isOpen={statusDialog.isOpen}
+        onClose={() => setStatusDialog((prev) => ({ ...prev, isOpen: false }))}
+        status={statusDialog.status}
+        message={statusDialog.message}
+      />
     </footer>
   );
 }

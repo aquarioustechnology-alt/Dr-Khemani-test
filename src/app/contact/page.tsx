@@ -7,23 +7,53 @@ import Image from "next/image";
 import { useState } from "react";
 import {
     Phone, MapPin, Clock,
-    MessageCircle, Send
+    MessageCircle, Send, Loader2
 } from "lucide-react";
+import { FormStatusDialog } from "@/components/FormStatusDialog";
 
 export default function ContactPage() {
     const [formState, setFormState] = useState({
         name: "", phone: "", email: "", clinic: "Healing Touch Clinic", message: "", date: ""
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [statusDialog, setStatusDialog] = useState<{
+        isOpen: boolean;
+        status: "success" | "error";
+        message?: string;
+    }>({ isOpen: false, status: "success" });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        setTimeout(() => {
-            alert("Appointment request submitted successfully! Our team will contact you shortly.");
+
+        try {
+            const response = await fetch("/api/send-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    formType: "contact",
+                    name: formState.name,
+                    phone: formState.phone,
+                    email: formState.email || "not-provided@contact.form",
+                    clinic: formState.clinic,
+                    date: formState.date,
+                    message: formState.message,
+                }),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                setStatusDialog({ isOpen: true, status: "success" });
+                setFormState({ name: "", phone: "", email: "", clinic: "Healing Touch Clinic", message: "", date: "" });
+            } else {
+                setStatusDialog({ isOpen: true, status: "error", message: result.error });
+            }
+        } catch {
+            setStatusDialog({ isOpen: true, status: "error", message: "Network error. Please check your connection and try again." });
+        } finally {
             setIsSubmitting(false);
-            setFormState({ name: "", phone: "", email: "", clinic: "Healing Touch Clinic", message: "", date: "" });
-        }, 1000);
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -202,8 +232,11 @@ export default function ContactPage() {
                                     disabled={isSubmitting}
                                     className="w-full bg-neutral-900 text-white font-semibold py-4 rounded-2xl hover:bg-[#C21975] transition-colors flex items-center justify-center gap-2 group disabled:opacity-70"
                                 >
-                                    {isSubmitting ? "Sending Request..." : "Request Appointment"}
-                                    {!isSubmitting && <Send className="w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />}
+                                    {isSubmitting ? (
+                                        <><Loader2 className="w-5 h-5 animate-spin" /> Sending Request...</>
+                                    ) : (
+                                        <>Request Appointment <Send className="w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" /></>
+                                    )}
                                 </button>
                                 <p className="text-xs text-center text-neutral-500">Your information is kept strictly confidential.</p>
                             </form>
@@ -375,6 +408,12 @@ export default function ContactPage() {
             </section>
 
             <Footer />
+            <FormStatusDialog
+                isOpen={statusDialog.isOpen}
+                onClose={() => setStatusDialog((prev) => ({ ...prev, isOpen: false }))}
+                status={statusDialog.status}
+                message={statusDialog.message}
+            />
         </main>
     );
 }
