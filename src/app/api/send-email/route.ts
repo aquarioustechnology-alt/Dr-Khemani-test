@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
         });
 
         const { data, error } = await resend.emails.send({
-            from: "Healing Touch Clinic <no-reply@drvinitakhemani.com>",
+            from: "Healing Touch Clinic <onboarding@resend.dev>",
             to: ["dr.vinita.khemani@gmail.com"],
             subject: emailSubject,
             html: htmlContent,
