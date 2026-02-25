@@ -3,7 +3,7 @@ import "./globals.css";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://drvinitakhemani.com"),
+  metadataBase: new URL("https://dr-khemani-test.vercel.app"),
   title: "Dr. Vinita Khemani | Best Gynecologist & Obstetrician in Kolkata | 21+ Years Experience",
   description: "Dr. Vinita Khemani is a senior Gynecologist & Obstetrician in Kolkata with 21+ years of experience, 10,000+ patients treated, and 2,348+ successful deliveries. Expert in high-risk pregnancy, laparoscopic surgery, PCOS treatment & fertility care. Available at 6 clinic locations across Kolkata.",
   keywords: "gynecologist kolkata, best gynecologist in kolkata, obstetrician kolkata, pregnancy doctor kolkata, fertility specialist kolkata, dr vinita khemani, laparoscopic surgery kolkata, high risk pregnancy doctor, PCOS treatment kolkata, normal delivery doctor kolkata, painless delivery kolkata, women's health clinic bangur avenue",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Healing Touch Clinic - Dr. Vinita Khemani",
     images: [
       {
-        url: "/images/OG.jpg", // Using the attached image for OG graph
+        url: "/images/OG.jpg",
         width: 1200,
         height: 630,
         alt: "Dr. Vinita Khemani - Best Gynecologist in Kolkata",

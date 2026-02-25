@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Award, TrendingUp } from "lucide-react";
+import { ImageHoverEffect } from "@/components/ImageHoverEffect";
 import { calculateExperience } from "@/lib/utils";
 import { useState } from "react";
 import { EnquiryModal } from "@/components/EnquiryModal";
@@ -71,36 +72,35 @@ export function AboutPreview() {
             </div>
           </motion.div>
 
-          {/* Card 2: Image Card (Center) */}
+          {/* Card 2: Image Card (Center) - Magnetic Tilt */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="rounded-[2.5rem] overflow-hidden relative group"
+            className="rounded-[2.5rem] overflow-hidden relative"
           >
-            <Image
+            <ImageHoverEffect
               src="/images/unnamed (1).webp"
               alt="Dr Vinita Khemani"
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
-
-            {/* Overlay Block - Hero Style 'Advanced Care' */}
-            <div className="absolute bottom-6 right-6 p-5 rounded-3xl backdrop-blur-md bg-gray-900/30 border border-white/20 shadow-xl max-w-[260px]">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 rounded-full border border-white/30 bg-white/10 flex items-center justify-center shrink-0 text-white">
-                  <Award className="w-5 h-5" />
+              variant="tilt"
+              className="w-full h-full"
+              overlayContent={
+                <div className="p-5 rounded-3xl backdrop-blur-md bg-gray-900/30 border border-white/20 shadow-xl max-w-[260px] ml-auto">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 rounded-full border border-white/30 bg-white/10 flex items-center justify-center shrink-0 text-white">
+                      <Award className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-3xl font-bold text-white leading-none">
+                      6+
+                    </h3>
+                  </div>
+                  <p className="text-sm text-white/90 font-medium tracking-wide pl-1">
+                    Clinic Locations
+                  </p>
                 </div>
-                <h3 className="text-3xl font-bold text-white leading-none">
-                  6+
-                </h3>
-              </div>
-              <p className="text-sm text-white/90 font-medium tracking-wide pl-1">
-                Clinic Locations
-              </p>
-            </div>
+              }
+            />
           </motion.div>
 
           {/* Card 3: Credentials (Deep Purple) */}

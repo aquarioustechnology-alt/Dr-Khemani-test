@@ -10,6 +10,7 @@ import { FadeInWhenVisible } from "@/components/FadeInWhenVisible";
 import { MagneticButton } from "@/components/MagneticButton";
 import { doctorInfo, clinics, services } from "@/lib/data";
 import { getWhatsAppLink, getCallLink } from "@/lib/utils";
+import { FormStatusDialog } from "@/components/FormStatusDialog";
 
 export function Contact() {
   const [formState, setFormState] = useState({
@@ -24,31 +25,68 @@ export function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [statusDialog, setStatusDialog] = useState<{
+    isOpen: boolean;
+    status: "success" | "error";
+    message?: string;
+  }>({ isOpen: false, status: "success" });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const selectedClinic = clinics.find(c => c.id === formState.clinic);
+      const selectedService = services.find(s => s.id === formState.service);
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-
-    // Reset after showing success
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormState({
-        name: "",
-        phone: "",
-        email: "",
-        clinic: "",
-        service: "",
-        date: "",
-        city: "",
-        message: "",
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "contact",
+          name: formState.name,
+          phone: formState.phone,
+          email: formState.email,
+          clinic: selectedClinic?.name || formState.clinic,
+          date: formState.date,
+          message: `City: ${formState.city}\nService: ${selectedService?.title || formState.service}\n\n${formState.message}`,
+        }),
       });
-    }, 3000);
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setStatusDialog({ isOpen: true, status: "success" });
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormState({
+            name: "",
+            phone: "",
+            email: "",
+            clinic: "",
+            service: "",
+            date: "",
+            city: "",
+            message: "",
+          });
+        }, 3000);
+      } else {
+        setStatusDialog({
+          isOpen: true,
+          status: "error",
+          message: result.error,
+        });
+      }
+    } catch {
+      setStatusDialog({
+        isOpen: true,
+        status: "error",
+        message: "Network error. Please check your connection and try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -330,6 +368,12 @@ export function Contact() {
           </FadeInWhenVisible>
         </div>
       </div>
+      <FormStatusDialog
+        isOpen={statusDialog.isOpen}
+        onClose={() => setStatusDialog((prev) => ({ ...prev, isOpen: false }))}
+        status={statusDialog.status}
+        message={statusDialog.message}
+      />
     </section>
   );
 }

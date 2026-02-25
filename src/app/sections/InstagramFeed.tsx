@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Instagram, ExternalLink } from "lucide-react";
+import { ImageHoverEffect } from "@/components/ImageHoverEffect";
 
 const instagramPosts = [
   { id: 1, image: "/images/Pregnancy Care.png", likes: 245 },
@@ -48,19 +48,20 @@ export function InstagramFeed() {
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05, type: "spring" }}
-              whileHover={{ scale: 1.05, rotate: 2 }}
-              className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg"
+              className="aspect-square rounded-2xl overflow-hidden shadow-lg block"
             >
-              <Image
+              <ImageHoverEffect
                 src={post.image}
                 alt={`Instagram post ${post.id}`}
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
+                variant="elastic"
+                className="w-full h-full"
+                overlayContent={
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-end p-4">
+                    <Instagram className="w-8 h-8 text-white mb-2" />
+                    <span className="text-white text-sm font-medium">{post.likes} likes</span>
+                  </div>
+                }
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-end p-4">
-                <Instagram className="w-8 h-8 text-white mb-2" />
-                <span className="text-white text-sm font-medium">{post.likes} likes</span>
-              </div>
             </motion.a>
           ))}
         </div>

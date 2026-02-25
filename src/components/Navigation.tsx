@@ -108,8 +108,8 @@ export function Navigation() {
         <div className="container-fluid px-4 lg:px-6 xl:px-12 relative">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group z-50 relative">
-              <div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+            <Link href="/" className="flex items-center gap-2 sm:gap-3 group z-50 relative">
+              <div className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center shrink-0">
                 <Image
                   src="/images/logo-icon.png"
                   alt="Dr. Vinita Khemani Logo"
@@ -117,9 +117,9 @@ export function Navigation() {
                   className="object-contain"
                 />
               </div>
-              <div className="hidden sm:block whitespace-nowrap">
-                <p className="font-display font-bold text-base lg:text-lg leading-tight text-gray-800">Healing Touch Clinic</p>
-                <p className="text-[10px] lg:text-xs font-medium" style={{ color: '#a43971' }}>Dr. Vinita Khemani</p>
+              <div className="whitespace-nowrap">
+                <p className="font-display font-bold text-xs sm:text-base lg:text-lg leading-tight text-gray-800">Healing Touch Clinic</p>
+                <p className="text-[8px] sm:text-[10px] lg:text-xs font-medium" style={{ color: '#a43971' }}>Dr. Vinita Khemani</p>
               </div>
             </Link>
 

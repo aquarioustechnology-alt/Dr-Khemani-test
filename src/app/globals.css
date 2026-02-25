@@ -295,6 +295,120 @@ body {
 
 
 
+/* ==================== IMAGE HOVER ANIMATIONS ==================== */
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-100%) rotate(-15deg);
+  }
+
+  100% {
+    transform: translateX(200%) rotate(-15deg);
+  }
+}
+
+@keyframes gradient-border-spin {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes kenburns-drift {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  50% {
+    transform: scale(1.04) translate(1%, 0.5%);
+  }
+
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.img-hover-shimmer-sweep {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.35) 50%,
+      transparent 70%);
+  animation: shimmer-sweep 1.2s ease-in-out forwards;
+}
+
+.img-hover-tilt-container {
+  cursor: pointer;
+  position: relative;
+  will-change: transform;
+}
+
+.img-hover-kenburns-drift {
+  animation: kenburns-drift 12s ease-in-out infinite;
+}
+
+.img-hover-elastic-container {
+  position: relative;
+  cursor: pointer;
+  will-change: transform;
+}
+
+.img-hover-glow-container {
+  cursor: pointer;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .img-hover-shimmer-sweep,
+  .img-hover-kenburns-drift {
+    animation: none !important;
+  }
+
+  .img-hover-tilt-container,
+  .img-hover-elastic-container,
+  .img-hover-glow-container {
+    transform: none !important;
+  }
+}
+
+/* ──────────────────────────────────────────────
+   Site-Wide Image Hover Zoom
+   Auto-targets images inside overflow-hidden rounded containers.
+   Next.js <Image fill> renders as <span><img></span>, so we target both.
+   ────────────────────────────────────────────── */
+[class*="overflow-hidden"][class*="rounded"]>img,
+[class*="overflow-hidden"][class*="rounded"]>span>img {
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[class*="overflow-hidden"][class*="rounded"]:hover>img,
+[class*="overflow-hidden"][class*="rounded"]:hover>span>img {
+  transform: scale(1.08);
+}
+
+/* Disable hover scale on touch-only devices to prevent sticky hover */
+@media (hover: none) {
+
+  .group:hover img,
+  [class*="overflow-hidden"][class*="rounded"]:hover>img,
+  [class*="overflow-hidden"][class*="rounded"]:hover>span>img {
+    transform: none !important;
+  }
+
+  .img-hover-tilt-container,
+  .img-hover-elastic-container {
+    pointer-events: auto;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -323,6 +437,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -357,6 +472,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

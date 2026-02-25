@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Calendar, User, Clock } from "lucide-react";
+import Image from "next/image";
 
 // Latest 3 blog posts from the verified list
 const blogPosts = [
@@ -77,14 +77,14 @@ export function Blog() {
                             className="group flex flex-col bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-xl hover:border-[#C21975]/20 transition-all duration-300 h-full"
                         >
                             {/* Image Container */}
-                            <div className="relative h-60 overflow-hidden">
+                            <div className="relative h-60 overflow-hidden w-full">
                                 <Image
                                     src={post.image}
                                     alt={post.title}
                                     fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
-                                <div className="absolute top-4 left-4">
+                                <div className="absolute top-4 left-4 z-10">
                                     <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur text-xs font-bold text-[#C21975] uppercase tracking-wider">
                                         {post.category}
                                     </span>

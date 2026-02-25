@@ -147,9 +147,9 @@ export default function PregnancyCarePage() {
                                         <div className="flex items-center gap-4 px-6 py-4 rounded-full bg-white border border-pink-100 shadow-sm">
                                             <div className="flex -space-x-3">
                                                 {[
-                                                    "/images/WhatsApp Image 2026-01-14 at 12.55.29 PM (1).jpeg",
-                                                    "/images/doctor_clinic_portrait_1770790565861.png",
-                                                    "/images/pcos_doctor_consult_1771254346129.png"
+                                                    "/images/2023-02-08.webp",
+                                                    "/images/1656409765121.webp",
+                                                    "/images/2023-04-06.webp"
                                                 ].map((src, i) => (
                                                     <div key={i} className="w-8 h-8 rounded-full border-2 border-white relative overflow-hidden">
                                                         <Image src={src} alt="Happy Patient" fill className="object-cover" />

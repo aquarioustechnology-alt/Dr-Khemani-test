@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { EnquiryModal } from "@/components/EnquiryModal";
+import { ImageHoverEffect } from "@/components/ImageHoverEffect";
 
 export function FocusSection() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -110,16 +111,15 @@ export function FocusSection() {
 
                         </div>
 
-                        {/* Right Image Side */}
+                        {/* Right Image Side - Reveal Animation */}
                         <div className="relative min-h-[400px] lg:min-h-full">
-                            <Image
+                            <ImageHoverEffect
                                 src="/images/fertility-still-life-arrangement.jpg"
                                 alt="Dr. Vinita Khemani - Fertility & PCOS Specialist"
-                                fill
-                                className="object-cover object-center"
+                                variant="reveal"
+                                className="w-full h-full"
                                 priority
                             />
-                            {/* Optional: Gradient Overlay if needed for text readability? No, image is purely decorative here on the right */}
                         </div>
 
                     </div>
