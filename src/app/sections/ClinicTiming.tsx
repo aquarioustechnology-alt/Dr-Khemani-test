@@ -9,9 +9,10 @@ const clinics = [
   {
     id: "healing-touch",
     name: "Healing Touch",
-    address: "59, Bangur Avenue, Block A, (Near Shyam Mandir) Kolkata - 700055",
+    fullName: "Healing Touch Clinic",
+    address: "59, Bangur Ave, near Shyam Mandir, Block A, Lake Town, Kolkata, West Bengal 700055",
     phone: "+91 99035 88155",
-    image: "/images/WhatsApp Image 2026-01-14 at 12.55.29 PM (1).jpeg",
+    image: "/images/clinic-photo.jpeg",
     timings: [
       { day: "Mon & Thu", time: "3:00 PM – 5:00 PM" },
       { day: "Tue, Wed, Fri, Sat", time: "12:00 PM – 2:00 PM" },
@@ -20,7 +21,8 @@ const clinics = [
   {
     id: "bhagirathi",
     name: "Bhagirathi Neotia",
-    address: "Women & Child Care Centre, New Town Action Area 1D, Kolkata",
+    fullName: "Neotia Bhagirathi Woman and Child Care Centre, New Town, Kolkata",
+    address: "Street No : 327, Premises No : 27-0327, Plot No : DG-20/17 & DG-20/21, Action Area 1D, Newtown, Kolkata, West Bengal 700156",
     phone: "033-332350000 / 6292149133",
     image: "/images/High-Risk Pregnancy.webp",
     timings: [
@@ -30,7 +32,8 @@ const clinics = [
   {
     id: "charnock",
     name: "Charnock",
-    address: "VIP Road (Opp. Haldiram), Kolkata",
+    fullName: "Charnock Hospital",
+    address: "BMC 195, Biswa Bangla Sarani, Dhalipara, Tegharia, Newtown, Kolkata, West Bengal 700157",
     phone: "033-40500500 / 9831639000",
     image: "/images/Laparoscopic Surgery.jpg",
     timings: [
@@ -40,7 +43,8 @@ const clinics = [
   {
     id: "apollo",
     name: "Apollo Clinic",
-    address: "Signature Building Nawapara, Chinar Park, Kolkata",
+    fullName: "Apollo Clinic Chinar Park",
+    address: "Unit No. A3, P. O. : R- Gopalpur, P. S. : The Signature, Nawpara Rd, Dash Drone, Newtown, Kolkata, West Bengal 700136",
     phone: "033-66263456 / 033-66263402",
     image: "/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg",
     timings: [
@@ -50,7 +54,8 @@ const clinics = [
   {
     id: "spandan",
     name: "Spandan",
-    address: "Teghoria, VIP Road (Near Disha Eye Hospital), Kolkata",
+    fullName: "Spandan Hospital",
+    address: "VIP Rd, near Disha Eye Hospital, Tegharia, Kaikhali, Kolkata, West Bengal 700052",
     phone: "033-40045511 / 8918314710",
     image: "/images/Pregnancy Care.png",
     timings: [
@@ -60,7 +65,8 @@ const clinics = [
   {
     id: "ils",
     name: "ILS Dumdum",
-    address: "1, Mall Road, near Nager Bazar Flyover, Kolkata",
+    fullName: "ILS Hospitals, Dumdum",
+    address: "1, Mall Rd, near Ramakrishna Paramahamsadev Bridge, Golpark, Dum Dum, Kolkata, North Dumdum, West Bengal 700028",
     phone: "6292260651",
     image: "/images/High-Risk Pregnancy.webp",
     timings: [
@@ -192,8 +198,8 @@ export function ClinicTiming() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute bottom-8 left-8">
-                    <h3 className="text-white text-3xl font-bold mb-2">{activeClinic.name}</h3>
-                    <div className="flex items-start gap-2 text-white/90 max-w-md">
+                    <h3 className="text-white text-3xl font-bold mb-2">{activeClinic.fullName || activeClinic.name}</h3>
+                    <div className="flex items-start gap-2 text-white/90 max-w-2xl pr-4">
                       <MapPin className="w-5 h-5 flex-shrink-0 mt-1" />
                       <p className="text-lg leading-relaxed">{activeClinic.address}</p>
                     </div>

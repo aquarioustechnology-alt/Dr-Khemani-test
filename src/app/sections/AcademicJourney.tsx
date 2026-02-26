@@ -64,8 +64,8 @@ const historyData = [
         year: "Present",
         title: "Leading Consultant",
         subtitle: "6+ Hospitals in Kolkata",
-        desc: "Senior Consultant at top hospitals including Bhagirathi Neotia, Charnock, and Apollo, while running Healing Touch Clinic.",
-        image: "/images/dr-vinita-about-hero.webp",
+        desc: "Senior Consultant at top hospitals including Neotia Bhagirathi Woman and Child Care Centre, Charnock Hospital, and Apollo Clinic Chinar Park, while running Healing Touch Clinic.",
+        image: "/images/dr-vinita-khemani.jpeg",
         icon: Award
     }
 ];

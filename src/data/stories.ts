@@ -62,7 +62,7 @@ export const realStories = [
         size: "large",
         theme: "dark",
         initial: "S",
-        image: "/images/unnamed (1).webp"
+        image: "/images/WhatsApp Image 2025-12-22 at 12.22.01 PM.jpeg"
     },
     {
         id: 6,
@@ -75,7 +75,7 @@ export const realStories = [
         size: "small",
         theme: "light",
         initial: "S",
-        image: "/images/unnamed (2).webp"
+        image: "/images/WhatsApp_Image_2025-12-22_at_12.22.00_PM.jpeg"
     },
     {
         id: 7,
@@ -89,6 +89,7 @@ export const realStories = [
         theme: "pink",
         initial: "S",
         image: "/images/avatars/google/sahid-khan.jpg",
+        bannerImage: "/images/WhatsApp Image 2025-12-22 at 12.26.51 PM.jpeg"
     },
     {
         id: 8,
@@ -100,7 +101,8 @@ export const realStories = [
         source: "Google Reviews",
         size: "medium",
         theme: "white",
-        initial: "S"
+        initial: "S",
+        bannerImage: "/images/WhatsApp Image 2025-12-22 at 12.26.52 PM.jpeg"
     },
     {
         id: 9,

@@ -21,7 +21,7 @@ export function ParallaxCTA() {
       {/* Parallax Background Image */}
       <motion.div style={{ y }} className="absolute inset-0">
         <Image
-          src="/images/WhatsApp Image 2026-01-14 at 12.55.29 PM (1).jpeg"
+          src="/images/clinic-photo.jpeg"
           alt="Clinic"
           fill
           className="object-cover"

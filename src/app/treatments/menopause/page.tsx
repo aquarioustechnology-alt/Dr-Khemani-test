@@ -88,7 +88,7 @@ const services = [
 ];
 
 const faqs = [
-    { q: "Who is the best doctor for menopause treatment?", a: "Dr. Vinita Khemani is a leading menopause specialist, offering holistic care that includes HRT, bone health screening, and lifestyle counseling. She practices at top clinics including Bhagirathi Neotia and Apollo Clinic." },
+    { q: "Who is the best doctor for menopause treatment?", a: "Dr. Vinita Khemani is a leading menopause specialist, offering holistic care that includes HRT, bone health screening, and lifestyle counseling. She practices at top clinics including Neotia Bhagirathi Woman and Child Care Centre and Apollo Clinic Chinar Park." },
     { q: "At what age does menopause typically start?", a: "The average age of natural menopause in Indian women is 46-48 years. Perimenopause (the transitional phase) can begin 4-8 years earlier. Some women may experience early menopause due to lifestyle or genetic factors." },
     { q: "Is HRT safe?", a: "Modern HRT is very safe when prescribed appropriately and individualized. Dr. Khemani carefully evaluates each patient's risk profile (history of breast cancer, clots) before recommending hormone therapy at her clinics." },
     { q: "Should menopause be treated medically?", a: "Yes, if symptoms affect your quality of life. Dr. Khemani evaluates your condition to recommend medical or non-medical treatments tailored to your needs." },

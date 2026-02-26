@@ -72,11 +72,11 @@ const myths = [
 ];
 
 const faqs = [
-    { q: "Who is the best doctor for PCOS treatment?", a: "Dr. Vinita Khemani is one of the most experienced gynecologists for PCOS treatment, with over 23 years of specialization in hormonal disorders and reproductive health. She practices at leading hospitals including Bhagirathi Neotia (New Town), Charnock Hospital (VIP Road), and ILS Hospital (Dumdum), offering evidence-based, personalized PCOS care to thousands of women across West Bengal." },
+    { q: "Who is the best doctor for PCOS treatment?", a: "Dr. Vinita Khemani is one of the most experienced gynecologists for PCOS treatment, with over 23 years of specialization in hormonal disorders and reproductive health. She practices at leading hospitals including Neotia Bhagirathi Woman and Child Care Centre, New Town, Kolkata, Charnock Hospital, and ILS Hospitals, Dumdums, Dumdum, offering evidence-based, personalized PCOS care to thousands of women across West Bengal." },
     { q: "Can PCOS be cured permanently?", a: "PCOS is a chronic, lifelong condition, meaning it cannot be \u2018cured\u2019 in the traditional sense. However, symptoms can be effectively managed and even reversed with the right combination of lifestyle changes, diet, and medical treatment, allowing women to lead healthy, fulfilling lives. Dr. Vinita Khemani\u2019s holistic approach at her clinics focuses on long-term symptom reversal rather than temporary fixes." },
     { q: "How long does PCOS treatment take?", a: "The duration of PCOS treatment varies depending on the severity of symptoms and individual goals. Initial hormonal improvements are often visible within 3\u20136 months of consistent treatment. However, since PCOS is a lifelong condition, ongoing lifestyle management is recommended. Dr. Khemani creates phased treatment plans that progressively reduce medication dependency while building sustainable habits." },
     { q: "What is the cost of PCOS treatment?", a: "The cost of PCOS treatment depends on the specific investigations and treatment plan required. An initial consultation with Dr. Vinita Khemani includes a detailed hormonal evaluation and ultrasound assessment. Subsequent costs vary based on whether the treatment involves medication alone, fertility support, or lifestyle counseling. Dr. Khemani\u2019s clinics are affiliated with multiple hospitals across the region, offering flexible options for different budgets." },
-    { q: "Where is Dr. Vinita Khemani's clinic located?", a: "Dr. Vinita Khemani consults at multiple locations across the region for patient convenience: Bhagirathi Neotia Woman and Child Care Centre (New Town), Charnock Hospital (VIP Road), Apollo Clinic (Chinar Park), Spandan Hospital, and ILS Hospital (Dumdum). You can book an appointment at the location most convenient to you." },
+    { q: "Where is Dr. Vinita Khemani's clinic located?", a: "Dr. Vinita Khemani consults at multiple locations across the region for patient convenience: Neotia Bhagirathi Woman and Child Care Centre, New Town, Kolkata, Charnock Hospital, Apollo Clinic Chinar Park Chinar Park, Spandan Hospital, and ILS Hospitals, Dumdums, Dumdum. You can book an appointment at the location most convenient to you." },
     { q: "Will I be able to get pregnant with PCOS?", a: "Yes, absolutely. PCOS is one of the most treatable causes of infertility. While irregular ovulation makes natural conception harder, treatments like ovulation induction (medicine to stimulate egg release), lifestyle changes, and IUI have very high success rates. Dr. Khemani has helped thousands of women achieve successful pregnancies despite PCOS." },
     { q: "How is PCOS diagnosed?", a: "Diagnosis follows the Rotterdam Criteria, requiring at least 2 of 3 signs: 1) Irregular periods, 2) Signs of high androgens (acne, excess hair) or blood tests showing it, 3) Polycystic ovaries seen on ultrasound. At her clinics, Dr. Khemani also conducts comprehensive screening including insulin levels, thyroid function, and metabolic markers for a complete hormonal profile." },
     { q: "Does PCOS cause diabetes?", a: "More than half of women with PCOS develop Type 2 diabetes by age 40. This is due to insulin resistance, which is particularly common among Indian women. Regular screening and maintaining a healthy weight significantly reduce this risk. Dr. Khemani recommends annual metabolic screening for all her PCOS patients." },
@@ -564,11 +564,11 @@ export default function PCOSTreatmentPage() {
                                     </div>
                                     <div className="flex flex-col">
                                         {[
-                                            { name: "Bhagirathi Neotia", loc: "New Town", src: "/images/hospitals/bhagirathi.png" },
+                                            { name: "Neotia Bhagirathi Woman and Child Care Centre", loc: "New Town", src: "/images/hospitals/bhagirathi.png" },
                                             { name: "Charnock Hospital", loc: "VIP Road", src: "/images/charnock-hospital-logo.webp" },
-                                            { name: "Apollo Clinic", loc: "Chinar Park", src: "/images/apollo-clinic-logo.webp" },
+                                            { name: "Apollo Clinic Chinar Park", loc: "Chinar Park", src: "/images/apollo-clinic-logo.webp" },
                                             { name: "Spandan Hospital", loc: "Teghoria", src: "/images/spandan-hospital-logo.jpg" },
-                                            { name: "ILS Hospitals", loc: "Dumdum", src: "/images/images.png" }
+                                            { name: "ILS Hospitals, Dumdums", loc: "Dumdum", src: "/images/images.png" }
                                         ].map((hospital, i) => (
                                             <div key={i} className="flex items-center gap-6 py-5 border-b border-gray-100 last:border-0 group hover:bg-gray-50/50 transition-colors -mx-4 px-4 rounded-xl">
                                                 <div className="w-24 h-16 relative flex-shrink-0 bg-white rounded-lg p-2 border border-pink-50 shadow-sm group-hover:scale-105 transition-transform flex items-center justify-center">
@@ -712,7 +712,7 @@ export default function PCOSTreatmentPage() {
                                 &quot;PCOS is not a disease to be feared — it is a condition to be understood and managed. Every woman&apos;s body tells a different story, and real healing begins when we listen to that story. At our clinic, we don&apos;t just prescribe medication; we build a comprehensive wellness plan that addresses diet, exercise, emotional health, and hormonal balance together.&quot;
                             </p>
                             <p className="text-gray-600 leading-relaxed mb-6">
-                                Dr. Khemani is affiliated with leading hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital, ensuring that patients have access to the latest diagnostic tools and treatment modalities.
+                                Dr. Khemani is affiliated with leading hospitals including Neotia Bhagirathi Woman and Child Care Centre, Charnock Hospital, and ILS Hospitals, Dumdum, ensuring that patients have access to the latest diagnostic tools and treatment modalities.
                             </p>
 
                             <div className="space-y-3 mb-8">

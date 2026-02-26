@@ -19,7 +19,7 @@ const symptoms = [
 ];
 
 const faqs = [
-    { q: "Who is the best doctor for endometriosis?", a: "Dr. Vinita Khemani is one of the most experienced gynecologists for endometriosis treatment, with over 23 years of expertise in advanced laparoscopic excision surgery. She practices at leading hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital." },
+    { q: "Who is the best doctor for endometriosis?", a: "Dr. Vinita Khemani is one of the most experienced gynecologists for endometriosis treatment, with over 23 years of expertise in advanced laparoscopic excision surgery. She practices at leading hospitals including Neotia Bhagirathi Woman and Child Care Centre, Charnock Hospital, and ILS Hospitals, Dumdum." },
     { q: "What is Endometriosis?", a: "Endometriosis is a condition where tissue similar to the lining of the uterus grows outside it—on the ovaries, fallopian tubes, and pelvic lining. This tissue sheds during periods but has no way to exit, causing intense pain, inflammation, and scar tissue. It affects approximately 1 in 10 women of reproductive age." },
     { q: "Can endometriosis be cured?", a: "While there is no permanent cure, symptoms can be effectively managed. Laparoscopic excision by a specialist like Dr. Khemani offers the best chance for long-term relief and fertility restoration." },
     { q: "Can Endometriosis cause infertility?", a: "Yes, about 30-50% of women with endometriosis face fertility issues. The condition can block fallopian tubes, distort pelvic anatomy, or create an inflammatory environment that affects egg quality. Dr. Khemani\u2019s laparoscopic excision approach preserves fertility while removing disease." },

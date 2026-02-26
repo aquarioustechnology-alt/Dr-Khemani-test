@@ -29,12 +29,12 @@ const monitoringProtocol = [
 ];
 
 const faqs = [
-    { q: "Who is the best high-risk pregnancy doctor?", a: "Dr. Vinita Khemani is one of the most experienced obstetricians for high-risk pregnancy management, with over 23 years of expertise and 2,348+ successful deliveries. She operates at NICU-equipped hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital." },
+    { q: "Who is the best high-risk pregnancy doctor?", a: "Dr. Vinita Khemani is one of the most experienced obstetricians for high-risk pregnancy management, with over 23 years of expertise and 2,348+ successful deliveries. She operates at NICU-equipped hospitals including Neotia Bhagirathi Woman and Child Care Centre, Charnock Hospital, and ILS Hospitals, Dumdum." },
     { q: "What makes a pregnancy high-risk?", a: "Factors include advanced age (35+), pre-existing conditions (diabetes, hypertension, thyroid), previous pregnancy complications, multiple pregnancies, obesity, or history of miscarriage. Dr. Khemani evaluates each case individually at her clinics." },
     { q: "How often do high-risk patients need checkups?", a: "High-risk pregnancies typically require visits every 2 weeks until 28 weeks, then weekly until delivery. Additional visits are scheduled based on specific conditions. Dr. Khemani is available at multiple hospitals across the region for convenient follow-ups." },
     { q: "Can high-risk pregnancies result in normal delivery?", a: "Yes! Many high-risk pregnancies with proper management result in healthy normal deliveries. Dr. Khemani aims for the safest delivery mode based on each patient\u2019s unique situation and closely monitors progress throughout." },
     { q: "When is hospitalization required?", a: "Hospitalization is recommended if there are signs of preterm labor, severe preeclampsia, uncontrolled bleeding, or fetal distress requiring continuous monitoring. Dr. Khemani will guide you based on your specific condition." },
-    { q: "What hospital facilities are available for high-risk delivery?", a: "Dr. Khemani operates at top hospitals equipped with NICU, blood bank, ICU, and 24/7 anesthesia \u2014 including Bhagirathi Neotia (New Town), Charnock Hospital (VIP Road), and ILS Hospital (Dumdum) \u2014 ensuring complete emergency preparedness." },
+    { q: "What hospital facilities are available for high-risk delivery?", a: "Dr. Khemani operates at top hospitals equipped with NICU, blood bank, ICU, and 24/7 anesthesia \u2014 including Neotia Bhagirathi Woman and Child Care Centre, New Town, Kolkata, Charnock Hospital, and ILS Hospitals, Dumdums, Dumdum \u2014 ensuring complete emergency preparedness." },
 ];
 
 export default function HighRiskPregnancyPage() {
@@ -259,7 +259,7 @@ export default function HighRiskPregnancyPage() {
                                     Level III NICU &amp; Emergency-Ready Hospitals
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">
-                                    Operating at hospitals with Level III NICUs (Bhagirathi Neotia, Charnock, ILS) — ensuring round-the-clock neonatal intensivist access, ventilator support, and emergency C-section readiness within minutes if needed.
+                                    Operating at hospitals with Level III NICUs (Neotia Bhagirathi Woman and Child Care Centre, Charnock, ILS) — ensuring round-the-clock neonatal intensivist access, ventilator support, and emergency C-section readiness within minutes if needed.
                                 </p>
                             </div>
                             <div className="bg-gradient-to-br from-[#C21975] to-[#8a2f5e] rounded-[2rem] p-8 flex flex-col justify-between flex-1 shadow-sm">

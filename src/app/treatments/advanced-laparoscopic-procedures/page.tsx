@@ -43,7 +43,7 @@ const procedures = [
 ];
 
 const faqs = [
-    { q: "Who is the best doctor for laparoscopic surgery?", a: "Dr. Vinita Khemani is a leading laparoscopic surgeon, known for her expertise in complex minimally invasive procedures like TLH, myomectomy, and endometriosis excision. She operates at top hospitals including Bhagirathi Neotia, Charnock Hospital, and Apollo Clinic." },
+    { q: "Who is the best doctor for laparoscopic surgery?", a: "Dr. Vinita Khemani is a leading laparoscopic surgeon, known for her expertise in complex minimally invasive procedures like TLH, myomectomy, and endometriosis excision. She operates at top hospitals including Neotia Bhagirathi Woman and Child Care Centre, Charnock Hospital, and Apollo Clinic Chinar Park." },
     { q: "Why choose advanced laparoscopy over open surgery?", a: "Advanced laparoscopy offers significant benefits: minimal scarring (tiny 5mm incisions), less post-operative pain, shorter hospital stay (often 24 hours), and a much faster return to daily life (1-2 weeks vs 6 weeks). Dr. Khemani specializes in these minimally invasive techniques." },
     { q: "What is the cost of laparoscopic surgery?", a: "The cost varies depending on the procedure (e.g., diagnostic vs. operative, hysterectomy vs. cystectomy) and the hospital chosen. Dr. Khemani offers surgical options at multiple hospitals to suit different insurance and budget requirements." },
     { q: "Is it safe for large fibroids?", a: "Yes. With advanced morcellation techniques, even large fibroids can be safely removed through tiny incisions. Dr. Khemani has extensive experience in handling complex, large-volume uteri laparoscopically." },
@@ -327,7 +327,7 @@ export default function AdvancedLaparoscopyPage() {
                                     Multi-Hospital Access across the region
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">
-                                    Operating at Bhagirathi Neotia (New Town), Charnock Hospital (VIP Road), Apollo Clinic (Chinar Park), Spandan Hospital, and ILS Hospital (Dumdum) — choose the location most convenient to you, with the same expert surgical care.
+                                    Operating at Neotia Bhagirathi Woman and Child Care Centre, New Town, Kolkata, Charnock Hospital, Apollo Clinic Chinar Park Chinar Park, Spandan Hospital, and ILS Hospitals, Dumdums, Dumdum — choose the location most convenient to you, with the same expert surgical care.
                                 </p>
                             </div>
                         </div>

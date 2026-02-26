@@ -6,9 +6,9 @@ import Image from "next/image";
 const hospitals = [
     { name: "Spandan Hospital", logo: "/images/spandan-hospital-logo.jpg" },
     { name: "Charnock Hospital", logo: "/images/charnock-hospital-logo.webp" },
-    { name: "Apollo Clinic", logo: "/images/apollo-clinic-logo.webp" },
-    { name: "ILS Hospital", logo: "/images/images.png" },
-    { name: "Bhagirathi Neotia Hospital", logo: "/images/neotia-logo.svg" },
+    { name: "Apollo Clinic Chinar Park", logo: "/images/apollo-clinic-logo.webp" },
+    { name: "ILS Hospitals, Dumdum", logo: "/images/images.png" },
+    { name: "Neotia Bhagirathi Woman and Child Care Centre, New Town, Kolkata", logo: "/images/neotia-logo.svg" },
 ];
 
 // Duplicate array multiple times to ensure seamless loop

@@ -9,10 +9,10 @@ export const doctorInfo = {
   experience: calculateExperience(),
   patientsTreated: "10,000+",
   phone: "+91-9903588155",
-  email: "drvinitakhemani@gmail.com",
+  email: "dr.vinita.khemani@gmail.com",
   description: `One of Kolkata's most trusted obstetricians and gynecologists with over ${calculateExperience()} years of extensive clinical experience in helping thousands of patients achieve optimal women's health.`,
   philosophy: "Every woman deserves personalized, compassionate care. My approach combines medical expertise with genuine empathy to support you through every stage of life.",
-  image: "/images/dr-vinita-about-hero.webp",
+  image: "/images/dr-vinita-khemani.jpeg",
 };
 
 export const clinics = [

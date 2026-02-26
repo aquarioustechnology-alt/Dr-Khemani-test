@@ -69,7 +69,7 @@ const dietaryTips = [
 const faqs = [
     {
         q: "Who is the best doctor for pregnancy care?",
-        a: "Dr. Vinita Khemani is highly regarded for her comprehensive pregnancy care, high normal delivery rates, and management of high-risk pregnancies at top hospitals like Bhagirathi Neotia and AMRI."
+        a: "Dr. Vinita Khemani is highly regarded for her comprehensive pregnancy care, high normal delivery rates, and management of high-risk pregnancies at top hospitals like Neotia Bhagirathi Woman and Child Care Centre and AMRI."
     },
     {
         q: "When should I book my first appointment?",
@@ -93,11 +93,11 @@ const faqs = [
     },
     {
         q: "What is the delivery package cost?",
-        a: "Delivery packages vary by hospital and room choice. Dr. Khemani offers transparent guidance on costs at her affiliated hospitals (like Bhagirathi Neotia and AMRI) to help you plan your maternity finances."
+        a: "Delivery packages vary by hospital and room choice. Dr. Khemani offers transparent guidance on costs at her affiliated hospitals (like Neotia Bhagirathi Woman and Child Care Centre and AMRI) to help you plan your maternity finances."
     },
     {
         q: "What hospitals are you affiliated with?",
-        a: "Dr. Khemani delivers at top maternity hospitals including AMRI, Bhagirathi Neotia, and others, ensuring you have access to the best NICU and emergency facilities."
+        a: "Dr. Khemani delivers at top maternity hospitals including AMRI, Neotia Bhagirathi Woman and Child Care Centre, and others, ensuring you have access to the best NICU and emergency facilities."
     },
 ];
 
@@ -439,7 +439,7 @@ export default function PregnancyCarePage() {
                 <div className="container-fluid mx-auto max-w-[1400px] px-6">
                     <div className="grid lg:grid-cols-2 gap-12 items-stretch bg-[#fff0f5] rounded-[2.5rem] p-8 md:p-12">
                         <div className="relative min-h-[500px] h-full rounded-[2rem] overflow-hidden shadow-xl">
-                            <Image src="/images/doctor_portrait_scrubs_1771254318496.png" alt="Dr. Vinita Khemani - Pregnancy Care Specialist" fill className="object-cover" />
+                            <Image src="/images/dr-vinita-khemani.jpeg" alt="Dr. Vinita Khemani - Pregnancy Care Specialist" fill className="object-cover" />
                         </div>
                         <div className="flex flex-col justify-center items-start">
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Trusted Obstetric Care</span>

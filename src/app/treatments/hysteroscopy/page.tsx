@@ -5,16 +5,16 @@ import { Footer } from "@/app/sections/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { CheckCircle, ArrowUpRight, Microscope, Eye, ChevronDown, Layers, FileSearch } from "lucide-react";
+import { CheckCircle, ArrowUpRight, Microscope, Eye, ChevronDown, Layers, FileSearch, Scissors, Activity } from "lucide-react";
 import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
 
 const uses = [
     { title: "Abnormal Bleeding", desc: "Investigating the root cause of heavy, prolonged, or irregular periods. Hysteroscopy allows direct visualization to identify polyps, submucosal fibroids, or endometrial hyperplasia that ultrasounds might miss, often allowing for immediate biopsy or treatment.", icon: FileSearch },
-    { title: "Polyp Removal (Polypectomy)", desc: " uterine polyps are common causes of spotting and infertility. Dr. Khemani uses precision hysteroscopic techniques to remove these growths completely from the root without damaging the surrounding healthy uterine lining, ensuring immediate symptom relief.", icon: CheckCircle },
+    { title: "Polyp Removal (Polypectomy)", desc: " uterine polyps are common causes of spotting and infertility. Dr. Khemani uses precision hysteroscopic techniques to remove these growths completely from the root without damaging the surrounding healthy uterine lining, ensuring immediate symptom relief.", icon: Scissors },
     { title: "Submucosal Fibroid Resection", desc: "Removing fibroids that bulge into the uterine cavity (submucosal) and cause severe bleeding or fertility issues. Using a resectoscope, these can often be shaved down completely through the cervix, avoiding the need for open surgery or cuts on the abdomen.", icon: Layers },
     { title: "Infertility Evaluation", desc: "A critical step before IVF or IUI. We assess the uterine cavity for any anatomical barriers to implantation, such as adhesions, scar tissue, or congenital anomalies, ensuring the 'soil' is perfect for the embryo.", icon: Microscope },
-    { title: "Septum Correction (Metroplasty)", desc: "Correcting a septate uterus (a congenital partition inside the womb) is vital for women with a history of recurrent miscarriage. Hysteroscopic resection restores the normal cavity shape, significantly improving the chances of carrying a pregnancy to term.", icon: CheckCircle },
+    { title: "Septum Correction (Metroplasty)", desc: "Correcting a septate uterus (a congenital partition inside the womb) is vital for women with a history of recurrent miscarriage. Hysteroscopic resection restores the normal cavity shape, significantly improving the chances of carrying a pregnancy to term.", icon: Activity },
     { title: "Lost IUCD Retrieval", desc: "Locating and safely removing an Intrauterine Contraceptive Device (Copper-T) when its strings are no longer visible. Hysteroscopy avoids blind manipulation and ensures the device is removed without injury to the uterine walls.", icon: Eye }
 ];
 

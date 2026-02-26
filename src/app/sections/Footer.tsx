@@ -119,9 +119,9 @@ export function Footer() {
 
             <div className="flex gap-3">
               {[
-                { Icon: Facebook, href: "https://www.facebook.com" },
-                { Icon: Instagram, href: "https://www.instagram.com" },
-                { Icon: Youtube, href: "https://www.youtube.com" }
+                { Icon: Facebook, href: "https://www.facebook.com/dr.vinita.healing.touch/" },
+                { Icon: Instagram, href: "https://www.instagram.com/dr_vinita_khemani/" },
+                { Icon: Youtube, href: "https://www.youtube.com/@DrVinitaKhemani" }
               ].map(({ Icon, href }, i) => (
                 <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C21975] hover:border-[#C21975] transition-all group">
                   <Icon className="w-4 h-4 text-pink-100 group-hover:text-white" />
@@ -206,7 +206,7 @@ export function Footer() {
                 </div>
                 <div className="text-sm text-pink-100/80 group-hover:text-pink-50 transition-colors">
                   <strong className="text-white block mb-0.5">Healing Touch Clinic</strong>
-                  59 Bangur Avenue, Block A,<br />Kolkata - 700055
+                  59, Bangur Ave, near Shyam Mandir, Block A,<br />Lake Town, Kolkata, West Bengal 700055
                 </div>
               </div>
 
@@ -223,8 +223,8 @@ export function Footer() {
                 <div className="w-8 h-8 rounded-full bg-[#C21975]/10 flex items-center justify-center shrink-0 group-hover:bg-[#C21975] transition-colors">
                   <Mail className="w-4 h-4 text-[#C21975] group-hover:text-white transition-colors" />
                 </div>
-                <a href="mailto:drvinitakhemani@gmail.com" className="text-sm text-pink-100/80 hover:text-white transition-colors">
-                  drvinitakhemani@gmail.com
+                <a href="mailto:dr.vinita.khemani@gmail.com" className="text-sm text-pink-100/80 hover:text-white transition-colors">
+                  dr.vinita.khemani@gmail.com
                 </a>
               </div>
             </div>

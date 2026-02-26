@@ -34,7 +34,7 @@ export function CTASection() {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/book-appointment"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-white px-8 py-4 rounded-full font-bold hover:shadow-xl hover:scale-105 transition-all"
                 style={{ color: '#C21975' }}
               >

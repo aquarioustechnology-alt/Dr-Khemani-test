@@ -319,7 +319,7 @@ export default function FertilityPage() {
                                     Seamless IVF Coordination Network
                                 </h3>
                                 <p className="text-pink-100 text-sm leading-relaxed">
-                                    When advanced treatment is needed, Dr. Khemani coordinates with top IVF specialists at Bhagirathi Neotia and Charnock Hospital — ensuring continuity of care from initial workup through embryo transfer and beyond.
+                                    When advanced treatment is needed, Dr. Khemani coordinates with top IVF specialists at Neotia Bhagirathi Woman and Child Care Centre and Charnock Hospital — ensuring continuity of care from initial workup through embryo transfer and beyond.
                                 </p>
                             </div>
                         </div>

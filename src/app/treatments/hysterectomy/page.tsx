@@ -28,7 +28,7 @@ const methods = [
 ];
 
 const faqs = [
-    { q: "Who is the best doctor for hysterectomy?", a: "Dr. Vinita Khemani is one of the most experienced gynecological surgeons for hysterectomy, with expertise in total laparoscopic hysterectomy (TLH), LAVH, and vaginal hysterectomy. She operates at leading hospitals including Bhagirathi Neotia, Charnock Hospital, and ILS Hospital." },
+    { q: "Who is the best doctor for hysterectomy?", a: "Dr. Vinita Khemani is one of the most experienced gynecological surgeons for hysterectomy, with expertise in total laparoscopic hysterectomy (TLH), LAVH, and vaginal hysterectomy. She operates at leading hospitals including Neotia Bhagirathi Woman and Child Care Centre, Charnock Hospital, and ILS Hospitals, Dumdum." },
     { q: "Will I go into menopause after a hysterectomy?", a: "Not necessarily. If your ovaries are preserved during the surgery, you will not enter menopause immediately. If ovaries are removed (oophorectomy), surgical menopause will begin. Dr. Khemani discusses this in detail before surgery to help you make an informed decision." },
     { q: "How long is recovery time after surgery?", a: "For laparoscopic hysterectomy (TLH), recovery is quick. Patients are discharged in 1-2 days and return to light activities in a week. Full recovery takes 2-3 weeks. Abdominal hysterectomy takes 4-6 weeks. Dr. Khemani\u2019s minimally invasive approach ensures faster recovery." },
     { q: "What is the cost of hysterectomy?", a: "The cost varies based on the type of procedure (TLH, LAVH, NDVH, or abdominal) and hospital chosen. Dr. Khemani operates at multiple hospitals, offering options for different budgets while maintaining the highest surgical standards." },
@@ -339,7 +339,7 @@ export default function HysterectomyPage() {
                                     Multi-Hospital Surgical Access
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">
-                                    Operating at 6 premier hospitals across the region — Bhagirathi Neotia, Charnock, Apollo Clinic, ILS — each equipped with advanced laparoscopic suites, NICU backup, and round-the-clock anesthesia teams for complete safety.
+                                    Operating at 6 premier hospitals across the region — Neotia Bhagirathi Woman and Child Care Centre, Charnock, Apollo Clinic Chinar Park, ILS — each equipped with advanced laparoscopic suites, NICU backup, and round-the-clock anesthesia teams for complete safety.
                                 </p>
                             </div>
                         </div>

@@ -59,7 +59,7 @@ const sections = [
 
 • **Dr. Vinita Khemani** (Healing Touch Clinic)
 • **Phone**: +91 99035 88155
-• **Email**: drvinitakhemani@gmail.com
+• **Email**: dr.vinita.khemani@gmail.com
 • **Address**: 59, Bangur Avenue, Block A, Kolkata - 700055`
     }
 ];

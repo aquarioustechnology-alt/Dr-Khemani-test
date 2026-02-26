@@ -19,7 +19,7 @@ const reasons = [
 ];
 
 const faqs = [
-    { q: "Which is the best hospital for emergency C-section?", a: "Dr. Vinita Khemani performs emergency C-sections at top the city hospitals like Bhagirathi Neotia and Charnock Hospital, which are equipped with 24/7 NICU, blood banks, and immediate OT readiness." },
+    { q: "Which is the best hospital for emergency C-section?", a: "Dr. Vinita Khemani performs emergency C-sections at top the city hospitals like Neotia Bhagirathi Woman and Child Care Centre and Charnock Hospital, which are equipped with 24/7 NICU, blood banks, and immediate OT readiness." },
     { q: "How fast can an emergency C-section be done?", a: "In critical situations, our team acts with 'Code Blue' urgency, capable of delivering the baby within minutes (often under 30 minutes) to prevent oxygen deprivation and ensure safety." },
     { q: "What is the cost of emergency C-section?", a: "Costs vary depending on the hospital and urgency level. However, ensuring the safety of mother and baby is our priority. Dr. Khemani works with hospitals offering a range of packages to suit different needs." },
     { q: "Will I be awake during the surgery?", a: "Unless there is an immediate life-threat requiring general anesthesia, we strictly use spinal or epidural anesthesia. This allows you to be awake, hear your baby's first cry, and hold them immediately, without feeling pain." },

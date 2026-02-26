@@ -83,7 +83,7 @@ To exercise any of these rights, contact us at the details provided below.`
         
 • **Dr. Vinita Khemani**
 • **Phone**: +91 99035 88155
-• **Email**: drvinitakhemani@gmail.com
+• **Email**: dr.vinita.khemani@gmail.com
 • **Address**: Kolkata, West Bengal, India`
     },
 ];

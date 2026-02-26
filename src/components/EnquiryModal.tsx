@@ -11,12 +11,12 @@ interface EnquiryModalProps {
 }
 
 const clinics = [
-    "Healing Touch Clinic (Bangur)",
-    "Bhagirathi Neotia (New Town)",
-    "Charnock Hospital (VIP Road)",
-    "Apollo Clinic (Chinar Park)",
-    "Spandan Hospital (Teghoria)",
-    "ILS Hospital (Dumdum)"
+    "Healing Touch Clinic",
+    "Neotia Bhagirathi Woman and Child Care Centre, New Town, Kolkata",
+    "Charnock Hospital",
+    "Apollo Clinic Chinar Park",
+    "Spandan Hospital",
+    "ILS Hospitals, Dumdum"
 ];
 
 export function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {

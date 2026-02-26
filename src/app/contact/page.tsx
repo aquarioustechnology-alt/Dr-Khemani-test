@@ -116,7 +116,7 @@ export default function ContactPage() {
                     >
                         <div className="relative w-full aspect-[4/3] max-h-[500px] rounded-[40px] overflow-hidden shadow-2xl">
                             <Image
-                                src="/images/doctor_portrait_scrubs_1771254318496.png"
+                                src="/images/dr-vinita-khemani.jpeg"
                                 alt="Dr. Vinita Khemani Team"
                                 fill
                                 className="object-cover object-top"
@@ -282,9 +282,8 @@ export default function ContactPage() {
                                                 <MapPin className="w-full h-full text-neutral-400" />
                                             </div>
                                             <p className="text-neutral-700 leading-relaxed">
-                                                59, Bangur Avenue, Block A<br />
-                                                (Near Shyam Mandir)<br />
-                                                Kolkata - 700055
+                                                59, Bangur Ave, near Shyam Mandir, Block A,<br />
+                                                Lake Town, Kolkata, West Bengal 700055
                                             </p>
                                         </div>
 
@@ -339,9 +338,9 @@ export default function ContactPage() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
                             {
-                                name: "Bhagirathi Neotia Hospital",
+                                name: "Neotia Bhagirathi Woman and Child Care Centre, New Town, Kolkata",
                                 desc: "Women & Child Care Centre",
-                                area: "New Town",
+                                area: "Street No : 327, Premises No : 27-0327, Plot No : DG-20/17 & DG-20/21, Action Area 1D, Newtown, Kolkata, West Bengal 700156",
                                 timings: "Wed & Fri: 4:00 PM",
                                 phone: "033-332350000",
                                 logo: "/images/neotia-logo.svg"
@@ -349,15 +348,15 @@ export default function ContactPage() {
                             {
                                 name: "Charnock Hospital",
                                 desc: "Renowned Multi-Speciality",
-                                area: "VIP Road",
+                                area: "BMC 195, Biswa Bangla Sarani, Dhalipara, Tegharia, Newtown, Kolkata, West Bengal 700157",
                                 timings: "Thursday: 11:00 AM",
                                 phone: "033-40500500",
                                 logo: "/images/charnock-hospital-logo.webp"
                             },
                             {
-                                name: "Apollo Clinic",
+                                name: "Apollo Clinic Chinar Park",
                                 desc: "Premium Medical Care",
-                                area: "Chinar Park",
+                                area: "Unit No. A3, P. O. : R- Gopalpur, P. S. : The Signature, Nawpara Rd, Dash Drone, Newtown, Kolkata, West Bengal 700136",
                                 timings: "Mon, Wed: 11:00 AM",
                                 phone: "033-66263456",
                                 logo: "/images/apollo-clinic-logo.webp"
@@ -365,15 +364,15 @@ export default function ContactPage() {
                             {
                                 name: "Spandan Hospital",
                                 desc: "Advanced Healthcare",
-                                area: "Teghoria, VIP Road",
+                                area: "VIP Rd, near Disha Eye Hospital, Tegharia, Kaikhali, Kolkata, West Bengal 700052",
                                 timings: "Wed & Sat: 5:00 PM",
                                 phone: "033-40045511",
                                 logo: "/images/spandan-hospital-logo.jpg"
                             },
                             {
-                                name: "ILS Dumdum",
+                                name: "ILS Hospitals, Dumdum",
                                 desc: "Multi-Speciality Centre",
-                                area: "Dumdum",
+                                area: "1, Mall Rd, near Ramakrishna Paramahamsadev Bridge, Golpark, Dum Dum, Kolkata, North Dumdum, West Bengal 700028",
                                 timings: "Thursday: 1:00 PM",
                                 phone: "6292260651",
                                 logo: "/images/images.png"

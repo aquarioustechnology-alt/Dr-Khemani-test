@@ -138,7 +138,7 @@ export function WhyChoose() {
               ))}
             </div>
 
-            <Link href="/services" className="btn-white inline-flex items-center gap-2">
+            <Link href="/treatments" className="btn-white inline-flex items-center gap-2">
               Explore Services
               <ArrowRight className="w-5 h-5" />
             </Link>

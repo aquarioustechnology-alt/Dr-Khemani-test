@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/app/sections/Footer";
-import { Calendar, Clock, User, ArrowLeft, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Calendar, Clock, ArrowLeft } from "lucide-react";
+import { BlogCTA } from "@/components/BlogCTA";
 
 // Same data as listing page
 const blogPosts = [
@@ -234,57 +235,49 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             <Navigation />
 
             {/* Hero / Header */}
-            <div className="relative pt-32 pb-12 lg:pb-20 bg-[#FDF2F8]">
-                <div className="container-fluid mx-auto max-w-[1000px] px-6">
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-gray-500 hover:text-[#C21975] mb-8 transition-colors text-sm font-medium">
+            <div className="relative pt-32 pb-32 lg:pb-40 overflow-hidden" style={{ background: 'linear-gradient(135deg, #fdf8fa 0%, #fff 100%)' }}>
+                {/* Premium Background Elements */}
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-pink-100/60 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-100/50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+
+                <div className="container-fluid mx-auto max-w-[1000px] px-6 relative z-10">
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-gray-500 hover:text-[#C21975] mb-8 transition-colors text-sm font-semibold">
                         <ArrowLeft className="w-4 h-4" /> Back to Blog
                     </Link>
 
-                    <div className="flex flex-wrap gap-4 mb-6">
-                        <span className="px-3 py-1 rounded-full bg-[#C21975]/10 text-[#C21975] text-xs font-bold uppercase tracking-wider">
+                    <div className="flex flex-wrap gap-4 mb-8">
+                        <span className="px-4 py-1.5 rounded-full bg-[#f5e6ef] text-[#C21975] text-xs font-bold uppercase tracking-wider border border-[#d4a5c4]/50 shadow-sm">
                             {post.category}
                         </span>
-                        <span className="flex items-center gap-1.5 text-gray-500 text-sm">
-                            <Calendar className="w-4 h-4" /> {post.date}
-                        </span>
-                        <span className="flex items-center gap-1.5 text-gray-500 text-sm">
-                            <Clock className="w-4 h-4" /> {post.readTime}
-                        </span>
+                        <div className="flex items-center gap-4 text-gray-500 text-sm font-medium">
+                            <span className="flex items-center gap-1.5">
+                                <Calendar className="w-4 h-4 text-[#C21975]" /> {post.date}
+                            </span>
+                            <span className="flex items-center gap-1.5">
+                                <Clock className="w-4 h-4 text-[#C21975]" /> {post.readTime}
+                            </span>
+                        </div>
                     </div>
 
-                    <h1 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+                    <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-[1.15] tracking-tight">
                         {post.title}
                     </h1>
 
-                    <div className="flex items-center justify-between border-t border-gray-200 pt-6">
-                        <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden relative">
-                                <User className="w-5 h-5 text-gray-400" />
-                            </div>
-                            <div>
-                                <p className="text-sm font-bold text-gray-900">Dr. Vinita Khemani</p>
-                                <p className="text-xs text-gray-500">Senior Gynecologist & Obstetrician</p>
-                            </div>
+                    <div className="flex items-center gap-4 border-t border-gray-200/60 pt-6">
+                        <div className="w-12 h-12 rounded-full border-2 border-white shadow-md overflow-hidden relative">
+                            <Image src="/images/dr-vinita-khemani.jpeg" alt="Dr. Vinita Khemani" fill className="object-cover" />
                         </div>
-
-                        <div className="flex gap-2">
-                            <button className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white transition-all">
-                                <Facebook className="w-4 h-4" />
-                            </button>
-                            <button className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-[#1DA1F2] hover:border-[#1DA1F2] hover:text-white transition-all">
-                                <Twitter className="w-4 h-4" />
-                            </button>
-                            <button className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:text-white transition-all">
-                                <Linkedin className="w-4 h-4" />
-                            </button>
+                        <div>
+                            <p className="text-base font-bold text-gray-900">Dr. Vinita Khemani</p>
+                            <p className="text-sm text-gray-500 font-medium">Senior Gynecologist & Obstetrician</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Featured Image */}
-            <div className="container-fluid mx-auto max-w-[1000px] px-6 -mt-10 lg:-mt-16 mb-12 relative z-10">
-                <div className="aspect-video relative rounded-[2rem] overflow-hidden shadow-2xl">
+            <div className="container-fluid mx-auto max-w-[1000px] px-6 -mt-24 lg:-mt-32 mb-6 md:mb-12 relative z-20">
+                <div className="h-[300px] md:h-[400px] lg:h-[450px] relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
                     <Image
                         src={post.image}
                         alt={post.title}
@@ -292,26 +285,29 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                         className="object-cover"
                         priority
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
             </div>
 
             {/* Content Body */}
-            <article className="container-fluid mx-auto max-w-[800px] px-6 pb-20">
+            <article className="container-fluid mx-auto max-w-[800px] px-6 pb-16 lg:pb-20 pt-4 md:pt-8">
                 <div
-                    className="prose prose-lg prose-headings:font-display prose-headings:font-bold prose-a:text-[#C21975] prose-img:rounded-3xl max-w-none text-gray-600 leading-relaxed"
+                    className="
+                        max-w-none text-gray-700 leading-relaxed text-lg
+                        [&_p]:mb-6 
+                        [&_h2]:font-display [&_h2]:text-3xl md:[&_h2]:text-4xl [&_h2]:font-bold [&_h2]:text-gray-900 [&_h2]:mb-6 [&_h2]:mt-12
+                        [&_h3]:font-display [&_h3]:text-2xl md:[&_h3]:text-3xl [&_h3]:font-bold [&_h3]:text-gray-900 [&_h3]:mb-4 [&_h3]:mt-10
+                        [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-8 [&_ul]:space-y-3
+                        [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-8 [&_ol]:space-y-3
+                        [&_li]:text-gray-700
+                        [&_a]:text-[#C21975] [&_a]:underline [&_a]:underline-offset-2
+                        [&_strong]:font-bold [&_strong]:text-gray-900
+                    "
                     dangerouslySetInnerHTML={{ __html: post.content || `<p>${post.excerpt}</p>` }}
                 />
 
-                {/* CTA Box */}
-                <div className="mt-16 bg-[#fff5f9] rounded-3xl p-8 md:p-10 border border-[#C21975]/10 flex flex-col md:flex-row items-center gap-8 md:justify-between text-center md:text-left">
-                    <div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">Have questions about this topic?</h3>
-                        <p className="text-gray-600">Schedule a consultation with Dr. Vinita Khemani to discuss your specific needs.</p>
-                    </div>
-                    <Link href="/contact" className="px-8 py-3 rounded-full bg-[#C21975] text-white font-bold hover:shadow-lg hover:-translate-y-1 transition-all shrink-0">
-                        Book Appointment
-                    </Link>
-                </div>
+                {/* Styled CTA Box */}
+                <BlogCTA />
             </article>
 
             <Footer />

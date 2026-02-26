@@ -29,7 +29,7 @@ const aboutFaqs = [
     },
     {
         q: "Which hospitals is Dr. Vinita Khemani associated with?",
-        a: "Dr. Vinita Khemani practices at 6 locations across Kolkata: Healing Touch Clinic (Bangur Avenue), Bhagirathi Neotia Hospital (New Town), Charnock Hospital (VIP Road), Apollo Clinic (Chinar Park), Spandan Hospital (Teghoria), and ILS Hospital (Dumdum)."
+        a: "Dr. Vinita Khemani practices at 6 locations across Kolkata: Healing Touch Clinic, Neotia Bhagirathi Woman and Child Care Centre, New Town, Kolkata, Charnock Hospital, Apollo Clinic Chinar Park, Spandan Hospital, and ILS Hospitals, Dumdum."
     },
     {
         q: "How many years of experience does Dr. Vinita Khemani have?",

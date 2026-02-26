@@ -79,7 +79,7 @@ export function Testimonials() {
 
         {/* 3D Stack Carousel */}
         <div className="max-w-6xl mx-auto">
-          <div className="relative h-[400px] md:h-[500px] flex items-center justify-center">
+          <div className="relative h-[650px] sm:h-[550px] md:h-[500px] flex items-center justify-center">
 
             {/* Active Card */}
             <AnimatePresence mode="wait" custom={direction}>
@@ -141,14 +141,14 @@ export function Testimonials() {
 
                   {/* Right Image */}
                   <div className="relative h-64 md:h-full bg-gray-100 overflow-hidden order-first md:order-last">
-                    {current.image && (
+                    {(current as any).bannerImage || current.image ? (
                       <Image
-                        src={current.image}
+                        src={(current as any).bannerImage || current.image}
                         alt={current.name}
                         fill
                         className="object-cover"
                       />
-                    )}
+                    ) : null}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
 
                     {/* Floating Badge on Image */}
