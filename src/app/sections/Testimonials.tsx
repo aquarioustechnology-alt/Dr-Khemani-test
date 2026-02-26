@@ -141,9 +141,9 @@ export function Testimonials() {
 
                   {/* Right Image */}
                   <div className="relative h-64 md:h-full bg-gray-100 overflow-hidden order-first md:order-last">
-                    {(current as any).bannerImage || current.image ? (
+                    {(current as unknown as { bannerImage?: string }).bannerImage || current.image ? (
                       <Image
-                        src={(current as any).bannerImage || current.image}
+                        src={((current as unknown as { bannerImage?: string }).bannerImage || current.image) as string}
                         alt={current.name}
                         fill
                         className="object-cover"
