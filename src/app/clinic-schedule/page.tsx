@@ -37,7 +37,7 @@ const clinics = [
         type: "Consultant",
         address: "Street No : 327, Premises No : 27-0327, Plot No : DG-20/17 & DG-20/21, Action Area 1D, Newtown, Kolkata, West Bengal 700156",
         phone: "033-332350000 / 6292149133",
-        image: "/images/High-Risk Pregnancy.webp",
+        image: "/images/Neotia-Bhagirathi.webp",
         mapUrl: "https://maps.google.com/?q=Bhagirathi+Neotia+New+Town+Kolkata",
         timings: [
             { day: "Wednesday & Friday", time: "4:00 PM" },
@@ -53,7 +53,7 @@ const clinics = [
         type: "Consultant",
         address: "BMC 195, Biswa Bangla Sarani, Dhalipara, Tegharia, Newtown, Kolkata, West Bengal 700157",
         phone: "033-40500500 / 9831639000",
-        image: "/images/Laparoscopic Surgery.jpg",
+        image: "/images/charnok.jpg",
         mapUrl: "https://maps.google.com/?q=Charnock+Hospital+VIP+Road+Kolkata",
         timings: [
             { day: "Thursday", time: "11:00 AM" },
@@ -69,7 +69,7 @@ const clinics = [
         type: "Consultant",
         address: "Unit No. A3, P. O. : R- Gopalpur, P. S. : The Signature, Nawpara Rd, Dash Drone, Newtown, Kolkata, West Bengal 700136",
         phone: "033-66263456 / 033-66263402",
-        image: "/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg",
+        image: "/images/appolo-clinic.webp",
         mapUrl: "https://maps.google.com/?q=Apollo+Clinic+Chinar+Park+Kolkata",
         timings: [
             { day: "Monday & Wednesday", time: "11:00 AM" },
@@ -85,7 +85,7 @@ const clinics = [
         type: "Consultant",
         address: "VIP Rd, near Disha Eye Hospital, Tegharia, Kaikhali, Kolkata, West Bengal 700052",
         phone: "033-40045511 / 8918314710",
-        image: "/images/Pregnancy Care.png",
+        image: "/images/spandan-hospital.webp",
         mapUrl: "https://maps.google.com/?q=Spandan+Hospital+Teghoria+Kolkata",
         timings: [
             { day: "Wednesday & Saturday", time: "5:00 PM" },
@@ -101,7 +101,7 @@ const clinics = [
         type: "Consultant",
         address: "1, Mall Rd, near Ramakrishna Paramahamsadev Bridge, Golpark, Dum Dum, Kolkata, North Dumdum, West Bengal 700028",
         phone: "6292260651",
-        image: "/images/High-Risk Pregnancy.webp",
+        image: "/images/ils.webp",
         mapUrl: "https://maps.google.com/?q=ILS+Hospital+Dumdum+Kolkata",
         timings: [
             { day: "Thursday", time: "1:00 PM" },

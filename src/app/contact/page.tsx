@@ -119,7 +119,8 @@ export default function ContactPage() {
                                 src="/images/dr-vinita-khemani.jpeg"
                                 alt="Dr. Vinita Khemani Team"
                                 fill
-                                className="object-cover object-top"
+                                className="object-cover"
+                                style={{ objectPosition: "center bottom" }}
                                 priority
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
