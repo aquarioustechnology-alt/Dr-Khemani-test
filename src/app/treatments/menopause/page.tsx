@@ -110,7 +110,7 @@ const ServiceCard = ({ service, index, range, targetScale }: { service: any, ind
     const scale = useTransform(scrollYProgress, range, [1, targetScale]);
 
     return (
-        <div ref={container} className="h-screen flex items-center justify-center sticky top-0">
+        <div ref={container} className="h-dvh flex items-center justify-center sticky top-0">
             <motion.div
                 style={{ scale, top: `calc(-5vh + ${index * 25}px)` }}
                 className="flex flex-col relative -top-[25vh] h-[550px] w-full max-w-[1200px] rounded-[3rem] p-8 md:p-12 origin-top border border-gray-200 shadow-2xl overflow-hidden bg-white"

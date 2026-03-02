@@ -31,7 +31,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-screen overflow-hidden">
+    <section ref={containerRef} className="relative min-h-dvh overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-white to-purple-50" />
 
@@ -45,7 +45,7 @@ export function Hero() {
       </motion.div>
 
       <motion.div style={{ opacity, scale }} className="relative z-10">
-        <div className="container-fluid pt-28 pb-20 min-h-screen flex items-center">
+        <div className="container-fluid pt-28 pb-20 min-h-dvh flex items-center">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
             {/* Left Content */}
             <motion.div

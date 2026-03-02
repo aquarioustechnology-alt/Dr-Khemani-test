@@ -61,7 +61,7 @@ export default function ContactPage() {
     };
 
     return (
-        <main className="relative bg-[#fdfafb] min-h-screen selection:bg-[#C21975] selection:text-white pb-0">
+        <main className="relative bg-[#fdfafb] min-h-dvh selection:bg-[#C21975] selection:text-white pb-0">
             <Navigation />
 
             {/* Hero Section */}

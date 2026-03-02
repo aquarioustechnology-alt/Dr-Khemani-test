@@ -9,7 +9,7 @@ import { ArrowRight, Star, Award, Users, Phone, Clock } from "lucide-react";
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
@@ -31,10 +31,10 @@ export function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-screen overflow-hidden">
+    <section ref={containerRef} className="relative min-h-dvh overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-white to-purple-50" />
-      
+
       {/* Animated Background Shapes */}
       <motion.div style={{ y }} className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-rose-200/40 to-transparent rounded-full blur-3xl"
@@ -45,7 +45,7 @@ export function Hero() {
       </motion.div>
 
       <motion.div style={{ opacity, scale }} className="relative z-10">
-        <div className="container-fluid pt-28 pb-20 min-h-screen flex items-center">
+        <div className="container-fluid pt-28 pb-20 min-h-dvh flex items-center">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
             {/* Left Content */}
             <motion.div
@@ -77,7 +77,7 @@ export function Hero() {
 
               {/* Subheadline */}
               <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
-                Dr. Vinita Khemani brings over <span className="font-semibold text-rose-600">21 years</span> of expertise in gynecology. 
+                Dr. Vinita Khemani brings over <span className="font-semibold text-rose-600">21 years</span> of expertise in gynecology.
                 From pregnancy care to complex surgeries, experience compassionate, personalized healthcare.
               </p>
 

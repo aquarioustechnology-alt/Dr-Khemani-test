@@ -14,7 +14,7 @@ export default function StoriesPage() {
     const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
 
     return (
-        <main className="relative bg-neutral-50 min-h-screen selection:bg-[#C21975] selection:text-white overflow-hidden">
+        <main className="relative bg-neutral-50 min-h-dvh selection:bg-[#C21975] selection:text-white overflow-hidden">
             <Navigation />
 
             {/* Hero Section */}
