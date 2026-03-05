@@ -124,6 +124,7 @@ export function Blog() {
                                     </div>
                                     <Link
                                         href={`/blog/${post.slug}`}
+                                        aria-label={`Read ${post.title}`}
                                         className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:bg-[#C21975] group-hover:border-[#C21975] group-hover:text-white transition-all"
                                     >
                                         <ArrowRight className="w-4 h-4" />

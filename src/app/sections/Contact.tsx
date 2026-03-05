@@ -282,6 +282,7 @@ export function Contact() {
                         value={formState.clinic}
                         onChange={handleChange}
                         required
+                        aria-label="Select preferred clinic"
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-medical-400 focus:ring-2 focus:ring-medical-100 outline-none transition-all bg-white"
                       >
                         <option value="">Select Clinic</option>
@@ -299,6 +300,7 @@ export function Contact() {
                         value={formState.service}
                         onChange={handleChange}
                         required
+                        aria-label="Select required service"
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-medical-400 focus:ring-2 focus:ring-medical-100 outline-none transition-all bg-white"
                       >
                         <option value="">Select Service</option>
@@ -317,6 +319,7 @@ export function Contact() {
                       <input
                         type="date"
                         name="date"
+                        aria-label="Select preferred date"
                         value={formState.date}
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-medical-400 focus:ring-2 focus:ring-medical-100 outline-none transition-all"

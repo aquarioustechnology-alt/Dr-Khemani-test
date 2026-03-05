@@ -211,6 +211,7 @@ export function Navigation() {
               {/* Mobile Hamburger Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 className="lg:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center focus:outline-none"
               >
                 <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-out rounded-full ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : '-translate-y-1'}`} />

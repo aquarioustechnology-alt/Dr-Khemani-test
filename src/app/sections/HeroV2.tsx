@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Star, Award, Users, Play, ArrowUpRight } from "lucide-react";
 import { calculateExperience, calculateSurgeries } from "@/lib/utils";
@@ -40,11 +39,7 @@ export function HeroV2() {
           <div className="relative z-10 w-full px-6 py-12 md:px-12 lg:px-16">
             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               {/* Left Content */}
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-              >
+              <div className="opacity-100">
                 <div
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 border border-[#d4a5c4]"
                   style={{ background: 'rgba(255,255,255,0.6)' }}
@@ -53,9 +48,9 @@ export function HeroV2() {
                   <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Dr. Vinita Khemani</span>
                 </div>
 
-                <h1 className="font-display text-5xl md:text-6xl lg:text-[68px] leading-[1.1] font-medium animate-text-gradient mb-8 tracking-tight">
+                <h1 className="font-display text-5xl md:text-6xl lg:text-[68px] leading-[1.1] font-medium mb-8 tracking-tight">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Best Gynecologist</span> <br />
-                  <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#b85a8a]">
+                  <span className="italic text-[#C21975]">
                     in Kolkata.
                   </span>
                 </h1>
@@ -114,30 +109,48 @@ export function HeroV2() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Right Content - Slider */}
               <div className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full mb-8 lg:mb-0 order-first lg:order-none">
                 {/* Slider Container */}
                 <div className="absolute top-0 right-0 w-full h-full rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden shadow-2xl">
-                  <AnimatePresence mode="popLayout">
-                    <motion.div
-                      key={currentImageIndex}
-                      initial={{ opacity: 0, scale: 1.1 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.7 }}
-                      className="absolute inset-0"
-                    >
-                      <Image
-                        src={heroImages[currentImageIndex]}
-                        alt="Dr. Vinita Khemani consulting patients at Healing Touch Clinic Kolkata"
-                        fill
-                        className="object-cover"
-                        priority
-                      />
-                    </motion.div>
-                  </AnimatePresence>
+                  <div className="absolute inset-0 bg-gray-100">
+                    {heroImages.map((src, index) => (
+                      <div
+                        key={src}
+                        className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${currentImageIndex === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                          }`}
+                        style={{
+                          opacity: currentImageIndex === index ? 1 : 0,
+                        }}
+                      >
+                        {index === 0 ? (
+                          <img
+                            src={src}
+                            alt="Dr. Vinita Khemani consulting patients at Healing Touch Clinic Kolkata"
+                            className="object-cover w-full h-full"
+                            style={{
+                              position: 'absolute',
+                              inset: 0,
+                              height: '100%',
+                              width: '100%',
+                            }}
+                            fetchPriority="high"
+                          />
+                        ) : (
+                          <Image
+                            src={src}
+                            alt="Dr. Vinita Khemani consulting patients at Healing Touch Clinic Kolkata"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            quality={80}
+                          />
+                        )}
+                      </div>
+                    ))}
+                  </div>
 
                   {/* Slider Controls */}
                   <div className="absolute bottom-4 left-4 lg:bottom-6 lg:left-6 flex gap-2 z-20">
@@ -145,6 +158,7 @@ export function HeroV2() {
                       <button
                         key={i}
                         onClick={() => setCurrentImageIndex(i)}
+                        aria-label={`Go to slide ${i + 1}`}
                         className={`w-2 h-2 lg:w-2.5 lg:h-2.5 rounded-full transition-all ${currentImageIndex === i ? 'bg-[#C21975] scale-125' : 'bg-white/60'}`}
                       />
                     ))}
@@ -152,10 +166,7 @@ export function HeroV2() {
                 </div>
 
                 {/* Top Left Solid Card - "Patient Focused" */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8, x: -20 }}
-                  animate={{ opacity: 1, scale: 1, x: 0 }}
-                  transition={{ delay: 0.6, type: "spring" }}
+                <div
                   className="absolute top-4 left-4 lg:top-8 lg:-left-12 p-4 lg:p-5 rounded-2xl lg:rounded-3xl bg-[#730940] shadow-[0_15px_40px_rgba(115,9,64,0.4)] max-w-[200px] lg:max-w-[260px] z-30 relative overflow-hidden group hidden md:block"
                 >
                   <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-white/10 to-transparent opacity-50 rounded-bl-[3rem]" />
@@ -173,13 +184,10 @@ export function HeroV2() {
                       Personalized gynecological care with 4.9★ patient satisfaction rating.
                     </p>
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Bottom Right Glass Card - "Advanced Care" */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8, x: 20 }}
-                  animate={{ opacity: 1, scale: 1, x: 0 }}
-                  transition={{ delay: 0.8, type: "spring" }}
+                <div
                   className="absolute bottom-4 right-4 lg:bottom-8 lg:-right-12 p-4 lg:p-5 rounded-2xl lg:rounded-3xl backdrop-blur-md bg-[#1a103c]/20 border border-white/20 shadow-xl max-w-[200px] lg:max-w-[260px] z-30 hidden md:block"
                 >
                   <div className="flex items-center gap-3 mb-2">
@@ -193,7 +201,7 @@ export function HeroV2() {
                   <p className="text-[10px] lg:text-xs text-white/90 leading-relaxed font-light drop-shadow-md pl-1">
                     Advanced laparoscopic & minimally invasive procedures.
                   </p>
-                </motion.div>
+                </div>
               </div>
             </div>
           </div>

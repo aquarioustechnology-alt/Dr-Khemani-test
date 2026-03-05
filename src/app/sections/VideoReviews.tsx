@@ -97,12 +97,14 @@ export function VideoReviews() {
                     <div className="flex gap-4">
                         <button
                             onClick={prevVideo}
+                            aria-label="Previous video"
                             className="w-12 h-12 rounded-full border border-[#C21975]/20 bg-white flex items-center justify-center text-[#C21975] hover:bg-[#C21975] hover:text-white transition-all shadow-md"
                         >
                             <ChevronLeft className="w-5 h-5" />
                         </button>
                         <button
                             onClick={nextVideo}
+                            aria-label="Next video"
                             className="w-12 h-12 rounded-full border border-[#C21975]/20 bg-white flex items-center justify-center text-[#C21975] hover:bg-[#C21975] hover:text-white transition-all shadow-md"
                         >
                             <ChevronRight className="w-5 h-5" />
@@ -138,6 +140,7 @@ export function VideoReviews() {
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <button
                                         onClick={() => setIsVideoOpen(true)}
+                                        aria-label="Play video"
                                         className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/30 backdrop-blur-md border border-white/50 flex items-center justify-center text-white hover:scale-110 hover:bg-[#C21975] hover:border-[#C21975] transition-all duration-300 shadow-xl"
                                     >
                                         <Play className="w-8 h-8 md:w-10 md:h-10 fill-current ml-1" />

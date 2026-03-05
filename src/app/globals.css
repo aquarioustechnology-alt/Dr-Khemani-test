@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 :root {
-  --font-inter: 'Plus Jakarta Sans', sans-serif;
-  --font-playfair: 'Playfair Display', serif;
+  --font-inter: var(--font-jakarta), sans-serif;
+  --font-playfair: var(--font-playfair), serif;
 
   /* Brand Colors - Based on #a43971 */
   --color-primary: #C21975;

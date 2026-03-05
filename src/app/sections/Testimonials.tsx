@@ -125,7 +125,7 @@ export function Testimonials() {
                         </div>
                       )}
                       <div>
-                        <h4 className="font-bold text-gray-900 text-lg">{current.name}</h4>
+                        <h3 className="font-bold text-gray-900 text-lg">{current.name}</h3>
                         <div className="flex items-center gap-2 text-sm text-gray-500">
                           <span>{current.role}</span>
                           <span className="w-1 h-1 rounded-full bg-gray-300" />
@@ -180,6 +180,7 @@ export function Testimonials() {
           <div className="flex items-center justify-center gap-4 mt-8">
             <button
               onClick={prev}
+              aria-label="Previous testimonial"
               className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-gray-600 hover:shadow-xl transition-all"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -194,6 +195,7 @@ export function Testimonials() {
                     setDirection(index > currentIndex ? 1 : -1);
                     setCurrentIndex(index);
                   }}
+                  aria-label={`Go to testimonial ${index + 1}`}
                   className={`h-2 rounded-full transition-all ${index === currentIndex ? "w-8" : "w-2"
                     }`}
                   style={{
@@ -205,6 +207,7 @@ export function Testimonials() {
 
             <button
               onClick={next}
+              aria-label="Next testimonial"
               className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-gray-600 hover:shadow-xl transition-all"
             >
               <ChevronRight className="w-6 h-6" />

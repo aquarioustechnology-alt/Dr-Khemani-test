@@ -118,7 +118,6 @@ export function FocusSection() {
                                 alt="Dr. Vinita Khemani - Fertility & PCOS Specialist"
                                 variant="reveal"
                                 className="w-full h-full"
-                                priority
                             />
                         </div>
 

@@ -151,6 +151,7 @@ export function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                                     <div className="relative">
                                         <input
                                             type="date"
+                                            aria-label="Select preferred date"
                                             className="w-full bg-[#E8E8E8] rounded-xl px-4 py-3 text-sm text-gray-900 appearance-none focus:outline-none focus:ring-2 focus:ring-[#C21975] transition-all"
                                             value={formData.date}
                                             onChange={(e) => setFormData({ ...formData, date: e.target.value })}
@@ -165,6 +166,7 @@ export function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                                         <select
                                             className="w-full bg-[#E8E8E8] rounded-xl px-4 py-3 text-sm text-gray-900 appearance-none focus:outline-none focus:ring-2 focus:ring-[#C21975] transition-all"
                                             required
+                                            aria-label="Select preferred clinic"
                                             value={formData.clinic}
                                             onChange={(e) => setFormData({ ...formData, clinic: e.target.value })}
                                         >

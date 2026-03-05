@@ -97,7 +97,7 @@ export function Footer() {
                 </div>
                 <div>
                   <p className="font-display font-bold text-xl leading-tight text-white tracking-wide">Healing Touch Clinic</p>
-                  <p className="text-xs font-medium text-[#C21975] uppercase tracking-wider">Dr. Vinita Khemani</p>
+                  <p className="text-xs font-medium text-pink-400 uppercase tracking-wider">Dr. Vinita Khemani</p>
                 </div>
               </div>
             </Link>
@@ -119,11 +119,11 @@ export function Footer() {
 
             <div className="flex gap-3">
               {[
-                { Icon: Facebook, href: "https://www.facebook.com/dr.vinita.healing.touch/" },
-                { Icon: Instagram, href: "https://www.instagram.com/dr_vinita_khemani/" },
-                { Icon: Youtube, href: "https://www.youtube.com/@DrVinitaKhemani" }
-              ].map(({ Icon, href }, i) => (
-                <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C21975] hover:border-[#C21975] transition-all group">
+                { Icon: Facebook, href: "https://www.facebook.com/dr.vinita.healing.touch/", name: "Facebook" },
+                { Icon: Instagram, href: "https://www.instagram.com/dr_vinita_khemani/", name: "Instagram" },
+                { Icon: Youtube, href: "https://www.youtube.com/@DrVinitaKhemani", name: "YouTube" }
+              ].map(({ Icon, href, name }, i) => (
+                <a key={i} href={href} aria-label={`Visit our ${name}`} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C21975] hover:border-[#C21975] transition-all group">
                   <Icon className="w-4 h-4 text-pink-100 group-hover:text-white" />
                 </a>
               ))}
@@ -244,7 +244,7 @@ export function Footer() {
               <p className="text-xs text-pink-200/60 mb-2">
                 © {new Date().getFullYear()} Healing Touch Clinic. All rights reserved.
               </p>
-              <p className="text-[10px] text-pink-200/40 max-w-3xl leading-relaxed">
+              <p className="text-[10px] text-pink-200/60 max-w-3xl leading-relaxed">
                 * To protect patient privacy, some imagery used across this website may be AI-generated and does not depict actual patients.
               </p>
             </div>

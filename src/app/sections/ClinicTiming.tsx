@@ -141,13 +141,13 @@ export function ClinicTiming() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-white">Preferred Date</label>
-                      <input type="date" className="w-full px-5 py-3 rounded-xl bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-900 icon-white" />
+                      <input type="date" aria-label="Select preferred date" className="w-full px-5 py-3 rounded-xl bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-900 icon-white" />
                     </div>
 
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-white">Preferred Clinic *</label>
                       <div className="relative">
-                        <select className="w-full px-5 py-3 rounded-xl bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-white/50 appearance-none text-gray-900" required>
+                        <select aria-label="Select preferred clinic" className="w-full px-5 py-3 rounded-xl bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-white/50 appearance-none text-gray-900" required>
                           <option value="">Select Clinic</option>
                           {clinics.map(c => <option key={c.id} value={c.name}>{c.name}</option>)}
                         </select>
