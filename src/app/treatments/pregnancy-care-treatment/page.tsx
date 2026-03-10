@@ -211,7 +211,7 @@ export default function PregnancyCarePage() {
                         More Than Just <span className="text-[#C21975]">Checkups</span>
                     </h2>
                     <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-12">
-                        Pregnancy is a transformation. We don&apos;t just monitor the baby; we care for the mother. From nutritional planning to labor preparation classes, our goal is a healthy mother and a healthy baby. Dr. Khemani is renowned for her patience, accessibility, and calm demeanor during delivery.
+                        Pregnancy is a transformation. We don&apos;t just monitor the baby; we care for the mother. From nutritional planning to labor preparation classes, our goal is a healthy mother and a healthy baby. Dr. Khemani is renowned for her patience, accessibility, and calm demeanor during delivery. For mothers with complex medical histories, she also provides specialised <a href="/treatments/high-risk-pregnancy-treatment" className="text-gray-900 hover:text-[#C21975] transition-colors">high-risk pregnancy monitoring</a>.
                     </p>
                     <div className="grid md:grid-cols-4 gap-8">
                         {[
@@ -315,7 +315,7 @@ export default function PregnancyCarePage() {
                                 <div key={i} className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-white/20 transition-colors">
                                     <tip.icon className="w-8 h-8 text-pink-300 mb-4" />
                                     <h4 className="font-bold text-lg mb-2">{tip.title}</h4>
-                                    <p className="text-sm text-pink-100">{tip.desc}</p>
+                                    <p className="text-sm text-pink-100" dangerouslySetInnerHTML={{ __html: tip.desc }} />
                                 </div>
                             ))}
                         </div>
@@ -388,7 +388,7 @@ export default function PregnancyCarePage() {
                                 India has made remarkable strides in reducing maternal mortality — from 556 per 100,000 live births in 1990 to approximately 97 per 100,000 in recent years. Yet, significant gaps remain, particularly in the quality of antenatal care. According to NFHS-5, while 83% of Indian women receive at least one antenatal checkup, only 58% receive the WHO-recommended 4+ visits, and comprehensive monitoring for blood pressure, blood sugar, and fetal growth remains inconsistent.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                In urban the city, the challenges are different but equally important. The rising trends of late marriages, career-first family planning, and increasing rates of gestational diabetes and hypertension mean that today&apos;s pregnancies require more sophisticated monitoring than ever before. Modern pregnancy care must address not just the physical aspects but also nutritional guidance, mental health support, and birth plan counseling.
+                                In urban the city, the challenges are different but equally important. The rising trends of late marriages, <a href='/treatments/family-planning' className='text-gray-900 hover:text-[#C21975] transition-colors'>career-first approaches to family planning</a>, and increasing rates of gestational diabetes and hypertension mean that today&apos;s pregnancies require more sophisticated monitoring than ever before. <a href='/about' className='text-gray-900 hover:text-[#C21975] transition-colors'>Modern pregnancy care</a> must address not just the physical aspects but also nutritional guidance, mental health support, and birth plan counseling.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
                                 Dr. Vinita Khemani provides comprehensive, evidence-based pregnancy care that covers every aspect of the maternal journey — from preconception counseling and first-trimester screening through regular growth monitoring, anomaly scans, gestational diabetes screening, and finally, personalized delivery planning. Her approach prioritizes normal delivery whenever safely possible, while keeping emergency surgical capabilities readily available.

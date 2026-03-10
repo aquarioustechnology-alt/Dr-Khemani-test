@@ -35,7 +35,7 @@ export function MissionV2() {
                     >
                         <h3 className="text-3xl font-bold text-gray-900 mb-6">Patient-Centric Philosophy</h3>
                         <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                            Dr. Vinita Khemani believes that medicine is as much about empathy as it is about science. Her &quot;Normal Delivery First&quot; approach has helped thousands of mothers experience childbirth naturally and safely.
+                            Dr. Vinita Khemani believes that medicine is as much about empathy as it is about science. Her &quot;Normal Delivery First&quot; approach has helped thousands of mothers experience childbirth naturally and safely with her <a href="/treatments/pregnancy-care-treatment" className="text-gray-900 hover:text-[#C21975] transition-colors">skilled pregnancy care</a>.
                         </p>
 
                         <div className="space-y-4">

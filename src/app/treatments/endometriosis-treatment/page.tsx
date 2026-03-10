@@ -127,7 +127,7 @@ export default function EndometriosisPage() {
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C21975] to-[#8a2f5e]">Endometriosis?</span>
                                 </h2>
                                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                                    It is a condition where tissue similar to the lining of the uterus grows outside it—on ovaries, fallopian tubes, and pelvic tissue. This tissue bleeds during each period but has nowhere to exit, causing inflammation, scar tissue (adhesions), and severe pain.
+                                    It is a condition where tissue similar to the lining of the uterus grows outside it—on ovaries, fallopian tubes, and pelvic tissue. This tissue bleeds during each period but has nowhere to exit, causing inflammation, scar tissue (adhesions), and severe pain. In advanced cases, the tissue may need to be removed using <a href="/treatments/advanced-laparoscopic-procedures" className="text-gray-900 hover:text-[#C21975] transition-colors">modern laparoscopic treatment techniques</a> to reduce pain and support faster healing.
                                 </p>
 
                                 <div className="mb-8">
@@ -194,7 +194,7 @@ export default function EndometriosisPage() {
                                     {stage.s}
                                 </div>
                                 <h4 className={`text-xl font-bold mb-3 ${stage.title || "text-gray-900"}`}>{stage.t}</h4>
-                                <p className={`text-sm leading-relaxed ${stage.desc || "text-gray-600"}`}>{stage.d}</p>
+                                <p className={`text-sm leading-relaxed ${stage.desc || "text-gray-600"}`} dangerouslySetInnerHTML={{ __html: stage.d }} />
                             </motion.div>
                         ))}
                     </div>
@@ -223,7 +223,7 @@ export default function EndometriosisPage() {
                             <div className="w-16 h-16 rounded-2xl bg-[#C21975] flex items-center justify-center text-white shadow-lg mb-6 font-bold text-2xl group-hover:scale-110 transition-transform">2</div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Laparoscopic Excision</h3>
                             <p className="text-gray-600 leading-relaxed">
-                                The Gold Standard. We perform minimally invasive surgery to thoroughly excise (cut out) endometrial lesions and adhesions while preserving healthy tissue.
+                                The Gold Standard. We perform minimally invasive surgery to thoroughly identify and excise endometrial lesions while preserving healthy tissue and restore pelvic health, which may include <a href="/treatments/advanced-laparoscopic-procedures" className="text-gray-900 hover:text-[#C21975] transition-colors">laparoscopic surgery</a> if recommended.
                             </p>
                         </div>
                         <div className="p-8 rounded-[2.5rem] bg-[#fff0f5] hover:bg-pink-50 transition-colors group">

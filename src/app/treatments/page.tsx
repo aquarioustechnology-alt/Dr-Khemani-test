@@ -80,7 +80,7 @@ const serviceCategories = [
         description: `State-of-the-art keyhole surgeries for complex gynecological conditions. Dr. Khemani has performed ${calculateSurgeries()}+ procedures ensuring faster recovery, minimal pain, and tiny scars.`,
         services: ["Total Laparoscopic Hysterectomy", "Myomectomy (Fibroids)", "Complex Cystectomy", "Ectopic Pregnancy", "Tubal Recanalization", "Fertility Enhancing Surgery"],
         image: "/images/Laparoscopic Surgery.jpg",
-        href: "/treatments/advanced-laparoscopic-procedures-treatment",
+        href: "/treatments/advanced-laparoscopic-procedures",
         color: "#d4a5c4",
     },
     {
@@ -89,7 +89,7 @@ const serviceCategories = [
         title: "Pregnancy Management",
         subtitle: "Complete Prenatal to Postnatal Care",
         description: "Holistic pregnancy care tailored to your journey. From the first heartbeat to delivery and beyond, we prioritize the health and safety of both mother and baby.",
-        services: ["Prenatal Checkups", "Ultrasound Monitoring", "Nutrition Counseling", "Normal Delivery Focus", "Labor Pain Management", "Postnatal Care"],
+        services: ["Comprehensive prenatal checkups to monitor fetal development and maternal health, including preparation for <a href='/treatments/pregnancy-care-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>painless delivery</a> options if desired.", "Ultrasound Monitoring", "Nutrition Counseling", "Normal Delivery Focus", "Labor Pain Management", "Postnatal Care"],
         image: "/images/Pregnancy Care.png",
         href: "/treatments/pregnancy-care-treatment",
         color: "#f5e6ef",
@@ -124,7 +124,7 @@ const serviceCategories = [
         description: "Confidential guidance on contraception and reproductive health. We help you choose the best method for your lifestyle and future family goals.",
         services: ["Contraceptive Counseling", "IUD Insertion/Removal", "Oral Contraceptives", "Permanent Sterilization", "Pre-conception Counseling", "Sexual Health"],
         image: "/images/2023-02-08.webp",
-        href: "/treatments/family-planning-treatment",
+        href: "/treatments/family-planning",
         color: "#f5e6ef",
     },
     {
@@ -135,7 +135,7 @@ const serviceCategories = [
         description: "Rapid response capability for emergency deliveries. Advanced surgical skill ensures the safety of mother and baby during unforeseen complications.",
         services: ["Fetal Distress Management", "Obstructed Labor", "Emergency Delivery", "NICU Backup", "Maternal Safety", "Post-Op Care"],
         image: "/images/High-Risk Pregnancy.webp",
-        href: "/treatments/emergency-caesarean-treatment",
+        href: "/treatments/emergency-caesarean-procedures",
         color: "#e8d5e0",
     },
     {
@@ -179,7 +179,7 @@ const serviceCategories = [
         description: "Holistic support for women navigating menopause. Addressing hot flashes, bone health, and emotional well-being to ensure quality of life.",
         services: ["Symptom Management", "Hormone Replacement Therapy (HRT)", "Bone Density Check", "Heart Health", "Lifestyle Guidance", "Wellness Checks"],
         image: "/images/2023-02-08.webp",
-        href: "/treatments/menopause-treatment",
+        href: "/treatments/menopause-care",
         color: "#d4a5c4",
     },
 ];
@@ -310,11 +310,11 @@ export default function TreatmentsPage() {
                                     <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">{service.title}</h2>
                                     <p className="text-lg text-gray-600 leading-relaxed mb-8">{service.description}</p>
 
-                                    <div className="grid grid-cols-2 gap-3 mb-8">
+                                    <div className="grid grid-cols-1 gap-3 mb-8">
                                         {service.services.map((s, j) => (
-                                            <div key={j} className="flex items-center gap-2">
-                                                <CheckCircle className="w-4 h-4 text-[#22C55E] shrink-0" />
-                                                <span className="text-sm text-gray-700 font-medium">{s}</span>
+                                            <div key={j} className="flex items-start gap-2">
+                                                <CheckCircle className="w-4 h-4 text-[#22C55E] shrink-0 mt-0.5" />
+                                                <span className="text-sm text-gray-700 font-medium leading-relaxed" dangerouslySetInnerHTML={{ __html: s }} />
                                             </div>
                                         ))}
                                     </div>
@@ -390,7 +390,7 @@ export default function TreatmentsPage() {
                                     Frequently <br />
                                     <span className="text-[#C21975]">Asked</span> Questions
                                 </h2>
-                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                <p className="text-gray-600 leading-relaxed mb-8">
                                     Find answers to the most common questions about our services, treatments, and clinic policies.
                                 </p>
                                 <button

@@ -74,7 +74,7 @@ const services = [
     subtitle: "Keyhole surgery with faster recovery",
     description: `${calculateSurgeries().toLocaleString()}+ advanced laparoscopic surgeries performed for fibroids, ovarian cysts, endometriosis, hysterectomy, and ectopic pregnancy – with same-day discharge and minimal scarring.`,
     features: ["Keyhole Surgery", "Fibroid Removal", "Cyst Treatment", "Quick Recovery"],
-    href: "/treatments/laparoscopic-surgery",
+    href: "/treatments/advanced-laparoscopic-procedures",
     image: "/images/Laparoscopic Surgery.jpg",
     color: "#f5e6ef",
     badgeText: "Minimally Invasive"

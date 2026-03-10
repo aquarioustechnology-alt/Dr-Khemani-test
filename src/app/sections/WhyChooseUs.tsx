@@ -41,7 +41,7 @@ export function WhyChooseUs() {
                                 Personalized care plans tailored to meet the unique preferences and needs of every patient
                             </h3>
                             <p className="text-gray-600 leading-relaxed text-base">
-                                We provide tailored care that respects individual preferences, fostering comfort, independence, and peace of mind for both patients and their families.
+                                We provide <a href="/about" className="text-gray-900 hover:text-[#C21975] transition-colors">tailored care</a> that respects individual preferences, fostering comfort, independence, and peace of mind for both patients and their families, supporting women through life stage transitions with <a href='/treatments/menopause-care' className='text-gray-900 hover:text-[#C21975] transition-colors'>guidance for menopause and hormonal well-being</a>.
                             </p>
                         </motion.div>
 

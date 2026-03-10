@@ -79,7 +79,7 @@ const services = [
         icon: Sun,
         title: "Wellness Programs",
         subtitle: "Thriving in your second spring",
-        description: "Menopause is a time for renewal. Our holistic wellness programs focus on nutrition, physical activity, and stress management. We help you embrace this life stage with vitality, offering guidance on weight management, sexual health, and overall well-being to ensure you feel your best every day.",
+        description: "Menopause is a time for renewal. Our holistic wellness programs focus on nutrition, physical activity, and stress management to ensure your <a href='/treatments/pregnancy-care-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>holistic health</a> and overall well-being every day.",
         features: ["Nutritional Planning", "Sexual Health Support", "Yoga & Meditation", "Weight Management"],
         image: "/images/menopause_wellness_1771240070819.png",
         color: "#f5e6ef",
@@ -127,9 +127,7 @@ const ServiceCard = ({ service, index, range, targetScale }: { service: any, ind
 
                         <h3 className="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-3">{service.title}</h3>
                         <p className="text-lg text-[#C21975] font-medium mb-4 italic">{service.subtitle}</p>
-                        <p className="text-gray-600 leading-relaxed mb-6 text-sm md:text-base line-clamp-4 hover:line-clamp-none transition-all duration-300">
-                            {service.description}
-                        </p>
+                        <p className="text-gray-600 leading-relaxed mb-6 text-sm md:text-base line-clamp-4 hover:line-clamp-none transition-all duration-300" dangerouslySetInnerHTML={{ __html: service.description }} />
 
                         <div className="grid grid-cols-2 gap-3 mt-auto">
                             {service.features.map((feature: string, i: number) => (

@@ -36,12 +36,12 @@ const causes = [
     },
     {
         title: "Hormonal Imbalance",
-        desc: "PCOS creates a disconnect in brain-ovary signaling. Elevated levels of Luteinizing Hormone (LH) prevent eggs from fully maturing and releasing. Instead of ovulating, the follicles remain as small fluid-filled sacs or 'cysts'. Simultaneously, high androgen levels trigger physical symptoms like acne, unwanted facial hair growth, and scalp thinning.",
+        desc: "PCOS creates a disconnect in brain-ovary signaling. Elevated levels of Luteinizing Hormone (LH) prevent eggs from fully maturing and releasing. Instead of ovulating, the follicles remain as small fluid-filled sacs or 'cysts'. Simultaneously, high androgen levels trigger physical symptoms like acne, unwanted facial hair growth, and scalp thinning, which may also affect your chances of conceiving and often requires support through <a href='/treatments/fertility-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>advanced fertility care</a>.",
         icon: Scale
     },
     {
         title: "Low-Grade Inflammation",
-        desc: "Chronic, low-grade inflammation is a hidden driver of PCOS in many women. This immune system overactivity stimulates polycystic ovaries to produce androgens, independent of body weight. Over time, this inflammatory state worsens hormonal imbalances and significantly increases the risk of developing heart disease and type 2 diabetes later in life.",
+        desc: "Chronic, low-grade inflammation is a hidden driver of PCOS in many women. This immune system overactivity stimulates polycystic ovaries to produce androgens, independent of body weight. Over time, this inflammatory state worsens hormonal imbalances and significantly increases the risk of developing heart disease, and can exacerbate other <a href='/treatments/endometriosis-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>inflammatory reproductive conditions like endometriosis</a>.",
         icon: HeartPulse
     },
     {
@@ -223,7 +223,7 @@ export default function PCOSTreatmentPage() {
                                 >
                                     <cause.icon className="w-8 h-8 text-[#C21975] mb-4" />
                                     <h3 className="text-xl font-bold text-gray-900 mb-3">{cause.title}</h3>
-                                    <p className="text-gray-600 text-sm leading-relaxed">{cause.desc}</p>
+                                    <p className="text-gray-600 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: cause.desc }} />
                                 </motion.div>
                             ))}
                         </div>
@@ -263,7 +263,7 @@ export default function PCOSTreatmentPage() {
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-[80px] opacity-10 pointer-events-none" />
                 <div className="container-fluid mx-auto max-w-[1200px] px-6 text-center relative z-10">
                     <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">Worried About PCOS Symptoms?</h3>
-                    <p className="text-pink-100 text-lg mb-8 max-w-2xl mx-auto">Don&apos;t wait for symptoms to worsen. Early intervention can prevent long-term complications like diabetes, heart disease, and infertility. Schedule an appointment with Dr. Vinita Khemani at her clinics for a comprehensive evaluation today.</p>
+                    <p className="text-pink-100 text-lg mb-8 max-w-2xl mx-auto">Don&apos;t wait for symptoms to worsen. Early intervention can prevent long-term complications like diabetes, heart disease, and infertility. Schedule an appointment with Dr. Vinita Khemani at her clinics for a <a href="/treatments/high-risk-pregnancy-treatment" className="text-white underline hover:text-pink-200 transition-colors">comprehensive health evaluation</a> today.</p>
                     <button
                         onClick={() => setIsEnquiryModalOpen(true)}
                         className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full bg-white text-[#C21975] font-semibold text-lg transition-transform hover:scale-105 shadow-xl"
@@ -348,7 +348,7 @@ export default function PCOSTreatmentPage() {
                                         <div className="w-10 h-10 rounded-full bg-[#fdeef6] text-[#C21975] flex items-center justify-center font-bold shrink-0">C</div>
                                         <div>
                                             <h4 className="font-bold text-gray-900 mb-1">Polycystic Ovaries</h4>
-                                            <p className="text-xs text-gray-500">Multiple immature follicles visible on ultrasonography.</p>
+                                            <p className="text-xs text-gray-500">Multiple immature follicles are visible on ultrasonography. When they persist or cause pain, <a href='/treatments/ovarian-cystectomy-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>ovarian cyst management procedures</a> can be considered.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -534,7 +534,7 @@ export default function PCOSTreatmentPage() {
                                 <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-white">Specialist Care</span>
                                 <h3 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-6">Dr. Vinita Khemani&apos;s Approach to <span className="text-[#C21975]">PCOS Treatment</span></h3>
                                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                    With over 23 years of experience treating PCOS, Dr. Vinita Khemani follows a structured, multi-phase approach that goes beyond just prescribing medication. Every patient receives a tailored care plan designed to address her unique hormonal profile, lifestyle, and health goals.
+                                    With over 23 years of experience treating PCOS, <a href='/about' className='text-gray-900 hover:text-[#C21975] transition-colors'>Dr. Vinita Khemani&apos;s expertise in gynecology and reproductive health</a> follows a structured, multi-phase approach that goes beyond just prescribing medication. Every patient receives a tailored care plan designed to address her unique hormonal profile, lifestyle, and health goals.
                                 </p>
                                 <div className="space-y-4">
                                     {[
@@ -550,7 +550,7 @@ export default function PCOSTreatmentPage() {
                                             </div>
                                             <div>
                                                 <p className="font-bold text-gray-900 text-sm">{item.title}</p>
-                                                <p className="text-gray-600 text-sm">{item.desc}</p>
+                                                <p className="text-gray-600 text-sm" dangerouslySetInnerHTML={{ __html: item.desc }} />
                                             </div>
                                         </div>
                                     ))}
@@ -691,14 +691,14 @@ export default function PCOSTreatmentPage() {
                     <div className="grid lg:grid-cols-3 gap-8 mb-12">
                         {[
                             { num: "23+", title: "Years Experience", desc: "Two decades of specialization in hormonal disorders and reproductive health." },
-                            { num: "10,000+", title: "Happy Patients", desc: "Trusted by thousands of women across Bengal for compassionate, result-oriented treatment." },
+                            { num: "10,000+", title: "Happy Patients", desc: "Trusted by thousands of women across Bengal for compassionate, result-oriented guidance for <a href='/treatments/pregnancy-care-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>pregnancy care and hormonal health</a>" },
                             { num: "608+", title: "Successful Surgeries", desc: "Including laparoscopic ovarian drilling for PCOS cases resistant to medical management." }
                         ].map((item, i) => (
                             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                                 className="text-center p-8 rounded-[2rem] bg-[#fff9fc] border border-pink-100 hover:shadow-lg transition-shadow">
                                 <p className="text-4xl md:text-5xl font-bold text-[#C21975] mb-3">{item.num}</p>
                                 <h4 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h4>
-                                <p className="text-gray-600 text-sm">{item.desc}</p>
+                                <p className="text-gray-600 text-sm" dangerouslySetInnerHTML={{ __html: item.desc }} />
                             </motion.div>
                         ))}
                     </div>
@@ -803,9 +803,7 @@ export default function PCOSTreatmentPage() {
                                     >
                                         <div className="px-6 md:px-8 pb-8 pt-0">
                                             <div className="w-full h-px bg-gray-100 mb-6" />
-                                            <p className="text-gray-600 leading-relaxed text-lg">
-                                                {faq.a}
-                                            </p>
+                                            <p className="text-gray-600 leading-relaxed text-lg" dangerouslySetInnerHTML={{ __html: faq.a }} />
                                         </div>
                                     </motion.div>
                                 </div>
@@ -860,6 +858,6 @@ export default function PCOSTreatmentPage() {
                 })
             }} />
             <Footer />
-        </main>
+        </main >
     );
 }

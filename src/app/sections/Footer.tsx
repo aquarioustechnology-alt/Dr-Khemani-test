@@ -22,14 +22,14 @@ const medicalServices = [
   { title: "High-Risk Pregnancy", href: "/treatments/high-risk-pregnancy-treatment" },
   { title: "Fertility Treatment", href: "/treatments/fertility-treatment" },
   { title: "PCOS / PCOD Management", href: "/treatments/pcos-treatment" },
-  { title: "Advanced Laparoscopic Procedures", href: "/treatments/advanced-laparoscopic-procedures-treatment" },
+  { title: "Advanced Laparoscopic Procedures", href: "/treatments/advanced-laparoscopic-procedures" },
   { title: "Hysterectomy", href: "/treatments/hysterectomy-treatment" },
   { title: "Hysteroscopy", href: "/treatments/hysteroscopy-treatment" },
   { title: "Endometriosis", href: "/treatments/endometriosis-treatment" },
   { title: "Ovarian Cystectomy", href: "/treatments/ovarian-cystectomy-treatment" },
-  { title: "Menopause Care", href: "/treatments/menopause-treatment" },
-  { title: "Family Planning", href: "/treatments/family-planning-treatment" },
-  { title: "Emergency Caesarean", href: "/treatments/emergency-caesarean-treatment" },
+  { title: "Menopause Care", href: "/treatments/menopause-care" },
+  { title: "Family Planning", href: "/treatments/family-planning" },
+  { title: "Emergency Caesarean", href: "/treatments/emergency-caesarean-procedures" },
 ];
 
 export function Footer() {

@@ -13,9 +13,9 @@ import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
 
 const riskConditions = [
-    { icon: HeartPulse, title: "Gestational Diabetes", desc: "Comprehensive glucose monitoring, insulin management, and dietary guidance for gestational diabetes to protect both mother and baby." },
+    { icon: HeartPulse, title: "Gestational Diabetes", desc: "Comprehensive glucose monitoring, insulin management, and dietary guidance for gestational diabetes to protect both mother and baby, complementing our <a href='/treatments/pregnancy-care-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>holistic pregnancy care routines</a>." },
     { icon: AlertTriangle, title: "Preeclampsia / Eclampsia", desc: "Early detection through regular BP monitoring, urine testing, and blood work. Timely intervention and delivery planning." },
-    { icon: Baby, title: "Multiple Pregnancies", desc: "Specialized care for twin and higher-order pregnancies with frequent monitoring, nutritional support, and delivery planning." },
+    { icon: Baby, title: "Multiple Pregnancies", desc: "Specialized care for twin and higher-order pregnancies with frequent monitoring, nutritional support, and delivery planning, including readiness for <a href='/treatments/emergency-caesarean-procedures' className='text-gray-900 hover:text-[#C21975] transition-colors'>emergency caesarean procedures</a> if complications arise." },
     { icon: Activity, title: "Recurrent Miscarriage", desc: "Thorough investigation (thrombophilia, immunology, anatomy) and progesterone support for women with recurrent pregnancy loss." },
     { icon: Eye, title: "Advanced Maternal Age (35+)", desc: "Enhanced screening, genetic counseling, and closer monitoring for women above 35 to ensure healthy outcomes." },
     { icon: Stethoscope, title: "Pre-existing Medical Conditions", desc: "Management of pregnancy with thyroid disorders, heart disease, kidney disease, epilepsy, or autoimmune conditions." },
@@ -97,7 +97,7 @@ export default function HighRiskPregnancyPage() {
                                 className="p-8 rounded-[2rem] bg-white border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-transform duration-500 group">
                                 <div className="w-14 h-14 rounded-2xl bg-[#f5e6ef] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><cond.icon className="w-7 h-7 text-[#C21975]" /></div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-3">{cond.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">{cond.desc}</p>
+                                <p className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: cond.desc }} />
                             </motion.div>
                         ))}
                     </div>

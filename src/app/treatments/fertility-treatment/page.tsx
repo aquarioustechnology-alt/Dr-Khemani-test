@@ -15,7 +15,7 @@ import { EnquiryModal } from "@/components/EnquiryModal";
 const treatmentOptions = [
     {
         title: "Fertility Evaluation",
-        desc: "Complete hormonal panel, ultrasound assessment, HSG (fallopian tube check), semen analysis, and AMH testing to identify the root cause of infertility.",
+        desc: "Complete hormonal panel, ultrasound assessment, HSG (fallopian tube check), semen analysis, and AMH testing to identify the root cause of infertility, sometimes complemented by <a href='/treatments/hysteroscopy-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>minimally invasive uterine assessment</a> to ensure a healthy implantation environment.",
         icon: Microscope,
     },
     {
@@ -126,7 +126,7 @@ export default function FertilityPage() {
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-bold text-gray-900 mb-3">{opt.title}</h3>
-                                        <p className="text-gray-600 leading-relaxed text-sm">{opt.desc}</p>
+                                        <p className="text-gray-600 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: opt.desc }} />
                                     </div>
                                 </div>
                             </motion.div>
@@ -165,7 +165,7 @@ export default function FertilityPage() {
                                     </div>
                                     <div className="pt-2">
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
-                                        <p className="text-gray-600 leading-relaxed text-sm">{step.desc}</p>
+                                        <p className="text-gray-600 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: step.desc }} />
                                     </div>
                                 </motion.div>
                             ))}
@@ -307,9 +307,7 @@ export default function FertilityPage() {
                                 <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
                                     Comprehensive Evaluation First, Not IVF First
                                 </h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    Many clinics push couples towards IVF immediately. Dr. Khemani starts with thorough hormonal panels, semen analysis, HSG, and ovulation tracking — often discovering treatable causes that make expensive procedures unnecessary.
-                                </p>
+                                <p className="text-gray-600 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: "Many clinics push couples towards IVF immediately. Dr. Khemani starts with thorough hormonal panels, semen analysis, HSG, and ovulation tracking, which is especially critical for patients needing <a href='/treatments/pcos-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>dedicated PCOS care</a>." }} />
                             </div>
                             <div className="bg-gradient-to-br from-[#C21975] to-[#8a2f5e] rounded-[2rem] p-8 flex flex-col justify-between flex-1 shadow-sm">
                                 <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center mb-5">
@@ -454,9 +452,7 @@ export default function FertilityPage() {
                                     >
                                         <div className="px-6 md:px-8 pb-8 pt-0">
                                             <div className="w-full h-px bg-gray-100 mb-6" />
-                                            <p className="text-gray-600 leading-relaxed text-lg">
-                                                {faq.a}
-                                            </p>
+                                            <p className="text-gray-600 leading-relaxed text-lg" dangerouslySetInnerHTML={{ __html: faq.a }} />
                                         </div>
                                     </motion.div>
                                 </div>
