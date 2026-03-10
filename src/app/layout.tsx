@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/OG.jpg",
-        width: 1200,
-        height: 630,
+        width: 1646,
+        height: 813,
         alt: "Dr. Vinita Khemani - Best Gynecologist in Kolkata",
       }
     ]
