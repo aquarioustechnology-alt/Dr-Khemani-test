@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Contact Dr. Vinita Khemani | Book Appointment | Gynecologist Kolkata",
-    description: "Contact Dr. Vinita Khemani - Best Gynecologist in Kolkata. Book appointment online, call +91-9903588155, or WhatsApp. 6 clinic locations across Kolkata. Working hours & directions.",
+    title: "Contact Dr Vinita Khemani | Expert Gynecologist in Kolkata",
+    description: "Contact Dr Vinita Khemani today to schedule an appointment. Trusted gynecologist in Kolkata for fertility, pregnancy, and women’s health.",
     keywords: "contact gynecologist kolkata, book appointment dr vinita khemani, gynecologist near me kolkata, healing touch clinic bangur avenue, doctor appointment kolkata",
     openGraph: {
-        title: "Contact & Book Appointment | Dr. Vinita Khemani",
-        description: "Book your appointment with Dr. Vinita Khemani. Call +91-9903588155 or visit any of our 6 clinic locations across Kolkata.",
+        title: "Contact Dr Vinita Khemani | Expert Gynecologist in Kolkata",
+        description: "Contact Dr Vinita Khemani today to schedule an appointment. Trusted gynecologist in Kolkata for fertility, pregnancy, and women’s health.",
         type: "website",
     },
 };

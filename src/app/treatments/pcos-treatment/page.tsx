@@ -75,8 +75,8 @@ const faqs = [
     { q: "Who is the best doctor for PCOS treatment?", a: "Dr. Vinita Khemani is one of the most experienced gynecologists for PCOS treatment, with over 23 years of specialization in hormonal disorders and reproductive health. She practices at leading hospitals including Neotia Bhagirathi Woman and Child Care Centre, New Town, Kolkata, Charnock Hospital, and ILS Hospitals, Dumdums, Dumdum, offering evidence-based, personalized PCOS care to thousands of women across West Bengal." },
     { q: "Can PCOS be cured permanently?", a: "PCOS is a chronic, lifelong condition, meaning it cannot be \u2018cured\u2019 in the traditional sense. However, symptoms can be effectively managed and even reversed with the right combination of lifestyle changes, diet, and medical treatment, allowing women to lead healthy, fulfilling lives. Dr. Vinita Khemani\u2019s holistic approach at her clinics focuses on long-term symptom reversal rather than temporary fixes." },
     { q: "How long does PCOS treatment take?", a: "The duration of PCOS treatment varies depending on the severity of symptoms and individual goals. Initial hormonal improvements are often visible within 3\u20136 months of consistent treatment. However, since PCOS is a lifelong condition, ongoing lifestyle management is recommended. Dr. Khemani creates phased treatment plans that progressively reduce medication dependency while building sustainable habits." },
-    { q: "What is the cost of PCOS treatment?", a: "The cost of PCOS treatment depends on the specific investigations and treatment plan required. An initial consultation with Dr. Vinita Khemani includes a detailed hormonal evaluation and ultrasound assessment. Subsequent costs vary based on whether the treatment involves medication alone, fertility support, or lifestyle counseling. Dr. Khemani\u2019s clinics are affiliated with multiple hospitals across the region, offering flexible options for different budgets." },
-    { q: "Where is Dr. Vinita Khemani's clinic located?", a: "Dr. Vinita Khemani consults at multiple locations across the region for patient convenience: Neotia Bhagirathi Woman and Child Care Centre, New Town, Kolkata, Charnock Hospital, Apollo Clinic Chinar Park Chinar Park, Spandan Hospital, and ILS Hospitals, Dumdums, Dumdum. You can book an appointment at the location most convenient to you." },
+    { q: "What is the cost of PCOS treatment?", a: "The cost of PCOS/PCOD treatment depends on the specific investigations and treatment plan required. An initial consultation with Dr. Vinita Khemani includes a detailed hormonal evaluation and ultrasound assessment. Subsequent costs vary based on whether the treatment involves medication alone, fertility support, or lifestyle counseling. Dr. Khemani\u2019s clinics are affiliated with multiple hospitals across the region, offering flexible options for different budgets." },
+    { q: "What is the difference between PCOS and PCOD?", a: "While often used interchangeably, PCOD (Polycystic Ovarian Disease) is typically a milder condition where ovaries produce multiple immature eggs that turn into cysts. PCOS (Polycystic Ovary Syndrome) is a more severe metabolic and endocrine disorder involving higher androgen levels and elevated risks for diabetes and heart disease. Dr. Vinita Khemani provides precise diagnosis and tailored treatment for both conditions." },
     { q: "Will I be able to get pregnant with PCOS?", a: "Yes, absolutely. PCOS is one of the most treatable causes of infertility. While irregular ovulation makes natural conception harder, treatments like ovulation induction (medicine to stimulate egg release), lifestyle changes, and IUI have very high success rates. Dr. Khemani has helped thousands of women achieve successful pregnancies despite PCOS." },
     { q: "How is PCOS diagnosed?", a: "Diagnosis follows the Rotterdam Criteria, requiring at least 2 of 3 signs: 1) Irregular periods, 2) Signs of high androgens (acne, excess hair) or blood tests showing it, 3) Polycystic ovaries seen on ultrasound. At her clinics, Dr. Khemani also conducts comprehensive screening including insulin levels, thyroid function, and metabolic markers for a complete hormonal profile." },
     { q: "Does PCOS cause diabetes?", a: "More than half of women with PCOS develop Type 2 diabetes by age 40. This is due to insulin resistance, which is particularly common among Indian women. Regular screening and maintaining a healthy weight significantly reduce this risk. Dr. Khemani recommends annual metabolic screening for all her PCOS patients." },
@@ -102,23 +102,23 @@ export default function PCOSTreatmentPage() {
                                 <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
                                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border border-[#d4a5c4] bg-white/60 backdrop-blur-sm">
                                         <div className="w-2 h-2 rounded-full bg-[#C21975] animate-pulse" />
-                                        <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Polycystic Ovary Syndrome</span>
+                                        <span className="text-sm font-semibold tracking-wide text-[#C21975] uppercase">Polycystic Ovary Syndrome & PCOD</span>
                                     </div>
                                     <h1 className="font-display text-4xl md:text-5xl lg:text-[60px] leading-[1.1] font-bold tracking-tight mb-6">
-                                        <span className="text-gray-900">Expert PCOS Treatment</span> <br />
+                                        <span className="text-gray-900">Expert PCOS & PCOD Treatment</span> <br />
                                         <span className="italic text-[#C21975]">
                                             in Kolkata
                                         </span>
                                     </h1>
                                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
-                                        It&apos;s not just about irregular periods. Dr. Vinita Khemani, one of the city&apos;s most experienced gynecologists, offers a comprehensive, evidence-based approach to manage PCOS — tackling insulin resistance, fertility, body weight, and emotional well-being together.
+                                        It&apos;s not just about irregular periods. Dr. Vinita Khemani, one of the city&apos;s most experienced gynecologists, offers a comprehensive, evidence-based approach to manage PCOS and PCOD — tackling insulin resistance, fertility, body weight, and emotional well-being together.
                                     </p>
                                     <div className="flex flex-wrap gap-4">
                                         <button
                                             onClick={() => setIsEnquiryModalOpen(true)}
                                             className="group inline-flex items-center justify-center gap-3 pr-2 pl-8 py-1 rounded-full text-white font-semibold text-lg transition-transform hover:scale-105 shadow-xl bg-gradient-to-r from-[#C21975] to-[#8a2f5e]"
                                         >
-                                            Book PCOS Consultation
+                                            Book PCOS/PCOD Consultation
                                             <span className="w-12 h-12 rounded-full bg-white text-[#C21975] flex items-center justify-center transition-transform group-hover:rotate-45">
                                                 <ArrowUpRight className="w-6 h-6" />
                                             </span>
@@ -153,12 +153,12 @@ export default function PCOSTreatmentPage() {
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
                             <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-[#d4a5c4] text-[#C21975] bg-[#f5e6ef]/50">India&apos;s Silent Epidemic</span>
-                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">PCOS <br /><span className="text-[#C21975]">&amp; West Bengal</span></h2>
+                            <h2 className="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">PCOS & PCOD <br /><span className="text-[#C21975]">&amp; West Bengal</span></h2>
                             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                Polycystic Ovary Syndrome affects an estimated 1 in 5 Indian women of reproductive age, making it one of the most prevalent endocrine disorders in the country, and across West Bengal, the prevalence is particularly high — studies published in the Indian Journal of Endocrinology and Metabolism show rates ranging from 3.7% to 22.5% in urban populations, driven by sedentary lifestyles, high-carbohydrate Bengali diets, and increasing professional stress.
+                                Polycystic Ovary Syndrome (PCOS) and Polycystic Ovarian Disease (PCOD) affect an estimated 1 in 5 Indian women of reproductive age, making them one of the most prevalent endocrine disorders in the country, and across West Bengal, the prevalence is particularly high — studies published in the Indian Journal of Endocrinology and Metabolism show rates ranging from 3.7% to 22.5% in urban populations, driven by sedentary lifestyles, high-carbohydrate Bengali diets, and increasing professional stress.
                             </p>
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                What makes PCOS particularly challenging for women is the intersection of genetic predisposition, carb-heavy diets (rice, mishti, and traditional sweets being dietary staples), increasing stress levels in urban environments, and cultural stigma around discussing reproductive health openly. Dr. Vinita Khemani has been at the forefront of PCOS awareness and treatment for over 23 years, helping thousands of women across West Bengal understand, manage, and overcome PCOS.
+                                What makes PCOS and PCOD particularly challenging for women is the intersection of genetic predisposition, carb-heavy diets (rice, mishti, and traditional sweets being dietary staples), increasing stress levels in urban environments, and cultural stigma around discussing reproductive health openly. Dr. Vinita Khemani has been at the forefront of awareness and treatment for over 23 years, helping thousands of women across West Bengal understand, manage, and overcome from them.
                             </p>
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
                                 {[

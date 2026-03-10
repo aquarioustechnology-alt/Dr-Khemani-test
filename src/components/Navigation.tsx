@@ -50,18 +50,18 @@ const PcosIcon = ({ className }: { className?: string }) => (
 );
 
 const treatments = [
-  { href: "/treatments/pcos-treatment", label: "PCOS Treatment", icon: PcosIcon, desc: "Hormonal balance & management" },
-  { href: "/treatments/endometriosis", label: "Endometriosis", icon: Stethoscope, desc: "Specialized pain management" },
-  { href: "/treatments/advanced-laparoscopic-procedures", label: "Adv. Laparoscopic Procedures", icon: LaparoscopyIcon, desc: "Complex minimally invasive surgeries" },
-  { href: "/treatments/pregnancy-care", label: "Pregnancy Management", icon: Baby, desc: "Complete prenatal to postnatal care" },
-  { href: "/treatments/fertility", label: "Fertility Management", icon: FertilityIcon, desc: "Evidence-based fertility solutions" },
-  { href: "/treatments/family-planning", label: "Family Planning", icon: Users, desc: "Contraceptive & reproductive advice" },
-  { href: "/treatments/emergency-caesarean", label: "Emergency C-Section", icon: Activity, desc: "Urgent surgical delivery care" },
-  { href: "/treatments/hysterectomy", label: "Hysterectomy", icon: Scissors, desc: "Surgical removal of the uterus" },
-  { href: "/treatments/hysteroscopy", label: "Hysteroscopy", icon: Microscope, desc: "Uterine inspection & treatment" },
-  { href: "/treatments/ovarian-cystectomy", label: "Ovarian Cystectomy", icon: CircleDot, desc: "Cyst removal via laparoscopy" },
-  { href: "/treatments/high-risk-pregnancy", label: "High-Risk Pregnancy", icon: Shield, desc: "Care for complex pregnancies" },
-  { href: "/treatments/menopause", label: "Menopause Care", icon: Flower2, desc: "Menopause symptom management" },
+  { href: "/treatments/pcos-treatment", label: "PCOS & PCOD Treatment", icon: PcosIcon, desc: "Hormonal balance & management" },
+  { href: "/treatments/endometriosis-treatment", label: "Endometriosis", icon: Stethoscope, desc: "Specialized pain management" },
+  { href: "/treatments/advanced-laparoscopic-procedures-treatment", label: "Adv. Laparoscopic Procedures", icon: LaparoscopyIcon, desc: "Complex minimally invasive surgeries" },
+  { href: "/treatments/pregnancy-care-treatment", label: "Pregnancy Management", icon: Baby, desc: "Complete prenatal to postnatal care" },
+  { href: "/treatments/fertility-treatment", label: "Fertility Management", icon: FertilityIcon, desc: "Evidence-based fertility solutions" },
+  { href: "/treatments/family-planning-treatment", label: "Family Planning", icon: Users, desc: "Contraceptive & reproductive advice" },
+  { href: "/treatments/emergency-caesarean-treatment", label: "Emergency C-Section", icon: Activity, desc: "Urgent surgical delivery care" },
+  { href: "/treatments/hysterectomy-treatment", label: "Hysterectomy", icon: Scissors, desc: "Surgical removal of the uterus" },
+  { href: "/treatments/hysteroscopy-treatment", label: "Hysteroscopy", icon: Microscope, desc: "Uterine inspection & treatment" },
+  { href: "/treatments/ovarian-cystectomy-treatment", label: "Ovarian Cystectomy", icon: CircleDot, desc: "Cyst removal via laparoscopy" },
+  { href: "/treatments/high-risk-pregnancy-treatment", label: "High-Risk Pregnancy", icon: Shield, desc: "Care for complex pregnancies" },
+  { href: "/treatments/menopause-treatment", label: "Menopause Care", icon: Flower2, desc: "Menopause symptom management" },
 ];
 
 export function Navigation() {

@@ -69,7 +69,7 @@ const serviceCategories = [
         description: "Expert diagnosis and treatment for endometriosis, reducing pelvic pain and preserving fertility. We offer both medical management and advanced conservative surgery.",
         services: ["Pelvic Pain Assessment", "Diagnostic Laparoscopy", "Cyst Removal", "Adhesiolysis", "Fertility Preservation", "Long-term Management"],
         image: "/images/Laparoscopic Surgery.jpg",
-        href: "/treatments/endometriosis",
+        href: "/treatments/endometriosis-treatment",
         color: "#e8d5e0",
     },
     {
@@ -80,7 +80,7 @@ const serviceCategories = [
         description: `State-of-the-art keyhole surgeries for complex gynecological conditions. Dr. Khemani has performed ${calculateSurgeries()}+ procedures ensuring faster recovery, minimal pain, and tiny scars.`,
         services: ["Total Laparoscopic Hysterectomy", "Myomectomy (Fibroids)", "Complex Cystectomy", "Ectopic Pregnancy", "Tubal Recanalization", "Fertility Enhancing Surgery"],
         image: "/images/Laparoscopic Surgery.jpg",
-        href: "/treatments/advanced-laparoscopic-procedures",
+        href: "/treatments/advanced-laparoscopic-procedures-treatment",
         color: "#d4a5c4",
     },
     {
@@ -91,7 +91,7 @@ const serviceCategories = [
         description: "Holistic pregnancy care tailored to your journey. From the first heartbeat to delivery and beyond, we prioritize the health and safety of both mother and baby.",
         services: ["Prenatal Checkups", "Ultrasound Monitoring", "Nutrition Counseling", "Normal Delivery Focus", "Labor Pain Management", "Postnatal Care"],
         image: "/images/Pregnancy Care.png",
-        href: "/treatments/pregnancy-care",
+        href: "/treatments/pregnancy-care-treatment",
         color: "#f5e6ef",
     },
     {
@@ -102,7 +102,7 @@ const serviceCategories = [
         description: "Dedicated management for pregnancies complicated by diabetes, hypertension, multiple gestations, or age-related factors. We ensure close monitoring for the best outcomes.",
         services: ["Gestational Diabetes", "Preeclampsia Management", "Twin/Triplet Care", "Preterm Labor Prevention", "Recurrent Miscarriage", "Fetal Monitoring"],
         image: "/images/High-Risk Pregnancy.webp",
-        href: "/treatments/high-risk-pregnancy",
+        href: "/treatments/high-risk-pregnancy-treatment",
         color: "#e8d5e0",
     },
     {
@@ -113,7 +113,7 @@ const serviceCategories = [
         description: "Compassionate evaluation and evidence-based treatments for couples facing conception challenges. We offer a range of assisted reproductive technologies.",
         services: ["Fertility Profiling", "Ovulation Induction", "IUI (Intrauterine Insemination)", "IVF Coordination", "Male Infertility Support", "Counseling"],
         image: "/images/Fertility Treatment.webp",
-        href: "/treatments/fertility",
+        href: "/treatments/fertility-treatment",
         color: "#d4a5c4",
     },
     {
@@ -124,7 +124,7 @@ const serviceCategories = [
         description: "Confidential guidance on contraception and reproductive health. We help you choose the best method for your lifestyle and future family goals.",
         services: ["Contraceptive Counseling", "IUD Insertion/Removal", "Oral Contraceptives", "Permanent Sterilization", "Pre-conception Counseling", "Sexual Health"],
         image: "/images/2023-02-08.webp",
-        href: "/treatments/family-planning",
+        href: "/treatments/family-planning-treatment",
         color: "#f5e6ef",
     },
     {
@@ -135,7 +135,7 @@ const serviceCategories = [
         description: "Rapid response capability for emergency deliveries. Advanced surgical skill ensures the safety of mother and baby during unforeseen complications.",
         services: ["Fetal Distress Management", "Obstructed Labor", "Emergency Delivery", "NICU Backup", "Maternal Safety", "Post-Op Care"],
         image: "/images/High-Risk Pregnancy.webp",
-        href: "/treatments/emergency-caesarean",
+        href: "/treatments/emergency-caesarean-treatment",
         color: "#e8d5e0",
     },
     {
@@ -146,7 +146,7 @@ const serviceCategories = [
         description: "Removal of the uterus when medically necessary for fibroids, cancer prevention, or severe bleeding. Offering Laparoscopic, Abdominal, and Vaginal approaches.",
         services: ["Laparoscopic Hysterectomy", "Total/Subtotal Removal", "Ovary Preservation", "Fibroid Treatment", "Recovery Planning", "Hormonal Support"],
         image: "/images/Laparoscopic Surgery.jpg",
-        href: "/treatments/hysterectomy",
+        href: "/treatments/hysterectomy-treatment",
         color: "#d4a5c4",
     },
     {
@@ -157,7 +157,7 @@ const serviceCategories = [
         description: "Minimally invasive procedure to inspect the inside of the uterus. Used for diagnosing bleeding causes and treating polyps or septum without external cuts.",
         services: ["Diagnostic Hysteroscopy", "Polypectomy", "Septum Resection", "Adhesiolysis", "Biopsy", "Fibroid Resection"],
         image: "/images/Laparoscopic Surgery.jpg",
-        href: "/treatments/hysteroscopy",
+        href: "/treatments/hysteroscopy-treatment",
         color: "#f5e6ef",
     },
     {
@@ -168,7 +168,7 @@ const serviceCategories = [
         description: "Surgical removal of ovarian cysts while preserving the ovary and fertility. Specialized in treating dermoid, endometriotic, and simple cysts.",
         services: ["Laparoscopic Removal", "Fertility Preservation", "Pathology Review", "Pain Relief", "Cyst Surveillance", "Emergency Torsion Care"],
         image: "/images/Laparoscopic Surgery.jpg",
-        href: "/treatments/ovarian-cystectomy",
+        href: "/treatments/ovarian-cystectomy-treatment",
         color: "#e8d5e0",
     },
     {
@@ -179,7 +179,7 @@ const serviceCategories = [
         description: "Holistic support for women navigating menopause. Addressing hot flashes, bone health, and emotional well-being to ensure quality of life.",
         services: ["Symptom Management", "Hormone Replacement Therapy (HRT)", "Bone Density Check", "Heart Health", "Lifestyle Guidance", "Wellness Checks"],
         image: "/images/2023-02-08.webp",
-        href: "/treatments/menopause",
+        href: "/treatments/menopause-treatment",
         color: "#d4a5c4",
     },
 ];

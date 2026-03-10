@@ -498,13 +498,10 @@ export default function MenopausePage() {
             </section>
 
             {/* Shared CTA Section */}
-            <SharedCTA title="Navigate Menopause Confidently" subtitle="Schedule a consultation with Dr. Vinita Khemani for personalized menopause management." />
-
-            <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
-
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <SharedCTA title="Struggling with Menopause?" subtitle="Consult Dr. Vinita Khemani for expert menopause management and personalized HRT plans." />
+
             <EnquiryModal isOpen={isEnquiryModalOpen} onClose={() => setIsEnquiryModalOpen(false)} />
+
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
             <Footer />
         </main >

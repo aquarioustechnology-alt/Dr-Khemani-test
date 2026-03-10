@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "About Dr. Vinita Khemani | Best Gynecologist in Kolkata | 21+ Years Experience",
-    description: "Learn about Dr. Vinita Khemani – DGO, FOGSI Life Member, with 21+ years experience, 10,000+ patients treated, and 2,348+ successful deliveries. Best gynecologist & obstetrician in Kolkata.",
+    title: "About Dr Vinita Khemani | Leading Gynecologist in Kolkata",
+    description: "Meet Dr Vinita Khemani, a renowned gynecologist & fertility specialist in Kolkata. Expert care in pregnancy, PCOS, and women's health. Book now!",
     keywords: "dr vinita khemani, best gynecologist kolkata, lady gynecologist kolkata, obstetrician kolkata, FOGSI member kolkata, women health specialist kolkata",
     openGraph: {
-        title: "About Dr. Vinita Khemani | Best Gynecologist in Kolkata",
-        description: "21+ years experience, DGO in Obs & Gynae, FOGSI Life Member. 10,000+ patients treated. Available at 6 clinic locations across Kolkata.",
+        title: "About Dr Vinita Khemani | Leading Gynecologist in Kolkata",
+        description: "Meet Dr Vinita Khemani, a renowned gynecologist & fertility specialist in Kolkata. Expert care in pregnancy, PCOS, and women's health. Book now!",
         type: "profile",
     },
 };

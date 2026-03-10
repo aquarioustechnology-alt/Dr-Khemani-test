@@ -38,7 +38,7 @@ const services = [
     subtitle: "Complete prenatal to postnatal care",
     description: `Comprehensive prenatal care including regular checkups, ultrasound monitoring, nutrition counseling, and personalized birth planning. Dr. Khemani prioritizes normal delivery with over ${calculateDeliveries().toLocaleString()} successful deliveries.`,
     features: ["Prenatal Checkups", "Nutrition Guidance", "Delivery Planning", "Postnatal Care"],
-    href: "/treatments/pregnancy-care",
+    href: "/treatments/pregnancy-care-treatment",
     image: "/images/Pregnancy Care.png",
     color: "#f5e6ef",
     badgeText: "Maternity Care"
@@ -50,7 +50,7 @@ const services = [
     subtitle: "Specialized management for complex cases",
     description: "Expert management of high-risk pregnancies including gestational diabetes, preeclampsia, placenta previa, multiple pregnancies, and recurrent miscarriage with 24/7 monitoring protocols.",
     features: ["Risk Assessment", "Specialized Monitoring", "Emergency Protocols", "NICU Coordination"],
-    href: "/treatments/high-risk-pregnancy",
+    href: "/treatments/high-risk-pregnancy-treatment",
     image: "/images/High-Risk Pregnancy.webp",
     color: "#f5e6ef",
     badgeText: "Priority Care"
@@ -62,7 +62,7 @@ const services = [
     subtitle: "Evidence-based fertility solutions",
     description: "Comprehensive fertility evaluation and treatment including ovulation induction, IUI procedures, IVF coordination, and management of PCOS, endometriosis, and tubal factor infertility.",
     features: ["Fertility Testing", "Ovulation Induction", "IUI & IVF Coordination", "Hormonal Therapy"],
-    href: "/treatments/fertility",
+    href: "/treatments/fertility-treatment",
     image: "/images/Fertility Treatment.webp",
     color: "#f5e6ef",
     badgeText: "Fertility Specialist"

@@ -102,7 +102,7 @@ export function FocusSection() {
                                     <ArrowRight className="w-5 h-5" />
                                 </button>
                                 <Link
-                                    href="/treatments/fertility"
+                                    href="/treatments/fertility-treatment"
                                     className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white text-[#C21975] border border-[#d4a5c4] font-semibold text-base hover:bg-[#f5e6ef] transition-colors"
                                 >
                                     View Treatments

@@ -17,13 +17,13 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dr-khemani-test.vercel.app"),
-  title: "Dr. Vinita Khemani | Best Gynecologist & Obstetrician in Kolkata | 21+ Years Experience",
-  description: "Dr. Vinita Khemani is a senior Gynecologist & Obstetrician in Kolkata with 21+ years of experience, 10,000+ patients treated, and 2,348+ successful deliveries. Expert in high-risk pregnancy, laparoscopic surgery, PCOS treatment & fertility care. Available at 6 clinic locations across Kolkata.",
+  title: "Best Female Gynecologist in Kolkata | Dr Vinita Khemani",
+  description: "Consult Dr Vinita Khemani, top obstetrician in Kolkata, offering expert care for pregnancy, fertility, PCOS & women's health. Book a consultation today.",
   keywords: "gynecologist kolkata, best gynecologist in kolkata, obstetrician kolkata, pregnancy doctor kolkata, fertility specialist kolkata, dr vinita khemani, laparoscopic surgery kolkata, high risk pregnancy doctor, PCOS treatment kolkata, normal delivery doctor kolkata, painless delivery kolkata, women's health clinic bangur avenue",
   authors: [{ name: "Dr. Vinita Khemani" }],
   openGraph: {
-    title: "Dr. Vinita Khemani | Best Gynecologist in Kolkata | 10,000+ Patients Treated",
-    description: "Senior Gynecologist & Obstetrician in Kolkata with 21+ years experience, 2,348+ successful deliveries, 583+ laparoscopic surgeries. 4.5★ Google rated. Book appointment at 6 clinic locations.",
+    title: "Best Female Gynecologist in Kolkata | Dr Vinita Khemani",
+    description: "Consult Dr Vinita Khemani, top obstetrician in Kolkata, offering expert care for pregnancy, fertility, PCOS & women's health. Book a consultation today.",
     type: "website",
     locale: "en_IN",
     siteName: "Healing Touch Clinic - Dr. Vinita Khemani",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dr. Vinita Khemani | Best Gynecologist in Kolkata",
-    description: "21+ years experience | 10,000+ patients | 2,348+ deliveries | 583+ surgeries. Book appointment at Healing Touch Clinic, Kolkata.",
+    title: "Best Female Gynecologist in Kolkata | Dr Vinita Khemani",
+    description: "Consult Dr Vinita Khemani, top obstetrician in Kolkata, offering expert care for pregnancy, fertility, PCOS & women's health. Book a consultation today.",
     images: ["/images/OG.jpg"],
   },
   robots: {
