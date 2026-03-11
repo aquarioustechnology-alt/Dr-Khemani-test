@@ -21,7 +21,7 @@ const medicalServices = [
   { title: "Pregnancy Care", href: "/treatments/pregnancy-care-treatment" },
   { title: "High-Risk Pregnancy", href: "/treatments/high-risk-pregnancy-treatment" },
   { title: "Fertility Treatment", href: "/treatments/fertility-treatment" },
-  { title: "PCOS / PCOD Management", href: "/treatments/pcos-treatment" },
+  { title: "PCOS / PCOD Management", href: "/treatments/pcos-pcod-treatment" },
   { title: "Advanced Laparoscopic Procedures", href: "/treatments/advanced-laparoscopic-procedures" },
   { title: "Hysterectomy", href: "/treatments/hysterectomy-treatment" },
   { title: "Hysteroscopy", href: "/treatments/hysteroscopy-treatment" },

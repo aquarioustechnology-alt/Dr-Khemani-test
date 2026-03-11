@@ -58,7 +58,7 @@ const serviceCategories = [
         description: "Comprehensive management of Polycystic Ovary Syndrome (PCOS) addressing irregular periods, acne, weight gain, and infertility. Dr. Khemani focuses on lifestyle changes and targeted medical therapies.",
         services: ["Hormonal Evaluation", "Diet & Lifestyle Plan", "Menstrual Regulation", "Acne & Hirsutism Treatment", "Metabolic Health", "Fertility Support"],
         image: "/images/2023-04-06.webp",
-        href: "/treatments/pcos-treatment",
+        href: "/treatments/pcos-pcod-treatment",
         color: "#f5e6ef",
     },
     {

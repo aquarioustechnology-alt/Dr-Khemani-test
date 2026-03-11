@@ -50,7 +50,7 @@ const PcosIcon = ({ className }: { className?: string }) => (
 );
 
 const treatments = [
-  { href: "/treatments/pcos-treatment", label: "PCOS & PCOD Treatment", icon: PcosIcon, desc: "Hormonal balance & management" },
+  { href: "/treatments/pcos-pcod-treatment", label: "PCOS & PCOD Treatment", icon: PcosIcon, desc: "Hormonal balance & management" },
   { href: "/treatments/endometriosis-treatment", label: "Endometriosis", icon: Stethoscope, desc: "Specialized pain management" },
   { href: "/treatments/advanced-laparoscopic-procedures", label: "Adv. Laparoscopic Procedures", icon: LaparoscopyIcon, desc: "Complex minimally invasive surgeries" },
   { href: "/treatments/pregnancy-care-treatment", label: "Pregnancy Management", icon: Baby, desc: "Complete prenatal to postnatal care" },

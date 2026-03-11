@@ -307,7 +307,7 @@ export default function FertilityPage() {
                                 <h3 className="font-display text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-4">
                                     Comprehensive Evaluation First, Not IVF First
                                 </h3>
-                                <p className="text-gray-600 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: "Many clinics push couples towards IVF immediately. Dr. Khemani starts with thorough hormonal panels, semen analysis, HSG, and ovulation tracking, which is especially critical for patients needing <a href='/treatments/pcos-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>dedicated PCOS care</a>." }} />
+                                <p className="text-gray-600 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: "Many clinics push couples towards IVF immediately. Dr. Khemani starts with thorough hormonal panels, semen analysis, HSG, and ovulation tracking, which is especially critical for patients needing <a href='/treatments/pcos-pcod-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>dedicated PCOS care</a>." }} />
                             </div>
                             <div className="bg-gradient-to-br from-[#C21975] to-[#8a2f5e] rounded-[2rem] p-8 flex flex-col justify-between flex-1 shadow-sm">
                                 <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center mb-5">

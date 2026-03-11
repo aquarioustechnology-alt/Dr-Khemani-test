@@ -444,7 +444,7 @@ export default function EndometriosisPage() {
                                     Excision Over Ablation — The Gold Standard
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">
-                                    While many surgeons use ablation (burning) which leaves disease behind, Dr. Khemani performs thorough excision surgery — cutting out endometrial implants completely. Studies show excision reduces recurrence by up to 80% compared to ablation techniques.
+                                    While many surgeons use ablation (burning) which leaves disease behind, Dr. Khemani performs thorough excision surgery — cutting out endometrial implants completely. Studies show excision reduces recurrence by up to 80% compared to ablation techniques, although <a href='/treatments/hysterectomy-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>total reproductive organ removal</a> remains an option when conservative treatments are insufficient.
                                 </p>
                             </div>
                             <div className="bg-gradient-to-br from-[#C21975] to-[#8a2f5e] rounded-[2rem] p-8 flex flex-col justify-between flex-1 shadow-sm">
