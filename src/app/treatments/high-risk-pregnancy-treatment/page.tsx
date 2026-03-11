@@ -13,7 +13,7 @@ import { SharedCTA } from "@/components/SharedCTA";
 import { EnquiryModal } from "@/components/EnquiryModal";
 
 const riskConditions = [
-    { icon: HeartPulse, title: "Gestational Diabetes", desc: "Comprehensive glucose monitoring, insulin management, and dietary guidance for gestational diabetes to protect both mother and baby, complementing our <a href='/treatments/pregnancy-care-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>holistic pregnancy care routines</a>." },
+    { icon: HeartPulse, title: "Gestational Diabetes", desc: "Comprehensive glucose monitoring, insulin management, and dietary guidance for gestational diabetes to protect both mother and baby, complementing our <a href='/treatments/pregnancy-management' className='text-gray-900 hover:text-[#C21975] transition-colors'>holistic pregnancy care routines</a>." },
     { icon: AlertTriangle, title: "Preeclampsia / Eclampsia", desc: "Early detection through regular BP monitoring, urine testing, and blood work. Timely intervention and delivery planning." },
     { icon: Baby, title: "Multiple Pregnancies", desc: "Specialized care for twin and higher-order pregnancies with frequent monitoring, nutritional support, and delivery planning, including readiness for <a href='/treatments/emergency-caesarean-procedures' className='text-gray-900 hover:text-[#C21975] transition-colors'>emergency caesarean procedures</a> if complications arise." },
     { icon: Activity, title: "Recurrent Miscarriage", desc: "Thorough investigation (thrombophilia, immunology, anatomy) and progesterone support for women with recurrent pregnancy loss." },

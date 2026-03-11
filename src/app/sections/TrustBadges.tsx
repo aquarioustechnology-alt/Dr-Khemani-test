@@ -105,7 +105,7 @@ export function TrustBadges() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Link href="/about" className="btn-secondary">
+          <Link href="/about-dr-vinita-khemani" className="btn-secondary">
             Know More About Doctor
             <ArrowRight className="w-5 h-5" />
           </Link>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect, useRef } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/app/sections/Footer";
 import { motion } from "framer-motion";
@@ -7,146 +8,40 @@ import Image from "next/image";
 import Link from "next/link";
 import { Calendar, ArrowRight, Clock, User } from "lucide-react";
 
-const blogPosts = [
-    {
-        id: "1",
-        slug: "a-quick-guide-on-pcos-and-how-to-beat-it-without-fear",
-        title: "A Quick Guide on PCOS and How to Beat It without Fear",
-        excerpt: "The impact of PCOS extends to various symptoms that can significantly affect a woman's quality of life. In this blog post, we will provide a comprehensive overview of PCOS, exploring its causes and treatments.",
-        category: "PCOS",
-        readTime: "5 min read",
-        date: "Apr 13, 2023",
-        image: "/images/blog/pcos-treatment.jpg",
-        featured: true,
-    },
-    {
-        id: "2",
-        slug: "the-importance-of-family-planning-understanding-contraception",
-        title: "The Importance of Family Planning: Understanding Contraception",
-        excerpt: "Navigating married life can be challenging, and making decisions about family planning is no exception. Choosing the right contraceptive method is an essential part of every couple's life.",
-        category: "Family Planning",
-        readTime: "4 min read",
-        date: "Apr 5, 2023",
-        image: "/images/blog/family-planning.jpg",
-        featured: true,
-    },
-    {
-        id: "3",
-        slug: "holistic-approaches-to-fertility-management",
-        title: "Holistic Approaches to Fertility Management",
-        excerpt: "Lack of Fertility can be a worrying and challenging experience for couples trying to conceive. However, adopting a holistic approach to fertility management can provide hope and empower individuals.",
-        category: "Fertility",
-        readTime: "6 min read",
-        date: "Mar 29, 2023",
-        image: "/images/blog/infertility-management.jpg",
-        featured: false,
-    },
-    {
-        id: "4",
-        slug: "understanding-fertility-management",
-        title: "Understanding Fertility Management",
-        excerpt: "Fertility issues can be a difficult and emotional journey for many couples, but understanding the available options can offer hope and support. In this blog, we will provide an overview of the various treatments.",
-        category: "Fertility",
-        readTime: "5 min read",
-        date: "Mar 22, 2023",
-        image: "/images/blog/understanding-fertility.jpg",
-        featured: false,
-    },
-    {
-        id: "5",
-        slug: "mid-cycle-spotting-should-you-be-worried",
-        title: "Mid-Cycle Spotting: Should You be Worried?",
-        excerpt: "Mid-cycle spotting, also known as breakthrough bleeding, can be a common occurrence for many women. However, it can also be a source of concern and anxiety for those who experience it.",
-        category: "Gynecology",
-        readTime: "3 min read",
-        date: "Mar 15, 2023",
-        image: "/images/blog/mid-cycle-spotting.jpg",
-        featured: false,
-    },
-    {
-        id: "6",
-        slug: "what-is-vaginal-infection-all-you-should-know",
-        title: "What is Vaginal Infection? All You Should Know",
-        excerpt: "Vaginal infections are common. Although they can be uncomfortable and unpleasant, most vaginal infections are not serious and can be easily treated. Learn about symptoms and prevention.",
-        category: "Gynecology",
-        readTime: "4 min read",
-        date: "Mar 9, 2023",
-        image: "/images/blog/vaginal-infection.jpg",
-        featured: false,
-    },
-    {
-        id: "7",
-        slug: "how-does-egg-freezing-work",
-        title: "How Does Egg Freezing Work?",
-        excerpt: "Egg freezing, also known as oocyte cryopreservation, is a fertility preservation technique that involves extracting a woman's eggs and freezing them at a very low temperature (-196°C) for later use.",
-        category: "Fertility",
-        readTime: "6 min read",
-        date: "Feb 28, 2023",
-        image: "/images/blog/egg-freezing.jpg",
-        featured: false,
-    },
-    {
-        id: "8",
-        slug: "pregnancy-and-sleep-how-to-sleep-well-when-expecting",
-        title: "Pregnancy and Sleep: How to Sleep Well When Expecting",
-        excerpt: "During pregnancy, sleep can be disrupted by several factors. These may include physical discomfort, hormonal changes, and stress. Learn tips for better sleep during pregnancy.",
-        category: "Pregnancy",
-        readTime: "5 min read",
-        date: "Feb 5, 2023",
-        image: "/images/blog/pregnancy-sleep.jpg",
-        featured: false,
-    },
-    {
-        id: "9",
-        slug: "the-psychological-impact-of-fertility-challenges-in-women",
-        title: "The Psychological Impact of Fertility Challenges in Women",
-        excerpt: "Fertility issues can profoundly affect a woman’s mental and emotional well-being, triggering a range of complex emotions. Understanding this impact is crucial for holistic care.",
-        category: "Fertility",
-        readTime: "7 min read",
-        date: "Jan 27, 2023",
-        image: "/images/blog/fertility-psychology.jpg",
-        featured: false,
-    },
-    {
-        id: "10",
-        slug: "7-common-fertility-questions-couples-who-cant-conceive-ask",
-        title: "7 Common Fertility Questions Couples Ask",
-        excerpt: "There are many potential reasons why couples may have difficulty conceiving. Here are answers to common questions couples ask when facing fertility challenges.",
-        category: "Fertility",
-        readTime: "5 min read",
-        date: "Jan 7, 2023",
-        image: "/images/blog/fertility-questions.jpg",
-        featured: false,
-    },
-    {
-        id: "11",
-        slug: "maternity-leave-in-india-what-every-working-women-should-know",
-        title: "Maternity Leave in India: What Every Working Woman Should Know",
-        excerpt: "India has come a long way regarding maternity leave policy. While the Maternity Benefit Act still has gaps, recent reforms have improved rights for working mothers.",
-        category: "General",
-        readTime: "5 min read",
-        date: "Dec 30, 2022",
-        image: "/images/blog/maternity-leave.jpg",
-        featured: false,
-    },
-    {
-        id: "12",
-        slug: "9-tips-to-avoid-infections-during-pregnancy",
-        title: "9 Tips to Avoid Infections During Pregnancy",
-        excerpt: "Infections during pregnancy can comply complications. Learn essential hygiene and lifestyle tips to keep yourself and your baby safe from infections.",
-        category: "Pregnancy",
-        readTime: "4 min read",
-        date: "Dec 24, 2022",
-        image: "/images/blog/pregnancy-infections.jpg",
-        featured: false,
-    }
-];
+import { blogPosts, blogCategories } from "@/lib/blogData";
 
 const categories = ["All", "Fertility", "Pregnancy", "PCOS", "Gynecology", "Family Planning"];
 
 export default function BlogPage() {
-    const featuredPosts = blogPosts.filter(p => p.featured);
-    const regularPosts = blogPosts.filter(p => !p.featured);
+    const [selectedCategory, setSelectedCategory] = useState("All");
+
+    const filteredPosts = selectedCategory === "All"
+        ? blogPosts
+        : blogPosts.filter(p => p.category === selectedCategory);
+
+    const featuredPosts = filteredPosts.filter(p => p.featured);
+    const allRegularPosts = filteredPosts.filter(p => !p.featured);
+    
+    const [visibleCount, setVisibleCount] = useState(12);
+    const regularPosts = allRegularPosts.slice(0, visibleCount);
+    const loaderRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setVisibleCount((prev) => Math.min(prev + 12, allRegularPosts.length));
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (loaderRef.current) {
+            observer.observe(loaderRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, [allRegularPosts.length]);
 
     return (
         <main className="relative bg-gray-50/50">
@@ -174,56 +69,62 @@ export default function BlogPage() {
                     </div>
 
                     {/* Featured Posts Grid - Modern Masonry Style */}
-                    <div className="grid lg:grid-cols-2 gap-8 mb-20">
-                        {featuredPosts.map((post, i) => (
-                            <motion.article
-                                key={post.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 + (i * 0.1) }}
-                                className="group relative bg-white rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
-                            >
-                                <div className="aspect-[16/9] w-full relative overflow-hidden">
-                                    <Image
-                                        src={post.image}
-                                        alt={post.title}
-                                        fill
-                                        className="object-cover group-hover:scale-105 transition-transform duration-700"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-70 transition-opacity" />
-                                    <div className="absolute top-6 left-6">
-                                        <span className="px-4 py-2 rounded-full bg-white/95 backdrop-blur text-sm font-bold text-[#C21975] shadow-sm">
-                                            {post.category}
-                                        </span>
+                    {featuredPosts.length > 0 && (
+                        <div className="grid lg:grid-cols-2 gap-8 mb-20">
+                            {featuredPosts.map((post, i) => (
+                                <motion.article
+                                    key={post.id}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.2 + (i * 0.1) }}
+                                    className="group relative bg-white rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                                >
+                                    <div className="aspect-[16/9] w-full relative overflow-hidden">
+                                        <Image
+                                            src={post.image}
+                                            alt={post.title}
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-70 transition-opacity" />
+                                        <div className="absolute top-6 left-6">
+                                            <span className="px-4 py-2 rounded-full bg-white/95 backdrop-blur text-sm font-bold text-[#C21975] shadow-sm">
+                                                {post.category}
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="p-8 lg:p-10">
-                                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-4 font-medium">
-                                        <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> {post.date}</span>
-                                        <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> {post.readTime}</span>
+                                    <div className="p-8 lg:p-10">
+                                        <div className="flex items-center gap-4 text-sm text-gray-500 mb-4 font-medium">
+                                            <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> {post.date}</span>
+                                            <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> {post.readTime}</span>
+                                        </div>
+                                        <Link href={`/blog/${post.slug}`}>
+                                            <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4 group-hover:text-[#C21975] transition-colors leading-tight">
+                                                {post.title}
+                                            </h2>
+                                        </Link>
+                                        <p className="text-gray-600 text-lg leading-relaxed mb-6 line-clamp-3">
+                                            {post.excerpt}
+                                        </p>
+                                        <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-[#C21975] font-bold tracking-wide hover:gap-3 transition-all">
+                                            Read Full Article <ArrowRight className="w-5 h-5" />
+                                        </Link>
                                     </div>
-                                    <Link href={`/blog/${post.slug}`}>
-                                        <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4 group-hover:text-[#C21975] transition-colors leading-tight">
-                                            {post.title}
-                                        </h2>
-                                    </Link>
-                                    <p className="text-gray-600 text-lg leading-relaxed mb-6 line-clamp-3">
-                                        {post.excerpt}
-                                    </p>
-                                    <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-[#C21975] font-bold tracking-wide hover:gap-3 transition-all">
-                                        Read Full Article <ArrowRight className="w-5 h-5" />
-                                    </Link>
-                                </div>
-                            </motion.article>
-                        ))}
-                    </div>
+                                </motion.article>
+                            ))}
+                        </div>
+                    )}
 
                     {/* Simple Category Filter */}
                     <div className="flex flex-wrap justify-center gap-3 mb-16">
                         {categories.map((cat, i) => (
                             <button
                                 key={i}
-                                className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${i === 0
+                                onClick={() => {
+                                    setSelectedCategory(cat);
+                                    setVisibleCount(12);
+                                }}
+                                className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${selectedCategory === cat
                                     ? 'bg-[#C21975] text-white shadow-lg shadow-[#C21975]/25'
                                     : 'bg-white text-gray-600 hover:bg-[#fff5f9] hover:text-[#C21975] border border-gray-200'
                                     }`}
@@ -234,7 +135,7 @@ export default function BlogPage() {
                     </div>
 
                     {/* Regular Posts Grid */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                         {regularPosts.map((post, i) => (
                             <motion.article
                                 key={post.id}
@@ -285,6 +186,13 @@ export default function BlogPage() {
                             </motion.article>
                         ))}
                     </div>
+
+                    {/* Infinite Scroll Loader */}
+                    {visibleCount < allRegularPosts.length && (
+                        <div ref={loaderRef} className="py-12 flex justify-center">
+                            <div className="w-8 h-8 rounded-full border-4 border-gray-200 border-t-[#C21975] animate-spin"></div>
+                        </div>
+                    )}
                 </div>
             </section>
 

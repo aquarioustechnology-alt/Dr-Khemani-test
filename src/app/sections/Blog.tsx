@@ -5,42 +5,12 @@ import Link from "next/link";
 import { ArrowRight, Calendar, User, Clock } from "lucide-react";
 import Image from "next/image";
 
-// Latest 3 blog posts from the verified list
-const blogPosts = [
-    {
-        id: "1",
-        slug: "a-quick-guide-on-pcos-and-how-to-beat-it-without-fear",
-        title: "A Quick Guide on PCOS and How to Beat It without Fear",
-        excerpt: "The impact of PCOS extends to various symptoms that can significantly affect a woman's quality of life. In this blog post, we will provide a comprehensive overview of PCOS.",
-        category: "PCOS",
-        readTime: "5 min read",
-        date: "Apr 13, 2023",
-        image: "/images/blog/pcos-treatment.jpg",
-        author: "Dr. Vinita Khemani"
-    },
-    {
-        id: "2",
-        slug: "the-importance-of-family-planning-understanding-contraception",
-        title: "The Importance of Family Planning: Understanding Contraception",
-        excerpt: "Navigating married life can be challenging, and making decisions about family planning is no exception. Choosing the right contraceptive method is essential.",
-        category: "Family Planning",
-        readTime: "4 min read",
-        date: "Apr 5, 2023",
-        image: "/images/blog/family-planning.jpg",
-        author: "Dr. Vinita Khemani"
-    },
-    {
-        id: "3",
-        slug: "holistic-approaches-to-fertility-management",
-        title: "Holistic Approaches to Fertility Management",
-        excerpt: "Lack of Fertility can be a worrying and challenging experience. However, adopting a holistic approach to fertility management can provide hope and empower individuals.",
-        category: "Fertility",
-        readTime: "6 min read",
-        date: "Mar 29, 2023",
-        image: "/images/blog/infertility-management.jpg",
-        author: "Dr. Vinita Khemani"
-    }
-];
+import { blogPosts as allBlogPosts } from "@/lib/blogData";
+
+const blogPosts = allBlogPosts.slice(0, 3).map(post => ({
+    ...post,
+    author: "Dr. Vinita Khemani"
+}));
 
 export function Blog() {
     return (

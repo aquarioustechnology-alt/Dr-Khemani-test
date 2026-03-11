@@ -222,7 +222,7 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Link href="/stories" className="btn-secondary">
+          <Link href="/patient-success-stories" className="btn-secondary">
             Read All Stories
           </Link>
         </motion.div>

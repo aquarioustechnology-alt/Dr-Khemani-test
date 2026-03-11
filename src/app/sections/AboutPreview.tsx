@@ -138,7 +138,7 @@ export function AboutPreview() {
 
             <div className="flex items-center justify-between mt-8 gap-2">
               <Link
-                href="/about"
+                href="/about-dr-vinita-khemani"
                 className="inline-flex items-center gap-2 text-[#C21975] font-semibold group-hover:gap-3 transition-all underline decoration-[#C21975]/30 underline-offset-4"
               >
                 Learn More

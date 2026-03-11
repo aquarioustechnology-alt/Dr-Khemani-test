@@ -9,9 +9,9 @@ import { EnquiryModal } from "./EnquiryModal";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Doctor" },
+  { href: "/about-dr-vinita-khemani", label: "About Doctor" },
   { href: "/treatments", label: "Treatments", isDropdown: true },
-  { href: "/stories", label: "Patient Stories" },
+  { href: "/patient-success-stories", label: "Patient Stories" },
   { href: "/clinic-schedule", label: "Clinic Schedule" },
   { href: "/contact", label: "Contact" },
 ];
@@ -53,12 +53,12 @@ const treatments = [
   { href: "/treatments/pcos-pcod-treatment", label: "PCOS & PCOD Treatment", icon: PcosIcon, desc: "Hormonal balance & management" },
   { href: "/treatments/endometriosis-treatment", label: "Endometriosis", icon: Stethoscope, desc: "Specialized pain management" },
   { href: "/treatments/advanced-laparoscopic-procedures", label: "Adv. Laparoscopic Procedures", icon: LaparoscopyIcon, desc: "Complex minimally invasive surgeries" },
-  { href: "/treatments/pregnancy-care-treatment", label: "Pregnancy Management", icon: Baby, desc: "Complete prenatal to postnatal care" },
-  { href: "/treatments/fertility-treatment", label: "Fertility Management", icon: FertilityIcon, desc: "Evidence-based fertility solutions" },
+  { href: "/treatments/pregnancy-management", label: "Pregnancy Management", icon: Baby, desc: "Complete prenatal to postnatal care" },
+  { href: "/treatments/fertility-management", label: "Fertility Management", icon: FertilityIcon, desc: "Evidence-based fertility solutions" },
   { href: "/treatments/family-planning", label: "Family Planning", icon: Users, desc: "Contraceptive & reproductive advice" },
   { href: "/treatments/emergency-caesarean-procedures", label: "Emergency C-Section", icon: Activity, desc: "Urgent surgical delivery care" },
-  { href: "/treatments/hysterectomy-treatment", label: "Hysterectomy", icon: Scissors, desc: "Surgical removal of the uterus" },
-  { href: "/treatments/hysteroscopy-treatment", label: "Hysteroscopy", icon: Microscope, desc: "Uterine inspection & treatment" },
+  { href: "/treatments/hysterectomy", label: "Hysterectomy", icon: Scissors, desc: "Surgical removal of the uterus" },
+  { href: "/treatments/hysteroscopy", label: "Hysteroscopy", icon: Microscope, desc: "Uterine inspection & treatment" },
   { href: "/treatments/ovarian-cystectomy-treatment", label: "Ovarian Cystectomy", icon: CircleDot, desc: "Cyst removal via laparoscopy" },
   { href: "/treatments/high-risk-pregnancy-treatment", label: "High-Risk Pregnancy", icon: Shield, desc: "Care for complex pregnancies" },
   { href: "/treatments/menopause-care", label: "Menopause Care", icon: Flower2, desc: "Menopause symptom management" },

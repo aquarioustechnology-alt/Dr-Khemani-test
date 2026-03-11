@@ -38,7 +38,7 @@ const services = [
     subtitle: "Complete prenatal to postnatal care",
     description: `Comprehensive prenatal care including regular checkups, ultrasound monitoring, nutrition counseling, and personalized birth planning. Dr. Khemani prioritizes normal delivery with over ${calculateDeliveries().toLocaleString()} successful deliveries.`,
     features: ["Prenatal Checkups", "Nutrition Guidance", "Delivery Planning", "Postnatal Care"],
-    href: "/treatments/pregnancy-care-treatment",
+    href: "/treatments/pregnancy-management",
     image: "/images/Pregnancy Care.png",
     color: "#f5e6ef",
     badgeText: "Maternity Care"
@@ -62,7 +62,7 @@ const services = [
     subtitle: "Evidence-based fertility solutions",
     description: "Comprehensive fertility evaluation and treatment including ovulation induction, IUI procedures, IVF coordination, and management of PCOS, endometriosis, and tubal factor infertility.",
     features: ["Fertility Testing", "Ovulation Induction", "IUI & IVF Coordination", "Hormonal Therapy"],
-    href: "/treatments/fertility-treatment",
+    href: "/treatments/fertility-management",
     image: "/images/Fertility Treatment.webp",
     color: "#f5e6ef",
     badgeText: "Fertility Specialist"

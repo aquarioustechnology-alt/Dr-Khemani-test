@@ -79,7 +79,7 @@ const services = [
         icon: Sun,
         title: "Wellness Programs",
         subtitle: "Thriving in your second spring",
-        description: "Menopause is a time for renewal. Our holistic wellness programs focus on nutrition, physical activity, and stress management to ensure your <a href='/treatments/pregnancy-care-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>holistic health</a> and overall well-being every day.",
+        description: "Menopause is a time for renewal. Our holistic wellness programs focus on nutrition, physical activity, and stress management to ensure your <a href='/treatments/pregnancy-management' className='text-gray-900 hover:text-[#C21975] transition-colors'>holistic health</a> and overall well-being every day.",
         features: ["Nutritional Planning", "Sexual Health Support", "Yoga & Meditation", "Weight Management"],
         image: "/images/menopause_wellness_1771240070819.png",
         color: "#f5e6ef",

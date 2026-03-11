@@ -89,9 +89,9 @@ const serviceCategories = [
         title: "Pregnancy Management",
         subtitle: "Complete Prenatal to Postnatal Care",
         description: "Holistic pregnancy care tailored to your journey. From the first heartbeat to delivery and beyond, we prioritize the health and safety of both mother and baby.",
-        services: ["Comprehensive prenatal checkups to monitor fetal development and maternal health, including preparation for <a href='/treatments/pregnancy-care-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>painless delivery</a> options if desired.", "Ultrasound Monitoring", "Nutrition Counseling", "Normal Delivery Focus", "Labor Pain Management", "Postnatal Care"],
+        services: ["Comprehensive prenatal checkups to monitor fetal development and maternal health, including preparation for <a href='/treatments/pregnancy-management' className='text-gray-900 hover:text-[#C21975] transition-colors'>painless delivery</a> options if desired.", "Ultrasound Monitoring", "Nutrition Counseling", "Normal Delivery Focus", "Labor Pain Management", "Postnatal Care"],
         image: "/images/Pregnancy Care.png",
-        href: "/treatments/pregnancy-care-treatment",
+        href: "/treatments/pregnancy-management",
         color: "#f5e6ef",
     },
     {
@@ -113,7 +113,7 @@ const serviceCategories = [
         description: "Compassionate evaluation and evidence-based treatments for couples facing conception challenges. We offer a range of assisted reproductive technologies.",
         services: ["Fertility Profiling", "Ovulation Induction", "IUI (Intrauterine Insemination)", "IVF Coordination", "Male Infertility Support", "Counseling"],
         image: "/images/Fertility Treatment.webp",
-        href: "/treatments/fertility-treatment",
+        href: "/treatments/fertility-management",
         color: "#d4a5c4",
     },
     {
@@ -146,7 +146,7 @@ const serviceCategories = [
         description: "Removal of the uterus when medically necessary for fibroids, cancer prevention, or severe bleeding. Offering Laparoscopic, Abdominal, and Vaginal approaches.",
         services: ["Laparoscopic Hysterectomy", "Total/Subtotal Removal", "Ovary Preservation", "Fibroid Treatment", "Recovery Planning", "Hormonal Support"],
         image: "/images/Laparoscopic Surgery.jpg",
-        href: "/treatments/hysterectomy-treatment",
+        href: "/treatments/hysterectomy",
         color: "#d4a5c4",
     },
     {
@@ -157,7 +157,7 @@ const serviceCategories = [
         description: "Minimally invasive procedure to inspect the inside of the uterus. Used for diagnosing bleeding causes and treating polyps or septum without external cuts.",
         services: ["Diagnostic Hysteroscopy", "Polypectomy", "Septum Resection", "Adhesiolysis", "Biopsy", "Fibroid Resection"],
         image: "/images/Laparoscopic Surgery.jpg",
-        href: "/treatments/hysteroscopy-treatment",
+        href: "/treatments/hysteroscopy",
         color: "#f5e6ef",
     },
     {

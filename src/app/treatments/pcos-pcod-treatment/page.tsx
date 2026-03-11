@@ -36,7 +36,7 @@ const causes = [
     },
     {
         title: "Hormonal Imbalance",
-        desc: "PCOS creates a disconnect in brain-ovary signaling. Elevated levels of Luteinizing Hormone (LH) prevent eggs from fully maturing and releasing. Instead of ovulating, the follicles remain as small fluid-filled sacs or 'cysts'. Simultaneously, high androgen levels trigger physical symptoms like acne, unwanted facial hair growth, and scalp thinning, which may also affect your chances of conceiving and often requires support through <a href='/treatments/fertility-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>advanced fertility care</a>.",
+        desc: "PCOS creates a disconnect in brain-ovary signaling. Elevated levels of Luteinizing Hormone (LH) prevent eggs from fully maturing and releasing. Instead of ovulating, the follicles remain as small fluid-filled sacs or 'cysts'. Simultaneously, high androgen levels trigger physical symptoms like acne, unwanted facial hair growth, and scalp thinning, which may also affect your chances of conceiving and often requires support through <a href='/treatments/fertility-management' className='text-gray-900 hover:text-[#C21975] transition-colors'>advanced fertility care</a>.",
         icon: Scale
     },
     {
@@ -691,7 +691,7 @@ export default function PCOSTreatmentPage() {
                     <div className="grid lg:grid-cols-3 gap-8 mb-12">
                         {[
                             { num: "23+", title: "Years Experience", desc: "Two decades of specialization in hormonal disorders and reproductive health." },
-                            { num: "10,000+", title: "Happy Patients", desc: "Trusted by thousands of women across Bengal for compassionate, result-oriented guidance for <a href='/treatments/pregnancy-care-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>pregnancy care and hormonal health</a>" },
+                            { num: "10,000+", title: "Happy Patients", desc: "Trusted by thousands of women across Bengal for compassionate, result-oriented guidance for <a href='/treatments/pregnancy-management' className='text-gray-900 hover:text-[#C21975] transition-colors'>pregnancy care and hormonal health</a>" },
                             { num: "608+", title: "Successful Surgeries", desc: "Including laparoscopic ovarian drilling for PCOS cases resistant to medical management." }
                         ].map((item, i) => (
                             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}

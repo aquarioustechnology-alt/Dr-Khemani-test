@@ -9,8 +9,8 @@ import { EnquiryModal } from "@/components/EnquiryModal";
 import { FormStatusDialog } from "@/components/FormStatusDialog";
 
 const quickLinks = [
-  { label: "About Dr. Vinita", href: "/about" },
-  { label: "Patient Success Stories", href: "/stories" },
+  { label: "About Dr. Vinita", href: "/about-dr-vinita-khemani" },
+  { label: "Patient Success Stories", href: "/patient-success-stories" },
   { label: "Women's Health Blog", href: "/blog" },
   { label: "Contact Clinic", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy-policy" },
@@ -18,13 +18,13 @@ const quickLinks = [
 ];
 
 const medicalServices = [
-  { title: "Pregnancy Care", href: "/treatments/pregnancy-care-treatment" },
+  { title: "Pregnancy Care", href: "/treatments/pregnancy-management" },
   { title: "High-Risk Pregnancy", href: "/treatments/high-risk-pregnancy-treatment" },
-  { title: "Fertility Treatment", href: "/treatments/fertility-treatment" },
+  { title: "Fertility Treatment", href: "/treatments/fertility-management" },
   { title: "PCOS / PCOD Management", href: "/treatments/pcos-pcod-treatment" },
   { title: "Advanced Laparoscopic Procedures", href: "/treatments/advanced-laparoscopic-procedures" },
-  { title: "Hysterectomy", href: "/treatments/hysterectomy-treatment" },
-  { title: "Hysteroscopy", href: "/treatments/hysteroscopy-treatment" },
+  { title: "Hysterectomy", href: "/treatments/hysterectomy" },
+  { title: "Hysteroscopy", href: "/treatments/hysteroscopy" },
   { title: "Endometriosis", href: "/treatments/endometriosis-treatment" },
   { title: "Ovarian Cystectomy", href: "/treatments/ovarian-cystectomy-treatment" },
   { title: "Menopause Care", href: "/treatments/menopause-care" },

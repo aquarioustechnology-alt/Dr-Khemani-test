@@ -15,7 +15,7 @@ import { EnquiryModal } from "@/components/EnquiryModal";
 const treatmentOptions = [
     {
         title: "Fertility Evaluation",
-        desc: "Complete hormonal panel, ultrasound assessment, HSG (fallopian tube check), semen analysis, and AMH testing to identify the root cause of infertility, sometimes complemented by <a href='/treatments/hysteroscopy-treatment' className='text-gray-900 hover:text-[#C21975] transition-colors'>minimally invasive uterine assessment</a> to ensure a healthy implantation environment.",
+        desc: "Complete hormonal panel, ultrasound assessment, HSG (fallopian tube check), semen analysis, and AMH testing to identify the root cause of infertility, sometimes complemented by <a href='/treatments/hysteroscopy' className='text-gray-900 hover:text-[#C21975] transition-colors'>minimally invasive uterine assessment</a> to ensure a healthy implantation environment.",
         icon: Microscope,
     },
     {
