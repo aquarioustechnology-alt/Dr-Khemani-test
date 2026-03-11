@@ -6,24 +6,36 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
     {
-        question: "How often should I visit a gynecologist?",
-        answer: "Visit a gynecologist once a year for a routine check-up. Schedule an immediate appointment if you experience irregular periods, pelvic pain, unusual discharge, or any sudden symptoms. Women above 40 should also include annual breast and cervical screening."
+        question: "When and where can I visit you?",
+        answer: "Dr. Vinita Khemani is available throughout the week (except on Sunday evening) at different clinics and hospitals. Please check her <a href='/clinic-schedule' class='text-[#a43971] hover:underline font-semibold'>clinic schedule here</a> and book your appointment."
     },
     {
-        question: "What happens during the first prenatal visit?",
-        answer: "The first prenatal visit includes a complete medical history review, blood tests (CBC, blood group, thyroid, sugar), urine analysis, blood pressure check, and an ultrasound to confirm the pregnancy and estimated due date. Dr. Khemani also provides a personalized nutrition and supplement plan."
+        question: "How do I book an appointment to consult you?",
+        answer: "Simply call +91-9903588155 during working hours (11 am to 8 pm) for an appointment in Bangur Avenue Clinic. Visit the <a href='/clinic-schedule' class='text-[#a43971] hover:underline font-semibold'>Clinic Schedule</a> page for more information on the contact number of the respective clinics."
     },
     {
-        question: "Does Dr. Vinita Khemani perform laparoscopic surgery?",
-        answer: "Yes. Dr. Khemani has performed 583+ laparoscopic (keyhole) surgeries for fibroids, ovarian cysts, endometriosis, ectopic pregnancy, and hysterectomy. Benefits include smaller incisions (5–10 mm), less post-operative pain, and discharge typically within 24–48 hours."
+        question: "What should I bring with me when I come for an appointment?",
+        answer: "You should bring all your medical records, investigation reports, USG previous prescriptions, etc. During the appointment, you need to also provide details of previous operations and allergies, if any."
     },
     {
-        question: "What is a high-risk pregnancy and how is it managed?",
-        answer: "A high-risk pregnancy involves conditions like gestational diabetes, preeclampsia, placenta previa, or a history of preterm birth. Dr. Khemani manages these with frequent ultrasound monitoring, specialized medication, coordinated NICU backup, and a customized delivery plan."
+        question: "Do I need a referral to make an appointment?",
+        answer: "Bringing a referral letter is not mandatory. If a physician has referred you to Dr. Vinita, please do bring their prescription/referral letter."
     },
     {
-        question: "What fertility treatments does Dr. Khemani offer?",
-        answer: "Treatments include ovulation induction, IUI (Intrauterine Insemination), IVF coordination, hormonal therapy for PCOS, hysteroscopy for uterine abnormalities, and laparoscopic treatment for endometriosis and tubal blockage. Each plan is tailored after a complete fertility evaluation."
+        question: "Do I have to pay now?",
+        answer: "No. You need to pay the fees at the time of the visit at the clinic."
+    },
+    {
+        question: "What are your consultation fees?",
+        answer: "The consultation fee of Dr. Vinita is INR 700 now. This amount will get revised to Rs. 800 from 1st January 2023. Note that several hospitals/clinics may charge an additional registration fee that's beyond Dr. Vinita's consultation charges. There's no registration charge at her personal clinic, Healing Touch Clinic."
+    },
+    {
+        question: "What types of surgery do you perform?",
+        answer: "Dr. Vinita does all types of Gynecological and Obstetric operations. She is specially trained in Infertility treatment, Cesarean, Hysterectomy, Laparoscopy and Ovarian Cystectomy."
+    },
+    {
+        question: "How can I contact you?",
+        answer: "You can contact Dr. Vinita using this <a href='/contact' class='text-[#a43971] hover:underline font-semibold'>contact form</a>."
     }
 ];
 
@@ -83,9 +95,10 @@ export function FAQSection() {
                                                     exit={{ height: 0, opacity: 0 }}
                                                     transition={{ duration: 0.3 }}
                                                 >
-                                                    <div className="px-8 pb-8 text-gray-600 leading-relaxed text-lg border-t border-gray-100 pt-6">
-                                                        {faq.answer}
-                                                    </div>
+                                                    <div
+                                                        className="px-8 pb-8 text-gray-600 leading-relaxed text-lg border-t border-gray-100 pt-6"
+                                                        dangerouslySetInnerHTML={{ __html: faq.answer }}
+                                                    />
                                                 </motion.div>
                                             )}
                                         </AnimatePresence>
