@@ -126,17 +126,14 @@ export function HeroV2() {
                         }}
                       >
                         {index === 0 ? (
-                          <img
+                          <Image
                             src={src}
                             alt="Dr. Vinita Khemani consulting patients at Healing Touch Clinic Kolkata"
-                            className="object-cover w-full h-full"
-                            style={{
-                              position: 'absolute',
-                              inset: 0,
-                              height: '100%',
-                              width: '100%',
-                            }}
-                            fetchPriority="high"
+                            fill
+                            className="object-cover"
+                            priority
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            quality={90}
                           />
                         ) : (
                           <Image

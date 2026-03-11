@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Calendar, ArrowRight, Clock, User } from "lucide-react";
 
-import { blogPosts, blogCategories } from "@/lib/blogData";
+import { blogPosts } from "@/lib/blogData";
 
 const categories = ["All", "Fertility", "Pregnancy", "PCOS", "Gynecology", "Family Planning"];
 
