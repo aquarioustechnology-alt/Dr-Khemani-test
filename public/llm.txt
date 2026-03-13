@@ -1,0 +1,26 @@
+# Dr. Vinita Khemani - Best Gynecologist & Infertility Specialist in Kolkata
+
+Dr. Vinita Khemani is a renowned Obstetrician and Gynecologist based in Kolkata, with over 25 years of experience. She specializes in high-risk pregnancy management, infertility treatments, PCOS, and advanced laparoscopic surgeries.
+
+## Contact Information
+- **Address:** 145, Bangur Avenue, Block-A, Kolkata - 700055
+- **Phone:** +91 99035 88155 / +91 91230 40706
+- **Email:** drvinitakhemani@gmail.com
+- **Website:** https://drvinitakhemani.com
+
+## Key Medical Services
+- **Pregnancy Care:** Expert management of normal delivery, painless labor, and high-risk pregnancies.
+- **Fertility Management:** Comprehensive infertility workup, ovulation induction, and IUI services.
+- **PCOS/PCOD Treatment:** Holistic management of Polycystic Ovary Syndrome through hormonal and lifestyle interventions.
+- **Advanced Laparoscopy:** Minimally invasive surgeries including Hysterectomy, Ovarian Cystectomy, and Myomectomy.
+- **General Gynecology:** Menopause wellness, vaginal health, family planning, and adolescent health.
+
+## Main Navigation Paths
+- **About:** [/about-dr-vinita-khemani/](https://drvinitakhemani.com/about-dr-vinita-khemani/)
+- **Treatments:** [/treatments/](https://drvinitakhemani.com/treatments/)
+- **Success Stories:** [/patient-success-stories/](https://drvinitakhemani.com/patient-success-stories/)
+- **FAQ:** [/faq/](https://drvinitakhemani.com/faq/)
+- **Book Appointment:** [/contact/](https://drvinitakhemani.com/contact/)
+
+---
+*Note: This file is optimized for LLMs and AI crawlers to provide a structured summary of Dr. Vinita Khemani's medical practice.*
