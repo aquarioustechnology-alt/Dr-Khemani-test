@@ -67,7 +67,7 @@ export default function OvarianCystectomyPage() {
                                 </motion.div>
                                 <motion.div className="relative h-[500px] lg:h-[600px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white">
-                                        <Image src="/images/WhatsApp Image 2026-01-14 at 12.55.30 PM (1).jpeg" alt="Laparoscopic Ovarian Cyst Removal" fill className="object-cover" />
+                                        <Image src="/images/Ovarian-Cystectomy.jpg" alt="Laparoscopic Ovarian Cyst Removal" fill className="object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-tr from-pink-900/40 to-transparent"></div>
                                     </div>
                                 </motion.div>

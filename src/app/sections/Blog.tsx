@@ -46,61 +46,59 @@ export function Blog() {
                             transition={{ delay: idx * 0.1 }}
                             className="group flex flex-col bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-xl hover:border-[#C21975]/20 transition-all duration-300 h-full"
                         >
-                            {/* Image Container */}
-                            <div className="relative h-60 overflow-hidden w-full">
-                                <Image
-                                    src={post.image}
-                                    alt={post.title}
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute top-4 left-4 z-10">
-                                    <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur text-xs font-bold text-[#C21975] uppercase tracking-wider">
-                                        {post.category}
-                                    </span>
-                                </div>
-                            </div>
-
-                            {/* Content */}
-                            <div className="p-8 flex flex-col flex-grow">
-                                <div className="flex items-center gap-4 text-xs text-gray-500 mb-4 font-medium">
-                                    <span className="flex items-center gap-1">
-                                        <Calendar className="w-3.5 h-3.5" />
-                                        {post.date}
-                                    </span>
-                                    <span className="w-1 h-1 rounded-full bg-gray-300" />
-                                    <span className="flex items-center gap-1">
-                                        <Clock className="w-3.5 h-3.5" />
-                                        {post.readTime}
-                                    </span>
-                                </div>
-
-                                <h3 className="text-xl font-bold font-display text-gray-900 mb-3 group-hover:text-[#C21975] transition-colors line-clamp-2">
-                                    <Link href={`/blog/${post.slug}`}>
-                                        {post.title}
-                                    </Link>
-                                </h3>
-
-                                <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
-                                    {post.excerpt}
-                                </p>
-
-                                <div className="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
-                                    <div className="flex items-center gap-2">
-                                        <div className="w-8 h-8 rounded-full bg-[#fff5f9] flex items-center justify-center">
-                                            <User className="w-4 h-4 text-[#C21975]" />
-                                        </div>
-                                        <span className="text-xs font-semibold text-gray-900">{post.author}</span>
+                            <Link href={`/blog/${post.slug}`} className="flex flex-col h-full">
+                                {/* Image Container */}
+                                <div className="relative h-60 overflow-hidden w-full">
+                                    <Image
+                                        src={post.image}
+                                        alt={post.title}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute top-4 left-4 z-10">
+                                        <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur text-xs font-bold text-[#C21975] uppercase tracking-wider">
+                                            {post.category}
+                                        </span>
                                     </div>
-                                    <Link
-                                        href={`/blog/${post.slug}`}
-                                        aria-label={`Read ${post.title}`}
-                                        className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:bg-[#C21975] group-hover:border-[#C21975] group-hover:text-white transition-all"
-                                    >
-                                        <ArrowRight className="w-4 h-4" />
-                                    </Link>
                                 </div>
-                            </div>
+
+                                {/* Content */}
+                                <div className="p-8 flex flex-col flex-grow">
+                                    <div className="flex items-center gap-4 text-xs text-gray-500 mb-4 font-medium">
+                                        <span className="flex items-center gap-1">
+                                            <Calendar className="w-3.5 h-3.5" />
+                                            {post.date}
+                                        </span>
+                                        <span className="w-1 h-1 rounded-full bg-gray-300" />
+                                        <span className="flex items-center gap-1">
+                                            <Clock className="w-3.5 h-3.5" />
+                                            {post.readTime}
+                                        </span>
+                                    </div>
+
+                                    <h3 className="text-xl font-bold font-display text-gray-900 mb-3 group-hover:text-[#C21975] transition-colors line-clamp-2">
+                                        {post.title}
+                                    </h3>
+
+                                    <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                                        {post.excerpt}
+                                    </p>
+
+                                    <div className="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+                                        <div className="flex items-center gap-2">
+                                            <div className="w-8 h-8 rounded-full bg-[#fff5f9] flex items-center justify-center">
+                                                <User className="w-4 h-4 text-[#C21975]" />
+                                            </div>
+                                            <span className="text-xs font-semibold text-gray-900">{post.author}</span>
+                                        </div>
+                                        <div
+                                            className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:bg-[#C21975] group-hover:border-[#C21975] group-hover:text-white transition-all"
+                                        >
+                                            <ArrowRight className="w-4 h-4" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
                         </motion.article>
                     ))}
                 </div>

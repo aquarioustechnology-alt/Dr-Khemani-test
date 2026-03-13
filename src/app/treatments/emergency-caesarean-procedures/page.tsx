@@ -71,7 +71,7 @@ export default function EmergencyCSectionPage() {
                                 </motion.div>
                                 <motion.div className="relative h-[500px] lg:h-[600px]" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white">
-                                        <Image src="/images/High-Risk Pregnancy.webp" alt="Emergency Delivery Care Team" fill className="object-cover" />
+                                        <Image src="/images/Emergency-Caesarean-Section.png" alt="Emergency Delivery Care Team" fill className="object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                                         <div className="absolute bottom-8 left-8 text-white max-w-xs">
                                             <p className="font-bold text-xl mb-1">24/7 Readiness</p>

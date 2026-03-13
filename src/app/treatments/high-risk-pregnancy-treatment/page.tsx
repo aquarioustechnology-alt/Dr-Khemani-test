@@ -72,7 +72,7 @@ export default function HighRiskPregnancyPage() {
                                 </motion.div>
                                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative h-[400px] md:h-[500px] order-first lg:order-none">
                                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl">
-                                        <Image src="/images/dr-vinita-khemani-kolkata-ymcrv.jpg" alt="High-risk pregnancy specialist Dr. Vinita Khemani" fill className="object-cover" priority />
+                                        <Image src="/images/High-Risk%20Pregnancy.webp" alt="High-risk pregnancy specialist Dr. Vinita Khemani" fill className="object-cover" priority />
                                     </div>
                                 </motion.div>
                             </div>

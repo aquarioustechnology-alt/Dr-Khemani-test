@@ -215,7 +215,7 @@ export default function FertilityPage() {
                         </div>
                         <div className="relative sticky top-32">
                             <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                                <Image src="/images/fertility-couple-hope.jpg" alt="Indian couple consulting for fertility treatment" fill className="object-cover" />
+                                <Image src="/images/Fertility%20Treatment.webp" alt="Indian couple consulting for fertility treatment" fill className="object-cover" />
                             </div>
                             <div className="absolute -bottom-4 -left-4 bg-white p-5 rounded-2xl shadow-xl border border-pink-100 max-w-[280px] hidden md:block z-10">
                                 <p className="text-sm font-bold text-gray-900 mb-1">You Are Not Alone</p>

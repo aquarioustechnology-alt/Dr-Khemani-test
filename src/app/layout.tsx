@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dr-khemani-test.vercel.app"),
+  metadataBase: new URL("https://drvinitakhemani.com"),
   title: "Best Female Gynecologist in Kolkata | Dr Vinita Khemani",
   description: "Consult Dr Vinita Khemani, top obstetrician in Kolkata, offering expert care for pregnancy, fertility, PCOS & women's health. Book a consultation today.",
   keywords: "gynecologist kolkata, best gynecologist in kolkata, obstetrician kolkata, pregnancy doctor kolkata, fertility specialist kolkata, dr vinita khemani, laparoscopic surgery kolkata, high risk pregnancy doctor, PCOS treatment kolkata, normal delivery doctor kolkata, painless delivery kolkata, women's health clinic bangur avenue",
